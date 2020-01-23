@@ -1,0 +1,76 @@
+# jgmenu config file (jgmenurc)
+#
+# See the man page jgmenu(1) for further details.
+
+#stay_alive          = 1
+hide_on_startup     = 1
+csv_cmd             = pmenu
+tint2_look          = 0
+#at_pointer          = 0
+terminal_exec       = st
+terminal_args       = -e
+#monitor             = 0
+#hover_delay	     = 100
+#hide_back_items     = 1
+columns             = 1
+
+menu_margin_x       = 5
+menu_margin_y       = 25
+# menu_width          = 400
+#menu_height_min     = 0
+#menu_height_max     = 0
+menu_height_mode    = static
+menu_padding_top    = 0
+menu_padding_right  = 0
+menu_padding_bottom = 0
+menu_padding_left   = 0
+menu_radius         = 0
+menu_border         = 0
+menu_halign         = left
+menu_valign         = bottom
+
+sub_spacing         = 0
+sub_padding_top     = 0
+sub_padding_right   = 0
+sub_padding_bottom  = 0
+sub_padding_left    = 0
+sub_hover_action    = 1
+
+#item_margin_x       = 3
+#item_margin_y       = 
+# screen locker3
+item_height         = 25
+item_padding_x      = 4
+item_radius         = 0
+item_border         = 0
+item_halign         = left
+
+#sep_height          = 5
+#sep_halign          = left
+#sep_markup          =
+
+font                = Iosevka 10
+#font_fallback       = xtg
+#icon_size           = 22
+#icon_text_spacing   = 10
+#icon_theme          =
+#icon_theme_fallback = xtg
+
+#arrow_string        = ▸
+#arrow_width         = 15
+
+color_menu_bg       = #282828 90
+color_menu_border   = #282828 90
+
+color_norm_bg       = #282828 0
+color_norm_fg       = #ebdbb2 100
+
+color_sel_bg        = #d79921 85
+color_sel_fg        = #282828 85
+color_sel_border    = #282828 0
+
+color_sep_fg        = #ebdbb2 0
+
+#csv_name_format     = %n (%g)
+csv_single_window   = 0
+csv_no_dirs         = 0

@@ -1,0 +1,37 @@
+# darky_solarized_dark_yellow theme for SLIM
+# by aditya shakya <adi1090x@gmail.com>
+# modified by Rizqi Nur Assyaufi <bandithijo@gmail.com>
+# using artwork from some free html+css login templates on the internet
+
+# Messages (ie: shutdown)
+
+msg_color               #ebdbb2
+msg_font                Iosevka:size=14:bold:dpi=75
+msg_x                   50%
+msg_y                   50%
+
+# Session Name
+
+session_color               #BCC3C3
+session_font                Iosevka:size=14:bold:dpi=75
+session_x                   50%
+session_y                   90%
+
+# valid values: stretch, tile
+
+background_style        stretch
+background_color        #282828
+
+# Input controls
+
+input_panel_x           50%
+input_panel_y           50%
+input_name_x            50
+input_name_y            23
+input_pass_x            50
+input_pass_y            75
+input_font              Iosevka:size=12:bold:dpi=75
+input_color             #ebdbb2
+
+username_msg
+password_msg

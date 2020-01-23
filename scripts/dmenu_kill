@@ -1,0 +1,2 @@
+#!/bin/sh
+ps -ef | sed 1d | dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -l 10 -i -p "Task Mager" | awk '{print $2}' | xargs kill -${1:-9} ;

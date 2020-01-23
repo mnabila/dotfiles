@@ -1,0 +1,23 @@
+#!/bin/bash
+# File              : dmenu_ytview
+# License           : MIT License
+# Author            : M. Nabil Adani <macroid48@gmail.com>
+# Date              : Kamis, 05/09/2019 11:08 WIB
+# Last Modified Date: Minggu, 10/11/2019 20:35 WIB
+# Last Modified By  : M. Nabil Adani <macroid48@gmail.com>
+
+# inspired by https://github.com/harimurtie/ndotfiles/blob/master/scripts/ytplay
+
+resolution="144p\n240p\n360p\n480p\n720p\n1080p"
+dmenu="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -p Resolution -i -l 10 -h 23"
+selected=$(echo -e "$resolution" | $dmenu)
+url="$(xclip -selection clipboard -o | cut -d '&' -f 1)"
+
+case "$selected" in
+  144p ) youtube-viewer --resolution 144p $url;;
+  240p ) youtube-viewer --resolution 240p $url;;
+  360p ) youtube-viewer --resolution 360p $url;;
+  480p ) youtube-viewer --resolution 480p $url;;
+  720p ) youtube-viewer --resolution 720p $url;;
+  1080p ) youtube-viewer --resolution 1080p $url;;
+esac

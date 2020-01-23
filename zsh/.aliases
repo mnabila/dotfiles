@@ -1,0 +1,37 @@
+#!/bin/sh
+# vim: ft=sh
+
+alias neofetch="neofetch --ascii ~/.config/neofetch/chess.txt"
+alias screencast="adb connect 192.168.43.1:5555; scrcpy -b 2M -m 1080 &"
+alias py="python"
+alias {vi,vim,nano}="nvim"
+alias pacman-mirror="reflector"
+alias :q="exit"
+
+#
+# yotube-viewer #
+#
+alias yt1="youtube-viewer --resolution=144p"
+alias yt2="youtube-viewer --resolution=240p"
+alias yt3="youtube-viewer --resolution=360p"
+alias yt4="youtube-viewer --resolution=480p"
+alias yt7="youtube-viewer --resolution=720p"
+alias yt10="youtube-viewer --resolution=1080p"
+
+#
+# pacman #
+#
+alias upgrade="pekmen;sudo reflector  --verbose --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist;sudo pacman -Fyy;sudo pacman -Syyuw --noconfirm"
+alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias pacname="pacman -Sup --print-format \"%n\" | sort -n"
+alias pacurl="pacman -Sup | grep https"
+alias pacsize="pacman -Sup --print-format \"%s %n\" | sort -n"
+alias apt="pacman"
+
+# FZF alias
+alias fzfp="fzf --reverse --preview 'bat --style=numbers --color=always {}'"
+
+# cpupower
+alias performance="sudo cpupower frequency-set -g performance"
+alias ondemand="sudo cpupower frequency-set -g ondemand"
+alias cpuinfo="watch -n1 \"cat /proc/cpuinfo | grep 'MHz'\""

@@ -1,0 +1,72 @@
+#
+# Colorscheme
+#
+
+# completion
+set completion-bg "#282828"
+set completion-fg "#ebdbb2"
+set completion-group-bg "#282828"
+set completion-group-fg "#ebdbb2"
+set completion-highlight-bg "#d79921"
+set completion-highlight-fg "#282828"
+
+# default
+set default-bg "#282828"
+set default-fg "#ebdbb2"
+
+# inputbar
+set inputbar-bg "#282828"
+set inputbar-fg "#ebdbb2"
+
+# notification
+set notification-bg "#d79921"
+set notification-fg "#282828"
+set notification-error-bg "#cc241d"
+set notification-error-fg "#ebdbb2"
+set notification-warning-bg "#d79921"
+set notification-warning-fg "#282828"
+
+
+# statusbar
+set statusbar-bg "#282828"
+set statusbar-fg "#ebdbb2"
+
+# highlight
+set highlight-color "#d79921"
+set highlight-active-color "#282828"
+
+# recolor
+set recolor-darkcolor "#ffffff"
+set recolor-lightcolor "#000000"
+
+# loading
+set render-loading-bg "#282828"
+set render-loading-fg "#ebdbb2"
+
+#
+# Configurations
+#
+
+# font
+set font "Iosevka Regular 10"
+
+# scrollbar
+set show-scrollbars true
+set show-v-scrollbar true
+set show-h-scrollbar false
+
+# highlight
+set highlight-transparency "0.8"
+
+# recoloring
+set recolor false
+set recolor-keephue false
+
+# window title
+set window-title-basename true
+set window-title-home-tilde true
+set window-title-page true
+
+# statusbar
+set statusbar-basename true
+set statusbar-home-tilde true

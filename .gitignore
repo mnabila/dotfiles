@@ -1,0 +1,10 @@
+**/*.db
+**/*.log
+**/*.pid
+**/__pycache__/*
+**/qsettings
+mpd/.config/mpd/mpdstate
+newsboat/.config/newsboat/history.cmdline
+newsboat/.config/newsboat/history.search
+tmux/.tmux/resurrect/*
+qutebrowser/.config/qutebrowser/autoconfig.yml

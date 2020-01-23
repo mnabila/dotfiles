@@ -1,0 +1,151 @@
+/*******************************************************************************
+ * ROFI Color theme for gruvbox colorscheme
+ * github: https://github.com/nabil48
+ ********************************************************************************/
+
+* {
+  background: rgba(40,40,40,80%);
+  foreground: rgba(235,219,178,100%);
+  black: rgba(40,40,40,100%);
+  bblack: rgba(60,56,54,100%);
+  red: rgba(204,36,29,100%);
+  bred: rgba(251,73,52,100%);
+  green: rgba(144,151,26,100%);
+  bgreen: rgba(184,187,38,100%);
+  yellow: rgba(215,153,33,100%);
+  byellow: rgba(250,189,47,100%);
+  blue: rgba(69,133,136,100%);
+  bblue: rgba(131,165,152,100%);
+  purple: rgba(177,98,134,100%);
+  bpurple: rgba(211,143,155,100%);
+  cyan: rgba(104,157,106,100%);
+  bcyan: rgba(142,192,124,100%);
+  white: rgba(235,219,178,100%);
+  bwhite: rgba(251,241,199,100%);
+
+  background-color: @background;
+  border-color: @background;
+}
+
+#window {
+  background-color: @background;
+  border-color: @yellow;
+  border: 2;
+}
+
+#mainbox {
+  background-color: @background;
+  border: 10;
+  /* padding: 10; */
+}
+
+#message {
+  border: none;
+  padding: 1px;
+}
+
+#textbox {
+  text-color: @foreground;
+}
+
+#listview {
+  background-color: @background;
+  fixed-height: 0;
+  spacing: 0px;
+  scrollbar: false;
+  border: 2px 0px 0px;
+}
+
+#element {
+  border: 0;
+  padding: 1px;
+
+}
+
+#element.normal.normal {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#element.normal.urgent {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#element.normal.active {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#element.selected.normal {
+  background-color: @yellow;
+  text-color: @black;
+}
+
+#element.selected.urgent {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#element.selected.active {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#element.alternate.normal {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#element.alternate.urgent {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#element.alternate.active {
+  background-color: @background;
+  text-color: @foreground;
+}
+
+#scrollbar {
+  width: 0px;
+  border: 0;
+  handle-width: 0px;
+  padding: 0;
+}
+
+#sidebar {
+  border: 0px dash 0px 0px;
+  border-color: @background;
+  text-color: @bblack;
+}
+
+#button {
+  text-color: @foreground;
+}
+
+#button.selected {
+  background-color: @yellow;
+  text-color: @bblack;
+}
+
+#inputbar {
+  spacing: 0;
+  text-color: @foreground;
+  border: 1px;
+}
+
+#case-indicator {
+  spacing: 0;
+  text-color: @foreground;
+}
+
+#entry {
+  spacing: 0;
+  text-color: @foreground;
+}
+
+#prompt {
+  spacing: 0;
+  text-color: @foreground;
+}

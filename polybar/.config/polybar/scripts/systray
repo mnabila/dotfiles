@@ -1,0 +1,6 @@
+#!/bin/bash
+pid="$(ps -eo pid,args --cols=10000 | awk '/config.ini systray/ && $1 != PROCINFO["pid"] { print $1 }')"
+for p in $pid
+do
+  polybar-msg -p $p cmd toggle
+done

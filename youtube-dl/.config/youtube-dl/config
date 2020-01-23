@@ -1,0 +1,20 @@
+#
+## Download Options
+# --external-downloader aria2c
+
+#
+## Video Format Options
+#
+--format bestvideo[height=720][ext=mp4]+bestaudio[ext=m4a]
+--merge-output-format mp4
+
+#
+## Filesystem Options
+#
+--output %(title)s.%(ext)s
+
+#
+## Post-processing Options:
+#
+--audio-format m4a
+--audio-quality 0

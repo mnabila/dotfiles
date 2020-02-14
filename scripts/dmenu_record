@@ -10,6 +10,7 @@
 # If there is already a running instance, user will be prompted to end it.
 
 DMENU="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -l 5 -i"
+OUTDIR="$HOME/Videos"
 
 updateicon() { \
   echo "$1" > ~/.recordingicon
@@ -38,7 +39,7 @@ screencast() { \
   -f alsa -i default \
   -r 30 \
   -c:v libx264rgb -crf 0 -preset ultrafast -c:a flac \
-  "$HOME/screencast-$(date '+%y%m%d-%H%M-%S').mkv" &
+  "$OUTDIR/screencast-$(date '+%y%m%d-%H%M-%S').mkv" &
   echo $! > ~/.recordingpid
   updateicon "⏺️🎙️"
 }
@@ -48,7 +49,7 @@ video() { ffmpeg \
   -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
   -i :0.0 \
   -c:v libx264 -qp 0 -r 30 \
-  "$HOME/video-$(date '+%y%m%d-%H%M-%S').mkv" &
+  "$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv" &
   echo $! > ~/.recordingpid
   updateicon "⏺️"
 }
@@ -57,7 +58,7 @@ webcamhidef() { ffmpeg \
   -f v412 \
   -i /dev/video0 \
   -video_size 1920x1080 \
-  "$HOME/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
+  "$OUTDIR/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
   echo $! > ~/.recordingpid
   updateicon "🎥"
 }
@@ -66,7 +67,7 @@ webcam() { ffmpeg \
   -f v412 \
   -i /dev/video0 \
   -video_size 640x480 \
-  "$HOME/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
+  "$OUTDIR/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
   echo $! > ~/.recordingpid
   updateicon "🎥"
 }
@@ -76,7 +77,7 @@ audio() { \
   ffmpeg \
   -f alsa -i default \
   -c:a flac \
-  "$HOME/audio-$(date '+%y%m%d-%H%M-%S').flac" &
+  "$OUTDIR/audio-$(date '+%y%m%d-%H%M-%S').flac" &
   echo $! > ~/.recordingpid
   updateicon "🎙️"
 }

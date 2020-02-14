@@ -157,6 +157,18 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# automatically putting workspaces on specific screens
+# workspace 1 output LVDS1 VGA1
+# workspace 2 output LVDS1 VGA1
+# workspace 3 output LVDS1 VGA1
+# workspace 4 output LVDS1 VGA1
+# workspace 5 output LVDS1 VGA1
+# workspace 6 output LVDS1 VGA1
+# workspace 7 output LVDS1 VGA1
+# workspace 8 output LVDS1 VGA1
+# workspace 9 output LVDS1 VGA1
+# workspace 10 output LVDS1 VGA1
+
 # cycle through active workspaces
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
@@ -342,6 +354,8 @@ bindsym $mod+Shift+g mode "$mode_gaps"
 # Disable Some Keys 
 bindsym button4 nop
 bindsym button5 nop
+bindsym button6 nop
+bindsym button7 nop
 bindsym XF86Suspend nop
 
 # Amixer audio controls
@@ -392,8 +406,11 @@ bindsym XF86Sleep exec --no-startup-id systemctl suspend
 bindsym $mod+F2 exec --no-startup-id dmenu_udiskie -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Storage" -i -l 10
 
 # Network Maanger
-bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
-bindsym $mod+Shift+F8 exec --no-startup-id nm-connection-editor
+# bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
+# bindsym $mod+Shift+F8 exec --no-startup-id nm-connection-editor
+
+# connman
+bindsym $mod+F8 exec --no-startup-id connman-gtk
 
 # Todo
 bindsym $mod+F10 exec --no-startup-id dmenu_todo
@@ -476,16 +493,20 @@ client.background       $background
 # workspace layout
 # Define names for default workspaces for which we configure key bindings later on.
 workspace_layout tabbed
+workspace_auto_back_and_forth yes
 
 # resize floating window
 floating_minimum_size 75 x 50
-floating_maximum_size 1266 x 624
+floating_maximum_size 1266 x 700
 
 # window configuration
 title_align center
 default_border normal
 default_floating_border normal
 hide_edge_borders smart
+focus_follows_mouse yes
+popup_during_fullscreen smart
+force_focus_wrapping yes
 
 #
 # WINDOW RULES
@@ -506,6 +527,8 @@ for_window [class="PPSSPPSDL"] border pixel 1
 for_window [class="Zathura"] border pixel 1
 for_window [class="Gcolor3"] floating enable border normal
 for_window [class="feh"] border pixel 1
+for_window [class="Gpa"] floating enable
+for_window [class="Sxiv"] border pixel 1
 
 # 
 # AUTORUNS #

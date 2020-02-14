@@ -1084,8 +1084,8 @@ c.url.searchengines = {
     "ag": "http://anigrab.herokuapp.com/?keyword={}",
     "au": "https://aur.archlinux.org/packages/?O=0&K={}",
     "aw": "https://wiki.archlinux.org/?search={}",
-    "da": "http://www.deviantart.com/?q={}",
-    "docker": "https://hub.docker.com/search?q={}&type=image",
+    "dc": "http://www.deviantart.com/?q={}",
+    "hd": "https://hub.docker.com/search?q={}&type=image",
     "dz": "https://www.deezer.com/search/{}",
     "g": "https://www.google.com/search?hl=en&q={}",
     "gh": "https://github.com/search?q={}",
@@ -1501,10 +1501,10 @@ c.colors.tabs.pinned.selected.even.bg = xresources["*color3"]
 # Type: QtColor
 c.colors.webpage.bg = xresources["*color15"]
 
-# Default monospace fonts. Whenever "monospace" is used in a font
-# setting, it's replaced with the fonts listed here.
-# Type: Font
-c.fonts.monospace = '"xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+# Default font families to use. Whenever "default_family" is used in a font setting, it’s replaced with the fonts listed here. If set to an empty value, a system-specific monospace default is used.
+# Type: List of Font, or Font
+c.fonts.default_family = '"Iosevka","xos4 Terminus", Terminus, Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+
 
 # Font used in the completion widget.
 # Type: Font

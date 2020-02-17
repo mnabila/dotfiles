@@ -1,6 +1,10 @@
 #!/bin/bash
 # Repository : https://github.com/Excerion/dswitcher
 
+# Required:
+# 1. wmctrl
+
+
 # Date format, for use as the prompt.
 date=$(date +"%a %d. %b %R")
 

@@ -1,11 +1,13 @@
 #!/bin/bash
 # File              : dmenu_boottester
 # License           : MIT License
-# Author            : M. Nabil Adani <macroid48@gmail.com>
+# Author            : M. Nabil Adani <nblid48@gmail.com>
 # Date              : Minggu, 27/10/2019 09:28 WIB
 # Last Modified Date: Sabtu, 09/11/2019 10:25 WIB
-# Last Modified By  : M. Nabil Adani <macroid48@gmail.com>
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
+# Required:
+# 1. qemu
 
 # add this custom action to policykit configurations
 # path : /usr/share/polkit-1/actions/org.freedesktop.policykit.qemu-system-x86_64.policy

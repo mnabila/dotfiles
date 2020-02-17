@@ -1,9 +1,19 @@
 #!/bin/bash
+# File              : dmenu_window
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Selasa, 18/02/2020 05:13 WIB
+# Last Modified Date: Selasa, 18/02/2020 05:13 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
-#https://bbs.archlinux.org/viewtopic.php?id=80145&p=7
+# Sources https://bbs.archlinux.org/viewtopic.php?id=80145&p=7
+
+# Required:
+# 1. xdotool
+
+
 
 # list running application, similar to dmenu-running-apps.sh
-
 declare -i active_id
 declare -i win_id
 

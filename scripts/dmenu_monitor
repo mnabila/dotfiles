@@ -1,6 +1,9 @@
 #!/bin/bash
 # Repository :  https://github.com/davatorium/rofi-scripts
 
+# Required:
+# 1. xorg-xrandr
+
 XRANDR=$(which xrandr)
 
 MONITORS=( $( ${XRANDR} | awk '( $2 == "connected" ){ print $1 }' ) )

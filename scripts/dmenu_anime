@@ -1,32 +1,38 @@
 #!/bin/bash
 # File              : dmenu_anime
 # License           : MIT License
-# Author            : M. Nabil Adani <macroid48@gmail.com>
+# Author            : M. Nabil Adani <nblid48@gmail.com>
 # Date              : Sabtu, 28/09/2019 22:10 WIB
 # Last Modified Date: Minggu, 29/09/2019 19:06 WIB
-# Last Modified By  : M. Nabil Adani <macroid48@gmail.com>
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
+
+# Required
+# 1. fuseiso
+# 2. fusermount
+# 3. mpv
+
 
 OPTIONS="Mount Anime\nPlay Anime\nPlay Playlist\nUmount Anime"
-LAUNCHER="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -p Anime -l 10 -i"
+DMENU="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -p Anime -l 10 -i"
 
 function mount(){
-  fuseiso -p "$(find ~/Anime/*/* -iname '*.iso'|$LAUNCHER)" /tmp/mount
+  fuseiso -p "$(find ~/Anime/*/* -iname '*.iso'|$DMENU)" /tmp/mount
 }
 
 function umount(){
-  fusermount -u /tmp/mount
+  fusermount -u /tmp/iso
 }
 
 function play(){
-  mpv -vo xv "$(find /tmp/mount/ -iname '*.mkv' -or -iname '*.mp4' | $LAUNCHER)"
+  mpv -vo xv "$(find /tmp/iso/ -iname '*.mkv' -or -iname '*.mp4' | $DMENU)"
 }
 
 function play_playlist(){
-  mpv -vo xv "/tmp/mount/$(ls /tmp/mount/ | $LAUNCHER)"
+  mpv -vo xv "/tmp/iso/$(ls /tmp/iso/ | $DMENU)"
 }
 
 
-case "$(echo -e $OPTIONS|$LAUNCHER)" in
+case "$(echo -e $OPTIONS|$DMENU)" in
   "Mount Anime")  mount;;
   "Play Anime")  play;;
   "Play Playlist")  play_playlist;;

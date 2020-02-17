@@ -2,6 +2,10 @@
 # Repository : https://github.com/cdown/mpdmenu
 
 
+# Required:
+# 2. mpc
+
+
 all_name='[ALL]'
 mode=playlist
 

@@ -1,12 +1,15 @@
 #!/bin/bash
 # File              : dmenu_ytview
 # License           : MIT License
-# Author            : M. Nabil Adani <macroid48@gmail.com>
+# Author            : M. Nabil Adani <nblid48@gmail.com>
 # Date              : Kamis, 05/09/2019 11:08 WIB
 # Last Modified Date: Minggu, 10/11/2019 20:35 WIB
-# Last Modified By  : M. Nabil Adani <macroid48@gmail.com>
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 # inspired by https://github.com/harimurtie/ndotfiles/blob/master/scripts/ytplay
+
+# Required:
+# 1. youtube-viewer
 
 resolution="144p\n240p\n360p\n480p\n720p\n1080p"
 dmenu="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -p Resolution -i -l 10 -h 23"

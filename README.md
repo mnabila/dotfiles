@@ -9,8 +9,23 @@
 ```
 
 # Dotfiles
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mnabila/dotfiles/blob/master/LICENSE)
 
 Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
+
+# Daftar Isi
+<!-- TOC depthFrom:2 -->
+
+- [Dotfiles](#Dotfiles)
+- [Details](#Details)
+- [ScreenShut](#ScreenShut)
+  - [i3 Gaps](#i3-gaps)
+  - [tmux](#tmux)
+  - [zsh](#zsh)
+- [Instalasi](#Instalasi)
+
+<!-- /TOC -->
+
 
 # Details
 
@@ -48,3 +63,115 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 #### zsh
 
 ![zsh](https://github.com/mnabila/dotfiles/blob/master/screenshot/zsh.png?raw=true)
+
+# Instalasi
+
+#### Instalasi GNU/Stow di Arch Linux
+
+> **Apa sih GNU/Stow itu ?**
+>
+> GNU/Stow merupakan sebuah symlink farm manager atau lebih mudah dipahami dengan symlink
+> manager sehingga pengguna tidak direpotkan lagi mengetikkan semua pathnya apabila ingin
+> melakukan symlink dari folder asal ke folder tujuan.
+
+> **Perbedaan perintah GNU/Stow dan perintah ln untuk membuat symlink ? (contoh tmux)**
+>
+> **ln**
+> 
+> ```$ ln -s /path/folder/asal/tmux/ /path/folder/tujuan/tmux```
+>
+> **GNU/Stow**
+>
+> ```$ stow tmux```
+
+
+> **untuk menghapus symlink yang di hasilkan bagaimana ?**
+>
+> **ln**
+> 
+> ```$ unlink /path/folder/tujuan/tmux```
+>
+> **GNU/Stow**
+>
+> ```$ stow -D tmux```
+
+> **Kenapa sih harus menggunakan GNU/Stow ?**
+>
+> Dikarenakan banyaknya configurasi yang ada adakalanya pengguna sangat direpotkan uuntuk memanagementnya ketika bermigrasi dari sistem operasi satu ke operasi yang lain.
+> Dengan adanya GNU/Stow ini pengguna sedikit terbantu karna tidak perlu lagi copy manual config dari folder dotfiles ke folder configurasi yang ada.
+> Cukup dengan membuat symlink dari folder dotfiles ke folder configurasi sehingga ketika ada perubahana juga cukup mudah managementnya.
+
+install paket GNU/Stow di Arch Linux
+
+```
+$ sudo pacman stow
+```
+
+daftar perintah di GNU/Stow
+
+```
+stow (GNU Stow) version 2.3.1
+
+SYNOPSIS:
+
+    stow [OPTION ...] [-D|-S|-R] PACKAGE ... [-D|-S|-R] PACKAGE ...
+
+OPTIONS:
+
+    -d DIR, --dir=DIR     Set stow dir to DIR (default is current dir)
+    -t DIR, --target=DIR  Set target to DIR (default is parent of stow dir)
+
+    -S, --stow            Stow the package names that follow this option
+    -D, --delete          Unstow the package names that follow this option
+    -R, --restow          Restow (like stow -D followed by stow -S)
+
+    --ignore=REGEX        Ignore files ending in this Perl regex
+    --defer=REGEX         Don't stow files beginning with this Perl regex
+                          if the file is already stowed to another package
+    --override=REGEX      Force stowing files beginning with this Perl regex
+                          if the file is already stowed to another package
+    --adopt               (Use with care!)  Import existing files into stow package
+                          from target.  Please read docs before using.
+    -p, --compat          Use legacy algorithm for unstowing
+
+    -n, --no, --simulate  Do not actually make any filesystem changes
+    -v, --verbose[=N]     Increase verbosity (levels are from 0 to 5;
+                            -v or --verbose adds 1; --verbose=N sets level)
+    -V, --version         Show stow version number
+    -h, --help            Show this help
+
+Report bugs to: bug-stow@gnu.org
+Stow home page: <http://www.gnu.org/software/stow/>
+General help using GNU software: <http://www.gnu.org/gethelp/>
+```
+
+#### Memasang Dotfiles
+
+Langkah pertama yakni clone dulu dotfiles yang ada. dengan perintah dibawah ini
+
+> Note:
+> pastikan folder tujuan nya berada di folder /home/\$USER agar mudah managementnya
+
+```
+$ git clone https://github.com/mnabila/dotfiles.git ~/Dotfiles
+```
+
+Untuk memasang confignya cukup mudah ketikkan perintah dibawah ini.
+
+> kita ambil contoh ingin memasang config tmux
+
+```
+$ stow tmux
+```
+
+Begitulah sedikit tutorial dari pemilik dotfiles 
+
+
+# Perlu Dukun ?
+- [Telegram - mnabila](https://t.me/mnabila)
+- [Twitter - nbl_adani](https://twitter.com/nbl_adani)
+
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/BraveUX/for-the-badge)
+[![forthebadge](https://forthebadge.com/images/badges/compatibility-club-penguin.svg)](https://github.com/BraveUX/for-the-badge)
+[![forthebadge](https://forthebadge.com/images/badges/reading-6th-grade-level.svg)](https://github.com/BraveUX/for-the-badge)

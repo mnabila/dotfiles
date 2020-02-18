@@ -9,11 +9,13 @@
 ```
 
 # Dotfiles
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mnabila/dotfiles/blob/master/LICENSE)
+![GitHub](https://img.shields.io/github/license/mnabila/dotfiles?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/mnabila/dotfiles?label=Dotfiles%20Size&style=for-the-badge)
 
 Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 
 # Daftar Isi
+
 <!-- TOC depthFrom:2 -->
 
 - [Dotfiles](#Dotfiles)
@@ -25,7 +27,6 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 - [Instalasi](#Instalasi)
 
 <!-- /TOC -->
-
 
 # Details
 
@@ -77,23 +78,22 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 > **Perbedaan perintah GNU/Stow dan perintah ln untuk membuat symlink ? (contoh tmux)**
 >
 > **ln**
-> 
-> ```$ ln -s /path/folder/asal/tmux/ /path/folder/tujuan/tmux```
+>
+> `$ ln -s /path/folder/asal/tmux/ /path/folder/tujuan/tmux`
 >
 > **GNU/Stow**
 >
-> ```$ stow tmux```
-
+> `$ stow tmux`
 
 > **untuk menghapus symlink yang di hasilkan bagaimana ?**
 >
 > **ln**
-> 
-> ```$ unlink /path/folder/tujuan/tmux```
+>
+> `$ unlink /path/folder/tujuan/tmux`
 >
 > **GNU/Stow**
 >
-> ```$ stow -D tmux```
+> `$ stow -D tmux`
 
 > **Kenapa sih harus menggunakan GNU/Stow ?**
 >
@@ -164,14 +164,8 @@ Untuk memasang confignya cukup mudah ketikkan perintah dibawah ini.
 $ stow tmux
 ```
 
-Begitulah sedikit tutorial dari pemilik dotfiles 
-
+Begitulah sedikit tutorial dari pemilik dotfiles
 
 # Perlu Dukun ?
 - [Telegram - mnabila](https://t.me/mnabila)
 - [Twitter - nbl_adani](https://twitter.com/nbl_adani)
-
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/BraveUX/for-the-badge)
-[![forthebadge](https://forthebadge.com/images/badges/compatibility-club-penguin.svg)](https://github.com/BraveUX/for-the-badge)
-[![forthebadge](https://forthebadge.com/images/badges/reading-6th-grade-level.svg)](https://github.com/BraveUX/for-the-badge)

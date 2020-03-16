@@ -54,12 +54,12 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 
 #### i3-gaps
 
-![i3gaps](https://github.com/mnabila/dotfiles/blob/master/screenshot/i3gaps.png?raw=true)
-![i3gaps workflow](https://github.com/mnabila/dotfiles/blob/master/screenshot/i3gaps-workflow.png?raw=true)
+![i3gaps](https://github.com/mnabila/dotfiles/blob/master/screenshot/i3gaps-2.png?raw=true)
+![i3gaps workflow](https://github.com/mnabila/dotfiles/blob/master/screenshot/i3gaps-workflow-2.png?raw=true)
 
 #### tmux
 
-![tmux](https://github.com/mnabila/dotfiles/blob/master/screenshot/tmux.png?raw=true)
+![tmux](https://github.com/mnabila/dotfiles/blob/master/screenshot/tmux-2.png?raw=true)
 
 #### zsh
 

@@ -1,10 +1,12 @@
 **/*.db
+**/*.dat
 **/*.log
 **/*.pid
 **/__pycache__/*
+**/api.json
 **/qsettings
 mpd/.config/mpd/mpdstate
 newsboat/.config/newsboat/history.cmdline
 newsboat/.config/newsboat/history.search
-tmux/.tmux/resurrect/*
 qutebrowser/.config/qutebrowser/autoconfig.yml
+tmux/.tmux/resurrect/*

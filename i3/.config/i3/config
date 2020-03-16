@@ -213,7 +213,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-
 # move window in floating mode
 mode "moveit" {
         bindsym Up move up 20px
@@ -406,11 +405,11 @@ bindsym XF86Sleep exec --no-startup-id systemctl suspend
 bindsym $mod+F2 exec --no-startup-id dmenu_udiskie -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Storage" -i -l 10
 
 # Network Maanger
-# bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
-# bindsym $mod+Shift+F8 exec --no-startup-id nm-connection-editor
+bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
+bindsym $mod+Shift+F8 exec --no-startup-id nm-connection-editor
 
 # connman
-bindsym $mod+F8 exec --no-startup-id connman-gtk
+# bindsym $mod+F8 exec --no-startup-id connman-gtk
 
 # Todo
 bindsym $mod+F10 exec --no-startup-id dmenu_todo
@@ -506,7 +505,7 @@ default_floating_border normal
 hide_edge_borders smart
 focus_follows_mouse yes
 popup_during_fullscreen smart
-force_focus_wrapping yes
+force_focus_wrapping workspace
 
 #
 # WINDOW RULES
@@ -546,4 +545,4 @@ exec --no-startup-id light -S 30
 exec --no-startup-id $HOME/.config/polybar/launch.sh start
 
 exec_always killall picom; picom --dbus -b
-exec_always feh --bg-scale "$HOME/Pictures/anime/blend-s-mafuyu-hoshikawa-uhd-4k-wallpaper.jpg"
+exec_always feh --bg-scale "$HOME/Pictures/diy/vim-orange.png"

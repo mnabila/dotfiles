@@ -70,3 +70,6 @@ set window-title-page true
 # statusbar
 set statusbar-basename true
 set statusbar-home-tilde true
+
+# clipboard
+set selection-clipboard "clipboard"

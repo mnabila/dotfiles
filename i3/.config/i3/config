@@ -535,13 +535,14 @@ for_window [class="Sxiv"] border pixel 1
 # exec xfce4-power-manager
 exec xautolock -time 15 -locker i3lock-fancy
 
-exec --no-startup-id mpd
-exec --no-startup-id viper start
 exec --no-startup-id lxpolkit
+exec --no-startup-id mpd
+exec --no-startup-id light -S 30
 exec --no-startup-id udiskie
 exec --no-startup-id clipmenud
 exec --no-startup-id jgmenu
-exec --no-startup-id light -S 30
+exec --no-startup-id redshift
+exec --no-startup-id viper start
 exec --no-startup-id $HOME/.config/polybar/launch.sh start
 
 exec_always killall picom; picom --dbus -b

@@ -34,9 +34,9 @@ color_menu_border   = #d3dae3 8
 color_norm_bg       = #282828 00
 color_norm_fg       = #d3dae3 100
 
-color_sel_bg        = #ffffff 20
-color_sel_fg        = #eeeeee 100
-color_sel_border    = #eeeeee 8
+color_sel_bg        = #d79921 100
+color_sel_fg        = #282828 100
+color_sel_border    = #282828 8
 
 color_sep_fg        = #ffffff 20
 EOF

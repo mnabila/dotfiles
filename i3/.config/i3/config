@@ -419,6 +419,7 @@ bindsym $mod+F11 exec --no-startup-id dmenu_mpdmenu
 
 # Mpc
 bindsym $mod+Pause exec --no-startup-id mpc toggle
+bindsym $mod+Shift+Pause exec --no-startup-id dmenu_mpdmenu
 bindsym $mod+Shift+plus exec --no-startup-id mpc next
 bindsym $mod+Shift+minus exec --no-startup-id mpc prev
 
@@ -508,7 +509,7 @@ popup_during_fullscreen smart
 force_focus_wrapping workspace
 
 #
-# WINDOW RULES
+# WINDOW RULES #
 #
 # window spesific configuration
 # for_window [class=".*"] title_format "<b>%title</b>"
@@ -532,11 +533,12 @@ for_window [class="Sxiv"] border pixel 1
 # 
 # AUTORUNS #
 #
-# exec xfce4-power-manager
 exec xautolock -time 15 -locker i3lock-fancy
 
 exec --no-startup-id lxpolkit
+exec --no-startup-id xfce4-power-manager
 exec --no-startup-id mpd
+exec --no-startup-id mpdscribble
 exec --no-startup-id light -S 30
 exec --no-startup-id udiskie
 exec --no-startup-id clipmenud

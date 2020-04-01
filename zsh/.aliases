@@ -7,6 +7,7 @@ alias py="python"
 alias {vi,vim,nano}="nvim"
 alias pacman-mirror="reflector"
 alias :q="exit"
+alias tetris="autoload -Uz tetriscurses;tetriscurses"
 
 #
 # yotube-viewer #
@@ -26,7 +27,7 @@ alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind
 alias pacname="pacman -Sup --print-format \"%n\" | sort -n"
 alias pacurl="pacman -Sup | grep https"
 alias pacsize="pacman -Sup --print-format \"%s %n\" | sort -n"
-alias apt="pacman"
+alias spp="sudo powerpill"
 
 # FZF alias
 alias fzfp="fzf --reverse --preview 'bat --style=numbers --color=always {}'"
@@ -35,3 +36,13 @@ alias fzfp="fzf --reverse --preview 'bat --style=numbers --color=always {}'"
 alias performance="sudo cpupower frequency-set -g performance"
 alias ondemand="sudo cpupower frequency-set -g ondemand"
 alias cpuinfo="watch -n1 \"cat /proc/cpuinfo | grep 'MHz'\""
+
+# lampp
+alias lamppstart="sudo systemctl start nginx.service;sudo systemctl start php-fpm.service;sudo systemctl start mariadb.service"
+alias lamppstop="sudo systemctl stop nginx.service;sudo systemctl stop php-fpm.service;sudo systemctl start mariadb.service"
+
+# zshmarks
+alias g="jump"
+alias b="bookmark"
+alias d="deletemark"
+alias m="showmarks"

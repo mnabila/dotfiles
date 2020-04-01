@@ -39,7 +39,7 @@ DMENU='dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -l 5 -i'
 choice=$(echo -e "File Iso\nFlashDrive" | $DMENU -p Bootable)
 
 function file_iso(){
-  file=$(find /mnt/Data/Sistem\ Operasi -iname '*.iso'|$DMENU -p "File Iso")
+  file=$(find /mnt/data/Sistem\ Operasi -iname '*.iso'|$DMENU -p "File Iso")
   if [[ -f $file ]] ; then
     ram=$(echo -e "64\n128\n512\n1024\n2024" | $DMENU -p Ram\ Size)
     if [[ ! -z $ram ]]; then

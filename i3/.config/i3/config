@@ -533,7 +533,7 @@ for_window [class="Sxiv"] border pixel 1
 # 
 # AUTORUNS #
 #
-exec xautolock -time 15 -locker i3lock-fancy
+exec xautolock -time 15 -locker i3lock-fancy -f "Iosevka-Italic"
 
 exec --no-startup-id lxpolkit
 exec --no-startup-id xfce4-power-manager
@@ -547,5 +547,5 @@ exec --no-startup-id redshift
 exec --no-startup-id viper start
 exec --no-startup-id $HOME/.config/polybar/launch.sh start
 
-exec_always killall picom; picom --dbus -b
-exec_always feh --bg-scale "$HOME/Pictures/diy/vim-orange.png"
+exec_always killall -9 picom; picom --dbus -b
+exec_always feh --bg-scale "$HOME/Pictures/diy/vim-abu.png"

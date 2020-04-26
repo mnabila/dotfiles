@@ -13,7 +13,7 @@
 
 
 OPTIONS="Mount Anime\nPlay Anime\nPlay Playlist\nUmount Anime"
-DMENU="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -p Anime -l 10 -i"
+DMENU="dmenu $@"
 
 function mount(){
   fuseiso -p "$(find ~/Anime/*/* -iname '*.iso'|$DMENU)" /tmp/mount

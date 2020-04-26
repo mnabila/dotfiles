@@ -17,7 +17,7 @@
 declare -i active_id
 declare -i win_id
 
-DMENU="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -i -p Window"
+DMENU="dmenu -p Window $@"
 winlist=$(xprop -root _NET_CLIENT_LIST | cut -d "#" -f 2 | tr "," " ")
 count=$(echo $winlist | wc -w)
 active_id=$(xprop -root _NET_ACTIVE_WINDOW | awk -F' ' '{ print $NF }')

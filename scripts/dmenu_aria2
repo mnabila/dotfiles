@@ -3,7 +3,7 @@
 # License           : MIT License
 # Author            : M. Nabil Adani <nblid48@gmail.com>
 # Date              : Rabu, 06/11/2019 04:51 WIB
-# Last Modified Date: Rabu, 06/11/2019 17:55 WIB
+# Last Modified Date: Kamis, 23/04/2020 12:51 WIB
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 
@@ -11,9 +11,9 @@
 # 1. aria2p (https://github.com/pawamoy/aria2p)
 # 2. clipmenu (https://github.com/cdown/clipmenu)
 
-DMENU="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -l 5 -i -p Aria2"
-
-url=$(cat /tmp/clipmenu/*/line_cache_clipboard | sort -r | cut -c 21- | grep -Po '(http|https|ftp|ftps):\/\/\w.+' | $DMENU)
+url=$(cat /tmp/clipmenu/*/line_cache | sort -r | cut -c 21- | grep -Po '(http|https|ftp|ftps):\/\/\w.+' | dmenu -p Aria2 "$@")
+# url=$(clipdel '^http[s]:\/\/.*' | sort -r | dmenu -p Aria2 "$@")
 if [[ ! -z $url ]]; then
+  notify-send "Aria2 | Downloading" "$url" -u normal
   aria2p call addUri -J "[[\"$url\"]]"
 fi

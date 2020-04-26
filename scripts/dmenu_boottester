@@ -35,7 +35,7 @@
 # </policyconfig>
 
 
-DMENU='dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -l 5 -i'
+DMENU="dmenu $@"
 choice=$(echo -e "File Iso\nFlashDrive" | $DMENU -p Bootable)
 
 function file_iso(){

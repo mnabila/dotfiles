@@ -38,7 +38,7 @@
 #				(This is unnecessarily long. I use this rarely, feel free to make this script accept parameters.)
 #
 
-DMENU="dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -l 10 -i -p Qute"
+DMENU="dmenu -p Qute $@"
 QUTE_CONFIG_DIR="$HOME/.config/qutebrowser"
 
 # url=$(echo "$QUTE_URL" | cat - "$QUTE_CONFIG_DIR/quickmarks" "$QUTE_DATA_DIR/history" | $DMENU)

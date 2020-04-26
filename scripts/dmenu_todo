@@ -12,7 +12,7 @@ touch "$file"
 height=$(wc -l "$file" | awk '{print $1}')
 prompt="Todo"
 
-cmd=$(dmenu -x 300 -y 220 -w 800 -l "$height" -p "$prompt" "$@" < "$file")
+cmd=$(dmenu -l "$height" -p "$prompt" "$@" < "$file")
 while [ -n "$cmd" ]; do
  	if grep -q "^$cmd\$" "$file"; then
 		grep -v "^$cmd\$" "$file" > "$file.$$"
@@ -23,7 +23,7 @@ while [ -n "$cmd" ]; do
 		height=$(( height + 1 ))
  	fi
 
-cmd=$(dmenu -x 300 -y 220 -w 800 -l "$height" -p "$prompt" "$@" < "$file")
+	cmd=$(dmenu -l "$height" -p "$prompt" "$@" < "$file")
 done
 
 exit 0

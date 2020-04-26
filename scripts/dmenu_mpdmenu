@@ -9,7 +9,7 @@
 all_name='[ALL]'
 mode=playlist
 
-launcher='dmenu -x 300 -y 220 -w 800 -fn "Iosevka-11" -i -l 10'
+launcher="dmenu $@"
 
 d_artist() {
     mpc list artist | sort -f | $launcher -p artist "${dmenu_args[@]}"
@@ -49,8 +49,8 @@ for arg do
     fi
 
     case "$arg" in
-        -l) mode=library ;;
-        -p) mode=playlist ;;
+        -L) mode=library ;;
+        -P) mode=playlist ;;
     esac
 
     let i++

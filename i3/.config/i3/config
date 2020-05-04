@@ -376,24 +376,20 @@ bindsym Shift+Print exec --no-startup-id flameshot full -p "$HOME/Pictures/scree
 
 # Clipmenu
 bindsym $mod+p exec --no-startup-id clipmenu -fn 'Iosevka-11' -nb '#282828' -nf '#ebdbb2' -sb '#d79921' -w '800' -x '300' -y '220' -i -p 'Clip'
-bindsym $mod+Shift+p exec --no-startup-id rm -rf /tmp/clipmenu/*
+bindsym $mod+Shift+p exec --no-startup-id "clipdel -d '.*'; pkill -9 clipmenud; pkill -9 clipnotify; clipmenud"
 
 # Restart, Suspend, Shutdown, Logout Dialog
-bindsym $mod+End exec --no-startup-id dmenu_power
+bindsym $mod+End exec --no-startup-id dmenu_power -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
 
 # Blank space under i3
 # bindsym $mod+o exec --no-startup-id i3-msg open
 
 # Arandr
-bindsym XF86Display exec --no-startup-id dmenu_monitor
+bindsym XF86Display exec --no-startup-id dmenu_monitor -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
 bindsym $mod+F5 exec --no-startup-id arandr
 
-# TouchPad 
-bindsym $mod+F9 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
-bindsym $mod+Shift+F9 exec --no-startup-id xinput --enable "SynPS/2 Synaptics TouchPad"
-
 # Lockscreen
-bindsym XF86ScreenSaver exec --no-startup-id i3lock-fancy
+bindsym XF86ScreenSaver exec --no-startup-id slimlock
 
 # Sleep
 bindsym XF86Sleep exec --no-startup-id systemctl suspend
@@ -401,25 +397,13 @@ bindsym XF86Sleep exec --no-startup-id systemctl suspend
 # Hibernate
 # bindsym XF86Suspend exec --no-startup-id systemctl hibernate
 
-# Udiskie
-bindsym $mod+F2 exec --no-startup-id dmenu_udiskie -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Storage" -i -l 10
-
-# Network Maanger
-bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
-bindsym $mod+Shift+F8 exec --no-startup-id nm-connection-editor
-
-# connman
-# bindsym $mod+F8 exec --no-startup-id connman-gtk
-
-# Todo
-bindsym $mod+F10 exec --no-startup-id dmenu_todo
-
-# Mpdmenu
-bindsym $mod+F11 exec --no-startup-id dmenu_mpdmenu
+# TouchPad 
+bindsym $mod+F9 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
+bindsym $mod+Shift+F9 exec --no-startup-id xinput --enable "SynPS/2 Synaptics TouchPad"
 
 # Mpc
 bindsym $mod+Pause exec --no-startup-id mpc toggle
-bindsym $mod+Shift+Pause exec --no-startup-id dmenu_mpdmenu
+bindsym $mod+Shift+Pause exec --no-startup-id dmenu_mpdmenu -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
 bindsym $mod+Shift+plus exec --no-startup-id mpc next
 bindsym $mod+Shift+minus exec --no-startup-id mpc prev
 
@@ -429,29 +413,46 @@ bindsym $mod+b exec --no-startup-id polybar-msg cmd restart
 bindsym $mod+Shift+n exec --no-startup-id polybar-msg cmd toggle
 bindsym $mod+n exec --no-startup-id $HOME/.config/polybar/scripts/systray
 
-# Youtube Viewer
-bindsym $mod+y exec --no-startup-id dmenu_ytview
-
 # viper restart
 bindsym $mod+Escape exec --no-startup-id viper restart
 
-# Anime MPV
-bindsym $mod+F1 exec --no-startup-id dmenu_anime
-
-# Rofi Top
-bindsym $mod+Delete exec --no-startup-id dmenu_kill
+# Youtube Viewer
+bindsym $mod+y exec --no-startup-id dmenu_ytview -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
 
 # dmenu_qutebrowser
-bindsym $mod+q exec --no-startup-id dmenu_qutebrowser
-
-# dmenu_record
-bindsym $mod+Home exec --no-startup-id dmenu_record
+bindsym $mod+q exec --no-startup-id dmenu_qutebrowser -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Qute" -i -l 10
 
 # dmenu_aria2
-bindsym $mod+u exec --no-startup-id dmenu_aria2
+bindsym $mod+u exec --no-startup-id dmenu_aria2 -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
+
+# dmenu_kill
+bindsym $mod+Delete exec --no-startup-id dmenu_kill -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Task Man" -i -l 10
+
+# dmenu_record
+bindsym $mod+Home exec --no-startup-id dmenu_record -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
+
+# dmenu_pass
+bindsym $mod+Shift+BackSpace exec --no-startup-id dmenu_pass -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Pass Man" -i -l 10
+
+# dmenu_anime
+bindsym $mod+F1 exec --no-startup-id dmenu_anime -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Anime" -i -l 10
+
+# dmenu_udiskie
+bindsym $mod+F2 exec --no-startup-id dmenu_udiskie -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -p "Storage" -i -l 10
+
+# connman
+# bindsym $mod+F8 exec --no-startup-id connman-gtk
+
+# Network Maanger
+# bindsym $mod+F8 exec --no-startup-id networkmanager_dmenu -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
+bindsym $mod+F8 exec --no-startup-id dmenu_wifi -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "400" -x "450" -y "220" -i -l 10
+bindsym $mod+Shift+F8 exec --no-startup-id nm-connection-editor
+
+# Todo
+bindsym $mod+F10 exec --no-startup-id dmenu_todo -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
 
 # dmenu_boottester
-bindsym $mod+F12 exec --no-startup-id dmenu_boottester
+bindsym $mod+F11 exec --no-startup-id dmenu_boottester -fn "Iosevka-11" -nb "#282828" -nf "#ebdbb2" -sb "#d79921" -w "800" -x "300" -y "220" -i -l 10
 
 #
 # COLORSCHEME #
@@ -504,7 +505,7 @@ title_align center
 default_border normal
 default_floating_border normal
 hide_edge_borders smart
-focus_follows_mouse yes
+focus_follows_mouse no
 popup_during_fullscreen smart
 force_focus_wrapping workspace
 
@@ -513,39 +514,40 @@ force_focus_wrapping workspace
 #
 # window spesific configuration
 # for_window [class=".*"] title_format "<b>%title</b>"
-for_window [class="vokoscreen"] floating enable border normal
-for_window [class="Yad"] floating enable border normal
-for_window [class="qjackctl"] floating enable border normal
-for_window [class="PacketTracer7"] floating enable border normal
-for_window [class="Connman-gtk"] floating enable border normal
+for_window [class="vokoscreen"]               floating enable border normal
+for_window [class="Yad"]                      floating enable border normal
+for_window [class="qjackctl"]                 floating enable border normal
+for_window [class="PacketTracer7"]            floating enable border normal
+for_window [class="Connman-gtk"]              floating enable border normal
 for_window [class="Pulseaudio-equalizer-gtk"] floating enable border normal
-for_window [class="viper-gui"] floating enable border normal
-for_window [class="pgadmin4"] floating enable border normal
-for_window [class="mpv"] border pixel 1
-for_window [class="qutebrowser"] border pixel 1
-for_window [class="PPSSPPSDL"] border pixel 1
-for_window [class="Zathura"] border pixel 1
-for_window [class="Gcolor3"] floating enable border normal
-for_window [class="feh"] border pixel 1
-for_window [class="Gpa"] floating enable
-for_window [class="Sxiv"] border pixel 1
+for_window [class="viper-gui"]                floating enable border normal
+for_window [class="pgadmin4"]                 floating enable border normal
+for_window [class="mpv"]                      border   pixel  1
+for_window [class="qutebrowser"]              border   pixel  1
+for_window [class="PPSSPPSDL"]                border   pixel  1
+for_window [class="Zathura"]                  border   pixel  1
+for_window [class="Gcolor3"]                  floating enable border normal
+for_window [class="feh"]                      border   pixel  1
+for_window [class="Gpa"]                      floating enable
+for_window [class="Sxiv"]                     border   pixel  1
 
 # 
 # AUTORUNS #
 #
-exec xautolock -time 15 -locker i3lock-fancy -f "Iosevka-Italic"
+# exec xautolock -time 15 -locker i3lock-fancy -f "Iosevka-Italic"
+exec xautolock -time 15 -locker slimlock
 
-exec --no-startup-id lxpolkit
+# exec --no-startup-id mpd
+# exec --no-startup-id mpdscribble
+# exec --no-startup-id redshift
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id mpd
-exec --no-startup-id mpdscribble
-exec --no-startup-id light -S 30
+exec --no-startup-id lxpolkit
 exec --no-startup-id udiskie
 exec --no-startup-id clipmenud
 exec --no-startup-id jgmenu
-exec --no-startup-id redshift
-exec --no-startup-id viper start
+exec --no-startup-id light -S 30
 exec --no-startup-id $HOME/.config/polybar/launch.sh start
+exec --no-startup-id viper start
 
-exec_always killall -9 picom; picom --dbus -b
+# exec_always killall -9 picom; picom --dbus -b
 exec_always feh --bg-scale "$HOME/Pictures/diy/vim-abu.png"

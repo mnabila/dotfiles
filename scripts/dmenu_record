@@ -17,96 +17,96 @@ DMENU="dmenu $@"
 OUTDIR="$HOME/Videos"
 
 updateicon() { \
-  echo "$1" > ~/.recordingicon
-  pkill -RTMIN+9 i3blocks
+    echo "$1" > ~/.recordingicon
+    pkill -RTMIN+9 i3blocks
 }
 
 killrecording() {
-  recpid="$(cat ~/.recordingpid)"
-  # kill with SIGTERM, allowing finishing touches.
-  kill -15 "$recpid"
-  rm -f ~/.recordingpid
-  updateicon ""
-  pkill -RTMIN+9 i3blocks
-  # even after SIGTERM, ffmpeg may still run, so SIGKILL it.
-  sleep 3
-  kill -9 "$recpid"
-  exit
+    recpid="$(cat ~/.recordingpid)"
+    # kill with SIGTERM, allowing finishing touches.
+    kill -15 "$recpid"
+    rm -f ~/.recordingpid
+    updateicon ""
+    pkill -RTMIN+9 i3blocks
+    # even after SIGTERM, ffmpeg may still run, so SIGKILL it.
+    sleep 3
+    kill -9 "$recpid"
+    exit
 }
 
 screencast() { \
-  ffmpeg -y \
-  -f x11grab \
-  -framerate 60 \
-  -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
-  -i :0.0 \
-  -f pulse -i 1 \
-  -r 30 \
-  -c:v libx264rgb -crf 0 -preset ultrafast -c:a flac \
-  "$OUTDIR/screencast-$(date '+%y%m%d-%H%M-%S').mkv" &
-  echo $! > ~/.recordingpid
-  updateicon "⏺️🎙️"
+    ffmpeg -y \
+    -f x11grab \
+    -framerate 60 \
+    -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
+    -i :0.0 \
+    -f pulse -i 1 \
+    -r 30 \
+    -c:v libx264rgb -crf 0 -preset ultrafast -c:a flac \
+    "$OUTDIR/screencast-$(date '+%y%m%d-%H%M-%S').mkv" &
+    echo $! > ~/.recordingpid
+    updateicon "⏺️🎙️"
 }
 
 video() { ffmpeg \
-  -f x11grab \
-  -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
-  -i :0.0 \
-  -c:v libx264 -qp 0 -r 30 \
-  "$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv" &
-  echo $! > ~/.recordingpid
-  updateicon "⏺️"
+    -f x11grab \
+    -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
+    -i :0.0 \
+    -c:v libx264 -qp 0 -r 30 \
+    "$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv" &
+    echo $! > ~/.recordingpid
+    updateicon "⏺️"
 }
 
 webcamhidef() { ffmpeg \
-  -f v412 \
-  -i /dev/video0 \
-  -video_size 1920x1080 \
-  "$OUTDIR/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
-  echo $! > ~/.recordingpid
-  updateicon "🎥"
+    -f v412 \
+    -i /dev/video0 \
+    -video_size 1920x1080 \
+    "$OUTDIR/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
+    echo $! > ~/.recordingpid
+    updateicon "🎥"
 }
 
 webcam() { ffmpeg \
-  -f v412 \
-  -i /dev/video0 \
-  -video_size 640x480 \
-  "$OUTDIR/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
-  echo $! > ~/.recordingpid
-  updateicon "🎥"
+    -f v412 \
+    -i /dev/video0 \
+    -video_size 640x480 \
+    "$OUTDIR/webcam-$(date '+%y%m%d-%H%M-%S').mkv" &
+    echo $! > ~/.recordingpid
+    updateicon "🎥"
 }
 
 
 audio() { \
-  ffmpeg \
-  -f alsa -i default \
-  -c:a flac \
-  "$OUTDIR/audio-$(date '+%y%m%d-%H%M-%S').flac" &
-  echo $! > ~/.recordingpid
-  updateicon "🎙️"
+    ffmpeg \
+    -f alsa -i default \
+    -c:a flac \
+    "$OUTDIR/audio-$(date '+%y%m%d-%H%M-%S').flac" &
+    echo $! > ~/.recordingpid
+    updateicon "🎙️"
 }
 
 askrecording() { \
-  choice=$(printf "screencast\\nvideo\\naudio\\nwebcam\\nwebcam (hi-def)" | $DMENU -p "Select recording style:")
-  case "$choice" in
-    screencast) screencast;;
-    audio) audio;;
-    video) video;;
-    webcam) webcamrecord;;
-    "webcam (hi-def)") webcamrecord;;
-  esac
+    choice=$(printf "screencast\\nvideo\\naudio\\nwebcam\\nwebcam (hi-def)" | $DMENU -p "Select recording style:")
+    case "$choice" in
+        screencast) screencast;;
+        audio) audio;;
+        video) video;;
+        webcam) webcamrecord;;
+        "webcam (hi-def)") webcamrecord;;
+    esac
 }
 
 asktoend() { \
-  response=$(printf "No\\nYes" | $DMENU -p "Recording still active. End recording?") &&
-  [ "$response" = "Yes" ] &&  killrecording
+    response=$(printf "No\\nYes" | $DMENU -p "Recording still active. End recording?") &&
+    [ "$response" = "Yes" ] &&  killrecording
 }
 
 
 case "$1" in
-  screencast) screencast;;
-  audio) audio;;
-  video) video;;
-  kill) killrecording;;
-  *) ([ -f ~/.recordingpid ] && asktoend && exit) || askrecording;;
+    screencast) screencast;;
+    audio) audio;;
+    video) video;;
+    kill) killrecording;;
+    *) ([ -f ~/.recordingpid ] && asktoend && exit) || askrecording;;
 esac

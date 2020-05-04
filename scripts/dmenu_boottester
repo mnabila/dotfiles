@@ -39,24 +39,24 @@ DMENU="dmenu $@"
 choice=$(echo -e "File Iso\nFlashDrive" | $DMENU -p Bootable)
 
 function file_iso(){
-  file=$(find /mnt/data/Sistem\ Operasi -iname '*.iso'|$DMENU -p "File Iso")
-  if [[ -f $file ]] ; then
-    ram=$(echo -e "64\n128\n512\n1024\n2024" | $DMENU -p Ram\ Size)
-    if [[ ! -z $ram ]]; then
-      qemu-system-x86_64 -enable-kvm -boot d -m $ram -cdrom "$file"
+    file=$(find /mnt/data/Sistem\ Operasi -iname '*.iso'|$DMENU -p "File Iso")
+    if [[ -f $file ]] ; then
+        ram=$(echo -e "64\n128\n512\n1024\n2024" | $DMENU -p Ram\ Size)
+        if [[ ! -z $ram ]]; then
+            qemu-system-x86_64 -enable-kvm -boot d -m $ram -cdrom "$file"
+        fi
     fi
-  fi
 }
 function flash_drive(){
-  fd=$(udiskie-info -C -2 -a -o '{ui_label}' | $DMENU | cut -d ":" -f 1)
-  if [[ ! -z $fd ]]; then
-    ram=$(echo -e "64\n128\n512\n1024\n2024" | $DMENU -p Ram\ Size)
-    if [[ ! -z $ram ]]; then
-      pkexec qemu-system-x86_64 -enable-kvm -m $ram -vga std -hda "$fd"
+    fd=$(udiskie-info -C -2 -a -o '{ui_label}' | $DMENU | cut -d ":" -f 1)
+    if [[ ! -z $fd ]]; then
+        ram=$(echo -e "64\n128\n512\n1024\n2024" | $DMENU -p Ram\ Size)
+        if [[ ! -z $ram ]]; then
+            pkexec qemu-system-x86_64 -enable-kvm -m $ram -vga std -hda "$fd"
+        fi
     fi
-  fi
 }
 case "$choice" in
-  "File Iso") file_iso;;
-  "FlashDrive") flash_drive;;
+    "File Iso") file_iso;;
+    "FlashDrive") flash_drive;;
 esac

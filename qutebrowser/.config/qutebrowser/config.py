@@ -200,7 +200,7 @@ c.content.default_encoding = "iso-8859-1"
 # Limit fullscreen to the browser window (does not expand to fill the
 # screen).
 # Type: Bool
-c.content.windowed_fullscreen = False
+c.content.fullscreen.window = False
 
 # Allow websites to share screen content. On Qt < 5.10, a dialog box is
 # always displayed, even if this is set to "true".

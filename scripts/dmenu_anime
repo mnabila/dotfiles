@@ -16,27 +16,27 @@ OPTIONS="Mount Anime\nPlay Anime\nPlay Playlist\nUmount Anime"
 DMENU="dmenu $@"
 
 function mount(){
-  fuseiso -p "$(find ~/Anime/*/* -iname '*.iso'|$DMENU)" /tmp/mount
+    fuseiso -p "$(find ~/Anime/*/* -iname '*.iso'|$DMENU)" /tmp/mount
 }
 
 function umount(){
-  fusermount -u /tmp/iso
+    fusermount -u /tmp/iso
 }
 
 function play(){
-  mpv -vo xv "$(find /tmp/iso/ -iname '*.mkv' -or -iname '*.mp4' | $DMENU)"
+    mpv -vo xv "$(find /tmp/iso/ -iname '*.mkv' -or -iname '*.mp4' | $DMENU)"
 }
 
 function play_playlist(){
-  mpv -vo xv "/tmp/iso/$(ls /tmp/iso/ | $DMENU)"
+    mpv -vo xv "/tmp/iso/$(ls /tmp/iso/ | $DMENU)"
 }
 
 
 case "$(echo -e $OPTIONS|$DMENU)" in
-  "Mount Anime")  mount;;
-  "Play Anime")  play;;
-  "Play Playlist")  play_playlist;;
-  "Umount Anime")  umount;;
-  * )             echo "Perintah tidak tersedia"
-    exit 2
+    "Mount Anime")  mount;;
+    "Play Anime")  play;;
+    "Play Playlist")  play_playlist;;
+    "Umount Anime")  umount;;
+    * )             echo "Perintah tidak tersedia"
+        exit 2
 esac

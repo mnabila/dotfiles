@@ -25,9 +25,9 @@ d_album() {
             printf '%s\n' "$all_name"
             printf '%s\n' "${albums[@]}" | sort -f
         } | $launcher -p album "${dmenu_args[@]}"
-    else
-        # We only have one album, so just use that.
-        printf '%s\n' "${albums[0]}"
+else
+    # We only have one album, so just use that.
+    printf '%s\n' "${albums[0]}"
     fi
 }
 
@@ -72,8 +72,8 @@ case "$mode" in
         fi
 
         mpc play >/dev/null 2>&1
-    ;;
+        ;;
     playlist)
         mpc play "$(d_playlist)"
-    ;;
+        ;;
 esac

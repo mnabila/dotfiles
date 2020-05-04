@@ -16,24 +16,24 @@ option=`echo -e $OPTIONS | dmenu "$@" -p Session | awk '{print $1}' | tr -d '\r\
 if [ ${#option} -gt 0 ]
 then
     case $option in
-      Logout)
-        i3-msg exit
-        ;;
-      Reboot)
-        systemctl reboot
-        ;;
-      Poweroff)
-        systemctl poweroff
-        ;;
-      Suspend)
-        $($USE_LOCKER) && "$LOCKER"; systemctl suspend
-        # systemctl suspend
-        ;;
-      Hibernate)
-        $($USE_LOCKER) && "$LOCKER"; systemctl hibernate
-        # systemctl hibernate
-        ;;
-      *)
-        ;;
+        Logout)
+            i3-msg exit
+            ;;
+        Reboot)
+            systemctl reboot
+            ;;
+        Poweroff)
+            systemctl poweroff
+            ;;
+        Suspend)
+            $($USE_LOCKER) && "$LOCKER"; systemctl suspend
+            # systemctl suspend
+            ;;
+        Hibernate)
+            $($USE_LOCKER) && "$LOCKER"; systemctl hibernate
+            # systemctl hibernate
+            ;;
+        *)
+            ;;
     esac
 fi

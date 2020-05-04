@@ -14,16 +14,16 @@ prompt="Todo"
 
 cmd=$(dmenu -l "$height" -p "$prompt" "$@" < "$file")
 while [ -n "$cmd" ]; do
- 	if grep -q "^$cmd\$" "$file"; then
-		grep -v "^$cmd\$" "$file" > "$file.$$"
-		mv "$file.$$" "$file"
+    if grep -q "^$cmd\$" "$file"; then
+        grep -v "^$cmd\$" "$file" > "$file.$$"
+        mv "$file.$$" "$file"
         height=$(( height - 1 ))
- 	else
-		echo "$cmd" >> "$file"
-		height=$(( height + 1 ))
- 	fi
+    else
+        echo "$cmd" >> "$file"
+        height=$(( height + 1 ))
+    fi
 
-	cmd=$(dmenu -l "$height" -p "$prompt" "$@" < "$file")
+    cmd=$(dmenu -l "$height" -p "$prompt" "$@" < "$file")
 done
 
 exit 0

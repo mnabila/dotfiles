@@ -1,57 +1,23 @@
 #!/bin/bash
 
-DMENU='dmenu -x 300 -y 220 -w 800 -fn Iosevka-11 -p Mager -l 5 -i'
-choice=$(echo -e "refresh\nwallpaper\ntouchpad\nconvert\nfile\nscriptedit\nbuku\nrecord\nmonitor\nkill\ndockon\ndockoff\nvim\nsteam\nfceux\nkalkulator\ntelegram\nqutebrowser\ncadence\nolive\nmovie\npavucontrol\nvoltoggle\nvolmax\nvolhalf\nbright30\nbright50\nbright100\nplay\npause\nstop\nnext\nprev\nminimize\nmaximize\nfullscreen\nmpvcontrol\nclose\nscreenshot\nscreenshotarea\nscreenshotdelay\nyoutube\ncompton\nvokoscreen\nlock\nlogout\nreboot\nshutdown\nsuspend" | $DMENU)
+DMENU="dmenu -p Mager $@"
+choice=$(echo -e "anime\naria2\nboottester\nkill\nmonitor\nmpdmenu\npass\npower\nqutebrowser\nrecord\nswitcher\ntodo\nudiskie\nwifi\nwindow\nytview" | $DMENU)
 
 case "$choice" in
-    refresh) i3-msg restart ;;
-    wallpaper) ~/Documents/scripts/gantiscale ;;
-    touchpad) ~/.config/i3/touchpad.sh devonoff ;;
-    convert) ~/Documents/scripts/converthb ;;
-    file) ~/Documents/scripts/dmenu_fm ;;
-    scriptedit) ~/Documents/scripts/confmenu ;;
-    buku) ~/Documents/scripts/books ;;
-    record) ~/Documents/scripts/dmenurecord ;;
-    monitor) ~/Documents/scripts/dmenu_display ;;
-    kill) ~/Documents/scripts/dmenu-kill-process ;;
-    dockon) ~/Documents/scripts/killdock on >/dev/null 2>&1 & ;;
-    dockoff) ~/Documents/scripts/killdock off >/dev/null 2>&1 & ;;
-    vim) xterm -e vim ;;
-    steam) steam ;;
-    fceux) ~/Documents/scripts/emu ;;
-    kalkulator) ~/Documents/scripts/itung ;;
-    telegram) telegram-desktop ;;
-    qutebrowser) qutebrowser ;;
-    cadence) cadence ;;
-    olive) olive-editor ;;
-    movie) ~/Documents/scripts/film ;;
-    pavucontrol) pavucontrol-qt ;;
-    voltoggle) pamixer --toggle-mute ;;
-    volmax) pamixer --set-volume 100 ;;
-    volhalf) pamixer --set-volume 50 ;;
-    bright30) xbacklight -set 30 ;;
-    bright50) xbacklight -set 50 ;;
-    bright100) xbacklight -set 100 ;;
-    play) mpc play ;;
-    pause) mpc toggle ;;
-    stop) mpc stop ;;
-    next) mpc next ;;
-    prev) mpc prev ;;
-    minimize) i3-msg move scratchpad ;;
-    maximize) ~/Documents/scripts/hide ;;
-    close) i3-msg kill & ;;
-    fullscreen) i3-msg fullscreen ;;
-    mpvcontrol) echo cycle pause | socat - ~/.config/mpv/socket ;;
-    screenshot) ~/Documents/scripts/screenshot.sh & ;;
-    screenshotarea) ~/Documents/scripts/screenshot.sh -s & ;;
-    screenshotdelay) ~/Documents/scripts/scrots & ;;
-    youtube) ~/Documents/scripts/ytplay & ;;
-    compton) ~/Documents/scripts/compton-toggle.sh & ;;
-    vokoscreen) vokoscreen & ;;
-    lock) betterlockscreen -l & ;;
-    logout) i3-msg exit & ;;
-    reboot) exec systemctl reboot & ;;
-    shutdown) exec systemctl -i poweroff & ;;
-    suspend) exec systemctl suspend & ;;
+anime) dmenu_anime "$@";;
+aria2) dmenu_aria2 "$@" ;;
+boottester) dmenu_boottester "$@" ;;
+kill) dmenu_kill "$@" ;;
+monitor) dmenu_monitor "$@" ;;
+mpdmenu) dmenu_mpdmenu "$@" ;;
+pass) dmenu_pass -p "Pass Man" "$@" ;;
+power) dmenu_power "$@" ;;
+qutebrowser) dmenu_qutebrowser "$@" ;;
+record) dmenu_record "$@" ;;
+switcher) dmenu_switcher "$@" ;;
+todo) dmenu_todo "$@" ;;
+udiskie) dmenu_udiskie "$@" ;;
+wifi) dmenu_wifi "$@" ;;
+window) dmenu_window "$@" ;;
+ytview) dmenu_ytview "$@" ;;
 esac
-

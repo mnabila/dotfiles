@@ -1,4 +1,10 @@
 #!/bin/bash
+# File              : dmenu_mager
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Jumat, 15/05/2020 13:12 WIB
+# Last Modified Date: Jumat, 15/05/2020 13:12 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="dmenu -p Mager $@"
 choice=$(echo -e "anime\naria2\nboottester\nkill\nmonitor\nmpdmenu\npass\npower\nqutebrowser\nrecord\nswitcher\ntodo\nudiskie\nwifi\nwindow\nytview" | $DMENU)

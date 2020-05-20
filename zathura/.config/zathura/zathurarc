@@ -59,7 +59,7 @@ set show-h-scrollbar false
 set highlight-transparency "0.8"
 
 # recoloring
-set recolor true
+set recolor false
 set recolor-keephue false
 
 # window title

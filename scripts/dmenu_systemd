@@ -1,0 +1,32 @@
+#!/bin/bash
+# File              : dmenu_systemd
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Rabu, 20/05/2020 15:54 WIB
+# Last Modified Date: Rabu, 20/05/2020 15:54 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
+
+DMENU="dmenu -p Services $@"
+
+systemcontrol() {
+    service=$(ls "$1" | grep "service" | $DMENU)
+    if [[ $service ]]; then
+        action=$(echo -e "Start\nStop\nReload" | $DMENU)
+        case $action in
+            Start) systemctl restart $service ;;
+            Stop) systemctl stop $service ;;
+            Reload) systemctl reload $service ;;
+        esac
+        if [[ $action ]]; then
+            notify-send "Systemd" "$action : $service"
+        else
+            notify-send "Systemd" "No Action : $service"
+        fi
+    fi
+}
+
+main=$(echo -e "System\nUser" | $DMENU)
+case $main in
+    User) systemcontrol /usr/lib/systemd/user ;;
+    System) systemcontrol /usr/lib/systemd/system ;;
+esac

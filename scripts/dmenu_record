@@ -52,14 +52,11 @@ screencast() {
 video() {
     ffmpeg \
         -f x11grab \
+        -framerate 30 \
         -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
         -i :0.0 \
-        -r 30 \
-        -c:v libx264 \
-        -pix_fmt yuv420p \
-        -profile:v high \
-        -crf 18 \
-        -refs 1 \
+        -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
+        -threads 0 \
         "$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv" &
     echo $! >~/.recordingpid
     updateicon "⏺️"

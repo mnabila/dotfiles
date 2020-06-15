@@ -7,15 +7,16 @@
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="dmenu -p Services $@"
+export SUDO_ASKPASS="/home/$USER/Dotfiles/scripts/dmenu_secret"
 
 systemcontrol() {
     service=$(ls "$1" | grep "service" | $DMENU)
     if [[ $service ]]; then
         action=$(echo -e "Start\nStop\nReload" | $DMENU)
         case $action in
-            Start) systemctl restart $service ;;
-            Stop) systemctl stop $service ;;
-            Reload) systemctl reload $service ;;
+            Start) sudo -A systemctl restart $service ;;
+            Stop) sudo -A systemctl stop $service ;;
+            Reload) sudo -A systemctl reload $service ;;
         esac
         if [[ $action ]]; then
             notify-send "Systemd" "$action : $service"

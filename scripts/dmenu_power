@@ -6,7 +6,7 @@
 
 # 2016 Oliver Kraitschy - http://okraits.de
 
-OPTIONS="Logout\nReboot\nPoweroff\nSuspend\nHibernate"
+OPTIONS="Logout\nSuspend\nReboot\nPoweroff\nHibernate"
 
 # source configuration or use default values
 USE_LOCKER="true"
@@ -26,12 +26,12 @@ then
             systemctl poweroff
             ;;
         Suspend)
-            $($USE_LOCKER) && "$LOCKER"; systemctl suspend
-            # systemctl suspend
+            # $($USE_LOCKER) && "$LOCKER"; systemctl suspend
+            systemctl suspend
             ;;
         Hibernate)
-            $($USE_LOCKER) && "$LOCKER"; systemctl hibernate
-            # systemctl hibernate
+            # $($USE_LOCKER) && "$LOCKER"; systemctl hibernate
+            systemctl hibernate
             ;;
         *)
             ;;

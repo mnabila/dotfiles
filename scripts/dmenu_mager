@@ -7,7 +7,7 @@
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="dmenu -p Mager $@"
-choice=$(echo -e "anime\naria2\nboottester\nkill\nmonitor\nmpdmenu\npass\npower\nqutebrowser\nrecord\nswitcher\ntodo\nudiskie\nwifi\nwindow\nytview" | $DMENU)
+choice=$(echo -e "anime\naria2\nboottester\nkill\nmonitor\nmpdmenu\npass\npower\nqutebrowser\nrecord\nswitcher\nsystemd\ntodo\nudiskie\nwifi\nwindow\nytview " | sort | $DMENU)
 
 case "$choice" in
 anime) dmenu_anime "$@";;
@@ -21,6 +21,7 @@ power) dmenu_power "$@" ;;
 qutebrowser) dmenu_qutebrowser "$@" ;;
 record) dmenu_record "$@" ;;
 switcher) dmenu_switcher "$@" ;;
+systemd) dmenu_systemd "$@" ;;
 todo) dmenu_todo "$@" ;;
 udiskie) dmenu_udiskie "$@" ;;
 wifi) dmenu_wifi "$@" ;;

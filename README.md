@@ -9,6 +9,7 @@
 ```
 
 # Dotfiles
+
 ![GitHub](https://img.shields.io/github/license/mnabila/dotfiles?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mnabila/dotfiles?label=Dotfiles%20Size&style=for-the-badge)
 
@@ -33,11 +34,11 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 |         Item          | Value                                           |
 | :-------------------: | :---------------------------------------------- |
 |          OS           | ArchLinux                                       |
-|          WM           | i3-gaps                                         |
+|          WM           | i3-gaps, bspwm                                  |
 |         Shell         | zsh _([zimfw](https://github.com/zimfw/zimfw))_ |
 |          DM           | lightdm, SLIM                                   |
 |         Font          | iosevka, iosevka nerd font                      |
-|      Compositor       | picom(compton fork)                             |
+|      Compositor       | picom(compton fork),xcompmgr                    |
 |     Notification      | dunst                                           |
 |       Terminal        | urxvt, Termite, Suckless terminal               |
 |       Launcher        | rofi, dmenu, jgmenu, j4-dmenu-desktop           |
@@ -56,6 +57,10 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 
 ![i3gaps](https://github.com/mnabila/dotfiles/blob/master/screenshot/i3gaps-2.png?raw=true)
 ![i3gaps workflow](https://github.com/mnabila/dotfiles/blob/master/screenshot/i3gaps-workflow-2.png?raw=true)
+
+#### bspwm
+
+![bspwm](https://github.com/mnabila/dotfiles/blob/master/screenshot/bspwm.png?raw=true)
 
 #### tmux
 
@@ -167,5 +172,6 @@ $ stow tmux
 Begitulah sedikit tutorial dari pemilik dotfiles
 
 # Perlu Dukun ?
+
 - [Telegram - mnabila](https://t.me/mnabila)
 - [Twitter - nbl_adani](https://twitter.com/nbl_adani)

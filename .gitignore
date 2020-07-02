@@ -11,4 +11,3 @@ newsboat/.config/newsboat/history.search
 qutebrowser/.config/qutebrowser/autoconfig.yml
 tmux/.tmux/resurrect/*
 mpdscribble
-bspwm

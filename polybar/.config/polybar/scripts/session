@@ -10,13 +10,13 @@ trap "rm -f ${config_file}" EXIT
 cat <<'EOF' >${config_file}
 tint2_look          = 0
 terminal_exec       = termite
-#columns             = 1
+#columns            = 1
 
 menu_margin_x       = 5
 menu_margin_y       = 25
-#menu_width          = 200
-#menu_height_min     = 0
-#menu_height_max     = 0
+#menu_width         = 200
+#menu_height_min    = 0
+#menu_height_max    = 0
 menu_height_mode    = static
 menu_padding_top    = 5
 menu_padding_right  = 5

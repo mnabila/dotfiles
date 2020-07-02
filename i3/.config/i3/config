@@ -376,7 +376,7 @@ bindsym Shift+Print exec --no-startup-id flameshot full -p "$HOME/Pictures/scree
 
 # Clipmenu
 bindsym $mod+p exec --no-startup-id clipmenu -w 800 -x 300 -y 220 -i -p "Clip"
-bindsym $mod+Shift+p exec --no-startup-id "clipdel -d '.*'; pkill -9 clipmenud; pkill -9 clipnotify; clipmenud"
+bindsym $mod+Shift+p exec --no-startup-id "notify-send 'Clipmenu' 'Clipboard Empty'; clipdel -d '.*'; pkill -9 clipmenud; pkill -9 clipnotify; clipmenud"
 
 # Restart, Suspend, Shutdown, Logout Dialog
 bindsym $mod+End exec --no-startup-id dmenu_power -w 800 -x 300 -y 220 -i -l 10
@@ -434,12 +434,13 @@ bindsym $mod+Home exec --no-startup-id dmenu_record
 # dmenu_pass
 bindsym $mod+Shift+BackSpace exec --no-startup-id dmenu_pass -w 800 -x 300 -y 220 -p "Pass Man" -i -l 10
 bindsym $mod+BackSpace exec --no-startup-id notify-send -i ~/Dotfiles/icons/gruvbox/lock.png "Pass Man" "Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)"
+bindsym $mod+Ctrl+BackSpace exec --no-startup-id pwclip
 
 # dmenu_mager
-bindsym $mod+shift+m exec --no-startup-id dmenu_mager -w 800 -x 300 -y 220 -i -l 10
+bindsym $mod+Menu exec --no-startup-id dmenu_mager -w 800 -x 300 -y 220 -i -l 10
 
 # dmenu_systemd
-bindsym $mod+F1 exec --no-startup-id dmenu_systemd -w 800 -x 300 -y 220 -i -l 10
+bindsym $mod+F1 exec --no-startup-id dmenu_systemd -w 450 -x 450 -y 220 -i -l 10
 
 # dmenu_udiskie
 bindsym $mod+F2 exec --no-startup-id dmenu_udiskie -w 800 -x 300 -y 220 -p "Storage" -i -l 10
@@ -553,5 +554,5 @@ exec --no-startup-id light -S 30
 exec --no-startup-id $HOME/.config/polybar/launch.sh start
 exec --no-startup-id viper start
 
-# exec_always killall -9 picom; picom --dbus -b
+exec_always killall -9 xcompmgr; xcompmgr
 exec_always feh --bg-scale "$HOME/Pictures/diy/vim-abu.png"

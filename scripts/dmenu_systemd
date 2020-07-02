@@ -11,13 +11,22 @@ export SUDO_ASKPASS="/home/$USER/Dotfiles/scripts/dmenu_secret"
 
 systemcontrol() {
     service=$(ls "$1" | grep "service" | $DMENU)
+    option=$(echo "$1" | cut -d "/" -f 5)
     if [[ $service ]]; then
         action=$(echo -e "Start\nStop\nReload" | $DMENU)
-        case $action in
+        if [[ $option == "system" ]]; then
+            case $action in
             Start) sudo -A systemctl restart $service ;;
             Stop) sudo -A systemctl stop $service ;;
             Reload) sudo -A systemctl reload $service ;;
-        esac
+            esac
+        else
+            case $action in
+            Start) systemctl --user restart $service ;;
+            Stop) systemctl --user stop $service ;;
+            Reload) systemctl --user reload $service ;;
+            esac
+        fi
         if [[ $action ]]; then
             notify-send "Systemd" "$action : $service"
         else
@@ -28,6 +37,6 @@ systemcontrol() {
 
 main=$(echo -e "System\nUser" | $DMENU)
 case $main in
-    User) systemcontrol /usr/lib/systemd/user ;;
-    System) systemcontrol /usr/lib/systemd/system ;;
+User) systemcontrol /usr/lib/systemd/user ;;
+System) systemcontrol /usr/lib/systemd/system ;;
 esac

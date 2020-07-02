@@ -29,12 +29,12 @@ function start() {
   set_env_vars
   if type "xrandr"; then
     for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-      MONITOR=$m polybar --reload -c $HOME/.config/polybar/config.ini bottom &
-      MONITOR=$m polybar --reload -c $HOME/.config/polybar/config.ini systray &
+      MONITOR=$m polybar --reload -c $HOME/.config/polybar/config.ini bspwmBottom &
+      MONITOR=$m polybar --reload -c $HOME/.config/polybar/config.ini bspwmTop &
     done
   else
-    polybar --reload botton &
-    polybar --reload systray &
+    polybar --reload bspwmBottom &
+    polybar --reload bspwmTop &
   fi
 }
 

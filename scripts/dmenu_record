@@ -24,7 +24,7 @@ killrecording() {
     if [[ -f ~/.recordingpid ]]; then
         recpid="$(cat ~/.recordingpid)"
         # kill with SIGTERM, allowing finishing touches.
-        kill -9 "$recpid"
+        kill "$recpid"
         rm -f ~/.recordingpid
         updateicon ""
         pkill -RTMIN+9 i3blocks
@@ -57,7 +57,7 @@ video() {
         -i :0.0 \
         -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
         -threads 0 \
-        "$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv" &
+        "$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mp4" &
     echo $! >~/.recordingpid
     updateicon "⏺️"
 }

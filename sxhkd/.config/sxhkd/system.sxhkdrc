@@ -1,0 +1,58 @@
+#
+# wm independent hotkeys
+#
+
+# make sxhkd reload its configuration files:
+super + Escape
+    sxhkdrcgen;notify-send "sxhkd" "restart sxhkd"
+
+# terminal emulator
+super + Return
+    st
+
+# program launcher
+super + d
+    j4-dmenu-desktop --dmenu="dmenu -fn Iosevka-11 -nb '#282828' -nf '#ebdbb2' -sb '#d79921' -w 800 -x 300 -y 220 -p Apps -i -l 10"
+super + shift + d
+    dmenu_run -w 800 -x 300 -y 220 -p "Run" -i -l 10 
+
+# audio control
+{XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute}
+    amixer set Master {5%+, 5%-, toggle}
+
+# brightness controls
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+    light -{A,U} 5
+
+# take screenshot
+{_, shift} + Print
+    flameshot {gui, full -p "$HOME/Pictures/screenshot"}
+
+# cliboard manager
+super + {_, shift + } Menu
+    {clipmenu -w 800 -x 300 -y 220 -i -p "Clip", notify-send "Clipmenu" "Clipboard Empty"; clipdel -d ".*"; pkill -9 clipmenud; pkill -9 clipnotify; clipmenud}
+
+# multi monitor setup
+super + {_, shift + } F5
+    {dmenu_monitor -w 800 -x 300 -y 220 -i -l 10, arandr}
+
+# sleep
+XF86Sleep
+    systemctl suspend
+
+# enable/disable touchpad
+super + {_,shift + } F9
+    xinput {--disable, --enable} "SynPS/2 Synaptics TouchPad"
+
+# passman
+super + BackSpace
+    notify-send -i ~/Dotfiles/icons/gruvbox/lock.png "Pass Man" "Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)"
+super + ctrl + BackSpace
+    pwclip
+super + shift + BackSpace
+    dmenu_pass -w 800 -x 300 -y 220 -p "Pass Man" -i -l 10
+
+# network manager
+super + {_, shift + } F8
+    {dmenu_wifi -w 400 -x 450 -y 220 -i -l 10, nm-connection-editor}
+

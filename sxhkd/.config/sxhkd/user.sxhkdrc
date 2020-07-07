@@ -8,8 +8,10 @@ super + End
 super + space
     dmenu_mager -w 800 -x 300 -y 220 -i -l 10
 super + F1
-    dmenu_systemd -w 800 -x 300 -y 220 -i -l 10
+    dmenu_sxhkd -w 800 -x 300 -y 220 -i -l 10
 super + F2
+    dmenu_systemd -w 800 -x 300 -y 220 -i -l 10
+super + F3
     dmenu_udiskie -w 800 -x 300 -y 220 -p 'Storage' -i -l 10
 super + F10
     dmenu_todo -w 800 -x 300 -y 220 -i -l 10
@@ -34,5 +36,5 @@ super + ctrl + Pause
     viper restart 
 
 # polybar 
-super + n
-    ~/.config/polybar/scripts/systray
+super + {_,shift +} n
+    {~/.config/polybar/scripts/systray, polybar-msg cmd toggle;bspc config top_padding 0;bspc config bottom_padding 0 }

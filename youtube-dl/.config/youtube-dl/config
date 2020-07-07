@@ -1,20 +1,28 @@
 #
-## Download Options
-# --external-downloader aria2c
+# Download Options
+#
+--external-downloader aria2c
 
 #
-## Video Format Options
+# Video Format Options
 #
 --format bestvideo[height=720][ext=mp4]+bestaudio[ext=m4a]
---merge-output-format mp4
+--merge-output-format mkv
+--youtube-skip-dash-manifest
 
 #
-## Filesystem Options
+# Filesystem Options
 #
 --output %(title)s.%(ext)s
 
+
 #
-## Post-processing Options:
+# Subtitle Options:
+#
+--write-auto-sub
+
+#
+# Post-processing Options:
 #
 --audio-format m4a
 --audio-quality 0

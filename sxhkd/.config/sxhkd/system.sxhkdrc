@@ -8,7 +8,8 @@ super + Escape
 
 # terminal emulator
 super + Return
-    st
+    env LIBGL_ALWAYS_SOFTWARE=1 alacritty
+
 
 # program launcher
 super + d

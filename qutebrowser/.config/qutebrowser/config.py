@@ -6,8 +6,6 @@
 # Uncomment this to still load settings configured via autoconfig.yml
 # config.load_autoconfig()
 
-import sys
-import os
 from xresources import read_xresources
 
 xresources = read_xresources("*")
@@ -275,9 +273,18 @@ c.content.host_blocking.enabled = True
 # exists.
 # Type: List of Url
 c.content.host_blocking.lists = [
-    "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
-    "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
+    "http://sysctl.org/cameleon/hosts",
+    "http://winhelp2002.mvps.org/hosts.txt",
+    "https://block.energized.pro/basic/formats/domains.txt",
+    "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+    "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts",
+    "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts_without_controversies.txt",
+    "https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hosts-VN",
+    "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
+    "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/hostnames.txt",
+    "https://raw.githubusercontent.com/tiuxo/hosts/master/ads",
     "https://www.malwaredomainlist.com/hostslist/hosts.txt",
+    "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts",
 ]
 
 # A list of patterns that should always be loaded, despite being ad-
@@ -288,7 +295,24 @@ c.content.host_blocking.lists = [
 # setting with a URL pattern instead. Local domains are always exempt
 # from hostblocking.
 # Type: List of UrlPattern
-c.content.host_blocking.whitelist = []
+c.content.host_blocking.whitelist = [
+    "*.redd.it",
+    "*.reddit.com",
+    "*.redditmedia.com",
+    "*.reddituploads.com",
+    "amp-reddit-com.cdn.ampproject.org",
+    "reddit-image.s3.amazonaws.com",
+    "reddit-securepage-3jk3gjh56lk4hklh2jhh34hjbsdbn345bnsdf.securecoin.icu",
+    "reddit-stream.com",
+    "reddit-uploaded-media.s3-accelerate.amazonaws.com",
+    "reddit-uploaded-video.s3-accelerate.amazonaws.com",
+    "reddit.map.fastly.net",
+    "redditgifts.com",
+    "redditgifts.s3.amazonaws.com",
+    "redditmercy.duckdns.org",
+    "rereddit.com",
+    "static.redditgifts.com",
+]
 
 # Enable hyperlink auditing (`<a ping>`).
 # Type: Bool
@@ -1616,3 +1640,7 @@ c.bindings.key_mappings = {
 config.bind("gh", "home", "normal")
 config.bind("<Ctrl-Shift-J>", "tab-move +", "normal")
 config.bind("<Ctrl-Shift-K>", "tab-move -", "normal")
+config.bind("zl", "spawn --userscript qute-pass -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")
+config.bind("zul", "spawn --userscript qute-pass -e -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")
+config.bind("zpl", "spawn --userscript qute-pass -w -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")
+config.bind("zol", "spawn --userscript qute-pass -o -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")

@@ -1,9 +1,19 @@
-from __future__ import (absolute_import, division, print_function)
+from __future__ import absolute_import, division, print_function
 
 from ranger.gui.colorscheme import ColorScheme
 from ranger.gui.color import (
-    black, blue, cyan, green, magenta, red, white, yellow, default,
-    normal, bold, reverse,
+    black,
+    blue,
+    cyan,
+    green,
+    magenta,
+    red,
+    white,
+    yellow,
+    default,
+    normal,
+    bold,
+    reverse,
     default_colors,
 )
 
@@ -11,7 +21,8 @@ from ranger.gui.color import (
 class Default(ColorScheme):
     progress_bar_color = blue
 
-    def use(self, context):  # pylint: disable=too-many-branches,too-many-statements
+    # pylint: disable=too-many-branches,too-many-statements
+    def use(self, context):
         fg, bg, attr = default_colors
 
         if context.reset:
@@ -25,7 +36,7 @@ class Default(ColorScheme):
             if context.empty or context.error:
                 bg = red
             if context.border:
-                fg = 237
+                fg = white
             if context.media:
                 if context.image:
                     fg = yellow
@@ -36,9 +47,9 @@ class Default(ColorScheme):
             if context.directory:
                 attr |= bold
                 fg = blue
-            elif context.executable and not \
-                    any((context.media, context.container,
-                         context.fifo, context.socket)):
+            elif context.executable and not any(
+                (context.media, context.container, context.fifo, context.socket)
+            ):
                 attr |= bold
                 fg = green
             if context.socket:

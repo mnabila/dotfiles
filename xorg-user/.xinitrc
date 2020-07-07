@@ -15,6 +15,9 @@ fi
 # Load .xprofile
 [ -f ~/.profile ] && . ~/.profile
 
+# set cursor
+xsetroot -cursor_name left_ptr
+
 # Untuk SLiM Session
 DEFAULTSESSION=i3-with-shmlog
 case "$1" in
@@ -23,6 +26,8 @@ case "$1" in
     i3) exec i3 ;;
     i3-with-shmlog) exec i3-with-shmlog ;;
     sway) exec sway ;;
+    instantwm) exec instantwm ;;
+    bspwm) exec bspwm ;;
     *) exec $DEFAULTSESSION ;;
 esac
 

@@ -68,6 +68,14 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
 
+# focus or send to the next desktop
+super + brace{left,right}
+    bspc node -d {prev,next}
+
+# toggle horizontal and vertical split in tiled window
+super + r
+    bspc node @parent -R 90
+
 #
 # preselect
 #

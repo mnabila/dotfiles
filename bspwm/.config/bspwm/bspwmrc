@@ -10,7 +10,8 @@ $HOME/.config/bspwm/autostart
 #
 # Workspace
 #
-bspc monitor -d 1 2 3 4 5
+bspc monitor LVDS-1 -d 1 2 3 4 5
+bspc monitor VGA-1 -d 6 7 8 9 10
 
 
 #
@@ -28,10 +29,10 @@ bspc config left_padding   0
 # User Interface
 #
 bspc config split_ratio               0.50
-bspc config borderless_monocle        true
+bspc config borderless_monocle        false
 bspc config gapless_monocle           true
 bspc config focus_follows_pointer     true
-bspc config pointer_follows_focus     true
+bspc config pointer_follows_focus     false
 bspc config pointer_follows_monitor   true
 bspc config ignore_ewmh_fullscreen    all
 bspc config ignore_ewmh_focus         false
@@ -44,3 +45,4 @@ bspc config focused_border_color      "#d79921"
 # Window Rules
 #
 bspc rule -a Screenkey manage=off
+bspc rule -a key-mon manage=off

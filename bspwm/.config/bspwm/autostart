@@ -7,14 +7,15 @@ function bsprun() {
 }
 
 sxhkdrcgen &
-bsprun exec xautolock -time 15 -locker "slimlock;gpg-connect-agent reloadagent /bye" &
-bsprun lxpolkit &
-bsprun xfce4-power-manager &
-bsprun light -S 30 &
-bsprun udiskie &
-bsprun clipmenud &
-bsprun jgmenu &
-bsprun viper start &
-bsprun ~/.config/polybar/launch.sh start &
-bsprun xcompmgr &
+bsprun exec xautolock -time 15 -locker "slimlock;gpg-connect-agent reloadagent /bye"
+bsprun lxpolkit
+bsprun xfce4-power-manager
+bsprun light -S 30
+bsprun udiskie
+bsprun clipmenud
+bsprun jgmenu
+bsprun viper start
+bsprun ~/.config/polybar/launch.sh start
+bsprun xcompmgr
+bsprun conky -c ~/.config/conky/todolist.conkyrc
 feh --bg-scale ~/Pictures/diy/vim.png &

@@ -19,7 +19,7 @@ while [ -n "$cmd" ]; do
         mv "$file.$$" "$file"
         height=$(( height - 1 ))
     else
-        echo "$cmd" >> "$file"
+        echo " $cmd" >> "$file"
         height=$(( height + 1 ))
     fi
 

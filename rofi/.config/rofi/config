@@ -1,20 +1,16 @@
 !!! Rofi config file !!!
-rofi.lines                : 12
-rofi.font                 : Iosevka 12
-rofi.fake-transparency    : true
-rofi.show-icons           : false
-rofi.theme                : ~/.config/rofi/theme/gruvbox.rasi
-rofi.display-window       : Window:
-rofi.display-drun         : Apps:
-rofi.display-run          : Run:
-rofi.display-keys         : key:
-rofi.sidebar-mode         : false
-rofi.modi                 : drun,run,keys
-rofi.show                 : drun
-rofi.drun-match-fields    : name
-rofi.window-match-fields  : name
-rofi.columns              : 1
-rofi.width                : 800
-rofi.columns              : 1
-rofi.terminal             : st
-!rofi.pid                  : /tmp/rofi.pid
+rofi.lines:               5
+rofi.font:                Iosevka Nerd Font 11
+rofi.fake-transparency:   true
+rofi.theme:               ~/.config/rofi/themes/gruvbox.rasi
+rofi.show-icons:          false
+rofi.display-window:      Window
+rofi.sidebar-mode:        false
+rofi.modi:                drun,run,keys
+rofi.drun-match-fields:   name
+rofi.window-match-fields: name
+rofi.columns:             1
+rofi.width:               600
+rofi.columns:             1
+rofi.terminal:            alacritty
+rofi.pid:                 /tmp/rofi.pid

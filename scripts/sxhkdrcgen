@@ -2,4 +2,4 @@
 
 cat ~/.config/sxhkd/*.sxhkdrc | tee /tmp/sxhkdrc
 killall -9 sxhkd
-sxhkd -c /tmp/sxhkdrc
+sxhkd -c /tmp/sxhkdrc &

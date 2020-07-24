@@ -43,7 +43,7 @@ conky.config = {
   default_outline_color = '#000000',
   draw_borders = false, --draw borders around text
   draw_graph_borders = true,
-  draw_shades = true,
+  draw_shades = false,
   draw_outline = false,
   stippled_borders = 0,
 

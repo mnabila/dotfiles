@@ -6,8 +6,8 @@
 #
 # Video Format Options
 #
---format bestvideo[height=720][ext=mp4]+bestaudio[ext=m4a]
---merge-output-format mkv
+--format best[height=720]
+--merge-output-format mp4
 --youtube-skip-dash-manifest
 
 #

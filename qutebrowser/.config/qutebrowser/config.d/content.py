@@ -211,13 +211,32 @@ c.content.local_content_can_access_file_urls = True
 # Type: Bool
 c.content.local_storage = True
 
-# Allow websites to record audio/video.
+# Allow websites to record audio.
+# This setting supports URL patterns.
 # Type: BoolAsk
 # Valid values:
 #   - true
 #   - false
 #   - ask
-c.content.media_capture = "ask"
+c.content.media.audio_capture = "ask"
+
+# Allow websites to record audio and video.
+# This setting supports URL patterns.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+c.content.media.audio_video_capture = "ask"
+
+# Allow websites to record video.
+# This setting supports URL patterns.
+# Type: BoolAsk
+# Valid values:
+#   - true
+#   - false
+#   - ask
+c.content.media.video_capture = "ask"
 
 # Netrc-file for HTTP authentication. If unset, `~/.netrc` is used.
 # Type: File

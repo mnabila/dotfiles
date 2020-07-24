@@ -23,3 +23,7 @@ config.bind("zl", "spawn --userscript qute-pass -d 'dmenu -w 800 -x 300 -y 220 -
 config.bind("zul", "spawn --userscript qute-pass -e -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")
 config.bind("zpl", "spawn --userscript qute-pass -w -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")
 config.bind("zol", "spawn --userscript qute-pass -o -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")
+config.bind(",y3", "hint links spawn mpv --ytdl-format='best[height=360]' {hint-url}", "normal")
+config.bind(",y4", "hint links spawn mpv --ytdl-format='best[height=480]' {hint-url}", "normal")
+config.bind(",y7", "hint links spawn mpv --ytdl-format='best[height=720]' {hint-url}", "normal")
+config.bind(",y10", "hint links spawn mpv --ytdl-format='best[height=1080]' {hint-url}", "normal")

@@ -19,7 +19,7 @@ c.aliases = {
 #   - multiple-tabs: Show a confirmation if multiple tabs are opened.
 #   - downloads: Show a confirmation if downloads are running
 #   - never: Never show a confirmation.
-c.confirm_quit = ["never"]
+c.confirm_quit = ["downloads"]
 
 # Maximum time (in minutes) between two history items for them to be
 # considered being from the same browsing session. Items with less time
@@ -261,10 +261,9 @@ c.input.links_included_in_focus_chain = True
 # Type: Int
 c.input.partial_timeout = 5000
 
-# Enable Opera-like mouse rocker gestures. This disables the context
-# menu.
+# Enable Opera-like mouse rocker gestures. This disables the context menu.
 # Type: Bool
-c.input.rocker_gestures = False
+c.input.mouse.rocker_gestures = False
 
 # Enable spatial navigation. Spatial navigation consists in the ability
 # to navigate between focusable elements in a Web page, such as
@@ -364,11 +363,11 @@ c.scrolling.smooth = False
 #   - tr-TR: Turkish (Turkey)
 #   - uk-UA: Ukrainian (Ukraine)
 #   - vi-VN: Vietnamese (Viet Nam)
-c.spellcheck.languages = []
+c.spellcheck.languages = ["id-ID", "en-US"]
 
-# Hide the statusbar unless a message is shown.
-# Type: Bool
-c.statusbar.hide = False
+# When to show the statusbar.
+# Type: String
+c.statusbar.show = "always"
 
 # Padding (in pixels) for the statusbar.
 # Type: Padding

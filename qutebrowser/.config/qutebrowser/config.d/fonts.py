@@ -47,9 +47,13 @@ c.fonts.prompts = "10pt sans-serif"
 # Type: Font
 c.fonts.statusbar = "10pt Iosevka"
 
-# Font used in the tab bar.
+# Font used for selected tabs.
 # Type: QtFont
-c.fonts.tabs = "10pt Iosevka"
+c.fonts.tabs.selected = "10pt Iosevka"
+
+# Font used for unselected tabs.
+# Type: QtFont
+c.fonts.tabs.unselected = "10pt Iosevka"
 
 # Font family for standard fonts.
 # Type: FontFamily

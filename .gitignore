@@ -1,13 +1,14 @@
-**/*.db
 **/*.dat
+**/*.db
 **/*.log
 **/*.pid
 **/__pycache__/*
 **/api.json
 **/qsettings
+**/watch_later/*
 mpd/.config/mpd/mpdstate
+mpdscribble
 newsboat/.config/newsboat/history.cmdline
 newsboat/.config/newsboat/history.search
 qutebrowser/.config/qutebrowser/autoconfig.yml
 tmux/.tmux/resurrect/*
-mpdscribble

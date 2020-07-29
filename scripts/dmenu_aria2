@@ -11,7 +11,8 @@
 # 1. aria2p (https://github.com/pawamoy/aria2p)
 # 2. clipmenu (https://github.com/cdown/clipmenu)
 
-url=$(cat /tmp/clipmenu/*/line_cache | sort -r | cut -c 21- | grep -Po '(http|https|ftp|ftps):\/\/\w.+' | dmenu -p Aria2 "$@")
+DMENU="rofi -dmenu -i -p Download $@"
+url=$(cat /tmp/clipmenu/*/line_cache | sort -r | cut -c 21- | grep -Po '(http|https|ftp|ftps):\/\/\w.+' | $DMENU)
 # url=$(clipdel '^http[s]:\/\/.*' | sort -r | dmenu -p Aria2 "$@")
 if [[ ! -z $url ]]; then
     notify-send "Aria2 | Downloading" "$url" -u normal

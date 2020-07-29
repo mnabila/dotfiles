@@ -97,7 +97,7 @@ function gen_entries()
 }
 
 # Call menu
-SEL=$( gen_entries | dmenu -p Monitor "$@" | awk '{print $1}' )
+SEL=$( gen_entries | rofi -dmenu -i -p Monitor "$@" | awk '{print $1}' )
 
 # Call xrandr
 $( ${COMMANDS[$SEL]} )

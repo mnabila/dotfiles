@@ -1,2 +1,2 @@
 #!/bin/sh
-ps -ef | sed 1d | dmenu -p "Task Man" "$@" | awk '{print $2}' | xargs kill -${1:-9} ;
+ps -ef | sed 1d | rofi -dmenu -i -p "Task Man" "$@" | awk '{print $2}' | xargs kill -${1:-9} ;

@@ -12,7 +12,7 @@ OPTIONS="Logout\nSuspend\nReboot\nPoweroff\nHibernate"
 USE_LOCKER="true"
 LOCKER="slimlock"
 
-option=`echo -e $OPTIONS | dmenu "$@" -p Session | awk '{print $1}' | tr -d '\r\n'`
+option=`echo -e $OPTIONS | rofi -dmenu -lines 5 -i -p Session| awk '{print $1}' | tr -d '\r\n'`
 if [ ${#option} -gt 0 ]
 then
     case $option in

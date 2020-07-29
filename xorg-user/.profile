@@ -19,11 +19,11 @@ export TERM=screen-256color
 export TERMINAL=st
 
 # Clipmenu Environment Variables
-export CM_LAUNCHER=dmenu
+export CM_LAUNCHER=rofi
 export CM_DIR=/tmp/clipmenu
 
 # default terminal ranger
-export TERMCMD=st
+export TERMCMD=alacritty
 
 # Path
 export PATH="$PYENV_ROOT/bin:$PATH"

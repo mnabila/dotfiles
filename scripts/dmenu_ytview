@@ -12,14 +12,14 @@
 # 1. youtube-viewer
 
 resolution="144p\n240p\n360p\n480p\n720p\n1080p"
-selected=$(echo -e "$resolution" | dmenu -p YouTube "$@")
+selected=$(echo -e "$resolution" | rofi -dmenu -i -p YouTube -lines 6 $@)
 url="$(xclip -selection clipboard -o | cut -d '&' -f 1)"
 
 case "$selected" in
-    144p ) youtube-viewer --resolution 144p $url;;
-    240p ) youtube-viewer --resolution 240p $url;;
-    360p ) youtube-viewer --resolution 360p $url;;
-    480p ) youtube-viewer --resolution 480p $url;;
-    720p ) youtube-viewer --resolution 720p $url;;
-    1080p ) youtube-viewer --resolution 1080p $url;;
+144p) youtube-viewer --resolution 144p $url ;;
+240p) youtube-viewer --resolution 240p $url ;;
+360p) youtube-viewer --resolution 360p $url ;;
+480p) youtube-viewer --resolution 480p $url ;;
+720p) youtube-viewer --resolution 720p $url ;;
+1080p) youtube-viewer --resolution 1080p $url ;;
 esac

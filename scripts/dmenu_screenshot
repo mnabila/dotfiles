@@ -1,0 +1,44 @@
+#!/bin/bash
+# File              : dmenu_screenshot
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Kamis, 30/07/2020 02:23 WIB
+# Last Modified Date: Kamis, 30/07/2020 05:25 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
+# Depends on        : imagemagic, slop
+
+TIMESTAMP="$(date +%Y%m%d_%H%M%S)"
+SCREENSHOTDIR="$HOME/Pictures/screenshot"
+ICON="$HOME/Dotfiles/icons/drops/screenshot.png"
+FILENAME="$SCREENSHOTDIR/Screenshot_$TIMESTAMP.png"
+DMENU="rofi -dmenu -p Screenshot -lines 3 -width 30"
+
+takeOnWindow() {
+    rofi -e "Select window to capture"
+    import $FILENAME
+    addFrameAndCopy
+}
+takeOnFullScreen() {
+    import -window root $FILENAME
+    addFrameAndCopy
+}
+takeOnRectange() {
+    import -window root $FILENAME
+    convert $FILENAME -crop $(slop) $FILENAME
+    addFrameAndCopy
+}
+addFrame() {
+    convert $FILENAME -bordercolor "#d79921" -border 3 \( +clone -background black -shadow 100x20+0+0 \) +swap -background white -layers merge +repage $FILENAME
+}
+addFrameAndCopy() {
+    addFrame
+    xclip -selection clipboard -i $FILENAME -t image/png
+    notify-send -i $ICON "Screenshot" "Copied to clipboard"
+}
+
+OPTIONS=$(echo -e "Window\nFullscreen\nRectange" | $DMENU)
+case $OPTIONS in
+Window) takeOnWindow ;;
+Fullscreen) takeOnFullScreen ;;
+Rectange) takeOnRectange ;;
+esac

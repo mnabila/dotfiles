@@ -3,10 +3,10 @@
 # License           : MIT License
 # Author            : M. Nabil Adani <nblid48@gmail.com>
 # Date              : Rabu, 20/05/2020 15:54 WIB
-# Last Modified Date: Rabu, 20/05/2020 15:54 WIB
+# Last Modified Date: Minggu, 26/07/2020 19:13 WIB
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
-DMENU="dmenu -p Services $@"
+DMENU="rofi -dmenu -i -p Services $@"
 export SUDO_ASKPASS="/home/$USER/Dotfiles/scripts/dmenu_secret"
 
 systemcontrol() {

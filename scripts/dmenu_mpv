@@ -1,0 +1,19 @@
+#!/bin/bash
+# File              : dmenu_mpv
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Jumat, 24/07/2020 18:54 WIB
+# Last Modified Date: Jumat, 24/07/2020 18:54 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
+# Depends on        : mpvc
+
+# Resource:
+# mpvc: https://github.com/lwilletts/mpvc
+
+
+dmenu="rofi -dmenu -i -p mpv"
+track=$(mpvc -i | tr "\t" "|" | $dmenu | cut -d "|" -f 1)
+# track=$(mpvc -i | sed 's/\t\[\[7m/|/g' | $dmenu | cut -d "|" -f 1)
+if [[ ! -z $track ]]; then
+    mpvc -J $track
+fi

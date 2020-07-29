@@ -58,7 +58,8 @@ bspc rule -a KBBI-Qt              state=floating center=on
 bspc rule -a Key-mon              state=floating sticky=on focus=off
 bspc rule -a Nm-connection-editor state=floating center=on
 bspc rule -a SimpleScreenRecorder state=floating center=on
+bspc rule -a MEGASync             state=floating sticky=on
 
 # workspace
 bspc rule -a qutebrowser desktop='^2'
-bspc rule -a telegram-desktop desktop='^2'
+bspc rule -a TelegramDesktop desktop='^2'

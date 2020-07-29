@@ -9,7 +9,7 @@
 all_name='[ALL]'
 mode=playlist
 
-launcher="dmenu $@"
+launcher="rofi -dmenu -i $@"
 
 d_artist() {
     mpc list artist | sort -f | $launcher -p artist "${dmenu_args[@]}"

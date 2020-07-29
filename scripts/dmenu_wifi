@@ -4,7 +4,7 @@
 # Starts a scan of available broadcasting SSIDs
 # nmcli dev wifi rescan
 
-DMENU="dmenu $@"
+DMENU="rofi -dmenu -i $@"
 FIELDS=SSID,SECURITY
 LIST=$(nmcli --fields "$FIELDS" device wifi list | sed '/^--/d')
 # Gives a list of known connections so we can parse it later

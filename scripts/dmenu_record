@@ -12,7 +12,7 @@
 # Required
 # 1. ffmpeg
 
-DMENU="dmenu -fn Iosevka-11 -nb #282828 -nf #ebdbb2 -sb #d79921 -w 800 -x 300 -y 220 -i -l 10"
+DMENU="rofi -dmenu -lines 5 -i"
 OUTDIR="$HOME/Videos"
 
 updateicon() {

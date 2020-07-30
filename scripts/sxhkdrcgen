@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cat ~/.config/sxhkd/*.sxhkdrc | tee /tmp/sxhkdrc
-if pgrep -f sxhkd; then
+if pidof sxhkd; then
     killall -9 sxhkd
+    notify-send "sxhkd" "restart sxhkd"
 fi
 sxhkd -c /tmp/sxhkdrc &
-notify-send "sxhkd" "restart sxhkd"

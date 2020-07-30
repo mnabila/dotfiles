@@ -3,34 +3,28 @@
 #
 
 # dmenu collections
-super + End
-    dmenu_power -w 800 -x 300 -y 220 -i -l 10
-super + space
-    dmenu_mager -w 800 -x 300 -y 220 -i -l 10
+super + {End,space,Delete,Home}
+    dmenu_{power,mager,kill,record} 
 super + F1
-    dmenu_sxhkd -w 800 -x 300 -y 220 -i -l 10
+    dmenu_sxhkd 
 super + F2
-    dmenu_systemd -w 800 -x 300 -y 220 -i -l 10
+    dmenu_systemd -lines 5
 super + F3
-    dmenu_udiskie -w 800 -x 300 -y 220 -p 'Storage' -i -l 10
+    dmenu_udiskie  -w 800 -x 300 -y 220 -i -l 10
 super + F10
-    dmenu_todo -w 800 -x 300 -y 220 -i -l 10
+    dmenu_todo
 super + F11
-    dmenu_boottester -w 800 -x 300 -y 220 -i -l 10
-super + Delete
-    dmenu_kill -w 800 -x 300 -y 220 -i -l 10
+    dmenu_boottester 
 super + {shift + y,q,u}
-    {dmenu_ytview, dmenu_qutebrowser, dmenu_aria2} -w 800 -x 300 -y 220 -i -l 10
-super + Home
-    dmenu_record
+    {dmenu_ytview, dmenu_qutebrowser, dmenu_aria2} 
 super + shift + Tab
-    dmenu_window -w 800 -x 300 -y 220 -i -l 10
+    rofi -show window
 
 
 # mpd control
 super + {_,shift + } Pause
-    {mpc toggle, dmenu_mpdmenu -w 800 -x 300 -y 220 -i -l 10}
-{XF86AudioNext,XF86AudioPrev, XF86AudioPlay, XF86AudioStop}
+    {mpc toggle, dmenu_mpdmenu}
+XF86Audio{Next,Prev,Play,Stop}
     mpc {next, prev, toggle, stop}
 
 # viper4linux 

@@ -7,7 +7,7 @@
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="rofi -dmenu -i -p Mager"
-OPTIONS=$(echo -e "anime\naria2\nboottester\nkill\nmonitor\nmpdmenu\npass\npower\nqutebrowser\nrecord\nswitcher\nsystemd\ntodo\nudiskie\nwifi\nwindow\nytview\nmpv\nscreenshot" | sort | $DMENU)
+OPTIONS=$(echo -e "anime\naria2\nboottester\nkill\nmonitor\nmpdmenu\npass\npower\nqutebrowser\nrecord\nswitcher\nsystemd\ntodo\nudiskie\nwifi\nwindow\nytview\nmpv\nscreenshot\ntranslate" | sort | $DMENU)
 
 case "$OPTIONS" in
     anime) dmenu_anime ;;
@@ -29,4 +29,5 @@ case "$OPTIONS" in
     ytview) dmenu_ytview ;;
     mpv) dmenu_mpv ;;
     screenshot) dmenu_screenshot ;;
+    translate) dmenu_translate;;
 esac

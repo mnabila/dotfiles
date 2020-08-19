@@ -24,9 +24,7 @@ XF86MonBrightness{Up,Down}
 
 # take screenshot
 {_, shift} + Print
-    flameshot {gui, full -p "$HOME/Pictures/screenshot"}
-super + Print
-    dmenu_screenshot
+    {dmenu_screenshot, flameshot full -p "$HOME/Pictures/screenshot"}
 
 # cliboard manager
 super + {_, shift +} Menu

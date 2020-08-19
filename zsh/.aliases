@@ -20,9 +20,9 @@ alias yt7="youtube-viewer --resolution=720p"
 alias yt10="youtube-viewer --resolution=1080p"
 
 #
-# pacman #
+# pacman
 #
-alias upgrade="pekmen;sudo reflector  --verbose --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist;sudo pacman -Fyy;sudo pacman -Syyuw --noconfirm"
+alias psu="pekmen;sudo reflector  --verbose --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist;sudo pacman -Fyy;sudo pacman -Syyuw"
 alias pmu="pekmen;sudo reflector  --verbose --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias pacname="pacman -Sup --print-format \"%n\" | sort -n"

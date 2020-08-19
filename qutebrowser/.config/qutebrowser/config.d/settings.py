@@ -444,6 +444,7 @@ c.url.searchengines = {
     "aw": "https://wiki.archlinux.org/?search={}",
     "dc": "http://www.deviantart.com/?q={}",
     "dz": "https://www.deezer.com/search/{}",
+    "fa": "https://fontawesome.com/icons?d=gallery&q={}",
     "g": "https://www.google.com/search?hl=en&q={}",
     "gh": "https://github.com/search?q={}",
     "gl": "https://gitlab.com/search?search={}",

@@ -13,10 +13,8 @@ super + F3
     dmenu_udiskie  -w 800 -x 300 -y 220 -i -l 10
 super + F10
     dmenu_todo
-super + F11
-    dmenu_boottester 
-super + {shift + y,q,u}
-    {dmenu_ytview, dmenu_qutebrowser, dmenu_aria2} 
+super + {q,u}
+    dmenu_{qutebrowser,aria2} 
 super + shift + Tab
     rofi -show window
 

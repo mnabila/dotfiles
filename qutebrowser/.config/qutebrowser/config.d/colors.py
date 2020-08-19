@@ -272,7 +272,7 @@ c.colors.statusbar.url.fg = xrdb["*color15"]
 
 # Foreground color of the URL in the statusbar on error.
 # Type: QssColor
-c.colors.statusbar.url.error.fg = xrdb["*color3"]
+c.colors.statusbar.url.error.fg = xrdb["*color15"]
 
 # Foreground color of the URL in the statusbar for hovered links.
 # Type: QssColor
@@ -286,7 +286,7 @@ c.colors.statusbar.url.success.http.fg = xrdb["*color15"]
 # Foreground color of the URL in the statusbar on successful load
 # (https).
 # Type: QssColor
-c.colors.statusbar.url.success.https.fg = xrdb["*color2"]
+c.colors.statusbar.url.success.https.fg = xrdb["*color15"]
 
 # Foreground color of the URL in the statusbar when there's a warning.
 # Type: QssColor

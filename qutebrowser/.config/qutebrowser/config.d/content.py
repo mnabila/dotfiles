@@ -110,20 +110,7 @@ c.content.host_blocking.enabled = True
 # The file `~/.config/qutebrowser/blocked-hosts` is always read if it
 # exists.
 # Type: List of Url
-c.content.host_blocking.lists = [
-    "http://sysctl.org/cameleon/hosts",
-    "http://winhelp2002.mvps.org/hosts.txt",
-    "https://block.energized.pro/basic/formats/domains.txt",
-    "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
-    "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts",
-    "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts_without_controversies.txt",
-    "https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/hosts-VN",
-    "https://raw.githubusercontent.com/mitchellkrogza/Badd-Boyz-Hosts/master/hosts",
-    "https://raw.githubusercontent.com/notracking/hosts-blocklists/master/hostnames.txt",
-    "https://raw.githubusercontent.com/tiuxo/hosts/master/ads",
-    "https://www.malwaredomainlist.com/hostslist/hosts.txt",
-    "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts",
-]
+c.content.host_blocking.lists = []
 
 # A list of patterns that should always be loaded, despite being ad-
 # blocked. Note this whitelists blocked hosts, not first-party URLs. As
@@ -133,24 +120,7 @@ c.content.host_blocking.lists = [
 # setting with a URL pattern instead. Local domains are always exempt
 # from hostblocking.
 # Type: List of UrlPattern
-c.content.host_blocking.whitelist = [
-    "*.redd.it",
-    "*.reddit.com",
-    "*.redditmedia.com",
-    "*.reddituploads.com",
-    "amp-reddit-com.cdn.ampproject.org",
-    "reddit-image.s3.amazonaws.com",
-    "reddit-securepage-3jk3gjh56lk4hklh2jhh34hjbsdbn345bnsdf.securecoin.icu",
-    "reddit-stream.com",
-    "reddit-uploaded-media.s3-accelerate.amazonaws.com",
-    "reddit-uploaded-video.s3-accelerate.amazonaws.com",
-    "reddit.map.fastly.net",
-    "redditgifts.com",
-    "redditgifts.s3.amazonaws.com",
-    "redditmercy.duckdns.org",
-    "rereddit.com",
-    "static.redditgifts.com",
-]
+c.content.host_blocking.whitelist = []
 
 # Enable hyperlink auditing (`<a ping>`).
 # Type: Bool

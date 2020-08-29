@@ -1,13 +1,13 @@
 #!/bin/bash
 
 function bsprun() {
-    if ! pidof $1; then
+    if [[ -z "$(pidof $1)" ]]; then
         $@ &
     fi
 }
 
 sxhkdrcgen
-bsprun exec xautolock -time 15 -locker "slimlock;gpg-connect-agent reloadagent /bye"
+bsprun xautolock -time 15 -locker "slimlock;gpg-connect-agent reloadagent /bye"
 bsprun lxpolkit
 bsprun xfce4-power-manager
 bsprun light -S 30

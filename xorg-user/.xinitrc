@@ -19,7 +19,7 @@ fi
 xsetroot -cursor_name left_ptr
 
 # Untuk SLiM Session
-DEFAULTSESSION=i3-with-shmlog
+DEFAULTSESSION=bspwm
 case "$1" in
     awesome) exec awesome ;;
     dwm) exec dwm ;;
@@ -28,6 +28,7 @@ case "$1" in
     sway) exec sway ;;
     instantwm) exec instantwm ;;
     bspwm) exec bspwm ;;
+    qtile) exec qtile ;;
     *) exec $DEFAULTSESSION ;;
 esac
 

@@ -5,32 +5,51 @@
 # Date              : Kamis, 30/07/2020 02:23 WIB
 # Last Modified Date: Kamis, 30/07/2020 05:25 WIB
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
-# Depends on        : imagemagic, slop
+# Depends on        : imagemagic, flameshot
 
 TIMESTAMP="$(date +%Y%m%d_%H%M%S)"
 SCREENSHOTDIR="$HOME/Pictures/screenshot"
-ICON="$HOME/Dotfiles/icons/drops/screenshot.png"
+ICON="$HOME/Dotfiles/icons/gruvbox/camera.png"
 FILENAME="$SCREENSHOTDIR/Screenshot_$TIMESTAMP.png"
 DMENU="rofi -dmenu -p Screenshot -lines 3 -width 30"
+TEXT="  https://t.me/mnabila   https://github.com/mnabila   https://gitlab.com/mnabila   $(date +%Y)"
 
 takeOnWindow() {
     rofi -e "Select window to capture"
     import $FILENAME
-    addFrameAndCopy
+    saveAndCopy
 }
+
 takeOnFullScreen() {
     import -window root $FILENAME
-    addFrameAndCopy
+    saveAndCopy
 }
+
 takeOnRectange() {
-    import -window root $FILENAME
-    convert $FILENAME -crop $(slop) $FILENAME
-    addFrameAndCopy
+    flameshot gui --raw >$FILENAME
+    if [[ $(cat $FILENAME) != "screenshot aborted" ]]; then
+        saveAndCopy
+    else
+        rm $FILENAME
+    fi
 }
+
+addRoundedFrame() {
+    convert $FILENAME \( +clone -alpha extract -draw 'fill black polygon 0,0 0,10 10,0 fill white circle 10,10 10,0' \( +clone -flip \) -compose Multiply -composite \( +clone -flop \) -compose Multiply -composite \) -alpha off -compose CopyOpacity -composite $FILENAME
+    convert $FILENAME \( +clone -background black -shadow 0x10+0+0 \) +swap -background white -layers merge +repage -profile /usr/share/color/icc/colord/sRGB.icc $FILENAME
+}
+
 addFrame() {
-    convert $FILENAME -bordercolor "#d79921" -border 3 \( +clone -background black -shadow 100x20+0+0 \) +swap -background white -layers merge +repage $FILENAME
+    convert $FILENAME -bordercolor "#ffffff" -border 2 \( +clone -background black -shadow 50x15+0+0 \) +swap -background white -layers merge +repage -profile /usr/share/color/icc/colord/sRGB.icc $FILENAME
 }
-addFrameAndCopy() {
+
+# TODO: MASIH NGEBUG WKWKWK <29-08-20, mnabila> #
+addAnnotate() {
+    # convert $FILENAME -font Iosevka-Nerd-Font-Complete -gravity north -background "#d79921" -fill "#282828" -splice 0x18 -annotate +0+0  "$TEXT" $FILENAME
+    convert $FILENAME -gravity NorthEast -pointsize 20 -fill "#d79921" -undercolor "#d79921" -annotate +60+0 "$TEXT" -pointsize 12 -fill "#282828" -undercolor "#d79921" -font Iosevka-Nerd-Font-Complete -annotate +60+10 "$TEXT" $FILENAME
+}
+
+saveAndCopy() {
     addFrame
     xclip -selection clipboard -i $FILENAME -t image/png
     notify-send -i $ICON "Screenshot" "Copied to clipboard"

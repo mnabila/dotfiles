@@ -1,5 +1,6 @@
 **/*.dat
 **/*.db
+**/.uuid
 **/*.log
 **/*.pid
 **/__pycache__/*

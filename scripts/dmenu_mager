@@ -7,7 +7,7 @@
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="rofi -dmenu -i -p Mager"
-OPTIONS=$(echo -e "anime\naria2\nboottester\nkill\nmonitor\nmpdmenu\npass\npower\nqutebrowser\nrecord\nswitcher\nsystemd\ntodo\nudiskie\nwifi\nwindow\nytview\nmpv\nscreenshot\ntranslate" | sort | $DMENU)
+OPTIONS=$(echo "anime aria2 boottester kill monitor mpdmenu pass power qutebrowser record switcher systemd todo udiskie wifi window ytview mpv screenshot translate sxhkd droidcam scrcpy" | sed 's/\ /\n/g'| sort | $DMENU)
 
 case "$OPTIONS" in
     anime) dmenu_anime ;;
@@ -23,11 +23,14 @@ case "$OPTIONS" in
     switcher) dmenu_switcher ;;
     systemd) dmenu_systemd ;;
     todo) dmenu_todo ;;
-    udiskie) dmenu_udiskie ;;
+    udiskie) dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select ;;
     wifi) dmenu_wifi ;;
     window) dmenu_window ;;
     ytview) dmenu_ytview ;;
     mpv) dmenu_mpv ;;
     screenshot) dmenu_screenshot ;;
-    translate) dmenu_translate;;
+    translate) dmenu_translate ;;
+    sxhkd) dmenu_sxhkd ;;
+    droidcam) droidcam-cli 192.168.43.1 4747 ;;
+    scrcpy) adb connect 192.168.43.1:5555 && scrcpy -b 2M -m 1080 --push-target /sdcard/Download & ;;
 esac

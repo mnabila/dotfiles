@@ -7,6 +7,7 @@
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="rofi -dmenu -i"
+ICON="$HOME/Dotfiles/icons/linebit/keyboard.png"
 COUNTRY="af|Afrikaans\nam|Amharic\nar|Arabic\naz|Azerbaijani\nba|Bashkir\nbe|Belarusian\nbg|Bulgarian\nbn|Bengali\nbs|Bosnian\nca|Catalan\nceb|Cebuano\nco|Corsican\ncs|Czech\ncy|Welsh\nda|Danish\nde|German\nel|Greek\nen|English\neo|Esperanto\nes|Spanish\net|Estonian\neu|Basque\nfa|Persian\nfi|Finnish\nfj|Fijian\nfr|French\nfy|Frisian\nga|Irish\ngd|Scots\ngl|Galician\ngu|Gujarati\nha|Hausa\nhaw|Hawaiian\nhe|Hebrew\nhi|Hindi\nhmn|Hmong\nhr|Croatian\nht|Haitian\nhu|Hungarian\nhy|Armenian\nid|Indonesian\nig|Igbo\nis|Icelandic\nit|Italian\nja|Japanese\njv|Javanese\nka|Georgian\nkk|Kazakh\nkm|Khmer\nkn|Kannada\nko|Korean\nku|Kurdish\nky|Kyrgyz\nla|Latin\nlb|Luxembourgish\nlo|Lao\nlt|Lithuanian\nlv|Latvian\nmg|Malagasy\nmhr|Eastern\nmi|Maori\nmk|Macedonian\nml|Malayalam\nmn|Mongolian\nmr|Marathi\nmrj|Hill\nms|Malay\nmt|Maltese\nmww|Hmong\nmy|Myanmar\nne|Nepali\nnl|Dutch\nno|Norwegian\nny|Chichewa\nor|Oriya\notq|Querétaro\npa|Punjabi\npap|Papiamento\npl|Polish\nps|Pashto\npt|Portuguese\nro|Romanian\nru|Russian\nrw|Kinyarwanda\nsd|Sindhi\nsi|Sinhala\nsk|Slovak\nsl|Slovenian\nsm|Samoan\nsn|Shona\nso|Somali\nsq|Albanian\nsr-Cyrl|Serbian\nsr-Latn|Serbian\nst|Sesotho\nsu|Sundanese\nsv|Swedish\nsw|Swahili\nta|Tamil\nte|Telugu\ntg|Tajik\nth|Thai\ntk|Turkmen\ntl|Filipino\ntlh|Klingon\ntlh-Qaak|Klingon\nto|Tongan\ntr|Turkish\ntt|Tatar\nty|Tahitian\nudm|Udmurt\nug|Uyghur\nuk|Ukrainian\nur|Urdu\nuz|Uzbek\nvi|Vietnamese\nxh|Xhosa\nyi|Yiddish\nyo|Yoruba\nyua|Yucatec\nyue|Cantonese\nzh-CN|Chinese\nzh-TW|Chinese\nzu|Zulu"
 
 name=$(echo -e $COUNTRY | cut -d "|" -f 2 | $DMENU -p "Translate To")
@@ -18,6 +19,7 @@ if [[ $name != "" ]]; then
     while $again; do
         speak=$(echo -e "Yes\nNo" | $DMENU -lines 2 -p "Play Audio" -mesg "Result: $result")
         if [[ $speak == "Yes" ]]; then
+            notify-send -i $ICON "Translate" "Listen to the translation."
             mpv /tmp/trans.ts
         else
             again=false

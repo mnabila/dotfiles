@@ -4,7 +4,7 @@ configuration {
   font: "Iosevka Nerd Font 11";
   lines: 8;
   location: 0;
-  modi: [ drun,run,window ];
+  modi: [drun,run,window];
   padding: 5;
   pid: "/run/user/1000/rofi.pid";
   show-icons: false;

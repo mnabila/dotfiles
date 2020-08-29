@@ -1,13 +1,14 @@
 #!/bin/sh
 # vim: ft=sh
 
-alias neofetch="neofetch --ascii ~/.config/neofetch/chess.txt"
-alias screencast="adb connect 192.168.43.1:5555; scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download &"
+alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
+alias screencast="adb connect 192.168.43.1:5555; scrcpy -b 2M -m 1080 --push-target /sdcard/Download &"
 alias py="python"
 alias {vi,vim,nano}="nvim"
 alias pacman-mirror="reflector"
 alias :q="exit"
 alias tetris="autoload -Uz tetriscurses;tetriscurses"
+alias nvr="nvr --servername $(nvr --serverlist | head -1)"
 
 #
 # yotube-viewer #
@@ -22,8 +23,8 @@ alias yt10="youtube-viewer --resolution=1080p"
 #
 # pacman
 #
-alias psu="pekmen;sudo reflector  --verbose --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist;sudo pacman -Fyy;sudo pacman -Syyuw"
-alias pmu="pekmen;sudo reflector  --verbose --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+alias pmu="pekmen;sudo reflector  --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+alias psu="pmu;sudo pacman -Fyy;sudo pacman -Syyuw"
 alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias pacname="pacman -Sup --print-format \"%n\" | sort -n"
 alias pacurl="pacman -Sup | grep https"

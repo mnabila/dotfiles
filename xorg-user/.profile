@@ -16,29 +16,32 @@ export GEM_HOME=$HOME/.gem
 export PYENV_ROOT="${HOME}/.pyenv"
 
 export TERM=screen-256color
-export TERMINAL=st
+export TERMINAL=alacritty
 
 # Clipmenu Environment Variables
 export CM_LAUNCHER=rofi
 export CM_DIR=/tmp/clipmenu
 
+# dmenu_udisk
+UDISKIE_DMENU_LAUNCHER="rofi"
+
 # default terminal ranger
 export TERMCMD=alacritty
 
 # Path
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="${HOME}/.gem/ruby/2.7.0/bin:$PATH"
-export PATH="${HOME}/.local/bin:$PATH"
-export PATH="${HOME}/Dotfiles/scripts:$PATH"
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/Dotfiles/scripts:$PATH"
 export PATH="/usr/lib/ccache/bin/:$PATH"
 
 # FZF with gruvbox colorscheme
-export FZF_DEFAULT_OPTS='
- --color=fg:#ebdbb2,bg:#282828,hl:#d79921
- --color=fg+:#282828,bg+:#d79921,hl+:#282828
- --color=info:#ebdbb2,prompt:#d3869b,pointer:#282828
- --color=marker:#282828,spinner:#d3869b,header:#d79921
-'
+# export FZF_DEFAULT_OPTS='
+#  --color=fg:#ebdbb2,bg:#282828,hl:#d79921
+#  --color=fg+:#282828,bg+:#d79921,hl+:#282828
+#  --color=info:#ebdbb2,prompt:#d3869b,pointer:#282828
+#  --color=marker:#282828,spinner:#d3869b,header:#d79921
+# '
+
 # Manpages
 export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 

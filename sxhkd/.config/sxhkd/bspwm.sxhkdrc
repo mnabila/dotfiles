@@ -49,9 +49,13 @@ super + {p,b,comma,period}
 # focus the next/previous node in the current desktop
 super + {_,shift + }c
     bspc node -f {next,prev}.local.!hidden.window
+super + button{9,8}
+    bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
+    bspc desktop -f {prev,next}.local
+super + ctrl + button{1,3}
     bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -70,6 +74,8 @@ super + {_,shift + }{1-9,0}
 
 # focus or send to the next desktop
 super + brace{left,right}
+    bspc node -d {prev,next}
+super + shift + button{9,8}
     bspc node -d {prev,next}
 
 # toggle horizontal and vertical split in tiled window

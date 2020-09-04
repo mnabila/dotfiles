@@ -50,16 +50,17 @@ bspc config focused_border_color      $(colors color3)
 bspc rule -a Screenkey manage=off
 
 # floating
+bspc rule -a Key-mon:"Keyboard Status Monitor"      state=floating sticky=on focus=off border=off
 bspc rule -a Arandr               state=floating center=on
 bspc rule -a Connman-gtk          state=floating center=on
 bspc rule -a GParted              state=floating center=on
 bspc rule -a Gcolor3              state=floating center=on
 bspc rule -a KBBI-Qt              state=floating center=on
-bspc rule -a Key-mon              state=floating sticky=on focus=off
 bspc rule -a Nm-connection-editor state=floating center=on
 bspc rule -a SimpleScreenRecorder state=floating center=on
 bspc rule -a MEGASync             state=floating sticky=on
+bspc rule -a scrcpy               state=floating center=on
 
 # workspace
-bspc rule -a qutebrowser desktop='^2'
-bspc rule -a TelegramDesktop desktop='^2'
+# bspc rule -a qutebrowser desktop='^2'
+# bspc rule -a TelegramDesktop desktop='^2'

@@ -10,7 +10,7 @@ super + F1
 super + F2
     dmenu_systemd -lines 5
 super + F3
-    dmenu_udiskie  -w 800 -x 300 -y 220 -i -l 10
+     dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select
 super + F10
     dmenu_todo
 super + {q,u}

@@ -32,5 +32,5 @@ case "$OPTIONS" in
     translate) dmenu_translate ;;
     sxhkd) dmenu_sxhkd ;;
     droidcam) droidcam-cli 192.168.43.1 4747 ;;
-    scrcpy) adb connect 192.168.43.1:5555 && scrcpy -b 2M -m 1080 --push-target /sdcard/Download & ;;
+    scrcpy) adb connect 192.168.43.1:5555 && scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download & ;;
 esac

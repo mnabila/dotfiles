@@ -82,8 +82,8 @@ conky.config = {
 
 
 conky.text = [[
-${font SF UI Display:weight=Bold:size=18}TODO${color1}${font}
-${voffset 10}${font Iosevka Nerd Font:weight=Bold:size=14}${color1}\
+${font SF UI Display:weight=Bold:size=16}TODO${color1}${font}
+${voffset 10}${font Iosevka Nerd Font:weight=Bold:size=12}${color1}\
 ${exec cat "$HOME/.todo"}\
 ${color}
 ${font}

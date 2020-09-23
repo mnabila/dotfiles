@@ -3,8 +3,8 @@
 
 function set_env_vars() {
     export ETH_INTERFACE=$(ip link show | grep enp | sed 's/.*: \(.*\):.*/\1/')
-    export WLAN_INTERFACE=$(ip link show | grep wl | sed 's/.*: \(.*\):.*/\1/')
-    export DEFAULT_INTERFACE=$(ip route | grep '^default' | awk '{print $5}')
+    export WLAN_INTERFACE=$(ip link show | grep wl | sed 's/.*: \(.*\):.*/\1/' | head -1)
+    export DEFAULT_INTERFACE=$(ip route | grep '^default' | awk '{print $5}' | head -1)
     export HWMON_PATH=$(for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done | awk "END {print}" | cut -d " " -f 3)
 
     echo $ETH_INTERFACE

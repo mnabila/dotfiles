@@ -363,7 +363,7 @@ c.scrolling.smooth = False
 #   - tr-TR: Turkish (Turkey)
 #   - uk-UA: Ukrainian (Ukraine)
 #   - vi-VN: Vietnamese (Viet Nam)
-c.spellcheck.languages = ["id-ID", "en-US"]
+c.spellcheck.languages = []
 
 # When to show the statusbar.
 # Type: String
@@ -448,15 +448,12 @@ c.url.searchengines = {
     "g": "https://www.google.com/search?hl=en&q={}",
     "gh": "https://github.com/search?q={}",
     "gl": "https://gitlab.com/search?search={}",
-    "gten": "https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text={}",
-    "gtid": "https://translate.google.com/#view=home&op=translate&sl=auto&tl=id&text={}",
-    "gtjp": "https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text={}",
     "hd": "https://hub.docker.com/search?q={}&type=image",
     "mal": "https://myanimelist.net/search/all?q={}",
+    "npm": "https://www.npmjs.com/search?q={}",
     "py": "https://pypi.org/search/?q={}",
     "r": "https://www.reddit.com/search/?q={}",
     "wp": "https://id.wikipedia.org/w/index.php?search={}",
-    "yp": "https://yarnpkg.com/en/packages?q={}&p=1",
     "yt": "https://www.youtube.com/results?search_query={}",
 }
 

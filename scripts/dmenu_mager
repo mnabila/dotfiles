@@ -29,7 +29,7 @@ case "$OPTIONS" in
     ytview) dmenu_ytview ;;
     mpv) dmenu_mpv ;;
     screenshot) dmenu_screenshot ;;
-    translate) dmenu_translate ;;
+    translate) dmenu_translate -i ;;
     sxhkd) dmenu_sxhkd ;;
     droidcam) droidcam-cli 192.168.43.1 4747 ;;
     scrcpy) adb connect 192.168.43.1:5555 && scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download & ;;

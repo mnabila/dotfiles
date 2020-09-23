@@ -16,7 +16,6 @@ c.bindings.key_mappings = {
     "<Shift+Return>": "<Return>",
 }
 
-config.bind("gh", "home", "normal")
 config.bind("<Ctrl-Shift-J>", "tab-move +", "normal")
 config.bind("<Ctrl-Shift-K>", "tab-move -", "normal")
 config.bind("zl", "spawn --userscript qute-pass -d 'dmenu -w 800 -x 300 -y 220 -i -l 10 -p Qute Pass' ", "normal")

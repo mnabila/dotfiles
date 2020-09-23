@@ -23,8 +23,9 @@ alias yt10="youtube-viewer --resolution=1080p"
 #
 # pacman
 #
-alias pmu="pekmen;sudo reflector  --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
-alias psu="pmu;sudo pacman -Fyy;sudo pacman -Syyuw"
+alias pmu="pekmen;sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
+alias pmu-id="pekmen;sudo reflector --verbose --country Indonesia --age 12 --protocol https --protocol http --sort rate --save /etc/pacman.d/mirrorlist"
+alias psu="sudo pacman -Fyy && sudo pacman -Syyuw"
 alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias pacname="pacman -Sup --print-format \"%n\" | sort -n"
 alias pacurl="pacman -Sup | grep https"
@@ -53,4 +54,5 @@ alias m="showmarks"
 alias glogin="gcloud auth login"
 alias gshell="gcloud alpha cloud-shell ssh"
 alias gproject="gcloud config set project"
+alias gclean="gcloud auth revoke --all"
 

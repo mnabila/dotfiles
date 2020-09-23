@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+## Start GNOME Keyring
+# eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,gpg)
+# export SSH_AUTH_SOCK
+
 ## Executed by startx (run your window manager from here)
 xrdb -load ~/.Xresources
 xset +fp /usr/share/fonts/local

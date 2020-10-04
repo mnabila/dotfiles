@@ -44,7 +44,7 @@ addBorder() {
 }
 
 addShadow() {
-    convert $FILENAME \( +clone -background black -shadow 50x15+0+0 \) +swap -background white -layers merge +repage $FILENAME
+    convert $FILENAME \( +clone -background black -shadow 30x15+0+0 \) +swap -background white -layers merge +repage $FILENAME
 }
 
 addAnnotate() {

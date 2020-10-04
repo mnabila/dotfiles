@@ -52,7 +52,7 @@ alias m="showmarks"
 
 # gcloud sdk
 alias glogin="gcloud auth login"
-alias gshell="gcloud alpha cloud-shell ssh"
+alias gshell="gcloud alpha cloud-shell ssh --authorize-session"
 alias gproject="gcloud config set project"
 alias gclean="gcloud auth revoke --all"
 

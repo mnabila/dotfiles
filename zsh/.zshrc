@@ -163,7 +163,12 @@ bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
 # }}} End configuration added by Zim install
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
 
 #
 # fzf
@@ -175,6 +180,11 @@ bindkey -M vicmd 'j' history-substring-search-down
 # aliases
 #
 [ -f ~/.aliases ] && source ~/.aliases
+
+#
+# functions
+#
+[ -f ~/.zsh/functions/git-svn.zsh ] && source ~/.zsh/functions/git-svn.zsh
 
 #
 # auto completion
@@ -190,8 +200,4 @@ autoload -Uz compinit && compinit -i
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line

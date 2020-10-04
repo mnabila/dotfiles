@@ -22,10 +22,9 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 - [Dotfiles](#Dotfiles)
 - [Details](#Details)
 - [ScreenShut](#ScreenShut)
-  - [i3 Gaps](#i3-gaps)
-  - [tmux](#tmux)
-  - [zsh](#zsh)
 - [Instalasi](#Instalasi)
+  - [Instalasi GNU/Stow di Arch Linux](#instalasi-gnu%2Fstow-di-arch-linux)
+  - [Download Folder Konfigurasi](#download-folder-configurasi)
 
 <!-- /TOC -->
 
@@ -169,9 +168,39 @@ Untuk memasang confignya cukup mudah ketikkan perintah dibawah ini.
 $ stow tmux
 ```
 
+
+## Download Folder Configurasi
+sebelum melakukan download folder configurasi yang perlu kita persiapkan yakni git dan subversion
+```
+$ sudo pacman -S git subversion
+```
+
+lalu tambahkan custom function dibawah ini pada bashrc atau zshrc kalian
+```
+git-svn(){
+  if [[ ! -z "$1" && ! -z "$2" ]]; then
+          echo "Starting clone/copy ..."
+          repo=$(echo $1 | sed 's/\/$\|.git$//')
+          svn export "$repo/trunk/$2"
+  else
+          echo "Use: git-svn <repository> <subdirectory>"
+  fi  
+}
+```
+untuk menggunakan cukup ketikkan perintah seperti dibawah ini
+```
+$ git-svn "url repository yang kalian inginkan" "folder yang ada di repository"
+```
+
+> kita ambil contoh ingin download  configurasi tmux saja
+
+```
+$ git-svn https://github.com/mnabila/dotfiles tmux
+```
+
 Begitulah sedikit tutorial dari pemilik dotfiles
 
 # Perlu Dukun ?
 
 - [Telegram - mnabila](https://t.me/mnabila)
-- [Twitter - nbl_adani](https://twitter.com/nbl_adani)
+- [Twitter - mnabiladani](https://twitter.com/mnabiladani)

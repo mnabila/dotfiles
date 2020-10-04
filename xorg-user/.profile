@@ -3,8 +3,8 @@
 #
 # ENVIRONMENT SETUP #
 #
+export ERRFILE=$HOME/.xsession-errors
 export EDITOR=nvim
-# export BROWSER=qutebrowser
 export FONTCONFIG_PATH=/etc/fonts
 
 export QT_AUTO_SCREEN_SCALE_FACTOR=1

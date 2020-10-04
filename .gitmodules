@@ -19,3 +19,6 @@
 [submodule "icons/dark"]
 	path = icons/dark
 	url = https://gitlab.com/sixsixfive/DarK-icons.git
+[submodule "tmux/.tmux/plugins/tmux-continuum"]
+	path = tmux/.tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum

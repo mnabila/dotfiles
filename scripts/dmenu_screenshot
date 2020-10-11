@@ -11,7 +11,7 @@ TIMESTAMP="$(date +%Y%m%d_%H%M%S)"
 SCREENSHOTDIR="$HOME/Pictures/screenshot"
 ICON="$HOME/Dotfiles/icons/gruvbox/camera.png"
 FILENAME="$SCREENSHOTDIR/Screenshot_$TIMESTAMP.png"
-DMENU="rofi -dmenu -p Screenshot -lines 3 -width 30"
+DMENU="rofi -dmenu -p Screenshot -lines 4 -width 30"
 TEXT="author : mnabila"
 
 takeOnWindow() {
@@ -65,9 +65,10 @@ saveAndCopy() {
     notify-send -i $ICON "Screenshot" "Copied to clipboard"
 }
 
-OPTIONS=$(echo -e "Window\nFullscreen\nRectange" | $DMENU)
+OPTIONS=$(echo -e "Window\nFullscreen\nRectange\nFlameshot" | $DMENU)
 case $OPTIONS in
 Window) takeOnWindow ;;
 Fullscreen) takeOnFullScreen ;;
 Rectange) takeOnRectange ;;
+Flameshot) flameshot gui ;;
 esac

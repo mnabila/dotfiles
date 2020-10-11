@@ -1,0 +1,13 @@
+#!/bin/bash
+# File              : notification
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Senin, 10/08/2020 21:11 WIB
+# Last Modified Date: Senin, 10/08/2020 21:11 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
+
+musicPath=$(echo "/home/$USER/Music/$(mpc current -f %file%)")
+ffmpeg -i "$musicPath" "/tmp/mpd_album.png" -y &>/dev/null
+convert /tmp/mpd_album.png \( +clone -alpha extract -draw 'fill black polygon 0,0 0,320 320,0 fill white circle 320,320 320,0' \( +clone -flip \) -compose Multiply -composite \( +clone -flop \) -compose Multiply -composite \) -alpha off -compose CopyOpacity -composite /tmp/mpd_album.png &>/dev/null
+notify-send -i /tmp/mpd_album.png "Now Playing" "$(mpc current)"
+

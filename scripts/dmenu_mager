@@ -3,34 +3,40 @@
 # License           : MIT License
 # Author            : M. Nabil Adani <nblid48@gmail.com>
 # Date              : Jumat, 15/05/2020 13:12 WIB
-# Last Modified Date: Jumat, 19/06/2020 10:47 WIB
+# Last Modified Date: Minggu, 11/10/2020 12:44 WIB
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="rofi -dmenu -i -p Mager"
-OPTIONS=$(echo "anime aria2 boottester kill monitor mpdmenu pass power qutebrowser record switcher systemd todo udiskie wifi window ytview mpv screenshot translate sxhkd droidcam scrcpy" | sed 's/\ /\n/g'| sort | $DMENU)
+OPTIONS='''
+[
+  { "label": "anime", "command": "dmenu_anime" },
+  { "label": "aria2", "command": "dmenu_aria2" },
+  { "label": "boottester", "command": "dmenu_boottester" },
+  { "label": "droidcam audio only", "command": "droidcam-cli -a 192.168.43.1 4747" },
+  { "label": "droidcam video & audio", "command": "droidcam-cli -a -v 192.168.43.1 4747" },
+  { "label": "droidcam video only", "command": "droidcam-cli 192.168.43.1 4747" },
+  { "label": "kill", "command": "dmenu_kill" },
+  { "label": "kill droidcam", "command": "pkill droidcam-cli" },
+  { "label": "monitor", "command": "dmenu_monitor" },
+  { "label": "mpdmenu", "command": "dmenu_mpdmenu" },
+  { "label": "mpv", "command": "dmenu_mpv" },
+  { "label": "pass", "command": "dmenu_pass -p \"Pass Man\"" },
+  { "label": "power", "command": "dmenu_power" },
+  { "label": "qutebrowser", "command": "dmenu_qutebrowser" },
+  { "label": "record", "command": "dmenu_record" },
+  { "label": "scrcpy", "command": "adb connect 192.168.43.1:5555 && scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download &" },
+  { "label": "screenshot", "command": "dmenu_screenshot" },
+  { "label": "switcher", "command": "dmenu_switcher" },
+  { "label": "sxhkd", "command": "dmenu_sxhkd" },
+  { "label": "systemd", "command": "dmenu_systemd" },
+  { "label": "todo", "command": "dmenu_todo" },
+  { "label": "translate", "command": "dmenu_translate -i" },
+  { "label": "udiskie", "command": "dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select" },
+  { "label": "wifi", "command": "dmenu_wifi" },
+  { "label": "window", "command": "dmenu_window" },
+  { "label": "ytview", "command": "dmenu_ytview" }
+]
+'''
 
-case "$OPTIONS" in
-    anime) dmenu_anime ;;
-    aria2) dmenu_aria2 ;;
-    boottester) dmenu_boottester ;;
-    kill) dmenu_kill ;;
-    monitor) dmenu_monitor ;;
-    mpdmenu) dmenu_mpdmenu ;;
-    pass) dmenu_pass -p "Pass Man" ;;
-    power) dmenu_power ;;
-    qutebrowser) dmenu_qutebrowser ;;
-    record) dmenu_record ;;
-    switcher) dmenu_switcher ;;
-    systemd) dmenu_systemd ;;
-    todo) dmenu_todo ;;
-    udiskie) dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select ;;
-    wifi) dmenu_wifi ;;
-    window) dmenu_window ;;
-    ytview) dmenu_ytview ;;
-    mpv) dmenu_mpv ;;
-    screenshot) dmenu_screenshot ;;
-    translate) dmenu_translate -i ;;
-    sxhkd) dmenu_sxhkd ;;
-    droidcam) droidcam-cli 192.168.43.1 4747 ;;
-    scrcpy) adb connect 192.168.43.1:5555 && scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download & ;;
-esac
+label=$(echo $OPTIONS | jq -r ".[].label" | $DMENU)
+exec $(echo $OPTIONS | jq -r ".[] | select(.label == \"$label\") | .command")

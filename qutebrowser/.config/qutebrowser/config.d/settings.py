@@ -8,6 +8,7 @@ c.aliases = {
     "wq": "quit --save",
     "wqa": "quit --save",
     "tor-proxy": "set content.proxy socks://127.0.0.1:9050",
+    "ssh-proxy": "set content.proxy socks://127.0.0.1:1080",
     "system-proxy": "set content.proxy system",
     "settings": "open -t qute://settings",
 }

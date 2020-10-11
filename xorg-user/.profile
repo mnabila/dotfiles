@@ -23,7 +23,7 @@ export CM_LAUNCHER=rofi
 export CM_DIR=/tmp/clipmenu
 
 # dmenu_udisk
-UDISKIE_DMENU_LAUNCHER="rofi"
+export UDISKIE_DMENU_LAUNCHER="rofi"
 
 # default terminal ranger
 export TERMCMD=alacritty

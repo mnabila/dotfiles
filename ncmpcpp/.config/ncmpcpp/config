@@ -77,5 +77,5 @@ song_window_title_format         = "mpd » {%a - }{%t}|{%f}"
 titles_visibility                = no
 
 [notification]
-execute_on_song_change           = notify-send -i ~/Dotfiles/icons/gruvbox/music.png "Now Playing" "$(mpc current)"
+execute_on_song_change           = ~/.config/ncmpcpp/notification
 

@@ -30,5 +30,5 @@ super + ctrl + Pause
     viper restart 
 
 # polybar 
-super + {_,shift +} n
-    {~/.config/polybar/scripts/systray, polybar-msg cmd toggle;bspc config top_padding 0;bspc config bottom_padding 0 }
+super + {_,shift +, ctrl +} n
+    {~/.config/polybar/scripts/systray, polybar-msg cmd toggle;bspc config top_padding 0;bspc config bottom_padding 0 , ~/.config/polybar/launch.sh toggle}

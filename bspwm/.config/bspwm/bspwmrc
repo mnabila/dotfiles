@@ -22,7 +22,7 @@ bspc monitor VGA-1 -d 6 7 8 9 10
 #
 bspc config border_width   2
 bspc config border_radius  5
-bspc config window_gap     5
+bspc config window_gap     10
 bspc config top_padding    0
 bspc config bottom_padding 0
 bspc config right_padding  0
@@ -34,7 +34,7 @@ bspc config left_padding   0
 bspc config split_ratio               0.50
 bspc config borderless_monocle        true
 bspc config gapless_monocle           true
-bspc config focus_follows_pointer     true
+bspc config focus_follows_pointer     false
 bspc config pointer_follows_focus     false
 bspc config pointer_follows_monitor   true
 bspc config ignore_ewmh_fullscreen    all

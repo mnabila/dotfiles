@@ -38,7 +38,7 @@ killrecording() {
 screencast() {
     ffmpeg -y \
         -f x11grab \
-        -framerate 60 \
+        -framerate 30 \
         -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
         -i :0.0 \
         -f pulse -i 1 \
@@ -52,10 +52,12 @@ screencast() {
 video() {
     ffmpeg \
         -f x11grab \
-        -framerate 30 \
+        -framerate 20 \
         -s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
         -i :0.0 \
-        -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
+        -c:a libopus \
+        -f lavfi -i anullsrc=channel_layout=mono:sample_rate=8000 \
+        -c:v libx265 -pix_fmt yuv420p -preset veryfast -q:v 1 \
         -threads 0 \
         "$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mp4" &
     echo $! >~/.recordingpid

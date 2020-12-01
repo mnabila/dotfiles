@@ -24,17 +24,21 @@ OPTIONS='''
   { "label": "power", "command": "dmenu_power" },
   { "label": "qutebrowser", "command": "dmenu_qutebrowser" },
   { "label": "record", "command": "dmenu_record" },
-  { "label": "scrcpy", "command": "adb connect 192.168.43.1:5555 && scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download &" },
+  { "label": "scrcpy", "command": "adb connect 192.168.43.1:5555 ; scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download &" },
   { "label": "screenshot", "command": "dmenu_screenshot" },
   { "label": "switcher", "command": "dmenu_switcher" },
   { "label": "sxhkd", "command": "dmenu_sxhkd" },
   { "label": "systemd", "command": "dmenu_systemd" },
   { "label": "todo", "command": "dmenu_todo" },
   { "label": "translate", "command": "dmenu_translate -i" },
-  { "label": "udiskie", "command": "dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select" },
+  { "label": "udiskie", "command": "dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select -p FlashDrive" },
   { "label": "wifi", "command": "dmenu_wifi" },
   { "label": "window", "command": "dmenu_window" },
-  { "label": "ytview", "command": "dmenu_ytview" }
+  { "label": "ytview", "command": "dmenu_ytview" },
+  { "label": "umount iso", "command": "dmenu_iso" },
+  { "label": "juypiter lab", "command": "chromium --new-window --app=http://localhost:8888/lab" },
+  { "label": "photopea", "command": "chromium --new-window --app=https://www.photopea.com/" },
+  { "label": "trello", "command": "chromium --new-window --app=https://trello.com/" }
 ]
 '''
 

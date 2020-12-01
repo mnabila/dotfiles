@@ -67,8 +67,8 @@ saveAndCopy() {
 
 OPTIONS=$(echo -e "Window\nFullscreen\nRectange\nFlameshot" | $DMENU)
 case $OPTIONS in
-Window) takeOnWindow ;;
-Fullscreen) takeOnFullScreen ;;
-Rectange) takeOnRectange ;;
-Flameshot) flameshot gui ;;
+    Window) takeOnWindow ;;
+    Fullscreen) takeOnFullScreen ;;
+    Rectange) takeOnRectange ;;
+    Flameshot) flameshot gui ;;
 esac

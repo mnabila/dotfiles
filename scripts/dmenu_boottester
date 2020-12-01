@@ -57,6 +57,6 @@ function flash_drive(){
     fi
 }
 case "$choice" in
-    "File Iso") file_iso;;
-    "FlashDrive") flash_drive;;
+"File Iso") file_iso;;
+"FlashDrive") flash_drive;;
 esac

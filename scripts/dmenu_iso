@@ -1,0 +1,22 @@
+#!/bin/bash
+# File              : dmenu_iso
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Jumat, 23/10/2020 19:17 WIB
+# Last Modified Date: Jumat, 23/10/2020 19:20 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
+
+DMENU="rofi -dmenu -i -p Umount"
+
+unmount() {
+    udisksctl unmount -b $1
+    udisksctl loop-delete -b $1
+}
+
+loop=$(udiskie-info -C -a -o '{ui_label}' | grep 'loop' | $DMENU)
+device=$(echo $loop | cut -d ":" -f 1)
+label=$(echo $loop | cut -d ":" -f 2)
+if [[ $loop == "" ]]; then
+    exit
+fi
+unmount $device >/dev/null

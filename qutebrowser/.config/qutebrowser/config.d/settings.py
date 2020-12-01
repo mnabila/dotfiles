@@ -451,7 +451,7 @@ c.url.searchengines = {
     "gl": "https://gitlab.com/search?search={}",
     "hd": "https://hub.docker.com/search?q={}&type=image",
     "mal": "https://myanimelist.net/search/all?q={}",
-    "npm": "https://www.npmjs.com/search?q={}",
+    "js": "https://www.npmjs.com/search?q={}",
     "py": "https://pypi.org/search/?q={}",
     "r": "https://www.reddit.com/search/?q={}",
     "wp": "https://id.wikipedia.org/w/index.php?search={}",

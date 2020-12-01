@@ -18,4 +18,4 @@ bsprun ~/.config/polybar/launch.sh start
 bsprun xcompmgr
 bsprun conky -c ~/.config/conky/todolist.conkyrc
 bsprun clipmenud
-feh --bg-scale ~/Pictures/diy/mnabila.png
+feh --bg-scale ~/Pictures/diy/mnabilagi.png

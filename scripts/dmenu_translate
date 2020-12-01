@@ -148,6 +148,9 @@ translateText() {
         result=$(trans -b --download-audio-as /tmp/trans.ts :$code "$text")
         again=true
 
+        notify-send -i $ICON "Translate" "Result saved to clipboard"
+        echo  -n "$result" | xclip
+
         while $again; do
             speak=$(echo -e "Yes\nNo" | $DMENU -lines 2 -p "Play Audio" -mesg "Result: $result")
             if [[ $speak == "Yes" ]]; then

@@ -61,9 +61,14 @@ theme.menu_width = dpi(100)
 -- beautiful.variable in your rc.lua
 -- theme.bg_widget = "#cc0000"
 
+-- widget
 theme.widget_icon = xrdb.color3
 theme.widget_text = xrdb.foreground
 
+-- notification
+theme.notification_margin = dpi(16)
+theme.notification_max_width = dpi(400)
+-- theme.notification_shape = gears.shape.rounded_rect
 
 -- Recolor Layout icons:
 theme = theme_assets.recolor_layout(theme, theme.fg_normal)

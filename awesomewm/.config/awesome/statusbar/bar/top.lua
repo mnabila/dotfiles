@@ -1,14 +1,14 @@
 local wibox = require("wibox")
 local gears = require("gears")
 local awful = require("awful")
-local func = require("statusbar.libs.function")
+local func = require("utils.function")
 local beautiful = require("beautiful")
 
 local dpi = beautiful.xresources.apply_dpi
 local margin = wibox.container.margin
 
 -- Modules
-local tasklist = require("statusbar.modules.tasklist")
+local tasklist = require("widget.tasklist")
 
 local M = {}
 

@@ -27,7 +27,9 @@ function M.get()
         awful.key(
             {modkey, "Control"},
             "space",
-            awful.client.floating.toggle,
+            function(c)
+                c.floating = not c.floating
+            end,
             {description = "toggle floating", group = "client"}
         ),
 

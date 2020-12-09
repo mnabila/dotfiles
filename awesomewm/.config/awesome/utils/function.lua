@@ -36,4 +36,17 @@ function M.icon_wrapper(icon, left, right, top, bottom)
     return margin(icon, dpi(left), dpi(right), dpi(top), dpi(bottom))
 end
 
+function M.colorize(icon, color)
+    return gears.color.recolor_image(icon, color)
+end
+
+function M.markup(content, opts)
+    local fg = opts.fg or ""
+
+    return string.format(
+        '<span foreground="%s">%s</span>',
+        fg, content
+    )
+end
+
 return M

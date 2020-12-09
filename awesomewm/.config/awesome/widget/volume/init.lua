@@ -1,15 +1,15 @@
 local wibox = require("wibox")
 local awful = require("awful")
 local beautiful = require("beautiful")
-local colorize = require("main.helpers").colorize
-local markup = require("main.helpers").markup
+local colorize = require("utils.function").colorize
+local markup = require("utils.function").markup
 
 local HOME = os.getenv("HOME")
 
-local volume_off = HOME .. "/.config/awesome/statusbar/modules/volume/volume_off.svg"
-local volume_mute = HOME .. "/.config/awesome/statusbar/modules/volume/volume_mute.svg"
-local volume_low = HOME .. "/.config/awesome/statusbar/modules/volume/volume_down.svg"
-local volume_high = HOME .. "/.config/awesome/statusbar/modules/volume/volume_up.svg"
+local volume_off = HOME .. "/.config/awesome/widget/volume/volume_off.svg"
+local volume_mute = HOME .. "/.config/awesome/widget/volume/volume_mute.svg"
+local volume_low = HOME .. "/.config/awesome/widget/volume/volume_down.svg"
+local volume_high = HOME .. "/.config/awesome/widget/volume/volume_up.svg"
 
 local M = {}
 

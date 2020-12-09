@@ -1,5 +1,6 @@
 local gears = require("gears")
 local awful = require("awful")
+local wibox = require("wibox")
 
 local M = {}
 
@@ -57,6 +58,23 @@ function M.widget(s)
             screen = s,
             filter = awful.widget.taglist.filter.all,
             buttons = taglist_buttons,
+            widget_template = {
+                {
+                    {
+                        {
+                            id     = 'text_role',
+                            widget = wibox.widget.textbox,
+                        },
+                        layout = wibox.layout.fixed.horizontal,
+                    },
+                    left  = 8,
+                    right = 8,
+                    widget = wibox.container.margin
+                },
+                id     = 'background_role',
+                widget = wibox.container.background,
+                -- Add support for hover colors and an index label
+            },
         }
 end
 

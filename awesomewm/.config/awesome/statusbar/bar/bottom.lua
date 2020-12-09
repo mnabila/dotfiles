@@ -1,23 +1,23 @@
 local wibox = require("wibox")
 local gears = require("gears")
 local awful = require("awful")
-local func = require("statusbar.libs.function")
+local func = require("utils.function")
 local beautiful = require("beautiful")
 
 local dpi = beautiful.xresources.apply_dpi
 local margin = wibox.container.margin
 
 -- Modules
-local taglist = require("statusbar.modules.taglist")
-local systray = require("statusbar.modules.systray")
-local memory = require("statusbar.modules.memory")
-local cpu = require("statusbar.modules.cpu")
-local netspeed = require("statusbar.modules.netspeed")
-local clock = require("statusbar.modules.clock")
-local temp = require("statusbar.modules.temp")
-local volume = require("statusbar.modules.volume")
-local hddtemp = require("statusbar.modules.hddtemp")
-local brightness = require("statusbar.modules.brightness")
+local taglist = require("widget.taglist")
+local systray = require("widget.systray")
+local memory = require("widget.memory")
+local cpu = require("widget.cpu")
+local netspeed = require("widget.netspeed")
+local clock = require("widget.clock")
+local temp = require("widget.temp")
+local volume = require("widget.volume")
+local hddtemp = require("widget.hddtemp")
+local brightness = require("widget.brightness")
 
 
 local M = {}
@@ -49,9 +49,9 @@ function M.bar(s)
                 func.icon_wrapper(temp.icon),
                 func.text_wrapper(temp.widget),
 
-                func.icon_wrapper(hddtemp.icon, 5, 5, 5, 5),
+                func.icon_wrapper(hddtemp.icon, 5, 0, 5, 5),
                 func.text_wrapper(hddtemp.widget.sda),
-                func.icon_wrapper(hddtemp.icon, 5, 5, 5, 5),
+                func.icon_wrapper(hddtemp.icon, 5, 0, 5, 5),
                 func.text_wrapper(hddtemp.widget.sdb),
 
                 func.icon_wrapper(cpu.icon),

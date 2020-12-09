@@ -1,5 +1,6 @@
 local beautiful = require("beautiful")
 local awful = require("awful")
+local gears = require("gears")
 
 
 local M = {}
@@ -24,7 +25,6 @@ function M.get(clientkeys, clientbuttons)
         {
             rule_any = {
                 instance = {
-                    "DTA", -- Firefox addon DownThemAll.
                     "copyq", -- Includes session name in class.
                     "pinentry"
                 },
@@ -57,7 +57,9 @@ function M.get(clientkeys, clientbuttons)
             rule_any = {
                 type = {"normal", "dialog"}
             },
-            properties = {titlebars_enabled = false}
+            properties = {
+                titlebars_enabled = false,
+            }
         },
     }
     -- }}}

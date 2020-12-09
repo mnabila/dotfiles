@@ -174,7 +174,26 @@ function M.get()
                 awful.spawn("dmenu_record")
             end,
             {description = "screen recorder", group = "launcher"}
+        ),
+
+        awful.key(
+            {modkey},
+            "Home",
+            function()
+                awful.spawn("dmenu_record")
+            end,
+            {description = "screen recorder", group = "launcher"}
+        ),
+
+        awful.key(
+            {modkey},
+            "a",
+            function()
+                awful.spawn("dmenu_aria2")
+            end,
+            {description = "opent network manager", group = "launcher"}
         )
+
     )
     return userkeys
 end

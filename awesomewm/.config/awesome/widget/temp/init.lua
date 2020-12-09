@@ -1,9 +1,9 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local icon = os.getenv("HOME") ..  "/.config/awesome/statusbar/modules/temp/icon.svg"
-local colorize = require("main.helpers").colorize
+local icon = os.getenv("HOME") ..  "/.config/awesome/widget/temp/icon.svg"
+local colorize = require("utils.function").colorize
 local beautiful = require("beautiful")
-local markup = require("main.helpers").markup
+local markup = require("utils.function").markup
 
 local M = {}
 

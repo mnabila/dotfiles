@@ -1,12 +1,12 @@
 local wibox = require("wibox")
 local awful = require("awful")
 local beautiful = require("beautiful")
-local markup = require("main.helpers").markup
-local colorize = require("main.helpers").colorize
+local markup = require("utils.function").markup
+local colorize = require("utils.function").colorize
 
-local up = os.getenv("HOME") .. "/.config/awesome/statusbar/modules/netspeed/up.svg"
-local down = os.getenv("HOME") .. "/.config/awesome/statusbar/modules/netspeed/down.svg"
-local network = os.getenv("HOME") .. "/.config/awesome/statusbar/modules/netspeed/network.svg"
+local up = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/up.svg"
+local down = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/down.svg"
+local network = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/network.svg"
 
 local M = {}
 

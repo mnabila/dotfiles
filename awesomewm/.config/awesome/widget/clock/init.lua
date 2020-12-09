@@ -1,10 +1,10 @@
 local gears = require("gears")
 local wibox = require("wibox")
 local awful = require("awful")
-local colorize = require"main.helpers".colorize
+local colorize = require("utils.function").colorize
 local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
-local icon = os.getenv("HOME") .. "/.config/awesome/statusbar/modules/clock/icon.svg"
+local icon = os.getenv("HOME") .. "/.config/awesome/widget/clock/icon.svg"
 
 local M = {}
 

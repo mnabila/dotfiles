@@ -12,8 +12,9 @@ local beautiful = require("beautiful")
 
 
 -- {{{ Notification 
-require("themes.xresources.notification")
+require("themes.xresources.naughty")
 -- }}}
+
 -- {{{ Error handling
 require("main.errorhandling")
 -- }}}
@@ -24,16 +25,10 @@ beautiful.init(require("themes.xresources.theme"))
 beautiful.wallpaper = os.getenv("HOME") .. "/Pictures/diy/mnabilagi.png"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "env LIBGL_ALWAYS_SOFTWARE=1 kitty"
-editor = os.getenv("EDITOR") or "nano"
+terminal   = "env LIBGL_ALWAYS_SOFTWARE=1 kitty"
+editor     = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
-
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod4"
+modkey     = "Mod4"
 
 local keymap = {
     bindtotags = require("keymap.bindtotags"),
@@ -55,6 +50,12 @@ awful.layout.layouts = {
 }
 -- }}}
 
+-- {{{ Tags 
+require("main.tags")
+-- }}}
+
+
+
 -- {{{ Menu
 require("main.menu")
 -- }}}
@@ -64,6 +65,7 @@ require("statusbar.init")
 -- }}}
 
 -- {{{ Bindings
+-- set mouse
 root.buttons(keymap.globalbuttons())
 -- Set keys
 root.keys(

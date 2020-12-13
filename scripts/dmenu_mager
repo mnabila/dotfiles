@@ -38,7 +38,8 @@ OPTIONS='''
   { "label": "umount iso", "command": "dmenu_iso" },
   { "label": "juypiter lab", "command": "chromium --new-window --app=http://localhost:8888/lab" },
   { "label": "photopea", "command": "chromium --new-window --app=https://www.photopea.com/" },
-  { "label": "trello", "command": "chromium --new-window --app=https://trello.com/" }
+  { "label": "trello", "command": "chromium --new-window --app=https://trello.com/" },
+  { "label": "viper restart", "command": "viper restart" }
 ]
 '''
 

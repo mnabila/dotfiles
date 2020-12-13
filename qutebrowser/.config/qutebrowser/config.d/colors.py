@@ -384,4 +384,4 @@ c.colors.tabs.pinned.selected.even.bg = xrdb["*color3"]
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = xrdb["*color15"]
+c.colors.webpage.bg = "#ffffff"

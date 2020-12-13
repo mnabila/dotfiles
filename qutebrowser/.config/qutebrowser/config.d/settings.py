@@ -456,6 +456,7 @@ c.url.searchengines = {
     "r": "https://www.reddit.com/search/?q={}",
     "wp": "https://id.wikipedia.org/w/index.php?search={}",
     "yt": "https://www.youtube.com/results?search_query={}",
+    "gc": "https://scholar.google.com/scholar?hl=id&q={}",
 }
 
 # Page(s) to open at the start.
@@ -482,3 +483,8 @@ c.window.hide_decoration = True
 # `tabs.title.format` are defined.
 # Type: FormatString
 c.window.title_format = "{perc}{current_title}{title_sep}qutebrowser"
+
+# Loading autoconfig.yml
+# When a config.py file exists, autoconfig.yml is not loaded automatically.
+# To load autoconfig.yml automatically, add the following snippet to config.py
+config.load_autoconfig()

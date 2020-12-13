@@ -51,10 +51,10 @@ alias d="deletemark"
 alias m="showmarks"
 
 # gcloud sdk
-alias glogin="gcloud auth login"
-alias gshell="gcloud alpha cloud-shell ssh --authorize-session"
-alias gproject="gcloud config set project"
-alias gclean="gcloud auth revoke --all"
+# alias glogin="gcloud auth login"
+# alias gshell="gcloud alpha cloud-shell ssh --authorize-session"
+# alias gproject="gcloud config set project"
+# alias gclean="gcloud auth revoke --all"
 
-alias nvim-update="yay --sudoloop -S --noconfirm neovim-git"
+alias nvim-update="yay --sudoloop -S --noconfirm neovim-git && nvim +PlugUpdate"
 

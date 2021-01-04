@@ -13,7 +13,7 @@
 ![GitHub](https://img.shields.io/github/license/mnabila/dotfiles?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mnabila/dotfiles?label=Dotfiles%20Size&style=for-the-badge)
 
-Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
+Tempat backup konfigurasi desktop - dengan bantuan GNU/stow
 
 # Daftar Isi
 
@@ -33,7 +33,7 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 |         Item          | Value                                           |
 | :-------------------: | :---------------------------------------------- |
 |          OS           | ArchLinux                                       |
-|          WM           | i3-gaps, bspwm                                  |
+|          WM           | i3-gaps, bspwm, awesomewm                       |
 |         Shell         | zsh _([zimfw](https://github.com/zimfw/zimfw))_ |
 |          DM           | lightdm, SLIM                                   |
 |         Font          | iosevka, iosevka nerd font                      |
@@ -60,6 +60,10 @@ Tempat backup konfigurasi i3-gaps - dengan bantuan GNU/stow
 #### bspwm
 
 ![bspwm](https://github.com/mnabila/dotfiles/blob/master/screenshot/bspwm.png?raw=true)
+
+#### awesomewm
+
+![bspwm](https://github.com/mnabila/dotfiles/blob/master/screenshot/awesomewm.png?raw=true)
 
 #### tmux
 
@@ -149,7 +153,7 @@ Stow home page: <http://www.gnu.org/software/stow/>
 General help using GNU software: <http://www.gnu.org/gethelp/>
 ```
 
-#### Memasang Dotfiles
+#### Mekasang Dotfiles
 
 Langkah pertama yakni clone dulu dotfiles yang ada. dengan perintah dibawah ini
 
@@ -168,14 +172,16 @@ Untuk memasang confignya cukup mudah ketikkan perintah dibawah ini.
 $ stow tmux
 ```
 
-
 ## Download Folder Configurasi
+
 sebelum melakukan download folder configurasi yang perlu kita persiapkan yakni git dan subversion
+
 ```
 $ sudo pacman -S git subversion
 ```
 
 lalu tambahkan custom function dibawah ini pada bashrc atau zshrc kalian
+
 ```
 git-svn(){
   if [[ ! -z "$1" && ! -z "$2" ]]; then
@@ -184,15 +190,17 @@ git-svn(){
           svn export "$repo/trunk/$2"
   else
           echo "Use: git-svn <repository> <subdirectory>"
-  fi  
+  fi
 }
 ```
+
 untuk menggunakan cukup ketikkan perintah seperti dibawah ini
+
 ```
 $ git-svn "url repository yang kalian inginkan" "folder yang ada di repository"
 ```
 
-> kita ambil contoh ingin download  configurasi tmux saja
+> kita ambil contoh ingin download configurasi tmux saja
 
 ```
 $ git-svn https://github.com/mnabila/dotfiles tmux

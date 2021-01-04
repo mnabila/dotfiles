@@ -6,19 +6,16 @@
 
 # 2016 Oliver Kraitschy - http://okraits.de
 
-OPTIONS="Logout\nSuspend\nReboot\nPoweroff\nHibernate"
+OPTIONS="Suspend\nReboot\nPoweroff\nHibernate"
 
 # source configuration or use default values
 USE_LOCKER="true"
 LOCKER="slimlock"
 
-option=`echo -e $OPTIONS | rofi -dmenu -lines 5 -i -p Session| awk '{print $1}' | tr -d '\r\n'`
+option=`echo -e $OPTIONS | rofi -dmenu -lines 4 -i -p Session| awk '{print $1}' | tr -d '\r\n'`
 if [ ${#option} -gt 0 ]
 then
     case $option in
-        Logout)
-            i3-msg exit
-            ;;
         Reboot)
             systemctl reboot
             ;;

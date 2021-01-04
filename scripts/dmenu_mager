@@ -7,41 +7,43 @@
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
 DMENU="rofi -dmenu -i -p Mager"
+# OPTIONS = [[label, command]]
 OPTIONS='''
 [
-  { "label": "anime", "command": "dmenu_anime" },
-  { "label": "aria2", "command": "dmenu_aria2" },
-  { "label": "boottester", "command": "dmenu_boottester" },
-  { "label": "droidcam audio only", "command": "droidcam-cli -a 192.168.43.1 4747" },
-  { "label": "droidcam video & audio", "command": "droidcam-cli -a -v 192.168.43.1 4747" },
-  { "label": "droidcam video only", "command": "droidcam-cli 192.168.43.1 4747" },
-  { "label": "kill", "command": "dmenu_kill" },
-  { "label": "kill droidcam", "command": "pkill droidcam-cli" },
-  { "label": "monitor", "command": "dmenu_monitor" },
-  { "label": "mpdmenu", "command": "dmenu_mpdmenu" },
-  { "label": "mpv", "command": "dmenu_mpv" },
-  { "label": "pass", "command": "dmenu_pass -p \"Pass Man\"" },
-  { "label": "power", "command": "dmenu_power" },
-  { "label": "qutebrowser", "command": "dmenu_qutebrowser" },
-  { "label": "record", "command": "dmenu_record" },
-  { "label": "scrcpy", "command": "adb connect 192.168.43.1:5555 ; scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download &" },
-  { "label": "screenshot", "command": "dmenu_screenshot" },
-  { "label": "switcher", "command": "dmenu_switcher" },
-  { "label": "sxhkd", "command": "dmenu_sxhkd" },
-  { "label": "systemd", "command": "dmenu_systemd" },
-  { "label": "todo", "command": "dmenu_todo" },
-  { "label": "translate", "command": "dmenu_translate -i" },
-  { "label": "udiskie", "command": "dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select -p FlashDrive" },
-  { "label": "wifi", "command": "dmenu_wifi" },
-  { "label": "window", "command": "dmenu_window" },
-  { "label": "ytview", "command": "dmenu_ytview" },
-  { "label": "umount iso", "command": "dmenu_iso" },
-  { "label": "juypiter lab", "command": "chromium --new-window --app=http://localhost:8888/lab" },
-  { "label": "photopea", "command": "chromium --new-window --app=https://www.photopea.com/" },
-  { "label": "trello", "command": "chromium --new-window --app=https://trello.com/" },
-  { "label": "viper restart", "command": "viper restart" }
+  [ "aria2",                  "dmenu_aria2" ],
+  [ "boottester",             "dmenu_boottester" ],
+  [ "droidcam audio only",    "droidcam-cli -a 192.168.43.1 4747" ],
+  [ "droidcam video & audio", "droidcam-cli -a -v 192.168.43.1 4747" ],
+  [ "droidcam video only",    "droidcam-cli 192.168.43.1 4747" ],
+  [ "kill",                   "dmenu_kill" ],
+  [ "kill droidcam",          "pkill droidcam-cli" ],
+  [ "monitor",                "dmenu_monitor" ],
+  [ "mpdmenu",                "dmenu_mpdmenu" ],
+  [ "mpv",                    "dmenu_mpv" ],
+  [ "pass",                   "dmenu_pass -p \"Pass Man\"" ],
+  [ "power",                  "dmenu_power" ],
+  [ "qutebrowser",            "dmenu_qutebrowser" ],
+  [ "record",                 "dmenu_record" ],
+  [ "scrcpy",                 "adb connect 192.168.43.1:5555 ; scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download &" ],
+  [ "screenshot",             "dmenu_screenshot" ],
+  [ "switcher",               "dmenu_switcher" ],
+  [ "sxhkd",                  "dmenu_sxhkd" ],
+  [ "systemd",                "dmenu_systemd" ],
+  [ "todo",                   "dmenu_todo" ],
+  [ "translate",              "dmenu_translate -i" ],
+  [ "udiskie",                "dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select -p FlashDrive" ],
+  [ "wifi",                   "dmenu_wifi" ],
+  [ "window",                 "dmenu_window" ],
+  [ "ytview",                 "dmenu_ytview" ],
+  [ "umount iso",             "dmenu_iso" ],
+  [ "viper restart",          "viper restart" ],
+  [ "juypiter lab",           "chromium --new-window --app=http://localhost:8888/lab" ],
+  [ "photopea",               "chromium --new-window --app=https://www.photopea.com/" ],
+  [ "trello",                 "chromium --new-window --app=https://trello.com/" ],
+  [ "Facebook",               "chromium --new-window --app=https://m.facebook.com/" ],
+  [ "TweetDeck",              "chromium --new-window --app=https://tweetdeck.twitter.com/" ]
 ]
 '''
 
-label=$(echo $OPTIONS | jq -r ".[].label" | $DMENU)
-exec $(echo $OPTIONS | jq -r ".[] | select(.label == \"$label\") | .command")
+label=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
+exec $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$label\") | .[1]")

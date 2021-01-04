@@ -25,7 +25,7 @@ alias yt10="youtube-viewer --resolution=1080p"
 #
 alias pmu="pekmen;sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias pmu-id="pekmen;sudo reflector --verbose --country Indonesia --age 12 --protocol https --protocol http --sort rate --save /etc/pacman.d/mirrorlist"
-alias psu="sudo pacman -Fyy && sudo pacman -Syyuw"
+alias psu="sudo pacman -Syyuw"
 alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias pacname="pacman -Sup --print-format \"%n\" | sort -n"
 alias pacurl="pacman -Sup | grep https"
@@ -56,5 +56,5 @@ alias m="showmarks"
 # alias gproject="gcloud config set project"
 # alias gclean="gcloud auth revoke --all"
 
-alias nvim-update="yay --sudoloop -S --noconfirm neovim-git && nvim +PlugUpdate"
+alias nvim-update="yay --sudoloop -S --noconfirm neovim-git"
 

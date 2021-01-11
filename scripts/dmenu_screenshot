@@ -11,7 +11,7 @@ TIMESTAMP="$(date +%Y%m%d_%H%M%S)"
 SCREENSHOTDIR="$HOME/Pictures/screenshot"
 ICON="$HOME/Dotfiles/icons/gruvbox/camera.png"
 FILENAME="$SCREENSHOTDIR/Screenshot_$TIMESTAMP.png"
-DMENU="rofi -dmenu -p Screenshot -lines 4 -width 30"
+DMENU="rofi -dmenu -p Screenshot -lines 6 -width 30"
 TEXT="author : mnabila"
 
 takeOnWindow() {
@@ -32,6 +32,10 @@ takeOnRectange() {
     else
         rm $FILENAME
     fi
+}
+takeOnRectangeWithDelay() {
+    sleep 2
+    takeOnRectange
 }
 
 addRoundedCorner() {
@@ -65,10 +69,18 @@ saveAndCopy() {
     notify-send -i $ICON "Screenshot" "Copied to clipboard"
 }
 
-OPTIONS=$(echo -e "Window\nFullscreen\nRectange\nFlameshot" | $DMENU)
-case $OPTIONS in
-    Window) takeOnWindow ;;
-    Fullscreen) takeOnFullScreen ;;
-    Rectange) takeOnRectange ;;
-    Flameshot) flameshot gui ;;
-esac
+
+OPTIONS='''
+[
+    ["Window", "takeOnWindow"],
+    ["Fullscreen", "takeOnFullScreen"],
+    ["Rectange", "takeOnRectange"],
+    ["Rectange With Delay", "takeOnRectangeWithDelay"],
+    ["Flameshot", "flameshot gui"],
+    ["Flameshot Fullscreen", "flameshot screen"]
+]
+'''
+
+
+menu=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
+$(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$menu\") | .[1]")

@@ -7,6 +7,17 @@ local icon = os.getenv("HOME") .. "/.config/awesome/widget/memory/icon.svg"
 
 local M = {}
 
+-- local meminfo = function()
+--     local file = '/proc/meminfo'
+--     local lines = {}
+--     for line in io.lines(file) do
+--         line = string.gsub(line, "%s+", "")
+--         local key, val = string.match(line, "([^:]+):([^:]+)")
+--         lines[key] = val
+--     end
+--     return lines
+-- end
+
 -- Memory
 M.icon = wibox.widget.imagebox(colorize(icon, beautiful.widget_icon))
 

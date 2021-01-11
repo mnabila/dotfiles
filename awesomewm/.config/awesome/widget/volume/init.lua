@@ -18,13 +18,13 @@ M.icon = wibox.widget.imagebox(colorize(volume_low, beautiful.widget_icon))
 
 local get_vol_status = [[
     sh -c "
-    pacmd list-sinks | awk '/\\* index: /{nr[NR+7];nr[NR+11]}; NR in nr'
+    amixer sget Master
     "
 ]]
 
 local set_volume = function(widget, stdout)
-    local volume = tonumber(stdout:match('(%d+)%% /'))
-    local muted = stdout:match('muted:(%s+)[yes]')
+    local volume = tonumber(stdout:match('(%d+)%%'))
+    local muted = stdout:match('(%d+)[off]')
 
     if muted then
         M.icon:set_image(colorize(volume_off, beautiful.widget_text))
@@ -47,7 +47,7 @@ M.widget = awful.widget.watch(get_vol_status, 120, function(widget, stdout)
         set_volume(widget, stdout)
     end)
 
-awesome.connect_signal("volume_change", function()
+awesome.connect_signal("volume", function()
         awful.spawn.easy_async_with_shell(get_vol_status, function(stdout)
                 set_volume(M.widget, stdout)
             end)

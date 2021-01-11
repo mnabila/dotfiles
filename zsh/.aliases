@@ -56,5 +56,8 @@ alias m="showmarks"
 # alias gproject="gcloud config set project"
 # alias gclean="gcloud auth revoke --all"
 
+# tidal-dl
+alias td="tidal-dl -l"
+
 alias nvim-update="yay --sudoloop -S --noconfirm neovim-git"
 

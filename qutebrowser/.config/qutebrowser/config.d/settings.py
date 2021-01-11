@@ -457,7 +457,8 @@ c.url.searchengines = {
     "wp": "https://id.wikipedia.org/w/index.php?search={}",
     "yt": "https://www.youtube.com/results?search_query={}",
     "gc": "https://scholar.google.com/scholar?hl=id&q={}",
-    "ad": "https://anidl.org/?s={}"
+    "ad": "https://anidl.org/?s={}",
+    "td": "https://listen.tidal.com/search?q={}"
 }
 
 # Page(s) to open at the start.

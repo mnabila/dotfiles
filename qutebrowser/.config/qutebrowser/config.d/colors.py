@@ -384,4 +384,24 @@ c.colors.tabs.pinned.selected.even.bg = xrdb["*color3"]
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = "#ffffff"
+# c.colors.webpage.bg = "#ffffff"
+
+# Which algorithm to use for modifying how colors are rendered with darkmode.
+# Type: String
+# c.colors.webpage.darkmode.algorithm = "brightness-rgb"
+
+# Contrast for dark mode. This only has an effect when colors.webpage.darkmode.algorithm is set to lightness-hsl or brightness-rgb.
+# Type: Float
+# c.colors.webpage.darkmode.contrast = 0.9
+
+# Render all web contents using a dark theme. Example configurations from Chromium’s chrome://flags:
+# Type: Bool
+# c.colors.webpage.darkmode.enabled = False
+
+# Which images to apply dark mode to. WARNING: With QtWebengine 5.15.0, this setting can cause frequent renderer process crashes due to a bug in Qt. Thus, the smart setting is ignored and treated like never in that case.
+# Type: String
+# c.colors.webpage.darkmode.policy.images = "never"
+
+# Which pages to apply dark mode to.
+# Type: String
+# c.colors.webpage.darkmode.policy.page = "smart"

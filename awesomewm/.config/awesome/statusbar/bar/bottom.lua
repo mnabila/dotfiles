@@ -18,6 +18,7 @@ local temp = require("widget.temp")
 local volume = require("widget.volume")
 local hddtemp = require("widget.hddtemp")
 local brightness = require("widget.brightness")
+local mpd = require("widget.mpd")
 
 
 local M = {}
@@ -33,6 +34,8 @@ function M.bar(s)
                 -- Left widgets
                 layout = wibox.layout.fixed.horizontal,
                 taglist.widget(s),
+                func.icon_wrapper(mpd.icon, 6, 6, 6, 6),
+                func.text_wrapper(mpd.widget, 0, 0, 0, 3),
             },
             {
                 layout = wibox.layout.fixed.horizontal,
@@ -41,6 +44,7 @@ function M.bar(s)
                 layout = wibox.layout.fixed.horizontal,
 
                 func.icon_wrapper(netspeed.network_icon, 5, 5, 5, 5),
+                func.text_wrapper(netspeed.ssid, 0, 0, 0, 3),
                 func.icon_wrapper(netspeed.down_icon),
                 func.text_wrapper(netspeed.down),
                 func.icon_wrapper(netspeed.up_icon),

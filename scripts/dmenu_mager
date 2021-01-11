@@ -24,7 +24,7 @@ OPTIONS='''
   [ "power",                  "dmenu_power" ],
   [ "qutebrowser",            "dmenu_qutebrowser" ],
   [ "record",                 "dmenu_record" ],
-  [ "scrcpy",                 "adb connect 192.168.43.1:5555 ; scrcpy -S -b 2M -m 1080 --push-target /sdcard/Download &" ],
+  [ "scrcpy",                 "adb connect 192.168.43.1:5555 ; scrcpy -S -b 2M -m 720p --push-target /sdcard/Download &" ],
   [ "screenshot",             "dmenu_screenshot" ],
   [ "switcher",               "dmenu_switcher" ],
   [ "sxhkd",                  "dmenu_sxhkd" ],

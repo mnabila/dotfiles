@@ -10,19 +10,18 @@ require("awful.autofocus")
 -- Theme handling library
 local beautiful = require("beautiful")
 
+-- {{{ Error handling
+require("main.errorhandling")
+-- }}}
 
 -- {{{ Notification 
 require("themes.xresources.naughty")
 -- }}}
 
--- {{{ Error handling
-require("main.errorhandling")
--- }}}
-
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(require("themes.xresources.theme"))
-beautiful.wallpaper = os.getenv("HOME") .. "/Pictures/diy/mnabilagi.png"
+beautiful.wallpaper = os.getenv("HOME") .. "/Pictures/diy/mnabila.png"
 
 -- This is used later as the default terminal and editor to run.
 terminal   = "env LIBGL_ALWAYS_SOFTWARE=1 kitty"
@@ -45,8 +44,6 @@ local keymap = {
 awful.layout.layouts = {
     awful.layout.suit.max,
     awful.layout.suit.tile,
-    awful.layout.suit.fair,
-    awful.layout.suit.spiral,
 }
 -- }}}
 

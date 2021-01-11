@@ -6,7 +6,7 @@ local colorize = require("utils.function").colorize
 
 local up = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/up.svg"
 local down = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/down.svg"
-local network = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/network.svg"
+local network = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/wifi_on.svg"
 
 local M = {}
 
@@ -23,10 +23,14 @@ local speed = {
     up = [[
         sh -c "cat /sys/class/net/[w]*/statistics/tx_bytes"
     ]],
+
     down = [[
         sh -c "cat /sys/class/net/[w]*/statistics/rx_bytes"
     ]]
 }
+local get_ssid = [[
+    sh -c "nmcli device show wlan0 | grep CONNECTION | cut -d : -f 2 | tr -d ' '"
+]]
 
 
 M.up = awful.widget.watch(speed.up, 2, function(widget, stdout)
@@ -49,6 +53,10 @@ M.down = awful.widget.watch(speed.down, 2, function(widget, stdout)
         end
         widget:set_markup(markup(tostring(num).."KiB", {fg = beautiful.widget_text}))
         down_old = tonumber(stdout)
+    end)
+
+M.ssid = awful.widget.watch(get_ssid, 10, function(widget, stdout)
+    widget:set_markup(markup(stdout, {fg = beautiful.widget_text}))
     end)
 
 return M

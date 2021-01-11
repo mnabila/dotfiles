@@ -162,7 +162,16 @@ function M.get()
             {modkey},
             "F8",
             function()
-                awful.spawn("connman-gtk")
+                awful.spawn("dmenu_nmcli")
+            end,
+            {description = "opent network manager", group = "launcher"}
+        ),
+
+        awful.key(
+            {modkey, "Shift"},
+            "F8",
+            function()
+                awful.spawn("nm-connection-editor")
             end,
             {description = "opent network manager", group = "launcher"}
         ),

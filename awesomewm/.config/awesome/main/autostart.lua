@@ -7,7 +7,7 @@ do
         "clipmenud",
         "xfce4-power-manager",
         "light -S 30",
-        "viper start",
+        -- "viper start",
         "udiskie",
     }
 

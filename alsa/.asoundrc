@@ -1,0 +1,21 @@
+pcm.!default {
+    type plug
+    slave { pcm "pulse" }
+}
+
+pcm.pulse {
+    type pulse
+    rate 384000
+}
+
+pcm.card1 {
+    format S23_LE
+    rate 384000
+    type hw
+    card 1
+}
+
+ctl.mixer0 {
+    type hw
+    card 0
+}

@@ -10,6 +10,7 @@ function M.get()
             "XF86AudioLowerVolume",
             function()
                 awful.spawn.with_shell("amixer set Master 5%-")
+                awesome.emit_signal("volume")
             end,
             {description = "lower the volume", group = "media"}
         ),
@@ -18,6 +19,7 @@ function M.get()
             "XF86AudioRaiseVolume",
             function()
                 awful.spawn.with_shell("amixer set Master 5%+")
+                awesome.emit_signal("volume")
             end,
             {description = "raise the volume", group = "media"}
         ),
@@ -26,6 +28,7 @@ function M.get()
             "XF86AudioMute",
             function()
                 awful.spawn.with_shell("amixer set Master toggle")
+                awesome.emit_signal("volume")
             end,
             {description = "mute the audio", group = "media"}
         ),
@@ -59,6 +62,7 @@ function M.get()
             "XF86MonBrightnessDown",
             function()
                 awful.spawn.with_shell("light -U 5")
+                awesome.emit_signal("brightness")
             end,
             {description = "decrease brightness", group = "brightness"}
         ),
@@ -67,6 +71,7 @@ function M.get()
             "XF86MonBrightnessUp",
             function()
                 awful.spawn.with_shell("light -A 5")
+                awesome.emit_signal("brightness")
             end,
             {description = "increase brightness", group = "brightness"}
         ),

@@ -34,23 +34,23 @@ local taglist_buttons = gears.table.join(
                 client.focus:toggle_tag(t)
             end
         end
-    ),
-
-    awful.button(
-        {},
-        4,
-        function(t)
-            awful.tag.viewnext(t.screen)
-        end
-    ),
-
-    awful.button(
-        {},
-        5,
-        function(t)
-            awful.tag.viewprev(t.screen)
-        end
     )
+
+--     awful.button(
+--         {},
+--         4,
+--         function(t)
+--             awful.tag.viewnext(t.screen)
+--         end
+--     ),
+
+--     awful.button(
+--         {},
+--         5,
+--         function(t)
+--             awful.tag.viewprev(t.screen)
+--         end
+--     )
 )
 
 function M.widget(s)

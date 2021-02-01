@@ -40,10 +40,11 @@ OPTIONS='''
   [ "juypiter lab",           "chromium --new-window --app=http://localhost:8888/lab" ],
   [ "photopea",               "chromium --new-window --app=https://www.photopea.com/" ],
   [ "trello",                 "chromium --new-window --app=https://trello.com/" ],
-  [ "Facebook",               "chromium --new-window --app=https://m.facebook.com/" ],
-  [ "TweetDeck",              "chromium --new-window --app=https://tweetdeck.twitter.com/" ]
+  [ "facebook",               "chromium --new-window --app=https://m.facebook.com/" ],
+  [ "tweetDeck",              "chromium --new-window --app=https://tweetdeck.twitter.com/" ],
+  [ "iptv",                   "dmenu_iptv" ]
 ]
 '''
 
-label=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
+label=$(echo $OPTIONS | jq -r "sort | .[][0]" | $DMENU)
 exec $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$label\") | .[1]")

@@ -1,0 +1,49 @@
+#!/bin/bash
+# File              : dmenu_iptv
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48@gmail.com>
+# Date              : Senin, 01/02/2021 11:52 WIB
+# Last Modified Date: Senin, 01/02/2021 11:52 WIB
+# Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
+
+DMENU="rofi -dmenu -i -p IPTV"
+IPTV='''
+[
+    ["Ahsan TV",        "http://119.82.224.75:1935/live/ahsantv/playlist.m3u8"],
+    ["ANTV",            "http://210.210.155.35/qwr9ew/s/s07/02.m3u8"],
+    ["BERITA SATU",     "http://edge.linknetott.swiftserve.com/live/BsNew/amlst:beritasatunewsbs/playlist.m3u8"],
+    ["CNN INDONESIA",   "https://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8"],
+    ["ELSHINTA TV",     "http://210.210.155.35/qwr9ew/s/s10/01.m3u8"],
+    ["GTV",             "https://vcdn2.rctiplus.id/live/eds/gtv_fta/live_fta/gtv_fta.m3u8"],
+    ["INDOSIAR",        "http://210.210.155.35/session/62c3f4aa-7aec-11ea-b162-c81f66f89318/qwr9ew/s/s04/02.m3u8?app_type=mobile&userid=d0cu4j7cnm&tkn=BEMV9570E7UC93I64J3E6KFTM2B2NMJK&chname=IndosiarC&chname=Indosiar"],
+    ["KOMPAS TV",       "http://103.130.186.138:8800/oxygenplay/kompastv/index.m3u8"],
+    ["METRO TV",        "http://188.40.76.108:25461/mytv01/uSIRzmks51/142"],
+    ["MNCTV",           "https://vcdn2.rctiplus.id/live/eds/mnctv_fta/live_fta/mnctv_fta.m3u8"],
+    ["NET TV",          "http://210.210.155.35/qwr9ew/s/s08/01.m3u8"],
+    ["RCTI",            "https://vcdn2.rctiplus.id/live/eds/rcti_fta/live_fta/rcti_fta.m3u8"],
+    ["RODJA TV",        "http://rr2.dens.tv/s/s14/index.m3u8"],
+    ["RTV/RAJAWALI TV", "http://202.80.222.170/000001/2/ch00000090990000001716/index.m3u8?virtualDomain=000001.live_hls.zte.com"],
+    ["SCTV",            "http://210.210.155.35/qwr9ew/s/s03/02.m3u8"],
+    ["TRANS 7",         "http://chostv.mobie.in/files/iptv/trans7.m3u8"],
+    ["TRANS TV",        "https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8"],
+    ["TVONE",           "http://chostv.mobie.in/files/iptv/tvone.m3u8"],
+    ["ANIPLUS ID",      "http://45.126.83.51/dr9445/h/h02/01.m3u8"],
+    ["MY KIDS",         "http://210.210.155.35/qwr9ew/s/s30/index2.m3u8"],
+    ["ANIMAX",          "http://210.210.155.35/session/83bc2526-da69-11e8-881b-c81f66f89318/dr9445/h/h144/index2.m3u8"],
+    ["AXN",             "http://210.210.155.35:80/session/37ee409e-73b5-11e9-b657-a0899505893d/uq2663/h/h141/01.m3u8"],
+    ["K+",              "http://210.210.155.35/uq2663/h/h08/index.m3u8"],
+    ["CINEMA WORLD",    "http://45.126.83.51/uq2663/h/h04/index2.m3u8"],
+    ["HITS",            "http://45.126.83.51/uq2663/h/h37/01.m3u8"],
+    ["THRILL",          "http://45.126.83.51/qwr9ew/s/s34/index2.m3u8"],
+    ["KIX",             "http://45.126.83.51/uq2663/h/h07/01.m3u8"],
+    ["GEM TV Asia",     "http://210.210.155.35/uq2663/h/h19/index.m3u8"]
+]
+'''
+
+channel=$(echo $IPTV | jq -r "sort | .[][0]" | $DMENU)
+url=$(echo $IPTV | jq -r ".[] | select(.[0] == \"$channel\") | .[1]")
+
+if [[ $channel != "" ]]; then
+    notify-send "DMENU_IPTV" "Current Playing $channel"
+    mpv --fs --title="$channel | IPTV" "$url" &
+fi

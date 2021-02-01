@@ -1,5 +1,6 @@
 local wibox = require("wibox")
 local awful = require("awful")
+local naughty = require("naughty")
 local beautiful = require("beautiful")
 local colorize = require("utils.function").colorize
 local markup = require("utils.function").markup
@@ -16,21 +17,18 @@ local M = {}
 -- Volume
 M.icon = wibox.widget.imagebox(colorize(volume_low, beautiful.widget_icon))
 
-local get_vol_status = [[
-    sh -c "
-    amixer sget Master
-    "
-]]
+local get_vol_status = [[ sh -c "pamixer --get-volume" ]]
+-- local get_mute_status = [[ sh -c "pamixer --get-mute" ]]
 
-local set_volume = function(widget, stdout)
-    local volume = tonumber(stdout:match('(%d+)%%'))
-    local muted = stdout:match('(%d+)[off]')
 
-    if muted then
+local function set_volume(widget, stdout)
+    local volume = tonumber(stdout)
+    local is_muted = false
+
+    if is_muted then
         M.icon:set_image(colorize(volume_off, beautiful.widget_text))
         widget:set_markup(markup("muted", {fg = beautiful.widget_text}))
     else
-
         if volume <= 20 then
             M.icon:set_image(colorize(volume_mute, beautiful.widget_icon))
         elseif volume <= 60 then

@@ -552,7 +552,6 @@ exec --no-startup-id clipmenud
 exec --no-startup-id jgmenu
 exec --no-startup-id light -S 30
 exec --no-startup-id $HOME/.config/polybar/launch.sh start
-exec --no-startup-id viper start
 
 exec_always killall -9 xcompmgr; xcompmgr
 exec_always feh --bg-scale "$HOME/Pictures/diy/vim-abu.png"

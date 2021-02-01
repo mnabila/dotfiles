@@ -13,7 +13,6 @@ bsprun xfce4-power-manager
 bsprun light -S 30
 bsprun udiskie
 bsprun jgmenu
-bsprun viper start
 bsprun xcompmgr
 bsprun conky -c ~/.config/conky/todolist.conkyrc
 bsprun clipmenud

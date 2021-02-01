@@ -11,6 +11,7 @@ c.aliases = {
     "ssh-proxy": "set content.proxy socks://127.0.0.1:1080",
     "system-proxy": "set content.proxy system",
     "settings": "open -t qute://settings",
+    "changelog": "open -t qute://help/changelog.html"
 }
 
 # Require a confirmation before quitting the application.
@@ -485,8 +486,3 @@ c.window.hide_decoration = True
 # `tabs.title.format` are defined.
 # Type: FormatString
 c.window.title_format = "{perc}{current_title}{title_sep}qutebrowser"
-
-# Loading autoconfig.yml
-# When a config.py file exists, autoconfig.yml is not loaded automatically.
-# To load autoconfig.yml automatically, add the following snippet to config.py
-config.load_autoconfig()

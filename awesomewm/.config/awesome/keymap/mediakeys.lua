@@ -9,7 +9,7 @@ function M.get()
             {},
             "XF86AudioLowerVolume",
             function()
-                awful.spawn.with_shell("amixer set Master 5%-")
+                awful.spawn.with_shell("pamixer --decrease 5")
                 awesome.emit_signal("volume")
             end,
             {description = "lower the volume", group = "media"}
@@ -18,7 +18,7 @@ function M.get()
             {},
             "XF86AudioRaiseVolume",
             function()
-                awful.spawn.with_shell("amixer set Master 5%+")
+                awful.spawn.with_shell("pamixer --increase 5")
                 awesome.emit_signal("volume")
             end,
             {description = "raise the volume", group = "media"}
@@ -27,7 +27,7 @@ function M.get()
             {},
             "XF86AudioMute",
             function()
-                awful.spawn.with_shell("amixer set Master toggle")
+                awful.spawn.with_shell("pamixer --toggle-mute")
                 awesome.emit_signal("volume")
             end,
             {description = "mute the audio", group = "media"}

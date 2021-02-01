@@ -13,7 +13,6 @@ export QT_SCALE_FACTOR=1
 export QT_SCREEN_SCALE_FACTORS=1
 
 export GEM_HOME=$HOME/.gem
-export PYENV_ROOT="${HOME}/.pyenv"
 
 export TERM=screen-256color
 export TERMINAL=kitty

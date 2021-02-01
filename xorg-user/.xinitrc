@@ -23,7 +23,7 @@ fi
 xsetroot -cursor_name left_ptr
 
 # Untuk SLiM Session
-DEFAULTSESSION=bspwm
+export XDG_CURRENT_DESKTOP=awesome
 case "$1" in
     awesome) exec awesome ;;
     dwm) exec dwm ;;
@@ -33,6 +33,6 @@ case "$1" in
     instantwm) exec instantwm ;;
     bspwm) exec bspwm ;;
     qtile) exec qtile ;;
-    *) exec $DEFAULTSESSION ;;
+    *) exec $XDG_CURRENT_DESKTOP ;;
 esac
 

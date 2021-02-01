@@ -388,7 +388,7 @@ c.colors.tabs.pinned.selected.even.bg = xrdb["*color3"]
 
 # Which algorithm to use for modifying how colors are rendered with darkmode.
 # Type: String
-# c.colors.webpage.darkmode.algorithm = "brightness-rgb"
+c.colors.webpage.darkmode.algorithm = "lightness-cielab"
 
 # Contrast for dark mode. This only has an effect when colors.webpage.darkmode.algorithm is set to lightness-hsl or brightness-rgb.
 # Type: Float
@@ -396,12 +396,20 @@ c.colors.tabs.pinned.selected.even.bg = xrdb["*color3"]
 
 # Render all web contents using a dark theme. Example configurations from Chromium’s chrome://flags:
 # Type: Bool
-# c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = False
+
+# Render all colors as grayscale. This only has an effect when colors.webpage.darkmode.algorithm is set to lightness-hsl or brightness-rgb.
+# Type: Bool
+c.colors.webpage.darkmode.grayscale.all = True
+
+# Desaturation factor for images in dark mode. If set to 0, images are left as-is. If set to 1, images are completely grayscale. Values between 0 and 1 desaturate the colors accordingly.
+# Type: Float
+c.colors.webpage.darkmode.grayscale.images = 0.5
 
 # Which images to apply dark mode to. WARNING: With QtWebengine 5.15.0, this setting can cause frequent renderer process crashes due to a bug in Qt. Thus, the smart setting is ignored and treated like never in that case.
 # Type: String
-# c.colors.webpage.darkmode.policy.images = "never"
+c.colors.webpage.darkmode.policy.images = "never"
 
 # Which pages to apply dark mode to.
 # Type: String
-# c.colors.webpage.darkmode.policy.page = "smart"
+c.colors.webpage.darkmode.policy.page = "smart"

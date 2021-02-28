@@ -178,18 +178,9 @@ function M.get()
 
         awful.key(
             {modkey},
-            "Home",
+            "Print",
             function()
-                awful.spawn("dmenu_record")
-            end,
-            {description = "screen recorder", group = "launcher"}
-        ),
-
-        awful.key(
-            {modkey},
-            "Home",
-            function()
-                awful.spawn("dmenu_record")
+                awful.spawn("dmenu_ffmpeg")
             end,
             {description = "screen recorder", group = "launcher"}
         ),

@@ -29,6 +29,9 @@ function M.get()
             "space",
             function(c)
                 c.floating = not c.floating
+                c.width    = 1200
+                c.height   = 700
+                awful.placement.centered(c)
             end,
             {description = "toggle floating", group = "client"}
         ),

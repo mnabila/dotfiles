@@ -11,7 +11,9 @@ c.aliases = {
     "ssh-proxy": "set content.proxy socks://127.0.0.1:1080",
     "system-proxy": "set content.proxy system",
     "settings": "open -t qute://settings",
-    "changelog": "open -t qute://help/changelog.html"
+    "changelog": "open -t qute://help/changelog.html",
+    "adblock-off" : "set content.blocking.enabled false",
+    "adblock-on" : "set content.blocking.enabled true",
 }
 
 # Require a confirmation before quitting the application.

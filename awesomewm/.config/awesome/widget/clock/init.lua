@@ -16,21 +16,17 @@ M.widget = wibox.widget.textclock(
 )
 
 -- Calendar Widget
-M.cal_shape = function(cr, width, height)
-    gears.shape.rounded_rect(cr, width, height, false, false, true, true, 12)
-end
-
 M.month_calendar = awful.widget.calendar_popup.month {
         start_sunday = false,
         spacing = dpi(10),
         font = beautiful.font,
         long_weekdays = true,
-        margin = dpi(8), -- 10
-        style_month = {border_width = 0, shape = cal_shape, padding = 25},
-        style_header = {border_width = 0, bg_color = beautiful.black},
-        style_weekday = {border_width = 0, bg_color = beautiful.black},
-        style_normal = {border_width = 0, bg_color = beautiful.black},
-        style_focus = {border_width = 0, bg_color = beautiful.widget_icon}
+        margin = dpi(5), -- 10
+        style_month = {border_width = 1, padding = 10, border_color = beautiful.bg_focus},
+        style_header = {border_width = 0, bg_color = beautiful.bg_normal},
+        style_weekday = {border_width = 0, bg_color = beautiful.bg_normal},
+        style_normal = {border_width = 0, bg_color = beautiful.bg_normal},
+        style_focus = {border_width = 0, bg_color = beautiful.bg_focus}
     }
 
 -- Attach calentar to clock_widget

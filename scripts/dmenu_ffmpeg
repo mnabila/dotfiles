@@ -3,7 +3,7 @@
 # License           : MIT License
 # Author            : M. Nabil Adani <nblid48[at]gmail[dot]com>
 # Date              : Minggu, 28/02/2021 11:41 WIB
-# Last Modified Date: Minggu, 28/02/2021 18:06 WIB
+# Last Modified Date: Senin, 01/03/2021 11:31 WIB
 # Last Modified By  : M. Nabil Adani <nblid48[at]gmail[dot]com>
 # Inspired By       : https://github.com/tanuj101/awesome-dmenu/blob/master/recorder/dmenurecord.sh
 
@@ -17,8 +17,8 @@ function audioVideo() {
 
     filename="$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv"
     dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
-    ffmpeg -y  -f x11grab -framerate 30 -s $dimensions \
-        -i :0.0 -f alsa -i default -r 30 \
+    ffmpeg -y -f x11grab -framerate 30 -s $dimensions \
+        -i :0.0 -f alsa -i default \
         -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
         -c:a aac $filename &
 
@@ -28,10 +28,11 @@ function audioVideo() {
 function video() {
     notify-send "Start Recording" "With:\nVideo On\nAudio Off"
 
-    filename="$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv"
+    filename="$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mp4"
     dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
-    ffmpeg -y  -f x11grab -framerate 30 -s $dimensions \
-        -i :0.0 -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 $filename &
+    ffmpeg -y -f x11grab -framerate 30 -s $dimensions \
+        -i :0.0 -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 \
+        -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 $filename &
 
     echo $! > $recordid
 }
@@ -46,10 +47,72 @@ function audio() {
     echo $! > $recordid
 }
 
+function stream(){
+    output=$2
+    platform=$1
+    dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
+
+    notify-send "Start Streaming On $platform" "With:\nVideo On\nAudio On"
+    ffmpeg -y -f x11grab -framerate 23 -s $dimensions \
+        -i :0.0 -f alsa -i default \
+        -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
+         -f flv $output &
+
+    echo $1 > $recordid
+}
+
+function getStreamToken(){
+    $DMENU -mesg "Insert $1 Token" -lines 0
+}
+
+function streamOnFacebook(){
+    token=$(getStreamToken "Facebook")
+    if [ "$token" == "" ]; then
+        exit
+    else
+        streamurl="rtmps://live-api-s.facebook.com:443/rtmp/$token"
+        stream "Facebook" $streamurl
+    fi
+}
+
+function streamOnNimoTv(){
+    token=$(getStreamToken "Nimo TV")
+    if [ "$token" == "" ]; then
+        exit
+    else
+        streamurl="rtmp://txpush.rtmp.nimo.tv/live/$token"
+        stream "Nimo TV" $streamurl
+    fi
+}
+
+function streamOnTwitch(){
+    token=$(getStreamToken "Twitch")
+    if [ "$token" == "" ]; then
+        exit
+    else
+        streamurl="rtmp://sin.contribute.live-video.net/app/$token"
+        stream "Twitch" $streamurl
+    fi
+}
+
+function streamOnYoutube(){
+    token=$(getStreamToken "Youtube")
+    if [ "$token" == "" ]; then
+        exit
+    else
+        streamurl="rtmp://a.rtmp.youtube.com/live2/$token"
+        stream "Youtube" $streamurl
+    fi
+}
+
 function stoprecord(){
     if [ -f $recordid ]; then
         kill -15 $(cat $recordid)
         rm $recordid
+    fi
+
+    if [ "$(pidof ffmpeg)" != "" ]; then
+        pkill ffmpeg
     fi
 }
 
@@ -62,12 +125,16 @@ function endrecord(){
 function startrecord(){
     OPTIONS='''
     [
-        ["Audio Video", "audioVideo"],
-        ["Video Only", "video"],
-        ["Audio Only", "audio"]
+        ["難 Audio Video", "audioVideo"],
+        [" Video Only", "video"],
+        [" Audio Only", "audio"],
+        [" Stream On Facebook", "streamOnFacebook"],
+        ["壘 Stream On Nimo TV", "streamOnNimoTv"],
+        ["既 Stream On Twitch", "streamOnTwitch"],
+        [" Stream On Youtube", "streamOnYoutube"]
     ]
     '''
-    select=$(echo $OPTIONS | jq -r "sort | .[][0]" | $DMENU)
+    select=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
     eval $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$select\") | .[1]")
 }
 
@@ -76,4 +143,3 @@ if [ -f $recordid ]; then
 else
     startrecord
 fi
-

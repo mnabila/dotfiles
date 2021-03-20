@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="m1 5c-0.554 0-1 0.446-1 1v4c0 0.554 0.446 1 1 1h2v0.5 0.5h-0.5c-0.277 0-0.5 0.223-0.5 0.5s0.223 0.5 0.5 0.5h3c0.277 0 0.5-0.223 0.5-0.5s-0.223-0.5-0.5-0.5h-0.5v-0.5-0.5h2c0.554 0 1-0.446 1-1v-4c0-0.554-0.446-1-1-1h-6zm0 1h6v4h-2.5-1-2.5v-4z" style="fill-opacity:.98636;fill:#f1f2f2;opacity:.5"/>
+<path d="m9 6c-0.554 0-1 0.446-1 1v4c0 0.554 0.446 1 1 1h6c0.554 0 1-0.446 1-1v-4c0-0.554-0.446-1-1-1zm0 1h6v4h-6z" style="fill-opacity:.98636;fill:#f1f2f2"/>
+<rect x="12" y="8" width="2" height="2" style="fill-opacity:.98636;fill:#f1f2f2"/>
+<rect x="10" y="8" width="1" height="1" style="fill-opacity:.98636;fill:#f1f2f2"/>
+<rect x="14" y="11" width="1" height="2" ry=".5" style="fill-opacity:.98636;fill:#f1f2f2"/>
+<rect x="9" y="11" width="1" height="2" ry=".5" style="fill-opacity:.98636;fill:#f1f2f2"/>
+</svg>

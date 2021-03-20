@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1">
+ <g style="color:#000000" fill="#f1f2f2" transform="translate(0 -.070420)">
+  <path style="text-decoration-line:none;text-transform:none;text-indent:0" font-weight="400" overflow="visible" d="m7.474 3.063c-3.56 0-6.443 2.914-6.443 6.474s2.883 6.474 6.443 6.474 6.475-2.914 6.475-6.474-2.914-6.474-6.475-6.474zm0 1.982a4.482 4.482 0 0 1 4.492 4.492 4.482 4.482 0 0 1 -4.492 4.492c-2.488 0-4.46-2.004-4.46-4.492 0-2.489 1.972-4.492 4.46-4.492z"/>
+  <path overflow="visible" d="m4.281 1a3.289 3.289 0 0 0 -3.281 3.281c0 0.405 0.084 0.767 0.219 1.125 1.206-1.822 3.184-3.102 5.468-3.343a3.263 3.263 0 0 0 -2.406 -1.063zm6.438 0a3.26 3.26 0 0 0 -2.406 1.063 7.533 7.533 0 0 1 5.468 3.374 3.14 3.14 0 0 0 0.219 -1.155 3.289 3.289 0 0 0 -3.281 -3.282z"/>
+  <path style="text-decoration-line:none;text-transform:none;text-indent:0" font-weight="400" overflow="visible" d="m3.906 12.906a1 1 0 0 0 -0.469 0.281l-1.125 1.094a1 1 0 1 0 1.375 1.438l1.125-1.094a1 1 0 0 0 -0.906 -1.719zm7.031 0.094a1 1 0 0 0 -0.593 1.656l0.906 1a1 1 0 1 0 1.5 -1.312l-0.906-1a1 1 0 0 0 -0.907 -0.344z"/>
+  <rect ry=".5" height="5" width="2" y="7.0704" x="5" fill="#f1f2f2"/>
+  <rect ry=".5" height="5" width="2" y="7.0704" x="8" fill="#f1f2f2"/>
+ </g>
+</svg>

@@ -1,0 +1,10 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#f1f2f2">
+        <path d="M10 5v1h2v3h1V6c0-.757-.357-1-1-1z" style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Sans" font-weight="400" color="#000" overflow="visible" font-family="Sans"/>
+        <path d="M12 8c-1.267.11-1.716.541-2 1v2h5v3h.219c.43 0 .781-.334.781-.719V10c0-.692-1-2-3-2z"/>
+        <path d="M11 12h1v3h-1zm2 0h1v3h-1z"/>
+        <path d="M4 2c-.684 0-1.2.452-1.563 1H1.5C.625 3 .03 3.616.03 4.469V14H9V4.562c0-.293-.042-.639-.313-1C8.417 3.203 7.928 3 7.531 3c-.315 0-.597-.002-.937 0-.086-.148-.064-.35-.188-.469C6.017 2.16 5.496 2 5 2H4zm0 2h1v1h1s.562.002 1 0v7H2.03V5H4V4z" style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Sans" font-weight="400" color="#f1f2f2" overflow="visible" font-family="Sans"/>
+        <path d="M3 10h3v1H3zm0-2h3v1H3z"/>
+    </g>
+</svg>

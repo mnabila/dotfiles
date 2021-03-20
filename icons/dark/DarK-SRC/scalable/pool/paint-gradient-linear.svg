@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="linearGradient899" osb:paint="solid">
+<stop style="stop-color:#f1f2f2" offset="0"/>
+</linearGradient>
+<linearGradient id="linearGradient880" gradientTransform="matrix(1.3718 0 0 1 -1985.1 3252.9)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient899"/>
+<linearGradient id="linearGradient872" gradientTransform="matrix(1.3718 0 0 1 -1985.1 1580.1)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient899"/>
+<linearGradient id="linearGradient1015" gradientTransform="matrix(1.3718 0 0 1.5 -1985.1 2372.7)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient899"/>
+<linearGradient id="linearGradient1017" gradientTransform="matrix(1.3718 0 0 1 -1985.1 1584.1)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient899"/>
+<linearGradient id="linearGradient1031" gradientTransform="matrix(1.3718 0 0 1 -1985.1 3248.9)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient899"/>
+<linearGradient id="linearGradient1049" gradientTransform="matrix(1.3718 0 0 1 -1985.1 1586.1)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient899"/>
+<linearGradient id="linearGradient1055" gradientTransform="matrix(1.3718 0 0 1 -1985.1 3246.9)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient899"/>
+</defs>
+<path d="m1 1v14h14v-14h-14zm1 1h12v12h-12v-12z" style="fill:#f1f2f2"/>
+<rect x="5" y="3" width="3" height="4" style="fill:url(#linearGradient872);opacity:.3"/>
+<rect x="4" y="4" width="1" height="1" style="fill:url(#linearGradient872);opacity:.3"/>
+<rect x="4" y="6" width="1" height="1" style="fill:url(#linearGradient872);opacity:.3"/>
+<rect x="11" y="3" width="2" height="4" style="fill:url(#linearGradient872)"/>
+<rect x="10" y="5" width="1" height="1" style="fill:url(#linearGradient872)"/>
+<rect x="10" y="3" width="1" height="1" style="fill:url(#linearGradient872)"/>
+<rect x="3" y="5" width="1" height="1" style="fill:url(#linearGradient872);opacity:.3"/>
+<rect x="3" y="3" width="1" height="1" style="fill:url(#linearGradient872);opacity:.3"/>
+<rect transform="scale(1,-1)" x="9" y="-7" width="1" height="1" style="fill:url(#linearGradient880)"/>
+<rect transform="scale(1,-1)" x="9" y="-5" width="1" height="1" style="fill:url(#linearGradient880)"/>
+<rect transform="scale(1,-1)" x="8" y="-4" width="1" height="1" style="fill:url(#linearGradient880)"/>
+<rect transform="scale(1,-1)" x="8" y="-6" width="1" height="1" style="fill:url(#linearGradient880)"/>
+<rect x="5" y="7" width="3" height="6" style="fill:url(#linearGradient1015);opacity:.3;stroke-width:1.2247"/>
+<rect x="4" y="8" width="1" height="1" style="fill:url(#linearGradient1017);opacity:.3"/>
+<rect x="4" y="10" width="1" height="1" style="fill:url(#linearGradient1017);opacity:.3"/>
+<rect x="11" y="7" width="2" height="6" style="fill:url(#linearGradient1015);stroke-width:1.2247"/>
+<rect x="10" y="9" width="1" height="1" style="fill:url(#linearGradient1017)"/>
+<rect x="10" y="7" width="1" height="1" style="fill:url(#linearGradient1017)"/>
+<rect x="3" y="9" width="1" height="1" style="fill:url(#linearGradient1017);opacity:.3"/>
+<rect x="3" y="7" width="1" height="1" style="fill:url(#linearGradient1017);opacity:.3"/>
+<rect transform="scale(1,-1)" x="9" y="-11" width="1" height="1" style="fill:url(#linearGradient1031)"/>
+<rect transform="scale(1,-1)" x="9" y="-9" width="1" height="1" style="fill:url(#linearGradient1031)"/>
+<rect transform="scale(1,-1)" x="8" y="-8" width="1" height="1" style="fill:url(#linearGradient1031)"/>
+<rect transform="scale(1,-1)" x="8" y="-10" width="1" height="1" style="fill:url(#linearGradient1031)"/>
+<rect x="4" y="12" width="1" height="1" style="fill:url(#linearGradient1049);opacity:.3"/>
+<rect x="10" y="11" width="1" height="1" style="fill:url(#linearGradient1049)"/>
+<rect x="3" y="11" width="1" height="1" style="fill:url(#linearGradient1049);opacity:.3"/>
+<rect transform="scale(1,-1)" x="9" y="-13" width="1" height="1" style="fill:url(#linearGradient1055)"/>
+<rect transform="scale(1,-1)" x="8" y="-12" width="1" height="1" style="fill:url(#linearGradient1055)"/>
+</svg>

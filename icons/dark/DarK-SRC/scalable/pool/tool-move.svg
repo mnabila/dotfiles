@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g id="tools" transform="translate(-8.6305 -361.89)">
+  <g id="gimp-tool-move" transform="translate(-92.369 164.89)">
+   <rect height="15.982" width="16" y="197.02" x="101" fill="none"/>
+   <path d="m303.72 298.35-3.0215 3.0156h2.0313v3.0362c-1.3434-0.0101-1.6875-0.0339-3.0313-0.0421v-1.9941l-3 2.9746 3 3.0176v-2.0059c1.3438-0.00009 1.6875 0.01 3.0313 0.0128v2 1.0009h-2.0313l3.0215 2.9961 2.9785-2.9961h-2v-1.0009-2c1.3333 0.0009 1.6667-0.00098 3-0.005v2.0059l3-3.0176-3-2.9746v1.9961c-1.3332 0.0235-1.6662 0.0438-3 0.0401v-3.044h2z" transform="translate(-194.7 -100.37)" fill="#f1f2f2"/>
+  </g>
+ </g>
+</svg>

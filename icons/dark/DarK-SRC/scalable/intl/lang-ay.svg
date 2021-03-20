@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(6)" style="fill:#f1f2f2">
+<rect transform="rotate(90)" x="13" y="-6" width="1" height="2" style="stroke-width:.8165"/>
+<rect transform="scale(-1)" x="-4" y="-11" width="1" height="4" style="stroke-width:.70711"/>
+<path d="m3 11 1 1v-1z"/>
+<rect transform="rotate(-90)" x="-12" y="4" width="1" height="2" style="stroke-width:.8165"/>
+<path d="m6 14 1-1h-1z"/>
+<rect transform="scale(-1)" x="-7" y="-13" width="1" height="6" style="stroke-width:.86603"/>
+</g>
+<rect x="6" y="7" width="1" height="4" style="fill:#f1f2f2"/>
+<rect transform="rotate(90)" x="7" y="-6" width="1" height="2" style="fill:#f1f2f2"/>
+<rect transform="rotate(90)" x="11" y="-7" width="1" height="3" style="fill:#f1f2f2"/>
+<rect transform="scale(-1)" x="-4" y="-11" width="1" height="3" style="fill:#f1f2f2"/>
+<path d="m3 8 1-1v1z" style="fill:#f1f2f2"/>
+<path d="m4 12-1-1h1z" style="fill:#f1f2f2"/>
+<rect transform="rotate(90)" x="11" y="-8" width="1" height="3" style="fill:#f1f2f2"/>
+</svg>

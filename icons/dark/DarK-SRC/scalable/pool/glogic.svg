@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="m2 2c1 2.5 1 2.5 0 5 3 0 4-1.25 5-2.5-1-1.25-2-2.5-5-2.5zm1.505 1.0137c0.65077 0.11113 0.89285 0.27478 1.2782 0.51562 0.38318 0.23949 0.66836 0.62332 0.97461 0.9707-0.30624 0.34738-0.59143 0.73121-0.97461 0.9707-0.38536 0.24085-0.62744 0.4045-1.2782 0.51562 0.15463-0.47121 0.495-1.0342 0.495-1.4863s-0.34037-1.0151-0.495-1.4863z" style="fill:#f1f2f2"/>
+<path d="m2 10v5h2.4961c0.0013229 2e-6 0.0025828 0 0.0039062 0 1.385 0 2.5-1.115 2.5-2.5 0-1.371-1.0935-2.4738-2.459-2.4961v-0.003906h-2.541zm1 1.0039h1.541c0.82766 0.021172 1.459 0.66189 1.459 1.4961s-0.63133 1.4749-1.459 1.4961v0.003906h-1.541v-2.9961z" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m10 4.9961v5h2.4961c0.0013 2e-6 0.0026 0 0.0039 0 1.385 0 2.5-1.115 2.5-2.5 6e-6 -1.371-1.0935-2.4738-2.459-2.4961v-0.003906h-0.54102zm1 1.0039h1.541c0.82766 0.021172 1.459 0.66189 1.459 1.4961s-0.63133 1.4749-1.459 1.4961v0.00391h-1.541z" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="15" y="7" width="1" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="3" width="2" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="11" width="1" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" y="12" width="2" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="8" y="9" width="1" height="3" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="8" y="8" width="2" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="6" y="4" width="3" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect transform="rotate(90)" x="5" y="-9" width="2" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect transform="scale(-1)" x="-10" y="-7" width="2" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="5" width="2" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="13" width="2" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<g transform="matrix(1,0,0,-1,0,16)">
+<path d="m1 2v8h10v-8zm1 1h8v6h-8z"/>
+<path d="m12 6v1h2v6h-8v-2h-1v3h10v-8z"/>
+</g>
+<path d="m6.9805 10.086-1.375 0.94922-3.9199 0.03516 0.00977 1 4.2246-0.03711 1.0995-0.76 2.9805 1.727 0.42-0.857z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<ellipse cx="3.9991" cy="9" rx=".99909" ry="1"/>
+</g>
+</svg>

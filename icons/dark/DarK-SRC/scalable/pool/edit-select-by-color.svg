@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <rect rx=".088388" ry=".088385" height=".99996" width="1" y="0" x="6"/>
+  <rect rx=".088388" ry=".088385" height=".99996" width="1" y="0" x="8"/>
+  <rect rx=".088388" ry=".088385" height=".99996" width="1" y="0" x="10"/>
+  <rect rx=".088388" ry=".088385" height=".99996" width="1" y="0" x="12"/>
+  <rect rx=".088388" ry=".088113" height=".99688" width="1" y="2.0155" x="12"/>
+  <rect transform="scale(1,-1)" rx=".088388" ry=".088113" height=".99688" width="1" y="-5.0062" x="12"/>
+  <rect ry=".088113" rx=".088388" transform="scale(1,-1)" height=".99688" width="1" y="-7" x="12"/>
+  <rect transform="scale(1,-1)" rx=".088388" ry=".090588" height="1.0249" width="1" y="-9" x="12"/>
+  <rect ry=".088113" rx=".088388" transform="scale(1,-1)" height=".99688" width="1" y="-4.9844" x="2"/>
+  <rect transform="scale(1,-1)" rx=".088388" ry=".088113" height=".99688" width="1" y="-2.9907" x="2"/>
+  <rect ry=".088113" rx=".088388" transform="scale(1,-1)" height=".99688" width="1" y="-.99688" x="2"/>
+  <ellipse rx="2.5" ry="2.5031" cy="4.4969" cx="7.5"/>
+  <path style="color:#000000;text-indent:0;text-decoration-line:none;text-transform:none" d="m11.5 9.9657c-1.3748 0-2.5 1.1329-2.5 2.5171s1.1252 2.5171 2.5 2.5171 2.5-1.1329 2.5-2.5171-1.1252-2.5171-2.5-2.5171zm0 1.0069c0.83436 0 1.5 0.67021 1.5 1.5103 0 0.84008-0.66564 1.5103-1.5 1.5103s-1.5-0.67021-1.5-1.5103c0-0.84007 0.66564-1.5103 1.5-1.5103z"/>
+  <ellipse opacity=".5" rx="2.5" ry="2.5171" cy="12.483" cx="4.5"/>
+  <rect ry=".088113" rx=".088388" transform="scale(1,-1)" height=".99688" width="1" y="-6.9782" x="2"/>
+  <rect transform="scale(1,-1)" rx=".088388" ry=".090588" height="1.0249" width="1" y="-9" x="2"/>
+  <rect ry=".090588" rx=".088388" transform="scale(1,-1)" height="1.0249" width="1" y="-9" x="4"/>
+  <rect transform="scale(1,-1)" rx=".088388" ry=".090588" height="1.0249" width="1" y="-9" x="6"/>
+  <rect ry=".090588" rx=".088388" transform="scale(1,-1)" height="1.0249" width="1" y="-9" x="8"/>
+  <rect transform="scale(1,-1)" rx=".088388" ry=".090588" height="1.0249" width="1" y="-9" x="10"/>
+  <rect transform="scale(1,-1)" rx=".088388" ry=".088661" height=".99996" width="1" y="-.99996" x="3.9996"/>
+ </g>
+</svg>

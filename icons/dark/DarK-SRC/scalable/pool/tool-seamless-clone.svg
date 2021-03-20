@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+ <g id="tools" transform="translate(63.291 -298.53)">
+  <g id="gimp-tool-seamless-clone" fill="#f1f2f2" transform="translate(-63.291 -737.83)">
+   <g transform="matrix(.99943 0 0 .99943 0 .39154)">
+    <path d="m5 1a2 2 0 0 0 -2 2 2 2 0 0 0 1.0312 1.75c-0.6963 2.3099-2.3652 2.3184-2.3652 2.3184v0.9316h-1.666v2h5l-1.666-2h3.332l-1.666 2h3.7207c0.0228-0.0424 0.0458-0.0786 0.0684-0.1211-0.4537-0.5398-0.7892-1.1727-0.7891-1.8789 0-0.3286 0.0742-0.6468 0.1875-0.9512-0.3479-0.0381-1.6166-0.3007-2.2187-2.3008a2 2 0 0 0 1.0312 -1.748 2 2 0 0 0 -2 -2z" transform="matrix(1.0006 0 0 1.0006 0 1036.6)" fill="#f1f2f2"/>
+   </g>
+   <g transform="translate(0,1)">
+    <path d="m6 1048.4v2h5l-1.6667-2zm5 2h5v-2h-3.3333z"/>
+    <path d="m7.6667 1047.4s2.6667 0 2.6667-4.6551c0.66667-0.9311 1.3333 0 1.3333 0 0 4.6551 2.6667 4.6551 2.6667 4.6551v0.931h-6.6667z"/>
+    <ellipse rx="2" ry="2" cy="1043.4" cx="11"/>
+   </g>
+  </g>
+ </g>
+</svg>

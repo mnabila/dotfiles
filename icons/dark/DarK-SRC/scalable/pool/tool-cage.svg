@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+ <g id="tools" transform="translate(15.403 -181.05)">
+  <g id="gimp-tool-cage" transform="matrix(.99805 0 0 1 -96.23 -35.946)">
+   <rect rx="0" transform="translate(241 217)" height="16" width="16" y="0" x="-160" fill="none"/>
+   <g fill="#f1f2f2">
+    <ellipse style="color:#000000;enable-background:new" rx="2.0039" ry="2" cy="220" cx="93.008"/>
+    <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;solid-color:#000000;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;dominant-baseline:auto;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;text-orientation:mixed;isolation:auto;enable-background:new;text-transform:none" d="m93.678 219.17-10.438 1.1562v11.23l5.76-4.6 5.9336 4.7383zm-1.3398 1.6582 0.74805 7.4726l-4.086-3.26-4.2598 3.4004v-6.7695z"/>
+    <ellipse style="color:#000000;enable-background:new" rx="2.0039" ry="2" cy="230" cx="94.01"/>
+    <ellipse style="color:#000000;enable-background:new" rx="2.0039" ry="2" cy="226" cx="89"/>
+    <ellipse style="color:#000000;enable-background:new" rx="2.0039" ry="2" cy="230" cx="83.99"/>
+    <ellipse style="color:#000000;enable-background:new" rx="2.0039" ry="2" cy="221" cx="83.99"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2" font-weight="400">
+<path d="M11 12h-1c-.257 0-.528.118-.719.284l-1.28 1.163-1.282-1.163A1.145 1.145 0 0 0 6 12H5v.908c0 .28.09.501.281.68L8.001 16l2.718-2.411a.88.88 0 0 0 .281-.681V12z" color="#f1f2f2" font-family="Bitstream Vera Sans" overflow="visible" style="fill:#f1f2f2;text-decoration-line:none;text-indent:0;text-transform:none"/>
+<rect x="4" y="1" width="5" height="1" ry="3.084e-18" style="fill:#f1f2f2;paint-order:markers fill stroke;stroke-width:.27951"/>
+<rect x="6" y="5" width="8" height="1" ry="3.084e-18" style="fill:#f1f2f2;paint-order:markers fill stroke;stroke-width:.35355"/>
+<rect x="6" y="9" width="6" height="1" ry="3.084e-18" style="fill:#f1f2f2;paint-order:markers fill stroke;stroke-width:.30619"/>
+<circle cx="1.5" cy="1.5" r="1.5" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="3.5" cy="5.5" r="1.5" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="3.5" cy="9.5" r="1.5" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</g>
+</svg>

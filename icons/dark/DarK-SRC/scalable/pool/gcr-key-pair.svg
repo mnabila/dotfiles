@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g transform="translate(0,3)" fill="#f1f2f2">
+  <path stroke-width="1.1429" d="m4 4a4 4 0 0 0 -4 4 4 4 0 0 0 4 4 4 4 0 0 0 4 -4 4 4 0 0 0 -4 -4zm0 2a2 2 0 0 1 2 2 2 2 0 0 1 -2 2 2 2 0 0 1 -2 -2 2 2 0 0 1 2 -2z"/>
+  <rect ry="1" height="2" width="8" y="7" x="8"/>
+  <rect ry="1" height="3" width="3" y="8" x="12"/>
+  <rect ry="1" height="2" width="8" y="7" x="6"/>
+ </g>
+ <g opacity=".7" transform="rotate(180 8 6.5)" fill="#f1f2f2">
+  <path style="" stroke-width="1.1429" d="m4 4a4 4 0 0 0 -4 4 4 4 0 0 0 4 4 4 4 0 0 0 4 -4 4 4 0 0 0 -4 -4zm0 2a2 2 0 0 1 2 2 2 2 0 0 1 -2 2 2 2 0 0 1 -2 -2 2 2 0 0 1 2 -2z"/>
+  <rect style="" ry="1" height="2" width="8" y="7" x="8"/>
+  <rect style="" ry="1" height="3" width="2" y="8" x="13" stroke-width=".8165"/>
+  <rect style="" ry="1" height="2" width="8" y="7" x="6"/>
+  <rect style="" ry=".5" height="3" width="1" y="8" x="11" stroke-width=".57735"/>
+ </g>
+</svg>

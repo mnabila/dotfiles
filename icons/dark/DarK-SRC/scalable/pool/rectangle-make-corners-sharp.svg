@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <rect height="2" width="13" y="1" x="1"/>
+  <rect height="14" width="2" y="1" x="13"/>
+  <path d="m5 6a5 5 0 0 0 5 5v-1.998c-1.5721 0-3.002-1.4299-3.002-3.002h-1.998z"/>
+  <rect height="2" width="2" y="4" x="5"/>
+  <rect height="2" width="2" y="9" x="10"/>
+  <circle cx="10" cy="6" r="1"/>
+ </g>
+</svg>

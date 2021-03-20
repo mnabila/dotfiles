@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+ <g fill="#f1f2f2">
+  <g transform="rotate(180,8,8)">
+   <path d="m0.3 11.457 1.7565-1.7565-0.021213-4.2214 0.39739-0.37477 8.4853 8.4853-0.33588 0.33588-4.2822 0.01697-1.7572 1.7572z" color="#f1f2f2" overflow="visible"/>
+   <rect width="16" height="16" opacity="0" stroke-width="2.402"/>
+  </g>
+ </g>
+</svg>

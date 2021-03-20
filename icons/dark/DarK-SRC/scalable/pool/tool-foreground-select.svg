@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <circle style="color:#bebebe" cy="7.5" cx="6.5" r="2.5"/>
+  <path d="m4 10c-1 0-2 0-2 1v3h9v-3c0-1-1-1-2-1v1h-5z"/>
+  <path d="m3 1v1h11v8h1v-9z"/>
+  <rect height="1" width="1" y="3" x="-.0000016357"/>
+  <rect height="1" width="1" y="3" x="2"/>
+  <rect height="1" width="1" y="3" x="4"/>
+  <rect height="1" width="1" y="3" x="6"/>
+  <rect height="1" width="1" y="3" x="8"/>
+  <rect height="1" width="1" y="3" x="10"/>
+  <rect height="1" width="1" y="3" x="12"/>
+  <rect height="1" width="1" y="5" x="12"/>
+  <rect height="1" width="1" y="7" x="12"/>
+  <rect height="1" width="1" y="9" x="12"/>
+  <rect height="1" width="1" y="11" x="12"/>
+  <rect height="1" width="1" y="13" x="12"/>
+  <rect height="1" width="1" y="15" x="10"/>
+  <rect height="1" width="1" y="15" x="8"/>
+  <rect height="1" width="1" y="15" x="12"/>
+  <rect height="1" width="1" y="5" x="0"/>
+  <rect height="1" width="1" y="7" x="0"/>
+  <rect height="1" width="1" y="9" x="0"/>
+  <rect height="1" width="1" y="11" x="0"/>
+  <rect height="1" width="1" y="13" x="0"/>
+  <rect height="1" width="1" y="15" x="0"/>
+  <rect height="1" width="1" y="15" x="2"/>
+  <rect height="1" width="1" y="15" x="4"/>
+  <rect height="1" width="1" y="15" x="6"/>
+ </g>
+</svg>

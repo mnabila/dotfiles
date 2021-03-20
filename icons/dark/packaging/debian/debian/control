@@ -1,0 +1,14 @@
+Source: dark-icon-theme
+Section: x11
+Priority: optional
+Maintainer: SSF <ssf@NeverEver.com>
+Build-Depends: libfile-fcntllock-perl, debhelper (>= 7) 
+Standards-Version: 3.9.6
+
+Package: dark-icon-theme
+Architecture: all
+Conflicts: dark-icon-theme
+Depends: hicolor-icon-theme
+Replaces: darksvg-icon-theme
+Description: DarK icons svg version.
+Homepage: https://gitlab.com/sixsixfive/dark-icons

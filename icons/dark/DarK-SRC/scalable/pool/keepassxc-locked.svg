@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 16 16">
+ <g opacity=".5" fill="#f1f2f2">
+  <path d="m11.062 1a3.938 3.938 0 0 0 -3.937 3.9375c0.002 0.283 0.0337 0.5658 0.0957 0.8418l-0.7207 0.7207-2.5-2.5h-3v3l2.6113 2.3887-2.6113 2.6113v3h3l1-1h1v-1l0.7461-0.746 2.2539 2.06v-0.783-0.531h-1v-1h-1v-1h-1v1h-1v1h-1v1h-2v-2h1v-1h1v-1h1v-1h-1v-1h-1v-1h-1v-2h2v1h1v1h1v1h1v-1h1v-1h0.1738a3 3 0 0 1 -0.1738 -1 3 3 0 0 1 3 -3 3 3 0 0 1 3 3 3 3 0 0 1 -3 3 3 3 0 0 1 -1 -0.1758v0.1758h-1v1h1l0.219-0.2188a3.937 3.937 0 1 0 0.843 -7.7812zm-2.062 8h-1v1h1v-1z"/>
+  <path opacity=".2" stroke-linejoin="round" d="m11 2c-1.6569 0-3 1.3431-3 3 0.0008 0.3408 0.0594 0.679 0.1738 1h-0.1738v1h-1v1h-1v-1h-1v-1h-1v-1h-2v2h1v1h1v1h1v1h-1v1h-1v1h-1v2h2v-1h1v-1h1v-1h1v1h1v1h1v-1h1v-0.615-0.385h-1v-1h-1v-1h1v-1h1v-0.1758c0.321 0.1151 0.659 0.1744 1 0.1758 1.657 0 3-1.3431 3-3s-1.343-3-3-3z" stroke-linecap="round" stroke-dasharray="3, 1"/>
+  <circle stroke-linejoin="round" stroke-width="2.875" stroke-linecap="round" cy="5" cx="11" stroke-dasharray="8.625, 2.87500000000000000" r="1"/>
+ </g>
+ <path style="color:#f1f2f2" fill="#f1f2f2" overflow="visible" d="m12.5 10c-0.822 0-1.5 0.626-1.5 1.385v1.685h-0.5c-0.277 0-0.5 0.205-0.5 0.461v2.469h6v-2.469c0-0.256-0.223-0.461-0.5-0.461h-0.5v-1.685c0-0.76-0.678-1.385-1.5-1.385zm0 0.923h1c0.286 0 0.5 0.198 0.5 0.462v1.685h-2v-1.685c0-0.264 0.214-0.462 0.5-0.462z"/>
+</svg>

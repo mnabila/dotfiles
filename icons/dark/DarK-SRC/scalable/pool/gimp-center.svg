@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="stock" transform="translate(58.136 13.727)">
+<g id="gimp-center" transform="matrix(1 0 0 .99988 -58.135 -13.725)">
+<g transform="translate(0 -1036.4)">
+<g style="fill:#bebebe">
+<path transform="matrix(1 0 0 1.0001 -.001 1036.4)" d="m6.9863 0.98047c-0.0074878 0.74862-8.502e-4 1.9738 0.0097657 3.0098h-2.0176l3.0215 3.0098 2.9785-3.0098h-1.9824l-0.0097657-3.0098h-2zm-2.9863 4.0469v1.9922h-3v2c1 0.01 2 0.031996 3 0v2l3-3.0195-3-2.9727zm8 0-3 2.9727 3 3.0195v-2c1 0.01 2 0.031996 3 0v-2h-3v-1.9922zm-4 3.9727-2.9805 2.9961h2.002c-0.01 0.99788-0.0319 1.9963 0 2.9941h2v-2.9941h1.998l-3.0195-2.9961z" style="fill:#f1f2f2;stroke-width:.99993"/>
+</g>
+</g>
+</g>
+</g>
+</svg>

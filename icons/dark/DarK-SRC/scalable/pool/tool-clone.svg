@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <path d="m2 11.017v3.0046h6l-2-3.005zm6 3.0046h6v-3.0046h-4z"/>
+  <path d="m3 10.24s4 0 4-3.8852c1-0.77704 2 0 2 0 0 3.8852 4 3.8852 4 3.8852v0.77704h-10z"/>
+  <ellipse rx="2" ry="2.003" cy="5.0076" cx="8"/>
+ </g>
+</svg>

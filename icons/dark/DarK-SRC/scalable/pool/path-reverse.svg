@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<g id="path-difference" transform="translate(-165 -607.36)">
+<g id="path-combine" transform="translate(-36.068 -116.07)">
+<path d="m201.12 725.43v1.9835h3.967v1.9835l2.9636-2.9752-2.9636-2.9752v1.9835z" style="fill:#f1f2f2;stroke-width:.99175"/>
+<path d="m217.03 735.43v1.9835h-3.967v1.9835l-2.9636-2.9752 2.9636-2.9752v1.9835z" style="fill:#f1f2f2;stroke-width:.99175"/>
+<path d="m216.26 723.33-0.13476 0.4043s-0.61472 1.8298-1.8262 3.6523c-1.2115 1.8225-2.9763 3.5625-5.2402 3.5625-2.6948 0-4.6738 2.0127-5.9668 3.9434-1.293 1.9307-1.9434 3.8535-1.9434 3.8535l-0.13671 0.4043 0.80859 0.27539 0.13672-0.4043s0.62296-1.8314 1.8438-3.6543c1.2208-1.8229 2.9939-3.5644 5.2578-3.5644 2.6948 0 4.6675-2.0123 5.9512-3.9434s1.9238-3.8555 1.9238-3.8555l0.13477-0.40429z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;fill:#f1f2f2;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<rect x="207.07" y="729.43" width="4" height="4" style="fill:#f1f2f2"/>
+</g>
+</g>
+</svg>

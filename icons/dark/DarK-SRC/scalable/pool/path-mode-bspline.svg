@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<g id="show-path-outline" transform="translate(-799 -558.36)">
+<g id="path-clip-edit" transform="translate(-30.024 .05348)">
+<g id="path-mask-edit" transform="translate(-29.976 .93091)">
+<g id="path-mode-spiro" transform="matrix(.99892 0 0 1 -59.002 .015591)">
+<g id="path-mode-bspline" transform="matrix(1.0011 0 0 1 -90.422 -.036935)">
+<g transform="matrix(1.3951 -1.3664 1.3664 1.3951 -405.34 1807.7)">
+<path transform="matrix(.36585 .35833 -.35833 .36585 965.2 49.148)" d="m1.5312 1a0.50005 0.50005 5.7296e-8 0 0-0.35742 0.15234 0.50005 0.50005 5.7296e-8 0 0-0.14062 0.3457l-0.033203 13a0.50029 0.50029 0 1 0 1 0.001953l0.03125-12.5h12.471a0.50032 0.50032 0 0 0-0.003906-1h-12.967zm11.477 2.0352c-3.1677-0.019263-5.7277 0.77986-7.4648 2.5117-1.7371 1.7319-2.5449 4.2865-2.5449 7.4531a1.0006 1.0006 0 1 0 2 0c-5.3e-6 -2.8333 0.69418-4.7781 1.957-6.0371 1.2629-1.259 3.2048-1.943 6.0371-1.9258a1.0006 1.0006 90 1 0 0.015624-2.002z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;fill:#f1f2f2;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

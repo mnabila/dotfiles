@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" version="1.1" viewBox="0 0 16 16">
+ <title>HomeBank Symbolic Icon Theme</title>
+ <g fill="#f1f2f2">
+  <path d="m2.0193 1.0386h12.988v2.0002h-12.988v-2.0002z" style="color:#bebebe"/>
+  <path d="m9.924 5.0084h5.083v2.0002h-5.083v-2.0002z" style="color:#bebebe"/>
+  <path d="m9.9542 9.0688h5.083v2.0002h-5.083v-2.0002z" style="color:#bebebe"/>
+  <g transform="translate(9.6529 -1.6512)">
+   <path d="m-0.66802 9.6337c-0.043808 0.60974 0.16939 1.3498-0.3654 1.8029-1.0657 1.0651-2.1303 2.1315-3.1968 3.1958-0.29648-0.0203-0.62618 0.0396-0.90304-0.02805-1.1051-1.1103-2.221-2.2105-3.3193-3.3272-0.3464-0.478-0.1728-1.095-0.2152-1.6446 0.6097 0.0438 1.3497-0.1694 1.8029 0.3654 0.7323 0.7322 1.4647 1.4652 2.197 2.1972 0.8163-0.797 1.5955-1.636 2.4356-2.4046 0.4736-0.2639 1.0476-0.1224 1.5642-0.1567z" style="color:#000000;block-progression:tb;text-transform:none;text-indent:0"/>
+   <path d="m-5.668 5.6337v7h2v-7h-2z" style="color:#000000;block-progression:tb;text-transform:none;text-indent:0"/>
+  </g>
+  <path d="m9.924 13.038h5.083v2.0002h-5.083v-2.0002z" style="color:#bebebe"/>
+ </g>
+</svg>

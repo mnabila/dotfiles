@@ -1,0 +1,7 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#f1f2f2">
+        <path d="M3 3v13h2V5h6v11h2V3z"/>
+        <path opacity=".3" d="M7 7h2v9H7z"/>
+    </g>
+</svg>

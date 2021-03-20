@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(0 1 1 0 0 -.92566)" fill="#f1f2f2">
+<rect x="13.926" y="1" width="1" height="14" stroke-width=".76376"/>
+<rect x="2.9257" y="3" width="10" height="3" opacity=".6" stroke-width=".61237"/>
+<rect x="5.9257" y="7" width="5" height="3" opacity=".6" stroke-width=".70711"/>
+<rect x="4.9257" y="11" width="4" height="3" opacity=".6" stroke-width=".63246"/>
+<rect transform="rotate(-90)" x="-2" y="1.9257" width="1" height="13" stroke-width=".73598"/>
+</g>
+</svg>

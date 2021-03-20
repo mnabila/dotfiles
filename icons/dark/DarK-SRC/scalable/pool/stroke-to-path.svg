@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<path d="m3 16v-7c0-3.878 2-6 7-6h6v-1h-7c-5 0-7 3.122-7 7v7z" style="fill:#f1f2f2"/>
+<path d="m7 16v-3c0-6 0-6 5-6h4v-1h-5c-6 0-5 2-5 7v3z" style="fill:#f1f2f2"/>
+<rect x="1" y="10" width="3" height="3" style="fill:#f1f2f2"/>
+<rect x="5" y="10" width="3" height="3" style="fill:#f1f2f2"/>
+<rect x="11" y=".99999" width="3" height="3" style="fill:#f1f2f2"/>
+<rect x="11" y="5" width="3" height="3" style="fill:#f1f2f2"/>
+</svg>

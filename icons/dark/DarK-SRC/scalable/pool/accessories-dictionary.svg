@@ -1,0 +1,9 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <g fill="#f1f2f2">
+        <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M9.565 1.13c-.564.089-1.24.379-2 .782-1.544-.849-2.746-.884-3.75-.625-1.065.274-1.928.696-3.282.656h-.5v10.812h.5c1.322 0 2.467-.61 3.532-.875 1.064-.264 1.982-.287 3.156.75l.312.282.344-.282c1.167-1.063 2.048-1.05 3.094-.78 1.046.268 2.17.897 3.5.905h.531V1.943h-.5c-1.507 0-2.296-.448-3.281-.719a3.816 3.816 0 0 0-1.656-.094zm.125.97c.482-.08.871-.02 1.28.093.723.198 1.67.586 3.032.687v8.75c-.866-.13-1.757-.487-2.781-.75-1.107-.284-2.41-.166-3.688.813-1.287-.955-2.6-1.06-3.718-.781-1.035.257-1.916.596-2.782.718V2.88c1.264-.075 2.232-.419 3.032-.625.92-.236 1.735-.284 3.25.625l.25.125.25-.125c.82-.467 1.393-.701 1.875-.78z" color="#000" font-weight="400" font-family="Sans" overflow="visible"/>
+        <path d="M7.034 2.35h1v9.602h-1z"/>
+        <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M13.002 2.474V13.88l-10.969.063V2.505h-2v13.469l1-.031 12.97-.063h1V2.474h-2z" color="#000" font-weight="400" font-family="Sans" overflow="visible"/>
+        <path style="marker:none" d="M.909 14.724v-2.187l4.22-1.13 2.226.596 2.503-.67 3.742 1.002v2.452z" color="#000" overflow="visible" opacity=".3"/>
+    </g>
+</svg>

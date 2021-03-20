@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<title>Gnome Symbolic Icon Theme</title>
+<g transform="translate(-363 105)">
+<path d="m364.15-90.779 0.90953-0.22097 1.4328-1.4183c0.35417 0.15628 1.6143 0.16764 1.9685 0l1.5654 1.4183 0.77551 0.22097 0.19887 0.23347v1.5456h-7.0052v-1.5235z" style="color-rendering:auto;color:#000000;fill:#ffffff;image-rendering:auto;isolation:auto;mix-blend-mode:normal;paint-order:normal;shape-rendering:auto;solid-color:#000000"/>
+<path transform="translate(363 -105)" d="m7.5938 2.9902a1.5277 1.5277 0 0 0-1.5273 1.5273 1.5277 1.5277 0 0 0 0.12109 0.59375l-1.498 1.8223a2.5 2.5 0 0 0-0.18945-0.0097657 2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-0.29297-1.1738l0.87695-2.2051a1.5277 1.5277 0 0 0 0.00977 0 1.5277 1.5277 0 0 0 1.3555-0.82617l1.9512 0.44922a1.5277 1.5277 0 0 0 1.5098 1.3047 1.5277 1.5277 0 0 0 1.5293-1.5273 1.5277 1.5277 0 0 0-1.5293-1.5273 1.5277 1.5277 0 0 0-1.3672 0.85156l-1.9414-0.49609a1.5277 1.5277 0 0 0-1.5078-1.2832z" style="color-rendering:auto;color:#000000;fill:#ffffff;image-rendering:auto;isolation:auto;mix-blend-mode:normal;paint-order:normal;shape-rendering:auto;solid-color:#000000"/>
+<path d="m374-96-1.0663 1.9107 0.77903 2.0893h0.53125l-0.24399-2.4688 1.2188-0.1875 0.21496 1.6989 0.57544-4e-3 0.2096-1.6638 0.9375 0.0937 0.0937 2.5 0.5625 0.0312 0.59375-2.5625-1.3955-1.2188v-1.2286h-2.9482z" style="color-rendering:auto;color:#000000;fill:#ffffff;image-rendering:auto;isolation:auto;mix-blend-mode:normal;paint-order:normal;shape-rendering:auto;solid-color:#000000"/>
+</g>
+</svg>

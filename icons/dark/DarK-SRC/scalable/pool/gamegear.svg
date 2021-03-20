@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<ellipse transform="matrix(1 0 -.557 .83051 0 0)" cx="8.8654" cy="9.6326" rx="1.4839" ry="3.6122" style="fill:#f1f2f2;opacity:.5;paint-order:markers fill stroke"/>
+<ellipse transform="matrix(1 0 -.557 .83051 0 0)" cx="13.865" cy="9.6326" rx="1.4839" ry="3.6122" style="fill:#f1f2f2;opacity:.75;paint-order:markers fill stroke"/>
+<ellipse transform="matrix(1 0 -.557 .83051 0 0)" cx="18.865" cy="9.6326" rx="1.4839" ry="3.6122" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</svg>

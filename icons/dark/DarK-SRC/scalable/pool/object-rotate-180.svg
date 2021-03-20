@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1">
+ <g fill="#f1f2f2">
+  <title>object-rotate-right</title>
+  <g fill="#f1f2f2">
+   <path d="m6 13 3 3v-6z"/>
+   <rect height="7" width="4" y="0" x="1" stroke-width=".74833"/>
+   <rect opacity=".5" transform="rotate(90)" height="4" width="7" y="-5" x="9" stroke-width=".74833"/>
+   <path d="m9 2v1.998c2.0956 0 4.002 1.9063 4.002 4.002 0 2.0956-1.9063 4.002-4.002 4.002v1.998a6 6 0 0 0 6 -6 6 6 0 0 0 -6 -6z"/>
+  </g>
+ </g>
+</svg>

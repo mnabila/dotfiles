@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<title>Gnome Symbolic Icon Theme</title>
+<g transform="translate(-483 105)" fill="#ffffff">
+<path d="m490.5-104.01c-1.385 0-2.5 1.115-2.5 2.5v5.0137c0 1.385 1.115 2.5 2.5 2.5 0.28782 0 0.55949-0.0578 0.81641-0.14648a4.5 4.5 0 0 1 1.6543-2.0723c0.0105-0.0934 0.0293-0.18496 0.0293-0.28125v-5.0137c0-1.385-1.115-2.5-2.5-2.5zm-4 4.0137c-0.27614 0-0.5 0.22386-0.5 0.5v2.9688c0 1.9684 1.258 3.6246 3 4.25v1.2812h-2c-0.56475 0-1 0.49007-1 1v1h6.6776a4.5 4.5 0 0 1-1.6777-3.5 4.5 4.5 0 0 1 0.0391-0.55273c-0.17687 0.027-0.35458 0.0527-0.5391 0.0527-1.9523 0-3.5-1.5671-3.5-3.5312v-2.9687c0-0.27614-0.22386-0.5-0.5-0.5zm8 0c-0.27614 0-0.5 0.22386-0.5 0.5 0 0.069 6e-3 0.12768 0.0312 0.1875v2.5644a4.5 4.5 0 0 1 0.9688-0.21875v-2.5332c0-0.27614-0.22386-0.5-0.5-0.5z" color="#f1f2f2" opacity=".5" style="block-progression:tb;fill-opacity:.98636;fill:#f1f2f2;text-decoration-line:none;text-indent:0;text-transform:none"/>
+<circle cx="495.5" cy="-92.5" r="3.5" color="#000000" color-rendering="auto" enable-background="new" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="fill-opacity:.98636;fill:#f1f2f2;isolation:auto;mix-blend-mode:normal;paint-order:normal"/>
+</g>
+</svg>

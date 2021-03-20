@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" version="1.1" viewBox="0 0 4.2333 4.2333" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<style/>
+<g id="gimp-color-temperature" style="fill:#f1f2f2">
+<path transform="scale(.26458)" d="m4.5 5c-0.277 0-0.5 0.223-0.5 0.5v3.8281c-0.80883 0.22492-1.3687 0.96126-1.3691 1.8008-4.935e-4 1.0328 0.83632 1.8705 1.8691 1.8711 1.0336 4.94e-4 1.8716-0.83751 1.8711-1.8711-0.0015907-0.83935-0.56219-1.5748-1.3711-1.7988v-3.83c0-0.277-0.223-0.5-0.5-0.5z" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2"/>
+<rect transform="rotate(135)" x="-.90326" y="-4.7999" width=".30981" height=".61963" rx=".15491" ry=".15491" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;opacity:.8"/>
+<rect transform="rotate(90)" x="1.5875" y="-4.2333" width=".26458" height=".52917" rx=".13229" ry=".13229" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;opacity:.8"/>
+<rect transform="rotate(45)" x="3.0256" y="-2.3678" width=".30981" height=".61963" rx=".15491" ry=".15491" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;opacity:.8"/>
+<rect x="2.6479" y=".26458" width=".26458" height=".52917" rx=".13229" ry=".13229" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;opacity:.8"/>
+<rect x="2.6479" y="2.6458" width=".26458" height=".52917" rx=".13229" ry=".13229" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;opacity:.8"/>
+<path d="m2.3812 1.3665c0.10074-0.11192 0.24425-0.17583 0.39483-0.17583 0.29338 0 0.53122 0.23783 0.53122 0.53122v0c0 0.29338-0.23783 0.53122-0.53122 0.53122-0.15058 0-0.29819-0.063906-0.39893-0.17583" style="color:#000000;fill:none;opacity:.8;stroke-linecap:round;stroke-linejoin:round;stroke-width:.26458;stroke:#f1f2f2"/>
+<path transform="scale(.26458)" d="m4.4805 1.0004c-1.4169 0-2.4805 1.329-2.4805 2.8633v4.0443c-0.90582 0.73462-1.498 1.8434-1.498 3.0957-2e-8 2.2034 1.7986 4 4.002 4 2.2553 0 4-1.807 4-4 0-1.2631-0.58856-2.3793-1.5039-3.1133v-4.0267c0-1.5343-1.0655-2.8633-2.4824-2.8633zm0 1.0039h0.037109c0.77578 0 1.4824 0.77439 1.4824 1.8594v2.7379h0.00195l-0.00195 2.0193c0.84024 0.5318 1.5 1.3101 1.5 2.3828 0 1.6629-1.3332 2.9961-2.9961 2.9961-1.6629 0-3.0059-1.3332-3.0059-2.9961-1e-7 -1.0735 0.65786-1.8512 1.502-2.3828l-0.0039062-1.9939h0.0039062v-2.7633c0-1.085 0.70469-1.8594 1.4805-1.8594z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;fill-rule:evenodd;fill:#f1f2f2;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+</g>
+</svg>

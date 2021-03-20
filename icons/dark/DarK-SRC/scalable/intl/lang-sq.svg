@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g transform="matrix(1,0,0,-1,5,19)" fill="#f1f2f2">
+<rect x="6" y="4" width="1" height="8"/>
+<rect transform="rotate(90)" x="7" y="-7" width="1" height="3"/>
+<rect transform="rotate(90)" x="11" y="-7" width="1" height="3"/>
+<rect transform="scale(-1)" x="-4" y="-11" width="1" height="3"/>
+<path d="m3 8 1-1v1z"/>
+<path d="m4 12-1-1h1z"/>
+</g>
+<g fill="#f1f2f2">
+<rect x="6" y="10" width="1" height="1" stroke-width=".70711"/>
+<rect transform="rotate(90)" x="7" y="-7" width="1" height="3" stroke-width="1.2247"/>
+<rect transform="rotate(90)" x="11" y="-6" width="1" height="3"/>
+<rect transform="scale(-1)" x="-4" y="-9" width="1" height="1" stroke-width=".57735"/>
+<path d="m3 8 1-1v1z"/>
+<path d="m4 10-1-1h1z"/>
+<path d="m7 10-1-1v1z"/>
+<rect transform="rotate(90)" x="9" y="-6" width="1" height="2" stroke-width=".8165"/>
+<path d="m6 12 1-1h-1z"/>
+</g>
+</svg>

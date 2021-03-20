@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g fill="#f1f2f2" fill-opacity=".99827">
+  <rect transform="rotate(90)" ry=".5" height="1" width="3" y="-12" x="6" stroke-width="1.2247"/>
+  <rect transform="rotate(90)" ry=".5" height="2" width="1" y="-12" x="6" stroke-width="1.4142"/>
+  <rect transform="rotate(90)" ry=".5" height="2" width="1" y="-12" x="10" stroke-width="1.4142"/>
+  <rect transform="rotate(90)" ry=".5" height="1" width="3" y="-11" x="8" stroke-width="1.2247"/>
+  <rect y="3" width="1" x="7" height="10"/>
+  <path opacity=".6" stroke-width=".94868" d="m1 4v9h6v-9h-6zm2.5 2h1c0.277 0 0.5 0.223 0.5 0.5v4c0 0.277-0.223 0.5-0.5 0.5s-0.5-0.223-0.5-0.5v-3.5h-0.5c-0.277 0-0.5-0.223-0.5-0.5s0.223-0.5 0.5-0.5z"/>
+  <rect ry=".5" transform="scale(-1)" height="1" width="2" y="-9" x="-12" stroke-width=".99996"/>
+  <path fill="#f1f2f2" d="m1.5 3c-0.8137 0-1.5 0.6863-1.5 1.5v8c0 0.814 0.6863 1.5 1.5 1.5h12c0.8137 0 1.5-0.6863 1.5-1.5v-8c0-0.8137-0.686-1.5-1.5-1.5zm0 1h12c0.277 0 0.5 0.223 0.5 0.5v8c0 0.277-0.223 0.5-0.5 0.5h-12c-0.277 0-0.5-0.223-0.5-0.5v-8c0-0.277 0.223-0.5 0.5-0.5z"/>
+ </g>
+</svg>

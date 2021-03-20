@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1">
+ <g fill="#f1f2f2">
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m1 1h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm2 0h1v1h-1zm0 2h1v1h-1zm0 2h1v1h-1zm0 2h1v1h-1zm0 2h1v1h-1zm0 2h1v1h-1zm0 2h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm-2 0h1v1h-1zm0-2h1v1h-1zm0-2h1v1h-1zm0-2h1v1h-1zm0-2h1v1h-1zm0-2h1v1h-1z" overflow="visible"/>
+  <path d="m5.0194 6.0155-0.0194 3.9845h3l2-2v-2z" stroke-width=".55902"/>
+  <path d="m6.2623 3h2.4754c0.1449 0 0.2623 0.1186 0.2623 0.265v1.47c0 0.1464-0.1173 0.265-0.2623 0.265h-2.4754c-0.1449 0-0.2623-0.1186-0.2623-0.265v-1.47c0-0.1464 0.1174-0.265 0.2623-0.265z" stroke-width=".49744"/>
+  <path d="m3.5 4c-0.277 0-0.5 0.223-0.5 0.5v7c0 0.277 0.223 0.5 0.5 0.5h8c0.277 0 0.5-0.223 0.5-0.5v-7c0-0.277-0.223-0.5-0.5-0.5h-1.438v1h0.938v6h-7v-6h1v-1z" stroke-width=".92582"/>
+ </g>
+</svg>

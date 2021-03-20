@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<g id="show-path-outline" transform="translate(-799 -558.36)">
+<g id="path-clip-edit" transform="translate(-30.024 .05348)">
+<g id="path-mask-edit" transform="translate(-29.976 .93091)">
+<path d="m871.52 558.31a0.50005 0.50005 0 0 0-0.0859 0.01c-5.5784 1.0362-10.571 4.7277-11.404 11.43a0.50005 0.50005 0 1 0 0.99219 0.125c0.77875-6.2666 5.3235-9.591 10.596-10.57a0.50005 0.50005 0 0 0-0.0977-0.99414z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;fill:#f1f2f2;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<circle transform="matrix(1.5 0 0 1.5 -391.5 485.36)" cx="842" cy="49" r="1" style="fill:#f1f2f2"/>
+<circle transform="matrix(1.5 0 0 1.5 -402.5 496.36)" cx="842" cy="49" r="1" style="fill:#f1f2f2"/>
+<path d="m865 563.38v4.8437c0 1.7193 2 3.1563 4.4687 4.1875 2.5313-1.0312 4.5-2.1953 4.5-4.125v-4.9062zm1 2h3v2l-2-1zm4 0h3l-1 1-2 1zm-3 3h5c-2.4749 4.4894-5 0-5 0z" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2"/>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="m2 1c-0.554 0-1 0.446-1 1v7.9297a8 8 0 0 0 1 0.070312 8 8 0 0 0 2-0.26562v-6.7344l4.8633 3.0938a8 8 0 0 0 1.1367-4.0938 8 8 0 0 0-0.072266-1h-7.9277z" style="fill:#f1f2f2"/>
+<g transform="translate(0,1)" style="fill:#bebebe">
+<title>tool-pointer-16px</title>
+<rect width="0" height="0" style="fill:none"/>
+<path d="M 5,14 H 5.8231 L 7.4692,10.8461 9.5308,14 H 12 L 9.1154,10 H 13 V 9.1538 L 5,4 Z" style="fill:#f1f2f2"/>
+</g>
+</svg>

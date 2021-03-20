@@ -1,0 +1,9 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#f1f2f2">
+        <path d="M11 0h-1c-.257 0-.528.13-.719.313l-1.28 1.28L6.718.314C6.529.13 6.257 0 6 0H5v1c0 .31.09.552.281.75l2.72 2.656 2.718-2.656c.19-.198.281-.44.281-.75V0z" style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Bitstream Vera Sans" font-weight="400" color="#f1f2f2" overflow="visible" font-family="Bitstream Vera Sans"/>
+        <path d="M3 3S1 3 1 5v9c0 1.042.96 2 2 2h10c1.04 0 2.204-.978 2-2V5c0-2-2-2-2-2l-2 2 1.844-.031c.12-.002.146.066.156.187v8.688c0 .122-.036.156-.156.156H3.156c-.12 0-.156-.034-.156-.156V5.156c0-.122.036-.19.156-.187L5 5z" style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Sans" font-weight="400" color="#f1f2f2" overflow="visible" font-family="Sans"/>
+        <path d="M7.906 6A2.986 2.986 0 0 0 5.47 7.375a3.012 3.012 0 0 0 .031 3.281L7.156 9.5a.971.971 0 0 1 0-1.031 1.007 1.007 0 0 1 1-.469c.128.02.259.083.375.156A1 1 0 1 1 8 10v2a2.997 2.997 0 0 0 2.531-1.375c.89-1.396.49-3.267-.906-4.156h-.031A3.01 3.01 0 0 0 7.906 6z"/>
+        <path d="M7.236 10.278l-.656 2.194c-.36 1.128-1.468.211-.732-.548z" style="marker:none" color="#000" overflow="visible"/>
+    </g>
+</svg>

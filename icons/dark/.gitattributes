@@ -1,0 +1,5 @@
+.update.sh export-ignore
+.preview.png export-ignore
+.git export-ignore
+.gitattributes export-ignore  
+.gitignore export-ignore

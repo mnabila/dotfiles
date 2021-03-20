@@ -1,0 +1,7 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <g color="#f1f2f2" font-weight="400" fill="#f1f2f2">
+        <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M4.188 0A2.197 2.197 0 0 0 2 2.188v11.624C2 15.012 2.986 16 4.188 16h7.625A2.197 2.197 0 0 0 14 13.812V2.188C14 .988 13.014 0 11.812 0zm0 2h7.625c.123 0 .187.057.187.188v11.624c0 .131-.064.188-.188.188H4.189C4.064 14 4 13.943 4 13.812V2.188C4 2.056 4.064 2 4.188 2z" font-family="Sans" overflow="visible"/>
+        <path style="line-height:normal;-inkscape-font-specification:'Bitstream Vera Sans';text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M8.78 5a1.023 1.023 0 0 0-.47.281l-3.03 3a1.018 1.018 0 0 0-.282.906V10H7.47l-1.188 1.274c-.214.219-.32.54-.28.843a1.464 1.464 0 0 0 0 .094v.781H7a1.03 1.03 0 0 0 .719-.281l3-2.992c.184-.19.287-.455.281-.719a.87.87 0 0 0 0-.125V8H8.436l1.312-1.281c.215-.22.322-.54.282-.844a1.464 1.464 0 0 0 0-.094V5h-1a1.015 1.015 0 0 0-.25 0z" font-size="xx-small" font-family="Bitstream Vera Sans" overflow="visible"/>
+    </g>
+</svg>

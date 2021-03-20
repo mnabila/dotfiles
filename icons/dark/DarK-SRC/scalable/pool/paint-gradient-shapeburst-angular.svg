@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="m1 1v14h14v-14h-14zm1 1h12v12h-12v-12z" style="fill:#f1f2f2"/>
+<rect x="3" y="3" width="10" height="10" style="fill-opacity:.99774;fill:#f1f2f2;opacity:.2;paint-order:markers fill stroke"/>
+<rect x="4" y="4" width="8" height="8" style="fill-opacity:.99774;fill:#f1f2f2;opacity:.2;paint-order:markers fill stroke"/>
+<rect x="5" y="5" width="6" height="6" style="fill-opacity:.99774;fill:#f1f2f2;opacity:.2;paint-order:markers fill stroke"/>
+<rect x="6" y="6" width="4" height="4" style="fill-opacity:.99774;fill:#f1f2f2;opacity:.2;paint-order:markers fill stroke"/>
+<rect x="7" y="7" width="2" height="2" style="fill-opacity:.99774;fill:#f1f2f2;opacity:.2;paint-order:markers fill stroke"/>
+<path d="m3.5 3.5 9 9" style="fill:none;opacity:.15;stroke-linecap:round;stroke-width:1px;stroke:#f1f2f2"/>
+<path d="m3.5 12.5 9-9" style="fill:none;opacity:.15;stroke-linecap:round;stroke-width:1px;stroke:#f1f2f2"/>
+</svg>

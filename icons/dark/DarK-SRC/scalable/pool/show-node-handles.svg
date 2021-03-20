@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<path d="m14.234 2.9112c-2.151 0.3304-4.642 1.5803-6.6549 3.424-2.0128 1.8438-3.5778 4.3218-3.5778 7.0405a0.57251 0.61562 0 1 0 1.1449 0c0-2.2058 1.2973-4.383 3.1485-6.0787 1.8512-1.6956 4.2261-2.908 6.0824-3.1932a0.57251 0.61562 0 1 0-0.1431-1.1926z" style="color:#000000;fill:#f1f2f2"/>
+<path d="m4.4825 2.1837a0.54999 0.76843 0 0 0-0.4812 0.8164v9.2203a0.54999 0.76843 0 1 0 1.0999 0v-9.2203a0.54999 0.76843 0 0 0-0.6187-0.8164z" style="color:#000000;fill:#f1f2f2"/>
+<rect x="3" y="10" width="4" height="4" style="fill:#f1f2f2"/>
+<ellipse cx="4.5001" cy="2.5" rx="1.5625" ry="1.5625" style="fill:#f1f2f2;stroke-width:1.0417"/>
+</svg>

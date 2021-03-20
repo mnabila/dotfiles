@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="stock" transform="translate(32.428 60.364)">
+<g id="gimp-sample-point" transform="translate(-213.43 -579.36)">
+<rect x="188" y="519" width="2" height="4" rx="1" ry="1" style="fill:#f1f2f2"/>
+<rect transform="scale(1,-1)" x="188" y="-535" width="2" height="4" rx="1" ry="1" style="fill:#f1f2f2"/>
+<rect transform="rotate(90)" x="526" y="-185" width="2" height="4" rx="1" ry="1" style="fill:#f1f2f2"/>
+<rect transform="matrix(0,1,1,0,0,0)" x="526" y="193" width="2" height="4" rx="1" ry="1" style="fill:#f1f2f2"/>
+<path transform="translate(241 217)" d="m-52 305c-2.7614 0-5 2.2386-5 5s2.2386 5 5 5c0.34518 0 0.67451-0.0272 1-0.0937v-2.0938c-0.31647 0.11352-0.64447 0.1875-1 0.1875-1.6569 0-3-1.3432-3-3s1.3431-3 3-3 3 1.3432 3 3c0 0.35553-0.07398 0.68353-0.1875 1h2.0938c0.0666-0.32549 0.09375-0.65482 0.09375-1 0-2.7614-2.2386-5-5-5z" style="fill:#f1f2f2"/>
+<path d="m192 531v-1h3v5h-2v-4z" style="fill:#f1f2f2"/>
+<rect x="192" y="534" width="4" height="1" style="fill:#f1f2f2"/>
+</g>
+</g>
+</svg>

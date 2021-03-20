@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="m1 1v2 1 9c0 1.108 0.892 2 2 2h10c1.108 0 2-0.892 2-2v-9h-3v-3h-9-2zm1 1h1 7 1v1 1 8 1c0 0.554 0.446 1 1 1h-2-7c-0.554 0-1-0.446-1-1v-9-1-1zm10 3h2v3 3 1c0 0.554-0.446 1-1 1s-1-0.446-1-1v-1-3-3z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="3" y="6" width="3" height="3" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" y="6" width="3" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" y="8" width="2" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="3" y="10" width="6" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="3" y="12" width="4" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="8" y="12" width="2" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="3" y="3" width="7" height="2" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</svg>

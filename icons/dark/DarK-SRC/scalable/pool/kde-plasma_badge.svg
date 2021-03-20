@@ -1,0 +1,9 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <defs>
+        <style id="current-color-scheme">
+            .ColorScheme-Text{color:#4d4d4d}
+        </style>
+    </defs>
+    <path d="M5 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm5 0L9 3l3 3-3 3 1 1 4-4-4-4zM3.5 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm3 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z" class="ColorScheme-Text" id="start-here-kde" fill="#f1f2f2"/>
+</svg>

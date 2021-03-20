@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<path d="M11.003 11.039h-1c-.258 0-.53.13-.72.313L8 12.634l-1.283-1.282c-.19-.183-.462-.313-.72-.313h-1v1.001c0 .31.09.553.281.75L8 15.45l2.722-2.66c.191-.197.281-.44.281-.75v-1.001z" color="#f1f2f2" font-family="Bitstream Vera Sans" font-weight="400" overflow="visible" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<rect x="2" y="2" width="1" height="7" ry="3.2382e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="6" y="2" width="1" height="7" ry="3.2382e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" y="8" width="2" height="1" ry="4.2408e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="6" y="5" width="3" height="1" ry="4.2408e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" y="2" width="2" height="1" ry="4.2408e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m11 2 5 6v1h-1l-5-6v-1z" style="fill:#f1f2f2"/>
+<path d="m15 2-5 6v1h1l5-6v-1z" style="fill:#f1f2f2"/>
+<rect y="2" width="5" height="1" ry="2.7756e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g id="snap-text-baseline" transform="translate(.07434)">
+  <g transform="matrix(0 -1 -1 0 15.926 15.926)" fill="#f1f2f2">
+   <rect height="2" width="2" y="1" x="12.926" stroke-width=".5"/>
+   <rect height="14" width="1" y="1" x="10.926" stroke-width=".76376"/>
+   <rect opacity=".6" height="3" width="9" y="2" x=".92566" stroke-width=".58095"/>
+   <rect opacity=".6" height="2" width="6" y="7" x="3.9257" stroke-width=".63246"/>
+   <rect opacity=".6" height="3" width="8" y="11" x="1.9257" stroke-width=".65465"/>
+  </g>
+ </g>
+</svg>

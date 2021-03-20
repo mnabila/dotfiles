@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<rect x="1" y="11" width="4" height="4" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;stroke-width:.89443"/>
+<rect x="11" y="1.0003" width="4" height="4" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;stroke-width:.89443"/>
+<path d="m12.646 2.6465-10 10 0.70703 0.70703 10-10z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;fill:#f1f2f2;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+</svg>

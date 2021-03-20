@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1">
+<g fill="#f1f2f2">
+<path d="m8 1a7 7 0 0 0 -7 7 7 7 0 0 0 7 7 7 7 0 0 0 7 -7 7 7 0 0 0 -7 -7zm0 1.998c2.619 0 5.002 2.3827 5.002 5.002 0 2.619-2.383 5.002-5.002 5.002-2.6193 0-5.002-2.383-5.002-5.002 0-2.6193 2.3827-5.002 5.002-5.002z"/>
+<path style="text-decoration-color:#000000;color:#000000;isolation:auto;mix-blend-mode:normal;text-indent:0;text-decoration-line:none;white-space:normal;text-transform:none;text-decoration-style:solid" d="m5 5c0 2 0.0328-0.1573 0.0273 1.0137l-0.0214 4.5583h-0.0059v-1.572 2h2v-2 1.572-1.5779h1.0039v-0.00195c0.031342 0 0.044701 0.00704 0.074219 0.00781h0.9219v0.6699-0.7969 2.127h2v-0.988c0.041-0.1759 0.003-0.3297 0-0.5093-0.003-0.1504 0.033-0.3201 0-0.4636v-0.0391h-0.006c0.006-1-0.994-1.9971-1.994-2l-2-0.0059v-1.9941zm2 1v0z"/>
+<path style="text-decoration-color:#000000;color:#000000;isolation:auto;mix-blend-mode:normal;text-indent:0;text-decoration-line:none;white-space:normal;text-transform:none;text-decoration-style:solid" d="m11.019 5c0 2-0.03279-0.15732-0.02734 1.0137l0.02148 4.5586h0.0059v-1.572 2h-2v-2 1.572-1.5779h-1.0039v-0.00195c-0.031342 0-0.044701 0.00704-0.074219 0.00781h-0.9219v0.6699-0.7969 2.127h-2v-0.98828c-0.04119-0.17566-0.0032-0.32938 0-0.50897 0.0028-0.15048-0.03321-0.32014 0-0.46368v-0.0394h0.0059c-0.0059-1 0.9941-1.9971 1.9941-2l2-0.00586v-1.9941zm-2 1v0z"/>
+</g>
+</svg>

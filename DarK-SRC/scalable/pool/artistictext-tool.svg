@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g id="show-path-outline" transform="translate(-799 -558.36)">
+<g id="path-clip-edit" transform="translate(-30.024 .05348)">
+<circle cx="842.52" cy="570.81" r="1.5" style="fill:#f1f2f2;stroke-width:1.5"/>
+<circle cx="831.52" cy="570.81" r="1.5" style="fill:#f1f2f2;stroke-width:1.5"/>
+<path d="m842.52 570.81h-11" style="fill:none;stroke-width:1px;stroke:#f1f2f2"/>
+<path d="m832.02 559.31v2h6c0.428 0 1 0.613 1 1v1h-5c-0.92 0-1.735 0.383-2.25 0.968a3.017 3.017 0 0 0-0.75 2.031c6e-3 0.72 0.27 1.453 0.781 2.032 0.513 0.578 1.31 0.968 2.22 0.968h7v-7a3 3 0 0 0-3-3zm2 6h5v2h-5c-0.398 0-0.567-0.11-0.719-0.282a1.144 1.144 0 0 1-0.28-0.719 1.11 1.11 0 0 1 0.25-0.718c0.144-0.166 0.327-0.282 0.75-0.282z" font-size="xx-small" overflow="visible" style="fill:#f1f2f2;text-decoration-line:none;text-indent:0;text-transform:none"/>
+</g>
+</g>
+</svg>

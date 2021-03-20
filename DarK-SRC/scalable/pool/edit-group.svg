@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<path d="m4 3v3.9845l2.2857 0.0155h1.7143v-2l-0.017714-2z" style="fill:#f1f2f2;stroke-width:.53452"/>
+<circle cx="11" cy="8" r="2" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m6 8-2 4h4z" style="fill:#f1f2f2"/>
+<path d="m1 1v1 1h1v-1h1v-1h-2z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m15 1v2h-1v-1h-1v-1z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="4" y="1" width="2" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" y="1" width="2" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="10" y="1" width="2" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m1 15h2v-1h-1v-1h-1zm0-3h1v-2h-1zm0-3h1v-2h-1zm0-3h1v-2h-1zm0-3h1v-1h1v-1h-2z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m15 15v-2h-1v1h-1v1zm-3 0v-1h-2v1zm-3 0v-1h-2v1zm-3 0v-1h-2v1zm-3 0v-1h-1v-1h-1v2z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m15 1h-2v1h1v1h1zm0 3h-1v2h1zm0 3h-1v2h1zm0 3h-1v2h1zm0 3h-1v1h-1v1h2z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2" font-weight="400">
+<path d="m8 4v8h8v-8h-8zm1 2h1c0.265 0 0.52975 0.09325 0.71875 0.28125l1.2812 1.2812 1.2812-1.2812a1.015 1.015 0 0 1 0.71875-0.28125h1v1c0 0.265-0.09325 0.52975-0.28125 0.71875l-2.2812 2.2812h-0.875l-2.2812-2.2812a1.015 1.015 0 0 1-0.28125-0.71875v-1z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect y="4" width="1" height="8" ry="2.2205e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect transform="rotate(90)" x="4" y="-9" width="1" height="8" ry="2.2205e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect transform="rotate(90)" x="11" y="-9" width="1" height="8" ry="2.2205e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</g>
+</svg>

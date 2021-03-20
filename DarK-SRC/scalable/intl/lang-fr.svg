@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<rect x="4" y="6" width="1" height="6"/>
+<rect x="5" y="5" width="2" height="1"/>
+<rect x="3" y="7" width="3" height="1"/>
+<path d="m4 6 1-1v1z"/>
+<rect transform="scale(-1,1)" x="-9" y="8" width="1" height="4" style="stroke-width:.70711"/>
+<path d="m8 8 1-1v1z"/>
+<rect transform="matrix(0,1,1,0,0,0)" x="7" y="9" width="1" height="2" style="stroke-width:.8165"/>
+</g>
+</svg>

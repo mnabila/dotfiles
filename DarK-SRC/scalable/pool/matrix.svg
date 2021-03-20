@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="1" height="14" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="1" width="3" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="14" width="3" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect transform="scale(-1,1)" x="-15" y="1" width="1" height="14" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect transform="scale(-1,1)" x="-15" y="1" width="3" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect transform="scale(-1,1)" x="-15" y="14" width="3" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m6.5098 4.9414c-0.68-0.012-1.3633 0.30633-1.8223 0.86133-0.46 0.556-0.69922 1.3154-0.69922 2.1934v3.0039h2.0117v-2h-0.011719v-1.0039c0.011719-0.99609 1.0117-0.99609 1.0117 0.0039062v3h1.9883v-1h0.011719v-1h-0.00586v-1.0039c0-1.716-1.1254-3.0297-2.4844-3.0547z" style="color:#000000;fill:#f1f2f2;isolation:auto;mix-blend-mode:normal;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-transform:none;white-space:normal"/>
+<rect x="4" y="5" width="2" height="6" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m9.5215 4.9414c-0.68-0.012-1.3633 0.30633-1.8223 0.86133-0.46 0.556-0.69922 1.3154-0.69922 2.1934v3.0039h2.0117v-2h-0.011719v-1.0039c0.011719-0.99609 1.0117-0.99609 1.0117 0.00391v3h1.9883v-1h0.01172v-1h-0.0059v-1.0039c3.8e-5 -1.716-1.1253-3.0297-2.4843-3.0547z" style="color:#000000;fill:#f1f2f2;isolation:auto;mix-blend-mode:normal;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-transform:none;white-space:normal"/>
+</svg>

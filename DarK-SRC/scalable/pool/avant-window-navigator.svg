@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <g stroke-linecap="round" stroke-miterlimit="7">
+   <path opacity=".29920" style="paint-order:markers fill stroke" d="m4 6.357c0-0.198-0.149-0.3589-0.333-0.357h-1.667v6h1.667c0.184 0 0.333-0.159 0.333-0.357z"/>
+   <rect style="paint-order:markers fill stroke" transform="rotate(90)" ry=".333" height="2" width="2" y="-5" x="8"/>
+   <rect style="paint-order:markers fill stroke" transform="rotate(90)" ry=".333" height="2" width="2" y="-5" x="11"/>
+  </g>
+  <path d="m1.8574 3c-0.4748 0-0.8574 0.3826-0.8574 0.8574v10.286c0 0.474 0.3826 0.857 0.8574 0.857h12.286c0.474 0 0.857-0.383 0.857-0.857v-10.286c0-0.4744-0.383-0.857-0.857-0.857zm0.1426 1h12v10h-12z" fill="#f1f2f2"/>
+  <rect ry=".333" style="paint-order:markers fill stroke" transform="rotate(90)" height="2" width="2" stroke-linecap="round" stroke-miterlimit="7" y="-5" x="5"/>
+ </g>
+</svg>

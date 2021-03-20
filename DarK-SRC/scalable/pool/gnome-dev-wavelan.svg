@@ -1,0 +1,20 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <defs>
+        <clipPath id="c">
+            <path style="marker:none" color="#f1f2f2" fill="#f1f2f2" stroke-width="2" overflow="visible" d="M26.999 221.502h1.876v4.878h-1.876z"/>
+        </clipPath>
+        <clipPath id="b">
+            <path style="marker:none" color="#f1f2f2" fill="#f1f2f2" stroke-width="2" overflow="visible" d="M26.966 221.282h2.898v5.313h-2.898z"/>
+        </clipPath>
+        <clipPath id="a">
+            <path style="marker:none" color="#f1f2f2" fill="#f1f2f2" stroke-width="2" overflow="visible" d="M26.85 220.75h3.825v6.375H26.85z"/>
+        </clipPath>
+    </defs>
+    <g fill="#f1f2f2">
+        <path transform="matrix(0 -.78431 .94118 0 -202.765 31.059)" style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M27.063 220.5a1.164 1.164 0 0 0-.688 2c.8.8.8 2.075 0 2.875A1.164 1.164 0 1 0 28 227a4.334 4.334 0 0 0 0-6.125 1.164 1.164 0 0 0-.938-.375z" clip-path="url(#a)" color="#000" font-weight="400" font-family="Sans" overflow="visible"/>
+        <path transform="matrix(0 -1.72549 1.88219 0 -413.493 54.529)" style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M27.063 221.125a.555.555 0 0 0-.25.938 2.657 2.657 0 0 1 0 3.75.555.555 0 1 0 .78.78 3.775 3.775 0 0 0 0-5.312.555.555 0 0 0-.53-.156z" clip-path="url(#b)" color="#000" font-weight="400" font-family="Sans" overflow="visible"/>
+        <path transform="matrix(0 -2.66667 2.86852 0 -634.374 78)" style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M27.125 221.313a.362.362 0 0 0-.219.593.362.362 0 0 0 .032.031 2.825 2.825 0 0 1 0 4 .362.362 0 1 0 .5.5 3.531 3.531 0 0 0 0-5 .362.362 0 0 0-.313-.125z" clip-path="url(#c)" color="#000" font-weight="400" font-family="Sans" overflow="visible"/>
+        <path d="M10 13a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2z"/>
+    </g>
+</svg>

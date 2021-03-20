@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="linearGradient19282" gradientTransform="matrix(1.1667 0 0 1 627.67 1787.4)" osb:paint="solid">
+<stop stop-color="#f1f2f2" offset="0"/>
+</linearGradient>
+<linearGradient id="linearGradient5044" gradientTransform="matrix(1.3718 0 0 1 -5174.3 -3454.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient19282"/>
+</defs>
+<g id="text_remove_kerns" transform="translate(-529 -836.36)" fill="url(#linearGradient5044)">
+<path d="m529 841.36 2.6875 3.5-2.6875 3.5h2.6562l1.3438-1.75 1.3437 1.75h2.6563l-2.6875-3.5 2.6875-3.5h-2.6563l-1.3437 1.75-1.3438-1.75z" opacity=".3"/>
+<path d="m535.91 844.36 3.4032 4.5745-2.3094 3.4255h2.8772l5.1228-8h-2.5237l-1.9062 2.9763-2.0076-2.9763z"/>
+</g>
+</svg>

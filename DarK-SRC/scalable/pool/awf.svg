@@ -1,0 +1,10 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-444 35)" color="#000" fill="#f1f2f2">
+        <path d="M446.219-34c-.648 0-1.188.54-1.188 1.188v4.624c0 .648.54 1.188 1.188 1.188h11.656c.648 0 1.156-.54 1.156-1.188v-4.625c0-.647-.508-1.187-1.156-1.187h-11.656zm0 1h11.656c.111 0 .156.076.156.188v4.624c0 .112-.045.188-.156.188h-11.656a.179.179 0 0 1-.188-.188v-4.625a.18.18 0 0 1 .188-.187z" style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Sans" font-weight="400" overflow="visible" font-family="Sans"/>
+        <path d="M454-32v1.031l1.531 1.375 1.47-1.406v-1h-.759l-.738.746-.726-.746zm-7.781 6c-.648 0-1.188.54-1.188 1.188v4.656c0 .648.54 1.187 1.188 1.187h11.656c.648 0 1.156-.54 1.156-1.187v-4.657c0-.647-.508-1.187-1.156-1.187h-11.656zm0 1h11.656c.111 0 .156.076.156.188v4.656c0 .11-.045.187-.156.187h-11.656a.179.179 0 0 1-.188-.187v-4.657a.18.18 0 0 1 .188-.187z" style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Sans" font-weight="400" overflow="visible" font-family="Sans"/>
+        <rect height="2" rx="0" ry="0" style="marker:none" width="8" x="448" y="-24" overflow="visible"/>
+        <rect height="1" rx="0" ry="0" style="marker:none" width="12.861" x="445.531" y="-29" opacity=".3" overflow="visible"/>
+        <rect height="1" rx="0" ry="0" style="marker:none" width="12.861" x="445.531" y="-20.969" opacity=".3" overflow="visible"/>
+    </g>
+</svg>

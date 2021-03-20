@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <ellipse rx="2.5" ry="2.5" cy="13.5" cx="4.5"/>
+  <path d="m4 10-4-4h8z"/>
+  <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;solid-color:#000000;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;dominant-baseline:auto;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;text-orientation:mixed;isolation:auto;text-transform:none" d="m8.2383 1.4297c-0.616 0.0578-1.2288 0.2114-1.8184 0.4668-2.3584 1.0213-3.8672 3.4229-3.8672 6.0586h2c0-1.8731 1.0722-3.5341 2.6621-4.2227 1.59-0.6885 3.3862-0.306 4.6092 1.0059s1.588 3.3116 0.895 5.0254c-0.693 1.7133-2.263 2.7733-3.971 2.7463l-0.03125 2c2.559 0.0403 4.8717-1.5638 5.8555-3.9961 0.984-2.4326 0.487-5.2391-1.285-7.139-1.329-1.4249-3.201-2.1188-5.0487-1.9453z"/>
+ </g>
+</svg>

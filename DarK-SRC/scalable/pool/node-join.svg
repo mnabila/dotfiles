@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<rect x="5" y="10" width="6" height="5" ry="0" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2"/>
+<rect x="2" y="12" width="12" height="1" style="fill:#f1f2f2"/>
+<g id="node-join" transform="translate(-455 -558.36)">
+<path d="m461.99 561.36h2l6e-3 3.0058h2l-3 2.9883-3-2.9883h2z" style="fill:#f1f2f2"/>
+<rect x="459" y="561.36" width="2" height="1" style="fill:#f1f2f2"/>
+<rect x="465" y="561.36" width="2" height="1" style="fill:#f1f2f2"/>
+</g>
+<rect x="1" y="1" width="3" height="5" ry="0" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;stroke-width:.70711"/>
+<rect x="12" y="1" width="3" height="5" ry="0" style="color:#000000;fill-rule:evenodd;fill:#f1f2f2;stroke-width:.70711"/>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <path d="m2 2c-0.554 0-1 0.446-1 1v11c0 0.554 0.446 1 1 1h12c0.554 0 1-0.446 1-1v-9c0-0.554-0.446-1.0039-1-1h-3.77l-2.23-2h-6zm1 3h10c0.554 0 1 0.446 1 1v7c0 0.554-0.446 1-1 1h-10c-0.554 0-1-0.446-1-1v-7c0-0.554 0.446-1 1-1z"/>
+  <rect ry=".5" height="1" width="6" y="12" x="5"/>
+  <rect ry=".5" height="5" width="1" y="8" x="10"/>
+  <rect ry=".5" height="5" width="1" y="8" x="5"/>
+  <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;solid-color:#000000;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;dominant-baseline:auto;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;text-orientation:mixed;isolation:auto;text-transform:none" d="m7.9727 6a0.50005 0.50005 0 0 0 -0.27344 0.099609l-4 3a0.50078 0.50078 0 1 0 0.6015 0.8008l3.6992-2.7754 3.699 2.7754a0.50078 0.50078 0 1 0 0.60156 -0.80078l-4-3a0.50005 0.50005 0 0 0 -0.3283 -0.0996z"/>
+  <rect ry=".35" height="3" width="1" y="10" x="7"/>
+  <rect height="1" width="1" y="9" x="4"/>
+  <rect height="1" width="1" y="9" x="11"/>
+ </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="4.5" cy="10" rx="2.5" ry="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m2.3369 11.5a2.5 1 0 0 0-0.33691 0.5 2.5 1 0 0 0 2.5 1 2.5 1 0 0 0 2.5-1 2.5 1 0 0 0-0.33691-0.5 2.5 1 0 0 1-2.1631 0.5 2.5 1 0 0 1-2.1631-0.5z" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m2.3369 13.5a2.5 1 0 0 0-0.33691 0.5 2.5 1 0 0 0 2.5 1 2.5 1 0 0 0 2.5-1 2.5 1 0 0 0-0.33691-0.5 2.5 1 0 0 1-2.1631 0.5 2.5 1 0 0 1-2.1631-0.5z" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<ellipse cx="10.5" cy="12" rx="2.5" ry="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m8.3369 13.5a2.5 1 0 0 0-0.33691 0.5 2.5 1 0 0 0 2.5 1 2.5 1 0 0 0 2.5-1 2.5 1 0 0 0-0.33691-0.5 2.5 1 0 0 1-2.1631 0.5 2.5 1 0 0 1-2.1631-0.5z" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<g transform="matrix(0 -1 -1 0 18 -.074)">
+<path d="m-9.074 6 3 3v-6z" style="fill:#f1f2f2"/>
+<rect transform="scale(1,-1)" x="-6.7407" y="-7" width="4.6667" height="2" style="fill:#f1f2f2;stroke-width:.72009"/>
+</g>
+</svg>

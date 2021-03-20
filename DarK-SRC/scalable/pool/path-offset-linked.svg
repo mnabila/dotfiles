@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<g id="path-difference" transform="translate(-165 -607.36)">
+<g id="path-combine" transform="translate(-36.068 -116.07)">
+<path d="m201.07 723.49v1.9687c8-0.0313 14 5.9688 13.969 13.969h1.9063c-0.875-10-5.875-15-15.875-15.938z" style="fill:#f1f2f2"/>
+<path d="m201.07 727.43v2c5.5228 0 10 4.4771 10 10h2c0-6.6274-5.3726-12-12-12z" style="fill:#f1f2f2;opacity:.3"/>
+<path d="m201.07 731.43v2c3.1558 0 5.7294 2.6477 5.9687 6h2c-0.2435-4.4618-3.7084-8-7.9687-8z" style="fill:#f1f2f2;opacity:.3"/>
+<rect x="210.07" y="725.49" width="5" height="5" style="fill:#f1f2f2"/>
+</g>
+</g>
+</svg>

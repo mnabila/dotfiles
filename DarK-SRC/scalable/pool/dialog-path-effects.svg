@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="0 0 16 16"
+   id="svg16"
+   sodipodi:docname="dialog-path-effects.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata22">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="749"
+     inkscape:window-height="480"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="14.75"
+     inkscape:cx="14.460048"
+     inkscape:cy="7.4576271"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg16" />
+  <path
+     d="m13.368 1.9465c-5.5785 1.0362-10.573 4.7355-11.406 11.438a0.50389 0.50389 0 1 0 1 0.125c0.7787-6.2666 5.3216-9.5832 10.594-10.562a0.50871 0.50871 0 1 0-0.1875-1z"
+     style="color:#000000;fill:#f1f2f2"
+     id="path2" />
+  <circle
+     cx="13.5"
+     cy="2.5"
+     r="1.5"
+     style="fill:#f1f2f2"
+     id="circle8" />
+  <circle
+     cx="2.5"
+     cy="13.5"
+     r="1.5"
+     style="fill:#f1f2f2;stroke-width:1.2247"
+     id="circle10" />
+  <path
+     d="m2.9205 3.9094c-1.2435 1.8693-1.2766 4.2067 0.2444 5.615 1.4792 0.8068 2.9545 0.6486 4.7753-0.9867-3.248 0.4264-4.9899-1.103-5.0197-4.6283z"
+     style="fill-rule:evenodd;fill:#f1f2f2"
+     id="path12" />
+  <path
+     d="m8.8609 1.1123c-1.5099 0.9137-2.2988 2.505-1.6614 3.9183 0.8042 0.9889 1.9214 1.3157 3.7716 0.7325-2.4852-0.6659-3.2426-2.2272-2.1102-4.6508z"
+     style="fill-rule:evenodd;fill:#f1f2f2"
+     id="path14" />
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g style="fill:#f1f2f2">
+<title>object-rotate-right</title>
+<path d="m9.1658 1.0099c-0.079 0.0161-0.159 0.0696-0.218 0.125l-4.2812 4 4.0312 4.3437 4.1562-3.875c0.23699-0.2214 0.17839-0.6828-0.125-1.0312l-2.781-3.2188c-0.228-0.2613-0.545-0.392-0.782-0.3437z" style="fill:#f1f2f2;opacity:.8"/>
+<path d="m3.5098 6.2286-2.3438 2.1875c-0.2369 0.2215-0.2096 0.6829 0.0938 1.0313l2.8125 3.2187c0.30339 0.3485 0.73176 0.4402 0.96875 0.2188l2.4688-2.313z" style="fill:#f1f2f2"/>
+<path d="m5.3 14c-0.1662 0-0.3 0.223-0.3 0.5s0.1338 0.5 0.3 0.5h2.7v-1h-2.1z" style="fill:#f1f2f2;stroke-width:.65465"/>
+<path d="m2.5333 14c0.25853 0 0.46667 0.223 0.46667 0.5s-0.20813 0.5-0.46667 0.5h-1.5333v-1z" style="fill:#f1f2f2;stroke-width:.8165"/>
+</g>
+<path d="m12.5 8a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5zm0 1a0.5 0.5 0 0 1 0.5 0.5 0.5 0.5 0 0 1-0.5 0.5 0.5 0.5 0 0 1-0.5-0.5 0.5 0.5 0 0 1 0.5-0.5z" style="fill-opacity:.98636;fill:#f1f2f2"/>
+<circle cx="10.5" cy="13.5" r="1.5" style="fill-opacity:.98636;fill:#f1f2f2"/>
+<circle cx="14.5" cy="13.5" r="1.5" style="fill-opacity:.98636;fill:#f1f2f2;opacity:.5"/>
+</svg>

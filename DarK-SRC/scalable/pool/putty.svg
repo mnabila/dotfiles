@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<path d="m5.8008 1c-0.4418 0-0.8008 0.359-0.8008 0.8008v2.1992h1v-2h9v5h-3v2h3.199c0.442 0 0.801-0.3588 0.801-0.8008v-6.3984c0-0.4418-0.359-0.8008-0.801-0.8008h-9.3982zm6.1992 9v1h1.5c0.277 0 0.5-0.223 0.5-0.5s-0.223-0.5-0.5-0.5h-1.5z"/>
+<path d="m0.80078 5c-0.44183 0-0.80078 0.359-0.80078 0.8008v6.3982c0 0.442 0.35895 0.801 0.80078 0.801h3.1992v1h-1.5c-0.277 0-0.5 0.223-0.5 0.5s0.223 0.5 0.5 0.5h6c0.277 0 0.5-0.223 0.5-0.5s-0.223-0.5-0.5-0.5h-1.5v-1h3.1992c0.442 0 0.801-0.359 0.801-0.801v-6.3982c0-0.4418-0.359-0.8008-0.801-0.8008zm0.19922 1h9v5h-9z"/>
+<path d="m2.4727 6.4961a0.50005 0.50005 0 0 0-0.27344 0.9043l1.4668 1.0996-1.4668 1.0996a0.5002 0.5002 0 1 0 0.59961 0.80078l2-1.5a0.50005 0.50005 0 0 0 0-0.80078l-2-1.5a0.50005 0.50005 0 0 0-0.32617-0.10352z" color="#000000" color-rendering="auto" dominant-baseline="auto" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;isolation:auto;mix-blend-mode:normal;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<rect x="6" y="9" width="3" height="1" ry=".5"/>
+</g>
+</svg>

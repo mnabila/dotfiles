@@ -1,0 +1,47 @@
+#!/usr/bin/make -f
+
+build: build-arch build-indep
+build-arch: build-stamp
+build-indep: build-stamp
+
+build-stamp:
+	dh_testdir
+	touch build-stamp
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	rm -rf debian/dark-icon-theme
+	dh_clean
+
+install: build
+	if [ -f $(CURDIR)/../dark-icon-theme_*.deb ]; then \
+		rm -f $(CURDIR)/../dark-icon-theme_*.deb ;\
+	fi;
+
+	dh_testdir
+	dh_testroot
+	dh_prep  
+	dh_installdirs
+#icons
+	mkdir -p $(CURDIR)/debian/dark-icon-theme/usr/share/icons
+	cp -R $(CURDIR)/../../DarK-svg $(CURDIR)/debian/dark-icon-theme/usr/share/icons
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installdocs
+	dh_installchangelogs 
+	dh_compress
+	dh_installdeb
+	dh_gencontrol
+	dh_link
+	dh_fixperms
+	dh_md5sums
+	dh_builddeb -- -Znone -Snone -z0
+#	dh_builddeb -- -Zxz -Sextreme -z9 --uniform-compression
+	dh_clean
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install

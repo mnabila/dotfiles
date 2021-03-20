@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<rect x="1" width="1" height="6" ry="3.3307e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="2" width="5" height="1" ry="2.7756e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="2" y="3" width="5" height="1" ry="2.7756e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="6" width="6" height="1" ry="2.7756e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="4" width="1" height="6" ry="3.3307e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" width="1" height="7" ry="3.8858e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="8" y="8" width="1" height="4" ry="2.2205e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="9" y="8" width="5" height="1" ry="2.7756e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="9" y="11" width="5" height="1" ry="2.7756e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="11" y="8" width="1" height="4" ry="2.2205e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="14" y="8" width="1" height="4" ry="2.2205e-17" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</g>
+<path d="m5 8v1h-2c-0.4458 0-0.7928-0.129-0.9316-1h-1.0684c0.20691 2.7523 1.3305 3 2.5488 3h1.4512l0.0254 1 1.9746-1v-2z" style="fill-rule:evenodd;fill:#f1f2f2"/>
+</svg>

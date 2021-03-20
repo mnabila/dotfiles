@@ -1,0 +1,9 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-363 145)">
+        <rect height="6" rx="1.031" ry="1.031" width="6" x="364" y="-144" fill="#f1f2f2" fill-opacity=".5"/>
+        <rect height="6" rx="1.031" ry="1.031" width="6" x="371" y="-137" fill="#f1f2f2" fill-opacity=".5"/>
+        <rect height="6" rx="1.031" ry="1.031" width="6" x="371" y="-144" fill="#f1f2f2"/>
+        <rect height="6" rx="1.031" ry="1.031" width="6" x="364" y="-137" fill="#f1f2f2"/>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <path d="m0.000002 9v2h5l-1.6667-2zm5 2h5v-2h-3.3333z"/>
+  <path d="m1.5 8.0689s2.8 0 2.8-4.6551c0.7-0.9311 1.4 0 1.4 0 0 4.6551 2.8 4.6551 2.8 4.6551v0.9311h-7z"/>
+  <ellipse rx="2" ry="2" cy="4" cx="5"/>
+  <path d="m10 6-1 2h2v4h-4l-2 3h11l-3-9z"/>
+ </g>
+</svg>

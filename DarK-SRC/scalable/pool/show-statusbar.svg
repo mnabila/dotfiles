@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="m2 3c-0.554 0-1 0.446-1 1v8c0 0.277 0.11222 0.52628 0.29297 0.70703l0.70703-0.70703v-8h8l1-1h-9zm11 0-1 1h1v8h-9l-1 1h10c0.554 0 1-0.446 1-1v-8c0-0.554-0.446-1-1-1z" style="fill:#f1f2f2"/>
+<path d="m3 5v6l6-6z" style="fill:#f1f2f2;opacity:.8"/>
+<path d="m9 7-4 4h4z" style="fill:#f1f2f2;opacity:.8"/>
+<path d="m2 14 12-12v2l-10 10z" style="fill:#f1f2f2"/>
+</svg>

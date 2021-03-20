@@ -1,0 +1,4 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 2v1h2v1H4c-.656 0-1 .39-1 1v3H2V6H1v6h1v-2h1v3c0 .484.516 1 1 1h8c.578 0 1-.547 1-1.047V12l1 1h1V5h-1.05L13 6V5c0-.516-.39-1-1-1H9V3h2V2zm3.781 3c.083-.01.167-.01.25 0h1v.781c.001.031.001.063 0 .094.04.304-.066.624-.281.844L8.438 8H11v.875A.87.87 0 0 1 11 9c.006.264-.098.529-.281.719l-3 3A1.03 1.03 0 0 1 7 13H6v-.781a1.464 1.464 0 0 1 0-.094c-.04-.304.067-.624.281-.844L7.47 10H5v-.813a1.019 1.019 0 0 1 .281-.906l3.032-3c.126-.134.29-.232.468-.281z" style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Bitstream Vera Sans" font-weight="400" color="#000" fill="#f1f2f2" overflow="visible" font-family="Bitstream Vera Sans"/>
+</svg>

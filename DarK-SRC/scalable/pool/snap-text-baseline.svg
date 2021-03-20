@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g id="snap-text-baseline" transform="translate(.07434)" fill="#f1f2f2">
+  <path stroke-width="1.0054" d="m2.7847 9.6716 2.8591 2.8284-2.8591 2.828-2.859-2.828z"/>
+  <path style="color-rendering:auto;text-decoration-color:#000000;color:#000000;font-variant-numeric:normal;text-orientation:mixed;shape-rendering:auto;font-variant-ligatures:normal;text-decoration-line:none;font-variant-position:normal;mix-blend-mode:normal;font-feature-settings:normal;shape-padding:0;font-variant-alternates:normal;text-indent:0;dominant-baseline:auto;font-variant-caps:normal;image-rendering:auto;white-space:normal;text-decoration-style:solid;solid-color:#000000;isolation:auto;text-transform:none" d="m1.7739 12v1h14.152v-1z"/>
+  <path opacity=".6" stroke-width="1.0054" d="m12.343 8.996h-4.4831l-0.7075 2.004h-2.8822l4.1185-11h3.4183l4.119 11h-2.883zm-3.7681-2.0409h3.0461l-1.519-4.3764z"/>
+ </g>
+</svg>

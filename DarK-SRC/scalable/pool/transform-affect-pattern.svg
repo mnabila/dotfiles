@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="linearGradient19282" gradientTransform="matrix(1.1667 0 0 1 627.67 1787.4)" osb:paint="solid">
+<stop stop-color="#f1f2f2" offset="0"/>
+</linearGradient>
+<linearGradient id="linearGradient5494" gradientTransform="matrix(1.3718 0 0 1 1182.3 11378)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient19282"/>
+</defs>
+<g id="text_remove_kerns" transform="translate(-529 -836.36)" fill="url(#linearGradient5494)">
+<path d="m531.01 837.37v1h11v6.9922h1v-7.9922h-11.5z" color="#000000" stroke-width="1px"/>
+<path d="m531.01 844.36v1h7v1h1v-2h-7.5z" color="#000000" stroke-width="1px"/>
+<path d="m534.01 848.36v2.0202h2v-2.0202z" color="#000000" stroke-width="1.3918px"/>
+<path d="m538.01 850.36v-2h3v-2l2.9883 3-2.9883 3v-2z"/>
+<path d="m531.01 848.38v2.0201h2v-2.0201z" color="#000000" stroke-width="1.3918px"/>
+<rect x="531.01" y="839.37" width="1" height=".99951"/>
+<rect x="532.01" y="840.37" width="1" height="1"/>
+<rect x="533.01" y="841.37" width="1" height="1"/>
+<rect x="532.01" y="842.37" width="1" height="1"/>
+<rect x="531.01" y="839.37" width="1" height=".99951"/>
+<rect x="532.01" y="840.37" width="1" height="1"/>
+<rect x="533.01" y="841.37" width="1" height="1"/>
+<rect x="532.01" y="842.37" width="1" height="1"/>
+<rect x="534.01" y="839.37" width="1" height=".99951"/>
+<rect x="535.01" y="840.37" width="1" height="1"/>
+<rect x="536.01" y="841.37" width="1" height="1"/>
+<rect x="535.01" y="842.37" width="1" height="1"/>
+<rect x="534.01" y="839.37" width="1" height=".99951"/>
+<rect x="535.01" y="840.37" width="1" height="1"/>
+<rect x="536.01" y="841.37" width="1" height="1"/>
+<rect x="535.01" y="842.37" width="1" height="1"/>
+<rect x="537.01" y="839.37" width="1" height=".99951"/>
+<rect x="538.01" y="840.37" width="1" height="1"/>
+<rect x="539.01" y="841.37" width="1" height="1"/>
+<rect x="538.01" y="842.37" width="1" height="1"/>
+<rect x="537.01" y="839.37" width="1" height=".99951"/>
+<rect x="538.01" y="840.37" width="1" height="1"/>
+<rect x="539.01" y="841.37" width="1" height="1"/>
+<rect x="538.01" y="842.37" width="1" height="1"/>
+</g>
+</svg>

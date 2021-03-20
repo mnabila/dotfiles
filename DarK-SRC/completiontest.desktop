@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=CompletionTest
+GenericName=completiontest
+Comment=uses exo to show all icons
+Exec=exo-desktop-item-edit /tmp/completiontest.desktop
+Terminal=true
+Type=Application
+Icon=applications-development
+StartupNotify=true
+

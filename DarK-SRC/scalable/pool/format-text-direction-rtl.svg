@@ -1,0 +1,8 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <g color="#000" font-weight="400" fill="#f1f2f2">
+        <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M6 .05v2h6c.428 0 1 .613 1 1v1H8c-.92 0-1.735.383-2.25.968A3.017 3.017 0 0 0 5 7.049c.006.72.27 1.453.781 2.032.513.578 1.31.968 2.22.968h7v-7a3 3 0 0 0-3-3zm2 6h5v2H8c-.398 0-.567-.11-.719-.282a1.144 1.144 0 0 1-.28-.719 1.11 1.11 0 0 1 .25-.718c.144-.166.327-.282.75-.282z" font-size="xx-small" font-family="Sans" overflow="visible"/>
+        <path style="line-height:normal;-inkscape-font-specification:'Bitstream Vera Sans';text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M4 15H3c-.265 0-.53-.093-.719-.281l-2-2L0 12.437v-.874l.281-.282 2-2C2.47 9.093 2.735 9 3 9h1v1c0 .265-.093.53-.281.719L2.438 12l1.28 1.281c.189.188.282.454.282.719v1z" font-family="Bitstream Vera Sans" overflow="visible"/>
+        <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M2 11v2h12.937v-2z" font-family="Sans" overflow="visible"/>
+    </g>
+</svg>

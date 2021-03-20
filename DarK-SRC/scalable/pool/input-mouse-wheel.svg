@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 16 16">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <path opacity=".5" d="m4 4.2188c-2.3879 1.557-4 4.4527-4 7.7812v2h7v-3h-3zm8 0v6.7812h-3v3h7v-2c0-3.3285-1.612-6.2242-4-7.7812z" fill="#f1f2f2"/>
+ <rect rx="2" ry="2" height="8" width="4" y="2" x="6" fill="#f1f2f2"/>
+</svg>

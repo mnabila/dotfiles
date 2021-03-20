@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="m3 3v9h13v-9zm1 1h11v7h-11z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="4" cy="4" r="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="4" cy="11" r="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="15" cy="11" r="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="15" cy="4" r="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="9.5" cy="7.5" r="2.5" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="5" y="7" width="1" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="13" y="7" width="1" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="1" y="5" width="1" height="9" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="2" y="13" width="12" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+</svg>

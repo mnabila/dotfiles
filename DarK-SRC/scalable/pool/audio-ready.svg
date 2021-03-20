@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<path d="M0 5h2.484l2.97-3L6 2.016v12h-.475L2.485 11H0z" color="#f1f2f2" overflow="visible"/>
+<circle cx="11" cy="8" r="3" fill="#f1f2f2"/>
+</g>
+</svg>

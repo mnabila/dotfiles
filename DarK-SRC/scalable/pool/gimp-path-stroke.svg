@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<g id="stock" transform="translate(-66.392 -75.265)">
+<g transform="matrix(.75193 0 0 .74537 70.361 -693.13)" style="fill:#f1f2f2">
+<g id="path-reverse" transform="matrix(.98384 0 0 .98151 -162.16 204.79)" style="fill:#f1f2f2">
+<path d="m178.66 847.15-0.14063 0.66406s-0.31534 1.4946-1.0293 3.2793c-0.71395 1.7847-1.8442 3.8167-3.2891 4.8476-3.2506 2.3194-7.9668 5.2656-7.9668 5.2656l-0.57617 0.36133 0.7207 1.1523 0.57617-0.35938s4.722-2.9484 8.0352-5.3125c1.837-1.3108 3.0016-3.5491 3.7617-5.4492 0.76011-1.9001 1.0976-3.5039 1.0976-3.5039l0.14063-0.66602z" style="color-rendering:auto;color:#000000;dominant-baseline:auto;fill:#f1f2f2;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;image-rendering:auto;isolation:auto;mix-blend-mode:normal;shape-padding:0;shape-rendering:auto;solid-color:#000000;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal"/>
+<rect x="171.62" y="852.61" width="5.407" height="5.4676" style="fill:#f1f2f2"/>
+</g>
+</g>
+<ellipse cx="71.892" cy="89.765" rx="1.5" ry="1.5" style="fill:#f1f2f2"/>
+<ellipse cx="80.892" cy="79.765" rx="1.5" ry="1.5" style="fill:#f1f2f2"/>
+<rect x="67.392" y="86.265" width="1" height="1" style="fill:#f1f2f2"/>
+<rect x="69.392" y="84.265" width="1" height="1" style="fill:#f1f2f2"/>
+<rect x="74.392" y="80.265" width="1" height="1" style="fill:#f1f2f2"/>
+<rect x="66.392" y="88.265" width="2" height="2" style="fill:#f1f2f2"/>
+<rect x="75.392" y="75.265" width="2" height="2" style="fill:#f1f2f2"/>
+<rect x="75.392" y="78.265" width="1" height="1" style="fill:#f1f2f2"/>
+<path d="m74.39 82.195a2 2 0 0 1-1.9289 2.0685 2 2 0 0 1-2.0687-1.9287 2 2 0 0 1 1.9284-2.0689 2 2 0 0 1 2.0692 1.9281l-1.9988 0.0707z" style="fill:#f1f2f2"/>
+</g>
+</svg>

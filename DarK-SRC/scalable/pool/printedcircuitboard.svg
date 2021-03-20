@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<path d="m2 1c-0.554 0-1 0.446-1 1v7.8926 1.2187l2-1.1113h1.0879a1.5 1.5 0 0 1 1.4121-1 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.4121-1h-1.0879l-2 1.1113v1.8887c0 0.554 0.446 1 1 1h4.1133 3.7734 4.1133c0.554 0 1-0.446 1-1v-4.1074-0.89258l-3 1.5a1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.2246 0.63672l3.2754-1.6367v-6c0-0.554-0.446-1-1-1h-8v3.0879a1.5 1.5 0 0 1 0.91211 0.91211h2.1758a1.5 1.5 0 0 1 1.4121-1 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.4121-1h-2.1758a1.5 1.5 0 0 1-1.4121 1 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1-1.4121v-3.0879h-3z"/>
+<circle cx="5.5" cy="5.5" r=".5" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="10.5" cy="5.5" r=".5" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="5.5" cy="10.5" r=".5" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<circle cx="10.5" cy="10.5" r=".5" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+</g>
+</svg>

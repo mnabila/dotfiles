@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1">
+ <g fill="#f1f2f2" transform="matrix(1,0,0,-1,0,16)">
+  <title>selection-raise</title>
+  <g fill="#f1f2f2">
+   <rect opacity=".5" height="2" width="5" y="5" x="1"/>
+   <rect height="2" width="13" y="1" x="1"/>
+   <rect opacity=".5" height="2" width="5" y="9" x="1"/>
+   <rect opacity=".5" height="2" width="5" y="13" x="1"/>
+   <path d="m10 15h2v-7h2l-3-3-3 3h2z"/>
+  </g>
+ </g>
+</svg>

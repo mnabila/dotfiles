@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m3 2h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m5 1h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m7 1h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m9 1h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m13 5h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m13 7h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m13 9h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m11 12h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m9 13h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m7 13h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m5 13h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m3 12h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m1 9h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m1 7h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m1 5h1v1h-1z"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m11 2h1v1h-1z"/>
+  <path d="m2 11h1v1h-1z" style="color:#000000;isolation:auto;mix-blend-mode:normal"/>
+  <path d="m12 3h1v1h-1z" style="color:#000000;isolation:auto;mix-blend-mode:normal"/>
+  <path style="color:#000000;isolation:auto;mix-blend-mode:normal" d="m2 3h1v1h-1z"/>
+  <path d="m12 11h1v1h-1z" style="color:#000000;isolation:auto;mix-blend-mode:normal"/>
+ </g>
+</svg>

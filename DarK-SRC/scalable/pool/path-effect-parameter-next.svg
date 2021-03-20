@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+<path d="m13.368 1.9465c-5.5785 1.0362-10.573 4.7355-11.406 11.438a0.50389 0.50389 0 1 0 1 0.125c0.7787-6.2666 5.3216-9.5832 10.594-10.562a0.50871 0.50871 0 1 0-0.1875-1z" style="color:#000000;fill:#f1f2f2"/>
+<path d="m8.9902 9.0547 0.053 6.0644 3.9024-3.1641z" style="fill:#f1f2f2;stroke-width:1px"/>
+<rect x="14" y="9" width=".94922" height="6" style="fill:#f1f2f2"/>
+<circle cx="13.5" cy="2.5" r="1.5" style="fill:#f1f2f2"/>
+<circle cx="2.5" cy="13.5" r="1.5" style="fill:#f1f2f2;stroke-width:1.2247"/>
+<path d="m2.9205 3.9094c-1.2435 1.8693-1.2766 4.2067 0.2444 5.615 1.4792 0.8068 2.9545 0.6486 4.7753-0.9867-3.248 0.4264-4.9899-1.103-5.0197-4.6283z" style="fill-rule:evenodd;fill:#f1f2f2"/>
+<path d="m8.8609 1.1123c-1.5099 0.9137-2.2988 2.505-1.6614 3.9183 0.8042 0.9889 1.9214 1.3157 3.7716 0.7325-2.4852-0.6659-3.2426-2.2272-2.1102-4.6508z" style="fill-rule:evenodd;fill:#f1f2f2"/>
+</svg>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="nm-signal-100-secure.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="773"
+     inkscape:window-height="480"
+     id="namedview6"
+     showgrid="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:zoom="14.75"
+     inkscape:cx="20.305085"
+     inkscape:cy="8"
+     inkscape:window-x="775"
+     inkscape:window-y="277"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4">
+    <inkscape:grid
+       type="xygrid"
+       id="grid22" />
+  </sodipodi:namedview>
+  <path
+     style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none;fill:#f1f2f2;fill-opacity:1"
+     d="M 12 0 L 12 15 L 15 15 L 15 0 L 12 0 z M 9 3 L 9 7.3574219 C 9 7.7136218 8.7136219 8 8.3574219 8 L 8 8 L 8 15 L 11 15 L 11 3 L 9 3 z M 4 8 L 4 15 L 7 15 L 7 8 L 4 8 z M 0 9 L 0 15 L 3 15 L 3 9 L 0 9 z "
+     id="path2" />
+  <path
+     style="fill:#f1f2f2"
+     d="M 0.5 0 C 0.223 0 0 0.223 0 0.5 L 0 6.5 C 0 6.777 0.223 7 0.5 7 L 7.5 7 C 7.777 7 8 6.777 8 6.5 L 8 0.5 C 8 0.223 7.777 0 7.5 0 L 0.5 0 z M 3.5390625 1 L 4.5390625 1 C 5.3610625 1 6.0580625 1.724575 6.0390625 2.484375 L 6 4.0195312 L 6.5 4.0195312 C 6.777 4.0195312 7 4.2244687 7 4.4804688 L 7 6.0195312 L 1 6.0195312 L 1 4.4804688 C 1 4.2244687 1.223 4.0195312 1.5 4.0195312 L 2 4.0195312 L 2.0390625 2.484375 C 2.0579625 1.725615 2.7170625 1 3.5390625 1 z M 3.5390625 2.0234375 C 3.2530625 2.0234375 3.0456625 2.220475 3.0390625 2.484375 L 3 4.0195312 L 5 4.0195312 L 5.0390625 2.484375 C 5.0456425 2.220455 4.8250625 2.0234375 4.5390625 2.0234375 L 3.5390625 2.0234375 z "
+     id="rect4491" />
+</svg>

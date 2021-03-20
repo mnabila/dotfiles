@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <g id="snap-text-baseline" transform="translate(.07434)">
+  <g transform="rotate(90 7.9257 7)" fill="#f1f2f2">
+   <g transform="matrix(0 1 1 0 -.07434 -.92566)">
+    <rect height="14" width="1" y="2" x="13.926" stroke-width=".76376"/>
+    <rect height="3" width="10" y="3" x="2.9257" stroke-width=".61237"/>
+    <rect height="2" width="6" y="8" x="6.9257" stroke-width=".63246"/>
+    <rect height="3" width="8" y="12" x="4.9257" stroke-width=".89443"/>
+   </g>
+  </g>
+ </g>
+</svg>

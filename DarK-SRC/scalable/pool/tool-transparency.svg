@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+ <g fill="#f1f2f2">
+  <rect fill-opacity=".12455" height="3" width="3" y="11" x="1"/>
+  <g>
+   <path d="m5.0009 7.0003 1.9991-0.0003 0.0003 1.9997h-1.9994zm3.9991-0.0003l1.9991 0.0003v1.9994h-1.9993zm-5.9985 0.0003c-2.001 5.9998-1.0005 2.9999 0 0zm-3.0015-0.0003 0.0023662 7.998c0.00032534 1.0997-0.09997 0.9997 0.9997 0.9997h13.996c1.0997 0 0.99938 0.1 0.9997-0.9997l0.002-7.998c-11.577-0.034-6.9479-0.038-16 0zm5.0009 6.9982h-1.9994v-1.9994h1.9994zm3.9988 0h-1.9994v-1.9994h1.9994zm3.9988 0h-1.9994v-1.9994h1.9994zm2-6.9977h-1.998l-0.0015 1.9994h1.9994v1.9994h-1.999v-1.9993h-1.9994v1.9994h-1.9993v-1.9993h-1.9994v1.9994h-1.9994v-1.9993h-1.9994v1.9994h-1.9994v-1.9993h1.9994v-1.9994h-2.0015" stroke-width=".99970"/>
+   <rect opacity="0.66" height="2" width="2" y="5" x="3"/>
+   <rect opacity="0.66" height="2" width="2" y="5" x="7"/>
+   <rect opacity="0.66" height="2" width="2" y="5" x="11"/>
+   <rect opacity="0.33" height="2" width="2" y="3" x="1"/>
+   <rect opacity="0.33" height="2" width="2" y="3" x="5"/>
+   <rect opacity="0.33" height="2" width="2" y="3" x="9.0003"/>
+   <rect opacity="0.33" height="2" width="2" y="3" x="13"/>
+   <rect opacity="0.11" height="2" width="2" y=".99998" x="3"/>
+   <rect opacity="0.11" height="2" width="2" y=".99998" x="7"/>
+   <rect opacity="0.11" height="2" width="2" y=".99998" x="11"/>
+  </g>
+ </g>
+ <rect opacity="0" height="1" width="16" y="-.000017383" x="0" stroke-width=".97625"/>
+</svg>

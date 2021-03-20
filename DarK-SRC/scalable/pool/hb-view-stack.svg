@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<path d="m1 6v5h14v-5zm1 1h12v3h-12z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="3" y="8" width="4" height="1" style="fill:#f1f2f2;opacity:.6;paint-order:markers fill stroke"/>
+<path d="m1 10v5h14v-5zm1 1h12v3h-12z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="3" y="12" width="10" height="1" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m1 2v5h14v-5zm1 1h12v3h-12z" style="fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="3" y="4" width="9" height="1" style="fill:#f1f2f2;opacity:.4;paint-order:markers fill stroke"/>
+</svg>

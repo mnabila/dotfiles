@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 16 16">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g fill="#f1f2f2">
+  <path style="text-decoration-line:none;text-transform:none;text-indent:0" font-weight="400" d="m11 11h-1c-0.257 0-0.528 0.13-0.719 0.313l-1.28 1.28-1.282-1.28c-0.19-0.183-0.462-0.313-0.719-0.313h-1v1c0 0.31 0.09 0.552 0.281 0.75l2.72 2.656 2.718-2.656c0.19-0.198 0.281-0.44 0.281-0.75v-1z" color="#f1f2f2" overflow="visible" font-family="Bitstream Vera Sans"/>
+  <path d="m1.2595 6.642c-0.344-0.342-0.35-1.075 0-1.422l0.04-0.04c4.267-4.247 9.167-4.24 13.425 0.018l0.02 0.02c0.35 0.35 0.318 1.07-0.02 1.443l-1.93 1.997c-0.35504 0.3572-0.93296 0.3572-1.288 0l-1.287-1.286c-0.35653-0.35492-0.35653-0.93208 0-1.287l0.302-0.301c-2.226-1.0642-2.814-1.0642-5.04 0l0.303 0.301c0.35653 0.35492 0.35653 0.93208 0 1.287l-1.2865 1.288c-0.35386 0.36002-0.93414 0.36002-1.288 0z"/>
+ </g>
+</svg>

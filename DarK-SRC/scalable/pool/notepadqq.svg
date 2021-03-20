@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2" font-family="Sans" font-weight="400">
+<path d="m4 2c-1.09 0-1 0.91-1 2v9c0 1.09 0.91 2 2 2h7c1.09 0 2-0.91 2-2v-9c0-1.09 0.09-2-1-2v10.991c0 1 0 1-1 1h-7.0184c-0.9816 0-0.9816 0-0.9816-1z" overflow="visible" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<path d="m5.4061 1.0067a0.5 0.37416 0 0 0-0.406 0.37416v2.245a0.5 0.37416 0 1 0 1 0v-2.2451a0.5 0.37416 0 0 0-0.594-0.37416z" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<path d="m7.4061 1.0067a0.5 0.37416 0 0 0-0.406 0.37416v2.245a0.5 0.37416 0 1 0 1 0v-2.2451a0.5 0.37416 0 0 0-0.594-0.37416z" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<path d="m9.4061 1.0067a0.5 0.37416 0 0 0-0.406 0.37416v2.245a0.5 0.37416 0 1 0 1 0v-2.2451a0.5 0.37416 0 0 0-0.594-0.37416z" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<path d="m11.406 1.0067a0.5 0.37416 0 0 0-0.406 0.37416v2.245a0.5 0.37416 0 1 0 1 0v-2.2451a0.5 0.37416 0 0 0-0.594-0.37416z" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<rect x="5" y="7" width="1" height="2" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="7" y="6" width="1" height="6" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="6" y="9" width="1" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="6" y="6" width="1" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m5 7 1-1v1z" style="fill:#f1f2f2"/>
+<path d="m5 9 1 1v-1z" style="fill:#f1f2f2"/>
+<rect x="9" y="7" width="1" height="2" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="11" y="6" width="1" height="6" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="10" y="9" width="1" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<rect x="10" y="6" width="1" height="1" style="fill-opacity:.99774;fill:#f1f2f2;paint-order:markers fill stroke"/>
+<path d="m9 7 1-1v1z" style="fill:#f1f2f2"/>
+<path d="m9 9 1 1v-1z" style="fill:#f1f2f2"/>
+</g>
+</svg>

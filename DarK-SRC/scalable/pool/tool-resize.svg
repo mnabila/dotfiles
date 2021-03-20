@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g id="tools" transform="matrix(1 0 0 -1 -9.0202 221.19)">
+<g id="gimp-tool-scale" transform="translate(-111.98 8.185)">
+<rect transform="translate(241 217)" x="-120" y="-20" width="16" height="16" fill="none"/>
+<g fill="#f1f2f2">
+<rect x="122" y="210" width="5" height="2" rx=".58709" ry=".51386" opacity=".7"/>
+<path d="m126.83 198c-0.46166 0-0.83333 0.38229-0.83333 0.85714v4.2858c0 0.47485 0.37167 0.85714 0.83333 0.85714h8.3333c0.46166 0 0.83333-0.38229 0.83333-0.85714v-4.2858c0-0.47485-0.37167-0.85714-0.83333-0.85714h-5.8333z"/>
+<path d="m129 205 2 2-3 3 1 1 3-3 2 2v-5h-3z"/>
+</g>
+</g>
+</g>
+</svg>

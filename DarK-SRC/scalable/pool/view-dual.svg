@@ -1,0 +1,7 @@
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <g color="#f1f2f2" fill="#f1f2f2">
+        <path style="line-height:normal;-inkscape-font-specification:Sans;text-indent:0;text-align:start;text-decoration-line:none;text-transform:none;marker:none" d="M0 1v13h6c.175 0 .525.152.813.344.287.192.468.375.468.375l.719.718.719-.75S9.615 14 10 14h6V1h-6c-.877 0-1.56.347-2.031.687-.03-.02-.031-.01-.063-.03C7.446 1.351 6.828 1 6 1H1zm2 2h4c.138 0 .515.147.813.344.297.196.5.375.5.375l.718.687.688-.719S9.619 3 10 3h4v9h-4c-.877 0-1.56.347-2.031.687-.02-.013-.011-.017-.031-.03C7.478 12.347 6.835 12 6 12H2z" font-weight="400" font-family="Sans" overflow="visible"/>
+        <path d="M5.625 5h-2.25A.374.374 0 0 0 3 5.375v1.25c0 .207.167.375.375.375h2.25A.374.374 0 0 0 6 6.625v-1.25A.374.374 0 0 0 5.625 5zm0 3h-2.25A.374.374 0 0 0 3 8.375v1.25c0 .208.167.375.375.375h2.25A.374.374 0 0 0 6 9.625v-1.25A.374.374 0 0 0 5.625 8zm7-3h-2.25a.374.374 0 0 0-.375.375v1.25c0 .208.167.375.375.375h2.25A.374.374 0 0 0 13 6.625v-1.25A.374.374 0 0 0 12.625 5zm0 3h-2.25a.374.374 0 0 0-.375.375v1.25c0 .208.167.375.375.375h2.25A.374.374 0 0 0 13 9.625v-1.25A.374.374 0 0 0 12.625 8z" style="marker:none" overflow="visible" opacity=".35"/>
+    </g>
+</svg>

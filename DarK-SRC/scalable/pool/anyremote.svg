@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Part of Monotone: https://github.com/sixsixfive/Monotone, released under cc-by-sa_v4-->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+ <defs>
+  <clipPath id="c">
+   <path d="m26.999 221.5h1.876v4.878h-1.876z" color="#f1f2f2" overflow="visible" stroke-width="2" fill="#f1f2f2"/>
+  </clipPath>
+  <clipPath id="b">
+   <path d="m26.966 221.28h2.898v5.313h-2.898z" color="#f1f2f2" overflow="visible" stroke-width="2" fill="#f1f2f2"/>
+  </clipPath>
+  <clipPath id="a">
+   <path d="m26.85 220.75h3.825v6.375h-3.825z" color="#f1f2f2" overflow="visible" stroke-width="2" fill="#f1f2f2"/>
+  </clipPath>
+ </defs>
+ <g fill="#f1f2f2" transform="matrix(.71402 .71494 -.71402 .71494 6.5897 -2.0358)">
+  <g font-weight="400">
+   <path opacity=".9" style="color:#000000;text-decoration-line:none;text-transform:none;text-indent:0" d="m27.063 220.5a1.164 1.164 0 0 0 -0.688 2c0.8 0.8 0.8 2.075 0 2.875a1.164 1.164 0 1 0 1.625 1.62 4.334 4.334 0 0 0 0 -6.12 1.164 1.164 0 0 0 -0.938 -0.38z" clip-path="url(#a)" transform="matrix(0 -.78431 .94118 0 -202.76 31.059)" overflow="visible"/>
+   <path opacity=".7" style="color:#000000;text-decoration-line:none;text-transform:none;text-indent:0" d="m27.063 221.12a0.555 0.555 0 0 0 -0.25 0.938 2.657 2.657 0 0 1 0 3.75 0.555 0.555 0 1 0 0.78 0.78 3.775 3.775 0 0 0 0 -5.312 0.555 0.555 0 0 0 -0.53 -0.156z" clip-path="url(#b)" transform="matrix(0 -1.7255 1.8822 0 -413.49 54.529)" overflow="visible"/>
+   <path opacity="0.269" style="color:#000000;text-decoration-line:none;text-transform:none;text-indent:0" d="m27.125 221.31a0.362 0.362 0 0 0 -0.219 0.593 0.362 0.362 0 0 0 0.032 0.031 2.825 2.825 0 0 1 0 4 0.362 0.362 0 1 0 0.5 0.5 3.531 3.531 0 0 0 0 -5 0.362 0.362 0 0 0 -0.313 -0.125z" clip-path="url(#c)" transform="matrix(0 -2.6667 2.8685 0 -634.37 78)" overflow="visible"/>
+  </g>
+  <path d="m10 13a2 2 0 0 1 -2 2 2 2 0 0 1 -2 -2 2 2 0 0 1 2 -2 2 2 0 0 1 2 2z"/>
+ </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+<g fill="#f1f2f2">
+<path d="m9.875 7a1 1 0 0 1-0.594-0.281l-2-2-0.687-0.719 0.687-0.719 2-2a1.0168 1.0168 0 1 1 1.438 1.438l-1.281 1.281 1.28 1.281a1 1 0 0 1-0.842 1.719z" font-weight="400" overflow="visible" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<path d="m11 13v-2h1c0.571 0 1-0.429 1-1v-4c0-0.571-0.429-1-1-1h-4v-2h4c1.645 0 3 1.355 3 3v4c0 1.645-1.355 3-3 3z" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+<path d="m10 7h1v-1h-1zm0-5h1v-1h-1z" overflow="visible"/>
+<path d="m4 3c-1.645 0-3 1.355-3 3v4c0 1.645 1.355 3 3 3h1.5625l-0.28125 0.28125a1.0168 1.0168 0 0 0-0.28125 0.89648v0.82227h0.82031a1.0168 1.0168 0 0 0 0.89844-0.28125l2-2 0.6875-0.71875-0.6875-0.71875-2-2a1 1 0 0 0-0.59375-0.28125h-0.0019531a1 1 0 0 0-0.30859 0h-0.81445v0.71875a1 1 0 0 0 0.28125 1l0.28125 0.28125h-1.5625c-0.571 0-1-0.429-1-1v-4c0-0.571 0.429-1 1-1h1v-2h-1z" style="opacity:.6;text-decoration-line:none;text-indent:0;text-transform:none"/>
+</g>
+</svg>

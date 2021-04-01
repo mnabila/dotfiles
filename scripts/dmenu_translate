@@ -139,11 +139,11 @@ COUNTRY='''
 
 translateText() {
     text="$1"
-    if [[ $text == "" ]]; then
+    if [ -z "$text" ]; then
         exit
     fi
     name=$(echo $COUNTRY | jq -r ".[].name" | $DMENU -p "Translate ")
-    if [[ $name != "" ]]; then
+    if [ ! -z "$name" ]; then
         code=$(echo $COUNTRY | jq -r ".[] | select(.name == \"$name\") | .code")
         result=$(trans -b --download-audio-as /tmp/trans.ts :$code "$text")
         again=true

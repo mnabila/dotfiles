@@ -4,21 +4,12 @@
 alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
 alias screencast="adb connect 192.168.43.1:5555; scrcpy -b 2M -m 1080 --push-target /sdcard/Download &"
 alias py="python"
-alias {vi,vim,nano}="nvim"
+alias {vi,vim}="nvim --noplugin -u /dev/null"
 alias pacman-mirror="reflector"
 alias :q="exit"
 alias tetris="autoload -Uz tetriscurses;tetriscurses"
 alias nvr="nvr --servername $(nvr --serverlist | head -1)"
-
-#
-# yotube-viewer #
-#
-alias yt1="youtube-viewer --resolution=144p"
-alias yt2="youtube-viewer --resolution=240p"
-alias yt3="youtube-viewer --resolution=360p"
-alias yt4="youtube-viewer --resolution=480p"
-alias yt7="youtube-viewer --resolution=720p"
-alias yt10="youtube-viewer --resolution=1080p"
+alias aur-pkg="ssh aur@aur.archlinux.org list-repos"
 
 #
 # pacman
@@ -59,5 +50,5 @@ alias m="showmarks"
 # tidal-dl
 alias td="tidal-dl -l"
 
-alias nvim-update="yay --sudoloop -S --noconfirm neovim-git"
+alias nvim-update="paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync"
 

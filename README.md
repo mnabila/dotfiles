@@ -153,7 +153,7 @@ Stow home page: <http://www.gnu.org/software/stow/>
 General help using GNU software: <http://www.gnu.org/gethelp/>
 ```
 
-#### Mekasang Dotfiles
+#### Memasang Dotfiles
 
 Langkah pertama yakni clone dulu dotfiles yang ada. dengan perintah dibawah ini
 

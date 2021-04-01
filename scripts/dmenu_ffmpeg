@@ -7,7 +7,6 @@
 # Last Modified By  : M. Nabil Adani <nblid48[at]gmail[dot]com>
 # Inspired By       : https://github.com/tanuj101/awesome-dmenu/blob/master/recorder/dmenurecord.sh
 
-
 DMENU="rofi -dmenu -lines 5 -width 30 -i -p Record"
 OUTDIR="$HOME/Videos"
 recordid="/tmp/recordid"
@@ -22,7 +21,7 @@ function audioVideo() {
         -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
         -c:a aac $filename &
 
-    echo $! > $recordid
+    echo $! >$recordid
 }
 
 function video() {
@@ -34,7 +33,7 @@ function video() {
         -i :0.0 -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 \
         -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 $filename &
 
-    echo $! > $recordid
+    echo $! >$recordid
 }
 
 function audio() {
@@ -44,10 +43,10 @@ function audio() {
     dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
     ffmpeg -f alsa -i default -ac 2 -acodec libmp3lame -ab 128k $filename &
 
-    echo $! > $recordid
+    echo $! >$recordid
 }
 
-function stream(){
+function stream() {
     output=$2
     platform=$1
     dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
@@ -60,86 +59,65 @@ function stream(){
         -vf scale=854x480 \
         -f flv $output &
 
-    echo $1 > $recordid
+    echo $1 >$recordid
 }
 
-function getStreamToken(){
+function getStreamToken() {
     $DMENU -mesg "Insert $1 Token" -lines 0
 }
 
-function streamOnFacebook(){
-    platform="Facebook"
+function startStreaming() {
+    platform="$1"
+    streamurl="$2"
     token=$(getStreamToken "$platform")
-    if [ "$token" == "" ]; then
+
+    if [ -z "$token" ]; then
         exit
     else
-        streamurl="rtmps://live-api-s.facebook.com:443/rtmp/$token"
-        stream "$platform" "$streamurl"
+        stream "$platform" "$streamurl$token"
     fi
 }
 
-function streamOnNimoTv(){
-    platform="Nimo TV"
-    token=$(getStreamToken "$platform")
-    if [ "$token" == "" ]; then
-        exit
-    else
-        streamurl="rtmp://txpush.rtmp.nimo.tv/live/$token"
-        stream "$platform" "$streamurl"
-    fi
+function streamOnFacebook() {
+    startStreaming "Facebook" "rtmps://live-api-s.facebook.com:443/rtmp/"
 }
 
-function streamOnTwitch(){
-    platform="Twitch"
-    token=$(getStreamToken "$platform")
-    if [ "$token" == "" ]; then
-        exit
-    else
-        streamurl="rtmp://sin.contribute.live-video.net/app/$token"
-        stream "$platform" "$streamurl"
-    fi
+function streamOnNimoTv() {
+    startStreaming "Nimo TV" "rtmp://txpush.rtmp.nimo.tv/live/"
 }
 
-function streamOnYoutube(){
-    platform="Youtube"
-    token=$(getStreamToken "$platform")
-    if [ "$token" == "" ]; then
-        exit
-    else
-        streamurl="rtmp://a.rtmp.youtube.com/live2/$token"
-        stream "$platform" "$streamurl"
-    fi
+function streamOnTwitch() {
+    startStreaming "Twitch" "rtmp://sin.contribute.live-video.net/app/"
 }
 
-function streamOnVimeo(){
-    platform="Vimeo"
-    token=$(getStreamToken "$platform")
-    if [ "$token" == "" ]; then
-        exit
-    else
-        streamurl="rtmps://rtmp-global.cloud.vimeo.com:443/live/$token"
-        stream "$platform" "$streamurl"
-    fi
+function streamOnYoutube() {
+    startStreaming "Youtube" "rtmp://a.rtmp.youtube.com/live2/"
 }
 
-function stoprecord(){
+function streamOnVimeo() {
+    startStreaming "Vimeo" "rtmps://rtmp-global.cloud.vimeo.com:443/live/"
+}
+
+function stoprecord() {
     if [ -f $recordid ]; then
         kill -15 $(cat $recordid)
         rm $recordid
     fi
 
+    sleep 5
     if [ "$(pidof ffmpeg)" != "" ]; then
         pkill ffmpeg
     fi
 }
 
-function endrecord(){
+
+function endrecord() {
     OPTIONS='["Yes", "No"]'
     select=$(echo $OPTIONS | jq -r ".[]" | $DMENU -mesg "Stop Recording")
     [ "$select" == "Yes" ] && stoprecord
 }
 
-function startrecord(){
+function startrecord() {
     OPTIONS='''
     [
         ["難 Audio Video",        "audioVideo"],

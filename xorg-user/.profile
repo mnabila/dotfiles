@@ -32,6 +32,8 @@ export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Dotfiles/scripts:$PATH"
 export PATH="/usr/lib/ccache/bin/:$PATH"
+export PATH="$HOME/.cargo/bin/:$PATH"
+
 
 # fzf
 # fzf with gruvbox colorscheme

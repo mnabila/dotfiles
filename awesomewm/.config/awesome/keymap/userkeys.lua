@@ -191,7 +191,16 @@ function M.get()
             function()
                 awful.spawn("dmenu_aria2")
             end,
-            {description = "opent network manager", group = "launcher"}
+            {description = "download manager", group = "launcher"}
+        ),
+
+        awful.key(
+            {modkey},
+            "y",
+            function()
+                awful.spawn("ytfzf -fDH")
+            end,
+            {description = "youtube viewer", group = "launcher"}
         )
 
     )

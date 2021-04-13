@@ -179,20 +179,6 @@ function M.get()
                 end
             end,
             {description = "restore minimized", group = "client"}
-        ),
-
-        awful.key(
-            {modkey},
-            "x",
-            function()
-                awful.prompt.run {
-                        prompt = "Run Lua code: ",
-                        textbox = awful.screen.focused().mypromptbox.widget,
-                        exe_callback = awful.util.eval,
-                        history_path = awful.util.get_cache_dir() .. "/history_eval"
-                    }
-            end,
-            {description = "lua execute prompt", group = "awesome"}
         )
     )
 

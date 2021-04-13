@@ -30,6 +30,6 @@ M.month_calendar = awful.widget.calendar_popup.month {
     }
 
 -- Attach calentar to clock_widget
-M.month_calendar:attach(M.widget, "tc", {on_pressed = true, on_hover = false})
+M.month_calendar:attach(M.widget, "br", {on_pressed = true, on_hover = false})
 
 return M

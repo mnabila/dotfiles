@@ -12,7 +12,7 @@ local tasklist = require("widget.tasklist")
 
 local M = {}
 
-local bar = awful.wibar({position = "top", screen = s, height= 20})
+local bar = awful.wibar({position = "top", screen = s, height= 20, bg="#00000000"})
 
 function M.bar(s)
     -- Create the wibox

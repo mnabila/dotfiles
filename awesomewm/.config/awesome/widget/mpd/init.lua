@@ -1,6 +1,6 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local icon = os.getenv("HOME") ..  "/.config/awesome/widget/mpd/icon.svg"
+local icon = os.getenv("HOME") .. "/.config/awesome/widget/mpd/icon.svg"
 local colorize = require("utils.function").colorize
 local markup = require("utils.function").markup
 local beautiful = require("beautiful")
@@ -15,7 +15,7 @@ M.widget = awful.widget.watch(get_music, 2, function(widget, stdout)
     if stdout:find("volume") then
         stdout = "😱 playlist empty 😱"
     end
-        widget:set_markup(markup(stdout, {fg = beautiful.widget_text}))
-    end)
+    widget:set_markup(markup(stdout, { fg = beautiful.widget_text }))
+end)
 
 return M

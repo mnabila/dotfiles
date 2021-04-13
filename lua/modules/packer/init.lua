@@ -21,8 +21,9 @@ packer.startup(function()
     use 'voldikss/vim-translator'
     use 'windwp/nvim-autopairs'
     use 'terrortylor/nvim-comment'
+    use 'code-biscuits/nvim-biscuits'
 
-    use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
+    use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', ft={ 'markdown' }}
 
     -- file namager
     use { 'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons' } }
@@ -33,6 +34,7 @@ packer.startup(function()
     -- git
     use { 'mattn/gist-vim', requires = { 'mattn/webapi-vim' } }
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+    use 'TimUntersberger/neogit'
 
     -- colorsceme
     use { 'morhetz/gruvbox', disable = true }
@@ -53,7 +55,7 @@ packer.startup(function()
         requires = {
             'nvim-lua/popup.nvim',
             'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope-fzy-native.nvim'
+            'nvim-telescope/telescope-fzy-native.nvim',
         }
     }
     use { 'hrsh7th/nvim-compe', requires = { 'hrsh7th/vim-vsnip' } }
@@ -62,7 +64,7 @@ packer.startup(function()
     use 'lukas-reineke/format.nvim'
 
     -- snippet
-    use 'mattn/emmet-vim'
+    use {'mattn/emmet-vim'}
 
     -- statusline
     use { 'glepnir/galaxyline.nvim', branch = 'main', requires = {'kyazdani42/nvim-web-devicons'}

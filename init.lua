@@ -13,7 +13,6 @@ require('plugins.hexokinase')
 require('plugins.indentline')
 require('plugins.treesitter')
 require('plugins.nvimTree')
--- require('modules.statusline')
 require('plugins.galaxyline')
 
 -- neovim plugins for functionality
@@ -22,6 +21,7 @@ require('plugins.header')
 require('plugins.telescope')
 require('plugins.autopairs')
 require('plugins.comment')
+require('plugins.biscuits')
 
 -- neovim language support
 require('plugins.markdown')
@@ -29,6 +29,7 @@ require('plugins.markdown')
 -- neovim git{_,hub} support
 require('plugins.gitsigns')
 require('plugins.gist')
+require('plugins.neogit')
 
 -- neovim code completion and code formater
 require('modules.lsp')

@@ -25,7 +25,7 @@ setopt HIST_IGNORE_ALL_DUPS
 
 
 # Set editor default keymap to emacs (`-e`) or vi (`-v`)
-bindkey -e
+bindkey -v
 
 # Prompt for spelling correction of commands.
 setopt CORRECT
@@ -70,7 +70,7 @@ zstyle ':zim:input' double-dot-expand yes
 # Set a custom terminal title format using prompt expansion escape sequences.
 # See http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Simple-Prompt-Escapes
 # If none is provided, the default '%n@%m: %~' is used.
-#zstyle ':zim:termtitle' format '%1~'
+zstyle ':zim:termtitle' format '${1}'
 
 #
 # zsh-autosuggestions
@@ -98,37 +98,8 @@ ZSH_HIGHLIGHT_STYLES[comment]='fg=8'
 # Prompt
 #
 
-# pure configuration {{{
-PURE_PROMPT_SYMBOL=❱
-PURE_PROMPT_VICMD_SYMBOL=❰
-
-# change the path color
-zstyle :prompt:pure:path color white
-
-# change the color for both `prompt:success` and `prompt:error`
-zstyle ':prompt:pure:path' color yellow
-zstyle ':prompt:pure:prompt:*' color cyan
-zstyle ':prompt:pure:prompt:continuation' color purple
-# }}}
-
-# minimal configuration {{{
-MNML_USER_CHAR=''
-MNML_NOMRAL_CHAR='❰'
-MNML_INSERT_CHAR='❱'
-MNML_PROMPT=(mnml_ssh mnml_pyenv mnml_status mnml_keymap)
-MNML_RPROMPT=('mnml_cwd 3 0' mnml_git)
-MNML_INFOLN=(mnml_me_ls mnml_me_git)
-# }}}
-
-# steeef configuration {{{
-USER_COLOR=135
-HOST_COLOR=166
-PWD_COLOR=3
-BRANCH_COLOR=81
-UNINDEXED_COLOR=166
-INDEXED_COLOR=118
-UNTRACKED_COLOR=161
-# }}}
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ------------------
 # Initialize modules
@@ -170,6 +141,14 @@ bindkey -M vicmd 'j' history-substring-search-down
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+
+#
+# auto completion
+#
+
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
 #
 # fzf
 #
@@ -185,21 +164,3 @@ bindkey '^e' edit-command-line
 # functions
 #
 [ -f ~/.zsh/functions/git-svn.zsh ] && source ~/.zsh/functions/git-svn.zsh
-
-#
-# auto completion
-#
-
-fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
-# eval "$(pipenv --completion)"
-
-# heroku autocomplete setup
-# [ -f ~/.cache/heroku/autocomplete/zsh_setup ] && source ~/.cache/heroku/autocomplete/zsh_setup
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

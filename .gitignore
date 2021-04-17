@@ -1,3 +1,4 @@
+**/*.zwc
 **/*.dat
 **/*.db
 **/.uuid
@@ -8,7 +9,6 @@
 **/qsettings
 **/watch_later/*
 mpd/.config/mpd/mpdstate
-mpdscribble
 newsboat/.config/newsboat/history.cmdline
 newsboat/.config/newsboat/history.search
 qutebrowser/.config/qutebrowser/autoconfig.yml

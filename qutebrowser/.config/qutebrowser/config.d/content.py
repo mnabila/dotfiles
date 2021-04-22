@@ -193,7 +193,23 @@ c.content.netrc_file = None
 #   - true
 #   - false
 #   - ask
-c.content.notifications = "ask"
+c.content.notifications.enabled = "ask"
+
+# What notification presenter to use for web notifications. Note that not all implementations support all features of notifications: - With PyQt 5.14, any setting other than qt does not support the click and close events, as well as the tag option to replace existing notifications. - The qt and systray options only support showing one notification at the time and ignore the tag option to replace existing notifications. - The herbe option only supports showing one notification at the time and doesn’t show icons. - The messages option doesn’t show icons and doesn’t support the click and close events.
+# Type: String
+# Valid values:
+# auto: Tries libnotify, systray and messages, uses the first one available without showing error messages.
+# qt: Use Qt’s native notification presenter, based on a system tray icon. Switching from or to this value requires a restart of qutebrowser. Recommended over systray on PyQt 5.14.
+# libnotify: Shows messages via DBus in a libnotify-compatible way. If DBus isn’t available, falls back to systray or messages, but shows an error message.
+# systray: Use a notification presenter based on a systray icon. Falls back to libnotify or messages if not systray is available. This is a reimplementation of the qt setting value, but with the possibility to switch to it at runtime.
+# messages: Show notifications as qutebrowser messages. Most notification features aren’t available.
+# herbe: (experimental!) Show notifications using herbe (github.com/dudik/herbe). Most notification features aren’t available.
+c.content.notifications.presenter = "libnotify"
+
+# Whether to show the origin URL for notifications. Note that URL patterns with this setting only get matched against the origin part of the URL, so e.g. paths in patterns will never match. Note that with the qt presenter, origins are never shown.
+# Type: Bool
+c.content.notifications.show_origin = True
+
 
 # Allow pdf.js to view PDF files in the browser. Note that the files can
 # still be downloaded by clicking the download button in the pdf.js
@@ -246,7 +262,7 @@ c.content.register_protocol_handler = "ask"
 #   - true
 #   - false
 #   - ask
-c.content.ssl_strict = "ask"
+c.content.tls.certificate_errors = "ask"
 
 # List of user stylesheet filenames to use.
 # Type: List of File, or File

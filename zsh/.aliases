@@ -3,7 +3,6 @@
 
 alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
 alias {vi,vim}="nvim --noplugin -u /dev/null"
-alias pacman-mirror="reflector"
 alias tetris="autoload -Uz tetriscurses;tetriscurses"
 alias nvr="nvr --servername $(nvr --serverlist | head -1)"
 alias aur-pkg="ssh aur@aur.archlinux.org list-repos"
@@ -18,7 +17,6 @@ alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind
 alias pacname="pacman -Sup --print-format \"%n\" | sort -n"
 alias pacurl="pacman -Sup | grep https"
 alias pacsize="pacman -Sup --print-format \"%s %n\" | sort -n"
-alias spp="sudo powerpill"
 
 # cpupower
 alias performance="sudo cpupower frequency-set -g performance"
@@ -38,4 +36,5 @@ alias m="showmarks"
 # alias gclean="gcloud auth revoke --all"
 
 alias nvim-update="paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync"
+alias docui="env LC_CTYPE=en_US.UTF-8 TERM=xterm-256color docui"
 

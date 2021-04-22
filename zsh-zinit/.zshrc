@@ -39,11 +39,10 @@ zinit light-mode for \
 zinit ice wait lucid
 zinit light zimfw/completion
 
-### End of Zinit's installer chunk
+# zinit plugins configurations
+[ -f ~/.zinitrc ] && source ~/.zinitrc
 
-# zinitrc
-zinit ice wait lucid id-as="zinitrc"
-zinit snippet ~/.zinitrc
+### End of Zinit's installer chunk
 
 # fzf
 zinit ice wait lucid id-as="fzf/completion"
@@ -51,13 +50,12 @@ zinit snippet /usr/share/fzf/completion.zsh
 zinit ice wait lucid id-as="fzf/key-bindings"
 zinit snippet /usr/share/fzf/key-bindings.zsh
 
-# aliases
-zinit ice wait lucid id-as="aliases"
-zinit snippet ~/.aliases
-
 # functions
 zinit ice wait lucid id-as="functions/git-svn"
 zinit snippet ~/.zsh/functions/git-svn.zsh
+
+# aliases
+[ -f ~/.aliases ] && source ~/.aliases
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

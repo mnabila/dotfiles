@@ -214,7 +214,7 @@ c.downloads.remove_finished = -1
 # Same as `{column}`, but starting from index 0.
 # Type: ShellCommand
 # c.editor.command = ["vim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
-c.editor.command = ["st", "-e", "nvim", "{file}"]
+c.editor.command = ["kitty", "-e", "nvim", "{file}"]
 
 # Encoding to use for the editor.
 # Type: Encoding

@@ -1,0 +1,41 @@
+#!/bin/bash
+# File              : dmenu_virtualsession
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48[at]gmail[dot]com>
+# Date              : Jumat, 07/05/2021 11:24 WIB
+# Last Modified Date: Jumat, 07/05/2021 11:24 WIB
+# Last Modified By  : M. Nabil Adani <nblid48[at]gmail[dot]com>
+
+function startXephyr() {
+    Xephyr :$1 -ac -br -noreset -fullscreen &
+}
+
+function bspwmSessions() {
+    startXephyr 1
+    sleep 2
+    DISPLAY=:1.0 bspwm -c ~/.config/bspwm/bspwmrc
+}
+
+function i3wmSessions() {
+    startXephyr 2
+    sleep 2
+    DISPLAY=:2.0 i3 -c ~/.config/i3/config
+}
+
+function awesomewmSessions() {
+    startXephyr 3
+    sleep 2
+    DISPLAY=:3.0 awesome -c ~/.config/awesome/rc.lua
+}
+
+DMENU="rofi -dmenu -lines 4 -width 30 -i"
+OPTIONS='''
+[
+    ["BSPWM"     , "bspwmSessions"],
+    ["I3WM"      , "i3wmSessions"],
+    ["AWESOMEWM" , "awesomewmSessions"]
+]
+'''
+
+label=$(echo $OPTIONS | jq -r "sort | .[][0]" | $DMENU -p 'Virtual Session')
+eval $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$label\") | .[1]")

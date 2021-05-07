@@ -6,6 +6,7 @@ alias {vi,vim}="nvim --noplugin -u /dev/null"
 alias tetris="autoload -Uz tetriscurses;tetriscurses"
 alias nvr="nvr --servername $(nvr --serverlist | head -1)"
 alias aur-pkg="ssh aur@aur.archlinux.org list-repos"
+alias aria2d="aria2c --enable-rpc"
 
 #
 # pacman

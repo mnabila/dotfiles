@@ -34,7 +34,7 @@ OPTIONS='''
   [ "udiskie",                "dmenu_udiskie -matching regex -dmenu -i -no-custom -multi-select -p FlashDrive" ],
   [ "wifi",                   "dmenu_wifi" ],
   [ "window",                 "dmenu_window" ],
-  [ "youtube",                 "ytfzf -fDH" ],
+  [ "youtube",                "ytfzf -fDH" ],
   [ "umount iso",             "dmenu_iso" ],
   [ "viper restart",          "viper restart" ],
   [ "juypiter lab",           "chromium --new-window --app=http://localhost:8888/lab" ],
@@ -42,7 +42,9 @@ OPTIONS='''
   [ "trello",                 "chromium --new-window --app=https://trello.com/" ],
   [ "facebook",               "chromium --new-window --app=https://m.facebook.com/" ],
   [ "tweetDeck",              "chromium --new-window --app=https://tweetdeck.twitter.com/" ],
-  [ "iptv",                   "dmenu_iptv" ]
+  [ "figma",                  "chromium --new-window --app=https://www.figma.com/files/drafts" ],
+  [ "iptv",                   "dmenu_iptv" ],
+  [ "virtual session",        "dmenu_virtualsession" ]
 ]
 '''
 

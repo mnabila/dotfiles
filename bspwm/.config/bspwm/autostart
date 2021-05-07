@@ -7,8 +7,8 @@ function bsprun() {
 }
 
 sxhkdrcgen
-bsprun xautolock -time 15 -locker "slimlock;gpg-connect-agent reloadagent /bye"
-bsprun lxpolkit
+bsprun xautolock -time 15 -detectsleep -locker "gpg-connect-agent reloadagent /bye;slimlock"
+bsprun /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 bsprun xfce4-power-manager
 bsprun light -S 30
 bsprun udiskie
@@ -17,4 +17,4 @@ bsprun xcompmgr
 bsprun conky -c ~/.config/conky/todolist.conkyrc
 bsprun clipmenud
 bsprun ~/.config/polybar/launch.sh start
-feh --bg-scale ~/Pictures/diy/mnabilagi.png
+feh --bg-scale ~/Pictures/diy/bspwm.png

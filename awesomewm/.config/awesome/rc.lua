@@ -21,7 +21,7 @@ require("themes.xresources.naughty")
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(require("themes.xresources.theme"))
-beautiful.wallpaper = os.getenv("HOME") .. "/Pictures/diy/mnabila.png"
+beautiful.wallpaper = os.getenv("HOME") .. "/Pictures/diy/awesomewm.png"
 
 -- This is used later as the default terminal and editor to run.
 terminal   = "env LIBGL_ALWAYS_SOFTWARE=1 kitty"

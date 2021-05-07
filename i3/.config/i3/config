@@ -65,7 +65,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec env LIBGL_ALWAYS_SOFTWARE=1 kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -540,13 +540,10 @@ for_window [class="Sxiv"]                     border   pixel  1
 # AUTORUNS #
 #
 # exec xautolock -time 15 -locker i3lock-fancy -f "Iosevka-Italic"
-exec xautolock -time 15 -locker "slimlock;gpg-connect-agent reloadagent /bye"
+exec xautolock -time 15 -detectsleep -locker 'gpg-connect-agent reloadagent /bye';slimlock
 
-# exec --no-startup-id mpd
-# exec --no-startup-id mpdscribble
-# exec --no-startup-id redshift
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id lxpolkit
+exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 exec --no-startup-id udiskie
 exec --no-startup-id clipmenud
 exec --no-startup-id jgmenu
@@ -554,4 +551,4 @@ exec --no-startup-id light -S 30
 exec --no-startup-id $HOME/.config/polybar/launch.sh start
 
 exec_always killall -9 xcompmgr; xcompmgr
-exec_always feh --bg-scale "$HOME/Pictures/diy/vim-abu.png"
+exec_always feh --bg-scale "$HOME/Pictures/diy/i3wm.png"

@@ -540,7 +540,7 @@ for_window [class="Sxiv"]                     border   pixel  1
 # AUTORUNS #
 #
 # exec xautolock -time 15 -locker i3lock-fancy -f "Iosevka-Italic"
-exec xautolock -time 15 -detectsleep -locker 'gpg-connect-agent reloadagent /bye';slimlock
+exec xautolock -time 15 -detectsleep -locker 'gpg-connect-agent reloadagent /bye;slimlock'
 
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1

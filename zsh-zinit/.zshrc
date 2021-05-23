@@ -1,12 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Created by newuser for 5.8
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -21,28 +12,17 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 ### User config here
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 zinit wait="2" lucid light-mode for \
-    zdharma/zui \
-    jocelynmallon/zshmarks \
-    zdharma/zzcomplete
+    jocelynmallon/zshmarks
 
 zinit light-mode for \
     zsh-users/zsh-autosuggestions \
-    zsh-users/zsh-completions \
     zdharma/fast-syntax-highlighting \
     zimfw/input \
-    zsh-users/zsh-history-substring-search \
     zimfw/utility
 
-zinit ice wait lucid
-zinit light zimfw/completion
-
-# zinit plugins configurations
-[ -f ~/.zinitrc ] && source ~/.zinitrc
-
-### End of Zinit's installer chunk
+zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
+    zsh-users/zsh-completions
 
 # fzf
 zinit ice wait lucid id-as="fzf/completion"
@@ -54,11 +34,21 @@ zinit snippet /usr/share/fzf/key-bindings.zsh
 zinit ice wait lucid id-as="functions/git-svn"
 zinit snippet ~/.zsh/functions/git-svn.zsh
 
+# completion enhancements
+zinit ice wait lucid id-as="config/completion"
+zinit snippet ~/.zsh/config/completion.zsh
+
+zinit wait lucid for \
+    OMZ::plugins/git
+
+# zinit plugins configurations
+[ -f ~/.zinitrc ] && source ~/.zinitrc
+
+### End of Zinit's installer chunk
+
 # aliases
 [ -f ~/.aliases ] && source ~/.aliases
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-autoload -Uz compinit
-compinit
+# prompt
+export STARSHIP_CONFIG=~/.zsh/starship.toml
+eval "$(starship init zsh)"

@@ -1,0 +1,24 @@
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# The default format is used to define the format of the prompt
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$env_var\
+$jobs\
+$cmd_duration\
+$line_break\
+$shell\
+$character"""
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"

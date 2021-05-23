@@ -3,39 +3,20 @@
 
 alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
 alias {vi,vim}="nvim --noplugin -u /dev/null"
-alias tetris="autoload -Uz tetriscurses;tetriscurses"
-alias nvr="nvr --servername $(nvr --serverlist | head -1)"
 alias aur-pkg="ssh aur@aur.archlinux.org list-repos"
 alias aria2d="aria2c --enable-rpc"
+alias ssh="env TERM=xterm-256color ssh"
+alias nvim-update="paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync"
+alias docui="env LC_CTYPE=en_US.UTF-8 TERM=xterm-256color docui"
+alias srcinfo="rm .SRCINFO && makepkg --printsrcinfo > .SRCINFO && git status"
 
-#
 # pacman
-#
 alias pmu="pekmen;sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
 alias pmu-id="pekmen;sudo reflector --verbose --country Indonesia --age 12 --protocol https --protocol http --sort rate --save /etc/pacman.d/mirrorlist"
 alias psu="sudo pacman -Syyuw"
-alias paczf="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
-alias pacname="pacman -Sup --print-format \"%n\" | sort -n"
-alias pacurl="pacman -Sup | grep https"
-alias pacsize="pacman -Sup --print-format \"%s %n\" | sort -n"
-
-# cpupower
-alias performance="sudo cpupower frequency-set -g performance"
-alias ondemand="sudo cpupower frequency-set -g ondemand"
-alias cpuinfo="watch -n1 \"cat /proc/cpuinfo | grep 'MHz'\""
 
 # zshmarks
 alias g="jump"
 alias b="bookmark"
 alias d="deletemark"
 alias m="showmarks"
-
-# gcloud sdk
-# alias glogin="gcloud auth login"
-# alias gshell="gcloud alpha cloud-shell ssh --authorize-session"
-# alias gproject="gcloud config set project"
-# alias gclean="gcloud auth revoke --all"
-
-alias nvim-update="paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync"
-alias docui="env LC_CTYPE=en_US.UTF-8 TERM=xterm-256color docui"
-

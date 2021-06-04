@@ -43,10 +43,7 @@ end
 function M.markup(content, opts)
     local fg = opts.fg or ""
 
-    return string.format(
-        '<span foreground="%s">%s</span>',
-        fg, content
-    )
+    return string.format('<span foreground="%s">%s</span>', fg, content)
 end
 
 return M

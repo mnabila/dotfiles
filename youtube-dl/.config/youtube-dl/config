@@ -19,13 +19,13 @@
 #
 # Subtitle Options:
 #
---sub-lang en
---write-auto-sub
---sub-format ass
+# --sub-lang en
+# --write-auto-sub
+# --sub-format ass
 
 #
 # Post-processing Options:
 #
 # --audio-format m4a
 # --audio-quality 0
---embed-subs
+# --embed-subs

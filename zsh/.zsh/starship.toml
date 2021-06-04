@@ -12,6 +12,7 @@ $git_commit\
 $git_state\
 $git_status\
 $env_var\
+$python\
 $jobs\
 $cmd_duration\
 $line_break\

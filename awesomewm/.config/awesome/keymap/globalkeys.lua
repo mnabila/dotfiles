@@ -1,6 +1,7 @@
 local awful = require("awful")
 local gears = require("gears")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local beautiful = require("beautiful")
 
 local M = {}
 
@@ -179,7 +180,27 @@ function M.get()
                 end
             end,
             {description = "restore minimized", group = "client"}
+        ),
+
+        awful.key(
+            {modkey, "Shift"},
+            "equal",
+            function()
+                awful.tag.incgap(2)
+            end,
+            {description = "increase the spacing between clients", group = "tag"}
+        ),
+
+        awful.key(
+            {modkey},
+            "minus",
+            function()
+                awful.tag.incgap(-2)
+            end,
+            {description = "decrease the spacing between clients", group = "tag"}
         )
+
+        -- TODO: add keybindings for reset gaps
     )
 
     return globalkeys

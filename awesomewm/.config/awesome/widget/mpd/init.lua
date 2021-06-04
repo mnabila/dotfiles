@@ -9,12 +9,19 @@ local M = {}
 
 M.icon = wibox.widget.imagebox(colorize(icon, beautiful.widget_icon))
 
-local get_music = [[ sh -c " mpc | head -1 " ]]
+local get_music = [[ sh -c "mpc | head -1" ]]
+local length_text = 40
 
 M.widget = awful.widget.watch(get_music, 2, function(widget, stdout)
     if stdout:find("volume") then
         stdout = "😱 playlist empty 😱"
     end
+
+    if #stdout >= length_text then
+        stdout = string.sub(stdout, 0, length_text)
+        stdout = stdout .. "..."
+    end
+
     widget:set_markup(markup(stdout, { fg = beautiful.widget_text }))
 end)
 

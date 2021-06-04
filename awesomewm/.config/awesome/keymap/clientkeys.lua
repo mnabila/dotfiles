@@ -102,6 +102,15 @@ function M.get()
                 c:raise()
             end,
             {description = "(un)maximize horizontally", group = "client"}
+        ),
+
+        awful.key(
+            {modkey, "Shift"},
+            "Return",
+            function(c)
+                c:swap(awful.client.getmaster())
+            end,
+            {description = "move to master", group = "client"}
         )
     )
     return clientkeys

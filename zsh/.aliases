@@ -15,8 +15,15 @@ alias pmu="pekmen;sudo reflector --verbose --latest 5 --protocol https --sort ra
 alias pmu-id="pekmen;sudo reflector --verbose --country Indonesia --age 12 --protocol https --protocol http --sort rate --save /etc/pacman.d/mirrorlist"
 alias psu="sudo pacman -Syyuw"
 
-# zshmarks
-alias g="jump"
-alias b="bookmark"
-alias d="deletemark"
-alias m="showmarks"
+# youtube-dl
+function ytmkv() {
+    youtube-dl --external-downloader aria2c --format "best[height<=720]" --merge-output-format mkv --youtube-skip-dash-manifest --output "%(title)s.%(ext)s" $@
+}
+
+function ytmp4() {
+    youtube-dl --external-downloader aria2c --format "best[height<=720]" --merge-output-format mp4 --youtube-skip-dash-manifest --output "%(title)s.%(ext)s" $@
+}
+
+function ytmp3() {
+    youtube-dl --external-downloader aria2c --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --output "~/Music/youtube/%(title)s.%(ext)s" $@
+}

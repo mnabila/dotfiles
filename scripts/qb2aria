@@ -1,0 +1,13 @@
+#!/bin/bash
+# File              : qb2aria
+# License           : MIT License
+# Author            : M. Nabil Adani <nblid48[at]gmail[dot]com>
+# Date              : Selasa, 01/06/2021 14:46 WIB
+# Last Modified Date: Selasa, 01/06/2021 14:46 WIB
+# Last Modified By  : M. Nabil Adani <nblid48[at]gmail[dot]com>
+
+url=$1
+if [[ ! -z $url ]]; then
+    notify-send "Aria2 | Downloading" "$url" -u normal
+    aria2p call addUri -J "[[\"$url\"]]"
+fi

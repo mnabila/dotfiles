@@ -1,11 +1,5 @@
 local wibox = require("wibox")
-local gears = require("gears")
 local awful = require("awful")
-local func = require("utils.function")
-local beautiful = require("beautiful")
-
-local dpi = beautiful.xresources.apply_dpi
-local margin = wibox.container.margin
 
 -- Modules
 local tasklist = require("widget.tasklist")
@@ -32,6 +26,6 @@ end
 
 function M.visible()
     bar.visible = not bar.visible
-end 
+end
 
 return M

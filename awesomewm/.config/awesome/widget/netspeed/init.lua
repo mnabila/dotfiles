@@ -3,11 +3,12 @@ local awful = require("awful")
 local beautiful = require("beautiful")
 local markup = require("utils.function").markup
 local colorize = require("utils.function").colorize
+local home = os.getenv("HOME")
 
-local up = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/up.svg"
-local down = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/down.svg"
-local wlan_on = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/wifi_on.svg"
-local wlan_off = os.getenv("HOME") .. "/.config/awesome/widget/netspeed/wifi_off.svg"
+local up = home .. "/.config/awesome/widget/netspeed/up.svg"
+local down = home .. "/.config/awesome/widget/netspeed/down.svg"
+local wlan_on = home .. "/.config/awesome/widget/netspeed/wifi_on.svg"
+local wlan_off = home .. "/.config/awesome/widget/netspeed/wifi_off.svg"
 
 local M = {}
 

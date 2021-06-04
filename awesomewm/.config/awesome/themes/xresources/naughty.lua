@@ -1,59 +1,60 @@
 local naughty = require("naughty")
-local wibox = require("wibox")
 local beautiful = require("beautiful")
-local awful = require("awful")
-local dpi = require("beautiful.xresources").apply_dpi
+local wibox = require("wibox")
 
+naughty.connect_signal("request::display", function(notif)
+    if notif.urgency == "critical" then
+        notif.timeout = 0
+    else
+        notif.timeout = 4
+    end
 
-naughty.config.defaults.padding = dpi(10)
-naughty.config.defaults.margin = dpi(16)
-naughty.config.defaults.ontop = true
-naughty.config.defaults.screen = awful.screen.focused()
-naughty.config.defaults.icon_size = beautiful.notification_icon_size
-naughty.config.defaults.margin = beautiful.notification_margin
-naughty.config.defaults.border_width = beautiful.notification_border_width
-naughty.config.defaults.title = "System Notification"
-naughty.config.defaults.position = "top_right"
-naughty.config.defaults.timeout = 3
-naughty.config.defaults.width = beautiful.notification_width
+    local widget_template = {
+        {
+            {
+                {
+                    {
+                        {
 
+                            notification = notif,
+                            widget = naughty.widget.icon,
+                            resize_strategy = "center",
+                        },
+                        {
+                            naughty.widget.title,
+                            naughty.widget.message,
+                            spacing = 4,
+                            layout = wibox.layout.fixed.vertical,
+                        },
+                        fill_space = true,
+                        spacing = 10,
+                        layout = wibox.layout.fixed.horizontal,
+                    },
+                    layout = wibox.layout.fixed.vertical,
+                },
+                margins = beautiful.notification_margin,
+                widget = wibox.container.margin,
+            },
+            id = "background_role",
+            widget = naughty.container.background,
+        },
+        strategy = "max",
+        width = beautiful.notification_width,
+        height = beautiful.notification_height,
+        widget = wibox.container.constraint,
+    }
 
-
--- naughty.connect_signal("request::display", function(notif)
---     naughty.layout.box{
---         notification    = notif,
---         type            = "notification",
---         bg              = beautiful.notification_bg,
---         border_color    = beautiful.notification_border_color,
---         border_width    = beautiful.notification_border_width,
---         widget_template = {
---             {
---                 {
---                     {
---                         naughty.widget.icon,
---                         {
---                             {
---                                 font = beautiful.notification_font,
---                                 markup = "<b>" .. notif.title .. "</b>",
---                                 widget = naughty.widget.title,
---                             },
---                             naughty.widget.message,
---                             spacing = 4,
---                             layout  = wibox.layout.fixed.vertical,
---                         },
---                         fill_space = true,
---                         spacing    = 4,
---                         layout     = wibox.layout.fixed.horizontal,
---                     },
---                     margins = beautiful.notification_margin,
---                     widget  = wibox.container.margin,
---                 },
---                 id     = "background_role",
---                 widget = naughty.container.background,
---                 width = beautiful.notification_width
---             },
---             strategy = "max",
---             widget   = wibox.container.constraint,
---         }
---     }
--- end)
+    naughty.layout.box({
+        notification = notif,
+        type = "notification",
+        widget_template = widget_template,
+        ontop = true,
+        minimum_width = beautiful.notification_width,
+        maximum_width = beautiful.notification_width,
+        offset = {
+            y = 100,
+            x = 1000,
+        },
+        position = "top_right",
+    })
+end)

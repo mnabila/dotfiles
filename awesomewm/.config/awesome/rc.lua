@@ -14,20 +14,19 @@ local beautiful = require("beautiful")
 require("main.errorhandling")
 -- }}}
 
--- {{{ Notification 
+-- {{{ Notification
 require("themes.xresources.naughty")
 -- }}}
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(require("themes.xresources.theme"))
-beautiful.wallpaper = os.getenv("HOME") .. "/Pictures/diy/awesomewm.png"
 
 -- This is used later as the default terminal and editor to run.
-terminal   = "env LIBGL_ALWAYS_SOFTWARE=1 kitty"
-editor     = os.getenv("EDITOR") or "nano"
+terminal = "env LIBGL_ALWAYS_SOFTWARE=1 kitty"
+editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
-modkey     = "Mod4"
+modkey = "Mod4"
 
 local keymap = {
     bindtotags = require("keymap.bindtotags"),
@@ -47,29 +46,24 @@ awful.layout.layouts = {
 }
 -- }}}
 
--- {{{ Tags 
+-- {{{ Tags
 require("main.tags")
 -- }}}
 
-
-
--- {{{ Menu
-require("main.menu")
--- }}}
-
 -- {{{ Wibar
-require("statusbar.init")
+require("statusbar")
 -- }}}
 
 -- {{{ Bindings
 -- set mouse
 root.buttons(keymap.globalbuttons())
 -- Set keys
-root.keys(
-    gears.table.join(
-        keymap.bindtotags(keymap.globalkeys()),keymap.mediakeys(), keymap.userkeys(), keymap.statusbarkeys()
-    )
-)
+root.keys(gears.table.join(
+    keymap.bindtotags(keymap.globalkeys()),
+    keymap.mediakeys(),
+    keymap.userkeys(),
+    keymap.statusbarkeys()
+))
 -- }}}
 
 -- {{{ Rules

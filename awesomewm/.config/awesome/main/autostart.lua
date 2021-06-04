@@ -10,7 +10,7 @@ do
         "udiskie",
     }
 
-    for _, i in pairs(cmds) do
-        awful.spawn.with_shell(i .. "&")
+    for _, value in ipairs(cmds) do
+        awful.spawn.with_shell(value .. "&")
     end
 end

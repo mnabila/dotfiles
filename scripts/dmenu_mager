@@ -38,7 +38,6 @@ OPTIONS='''
   [ "window",                 "dmenu_window" ],
   [ "youtube",                "ytfzf -fDH" ],
   [ "umount iso",             "dmenu_iso" ],
-  [ "viper restart",          "viper restart" ],
   [ "juypiter lab",           "chromium --new-window --app=http://localhost:8888/lab" ],
   [ "photopea",               "chromium --new-window --app=https://www.photopea.com/" ],
   [ "trello",                 "chromium --new-window --app=https://trello.com/" ],

@@ -6,7 +6,7 @@
 #
 # Video Format Options
 #
---format best[height=720]
+--format best[height<=720]
 --merge-output-format mkv
 --youtube-skip-dash-manifest
 

@@ -1,15 +1,10 @@
-/* ==========================================================================
-   File: gruvbox-common.rasi
-   Desc: Shared rules between all gruvbox themes
-   Author: bardisty <b@bah.im>
-   Source: https://github.com/bardisty/gruvbox-rofi
-   Modified: Mon Feb 12 2018 06:06:47 PST -0800
-   ========================================================================== */
+@import "color/gruvbox.rasi"
 
 window {
     background-color: @background;
     border:           2;
-    padding:          2;
+    padding:          4px;
+    margin:           0;
 }
 
 mainbox {
@@ -17,10 +12,28 @@ mainbox {
     padding: 0;
 }
 
+inputbar {
+    spacing:    0;
+    padding:    0;
+    margin:     0;
+    text-color: @normal-foreground;
+    children:   [ prompt, entry];
+}
+
+prompt {
+    background-color: @gruvbox-dark-yellow-dark;
+    padding:          3px 6px;
+    text-color:       @normal-background;
+    margin:           0px;
+}
+
+entry {
+    padding:    3px;
+    text-color: @normal-foreground;
+}
+
 message {
-    border:       2px 0 0;
-    border-color: @separatorcolor;
-    padding:      1px;
+    padding:      2px 0px;
 }
 
 textbox {
@@ -29,11 +42,9 @@ textbox {
 }
 
 listview {
-    border:       2px solid 0 0;
-    padding:      2px 0 0;
-    border-color: @separatorcolor;
-    spacing:      2px;
-    scrollbar:    @scrollbar;
+    margin:    2px 0px 0px 0px;
+    spacing:   2px;
+    scrollbar: @scrollbar;
 }
 
 element {
@@ -86,32 +97,14 @@ element.alternate.active {
     text-color:       @alternate-active-foreground;
 }
 
-scrollbar {
-    width:        4px;
-    border:       0;
-    handle-color: @scrollbar-handle;
-    handle-width: 8px;
-    padding:      0;
-}
-
 mode-switcher {
-    border:       2px 0 0;
-    border-color: @separatorcolor;
+    margin: 3px;
 }
 
-inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    2px;
-    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
-}
-
-case-indicator,
-entry,
-prompt,
 button {
-    spacing:    0;
-    text-color: @normal-foreground;
+    padding:    2px;
+    margin:     0px;
+    text-color: @gruvbox-dark-bg3;
 }
 
 button.selected {
@@ -119,9 +112,4 @@ button.selected {
     text-color:       @selected-normal-foreground;
 }
 
-textbox-prompt-sep {
-    expand:     false;
-    str:        ":";
-    text-color: @normal-foreground;
-    margin:     0 0.3em 0 0;
-}
+

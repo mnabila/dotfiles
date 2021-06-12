@@ -29,8 +29,8 @@ function M.get()
             "space",
             function(c)
                 c.floating = not c.floating
-                c.width    = 1200
-                c.height   = 700
+                c.width    = 1100
+                c.height   = 650
                 awful.placement.centered(c)
             end,
             {description = "toggle floating", group = "client"}
@@ -102,15 +102,6 @@ function M.get()
                 c:raise()
             end,
             {description = "(un)maximize horizontally", group = "client"}
-        ),
-
-        awful.key(
-            {modkey, "Shift"},
-            "Return",
-            function(c)
-                c:swap(awful.client.getmaster())
-            end,
-            {description = "move to master", group = "client"}
         )
     )
     return clientkeys

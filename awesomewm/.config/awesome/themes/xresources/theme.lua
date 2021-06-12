@@ -10,7 +10,7 @@ local theme = dofile(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 theme.font = "Iosevka 10"
 
 -- wallpaper
-theme.wallpaper = os.getenv("HOME") .. "/Pictures/diy/awesomewm.png"
+theme.wallpaper = os.getenv("HOME") .. "/Pictures/diy/mnabila.png"
 
 -- background
 theme.bg_normal = xrdb.background

@@ -1,16 +1,19 @@
 configuration {
-  case-sensitive: false;
-  fake-transparency: true;
-  font: "Iosevka Nerd Font 11";
-  lines: 8;
-  location: 0;
-  modi: [drun,run,window];
-  padding: 5;
-  pid: "/run/user/1000/rofi.pid";
-  show-icons: false;
-  sidebar-mode: false;
-  terminal: "alacritty";
-  theme: "~/.config/rofi/themes/gruvbox.rasi";
-  window-match-fields: "name";
-  yoffset: -50;
+    case-sensitive: false;
+    fake-transparency: true;
+    font: "Iosevka 11";
+    lines: 8;
+    location: 0;
+    modi: [drun, run];
+    padding: 5;
+    pid: "/run/user/1000/rofi.pid";
+    show-icons: false;
+    sidebar-mode: false;
+    terminal: "env LIBGL_ALWAYS_SOFTWARE=1 kitty";
+    theme: "~/.config/rofi/themes/main.rasi";
+    window-match-fields: "name";
+    yoffset: -50;
+    width: 45;
+    display-run: " Command";
+    display-drun: " Apps";
 }

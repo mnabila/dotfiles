@@ -29,16 +29,16 @@ function M.get()
             function()
                 awful.spawn("mpc toggle")
             end,
-            {description = "execute command", group = "launcher"}
+            {description = "mpc toggles between play and pause", group = "launcher"}
         ),
 
         awful.key(
             {modkey, "Shift"},
             "Pause",
             function()
-                awful.spawn("dmenu_mpdmenu")
+                awful.spawn("dmenu_mpc")
             end,
-            {description = "execute command", group = "launcher"}
+            {description = "mpc playlist", group = "launcher"}
         ),
 
         awful.key(

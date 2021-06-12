@@ -11,8 +11,8 @@
 # mpvc: https://github.com/lwilletts/mpvc
 
 
-dmenu="rofi -dmenu -i -p mpv"
-track=$(mpvc -i | tr "\t" "|" | $dmenu | cut -d "|" -f 1)
+DMENU="rofi -dmenu -i"
+track=$(mpvc -i | tr "\t" "|" | $DMENU -p "奈 MPV" | cut -d "|" -f 1)
 # track=$(mpvc -i | sed 's/\t\[\[7m/|/g' | $dmenu | cut -d "|" -f 1)
 if [[ ! -z $track ]]; then
     mpvc -J $track

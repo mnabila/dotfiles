@@ -17,13 +17,13 @@ alias psu="sudo pacman -Syyuw"
 
 # youtube-dl
 function ytmkv() {
-    youtube-dl --external-downloader aria2c --format "best[height<=720]" --merge-output-format mkv --youtube-skip-dash-manifest --output "%(title)s.%(ext)s" $@
+    youtube-dl --merge-output-format mkv --output "%(title)s.%(ext)s" $@
 }
 
 function ytmp4() {
-    youtube-dl --external-downloader aria2c --format "best[height<=720]" --merge-output-format mp4 --youtube-skip-dash-manifest --output "%(title)s.%(ext)s" $@
+    youtube-dl --merge-output-format mp4 --output "%(title)s.%(ext)s" $@
 }
 
 function ytmp3() {
-    youtube-dl --external-downloader aria2c --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --output "~/Music/youtube/%(title)s.%(ext)s" $@
+    youtube-dl --format bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --output "~/Music/youtube/%(title)s.%(ext)s" $@
 }

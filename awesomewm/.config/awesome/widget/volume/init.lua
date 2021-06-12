@@ -1,6 +1,5 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local naughty = require("naughty")
 local beautiful = require("beautiful")
 local colorize = require("utils.function").colorize
 local markup = require("utils.function").markup

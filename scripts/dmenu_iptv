@@ -6,7 +6,7 @@
 # Last Modified Date: Senin, 01/02/2021 11:52 WIB
 # Last Modified By  : M. Nabil Adani <nblid48@gmail.com>
 
-DMENU="rofi -dmenu -i -p IPTV"
+DMENU="rofi -dmenu -i"
 IPTV='''
 [
     ["ANIMAX",            "http://210.210.155.35/dr9445/h/h144/01.m3u8"],
@@ -47,7 +47,7 @@ IPTV='''
 ]
 '''
 
-channel=$(echo $IPTV | jq -r "sort | .[][0]" | $DMENU)
+channel=$(echo $IPTV | jq -r "sort | .[][0]" | $DMENU -p "癩 IPTV")
 url=$(echo $IPTV | jq -r ".[] | select(.[0] == \"$channel\") | .[1]")
 
 if [[ $channel != "" ]]; then

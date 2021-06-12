@@ -15,7 +15,7 @@ export QT_SCREEN_SCALE_FACTORS=1
 export GEM_HOME=$HOME/.gem
 
 export TERM=screen-256color
-export TERMINAL=kitty
+export TERMINAL="env LIBGL_ALWAYS_SOFTWARE=1 kitty"
 
 # Clipmenu Environment Variables
 export CM_LAUNCHER=rofi
@@ -25,7 +25,7 @@ export CM_DIR=/tmp/clipmenu
 export UDISKIE_DMENU_LAUNCHER="rofi"
 
 # default terminal ranger
-export TERMCMD=kitty
+export TERMCMD="env LIBGL_ALWAYS_SOFTWARE=1 kitty"
 
 # Path
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"

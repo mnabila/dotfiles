@@ -8,7 +8,8 @@ alias aria2d="aria2c --enable-rpc"
 alias ssh="env TERM=xterm-256color ssh"
 alias nvim-update="paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync"
 alias docui="env LC_CTYPE=en_US.UTF-8 TERM=xterm-256color docui"
-alias srcinfo="rm .SRCINFO && makepkg --printsrcinfo > .SRCINFO && git status"
+alias srcinfo="rm .SRCINFO; makepkg --printsrcinfo > .SRCINFO && git status"
+alias cekisp="curl ipinfo.io"
 
 # pacman
 alias pmu="pekmen;sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
@@ -19,9 +20,15 @@ alias psu="sudo pacman -Syyuw"
 function ytmkv() {
     youtube-dl --merge-output-format mkv --output "%(title)s.%(ext)s" $@
 }
+function ytmkv1080() {
+    youtube-dl --merge-output-format mkv --format "best[height<=1080]" --output "%(title)s.%(ext)s" $@
+}
 
 function ytmp4() {
     youtube-dl --merge-output-format mp4 --output "%(title)s.%(ext)s" $@
+}
+function ytmp41080() {
+    youtube-dl --merge-output-format mp4 --format "best[height<=1080]" --output "%(title)s.%(ext)s" $@
 }
 
 function ytmp3() {

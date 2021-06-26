@@ -59,6 +59,7 @@ theme.notification_font = theme.font
 theme.notification_margin = dpi(10)
 theme.notification_width = dpi(350)
 theme.notification_height = dpi(80)
+theme.notification_max_height = dpi(130)
 theme.notification_max_width = theme.notification_width
 theme.notification_icon_size = dpi(32)
 theme.notification_border_width = dpi(2)

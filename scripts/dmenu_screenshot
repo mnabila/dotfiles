@@ -12,7 +12,8 @@ SCREENSHOTDIR="$HOME/Pictures/screenshot"
 ICON="$HOME/Dotfiles/icons/gruvbox/camera.png"
 FILENAME="$SCREENSHOTDIR/Screenshot_$TIMESTAMP.png"
 DMENU="rofi -dmenu -p Screenshot -lines 6 -width 30"
-TEXT="author : mnabila"
+TEXT="$(date '+%A, %d/%m/%Y') $(date '+%H:%M:%S')"
+FONT="Iosevka"
 
 takeOnWindow() {
     rofi -e "Select window to capture"
@@ -27,7 +28,10 @@ takeOnFullScreen() {
 
 takeOnRectange() {
     flameshot gui --raw >$FILENAME
-    if [[ $(cat $FILENAME) != "screenshot aborted" ]]; then
+
+    mime=$(file -i $FILENAME | cut -d = -f 2)
+
+    if [[ $mime = "binary" ]]; then
         saveAndCopy
     else
         rm $FILENAME
@@ -44,17 +48,15 @@ addRoundedCorner() {
 }
 
 addBorder() {
-    convert $FILENAME -bordercolor "#282828" -border 1 $FILENAME
+    convert $FILENAME -bordercolor "#d79921" -border 2 $FILENAME
 }
 
 addShadow() {
-    convert $FILENAME \( +clone -background black -shadow 30x15+0+0 \) +swap -background white -layers merge +repage $FILENAME
+    convert $FILENAME \( +clone -background black -shadow 20x5+0+0 \) +swap -background "#282828" -layers merge +repage $FILENAME
 }
 
 addAnnotate() {
-    convert $FILENAME -font Iosevka-Nerd-Font-Complete -gravity north -background "#d79921" -fill "#282828" -splice 0x18 -annotate +0+1  "$TEXT" $FILENAME
-    # convert $FILENAME -gravity NorthEast -pointsize 20 -fill "#d79921" -undercolor "#d79921" -annotate +60+0 "$TEXT" -pointsize 12 -fill "#282828" -undercolor "#d79921" -font Iosevka-Nerd-Font-Complete -annotate +60+10 "$TEXT" $FILENAME
-    # convert $FILENAME -bordercolor "#ff0000" -border 2 -gravity North -pointsize 12 -fill '#282828' -undercolor '#d79921' -font Iosevka -annotate +0+1 "$TEXT" $FILENAME
+    convert $FILENAME -font $FONT -gravity north -background "#d79921" -fill "#282828" -splice 0x18 -annotate +0+1 "$TEXT" $FILENAME
 }
 
 addProfile() {
@@ -62,13 +64,13 @@ addProfile() {
 }
 
 saveAndCopy() {
+    addAnnotate
     addBorder
     addShadow
     addProfile
     xclip -selection clipboard -i $FILENAME -t image/png
     notify-send -i $ICON "Screenshot" "Copied to clipboard"
 }
-
 
 OPTIONS='''
 [
@@ -80,7 +82,6 @@ OPTIONS='''
     ["Flameshot Fullscreen", "flameshot screen"]
 ]
 '''
-
 
 menu=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
 $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$menu\") | .[1]")

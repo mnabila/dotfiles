@@ -50,7 +50,9 @@ naughty.connect_signal("request::display", function(notif)
         widget_template = widget_template,
         ontop = true,
         minimum_width = beautiful.notification_width,
-        maximum_width = beautiful.notification_width,
+        maximum_width = beautiful.notification_max_width,
+        minimum_height = beautiful.notification_height,
+        maximum_height = beautiful.notification_max_height,
         offset = {
             y = 100,
             x = 1000,

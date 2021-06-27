@@ -3,32 +3,39 @@
 # License           : MIT License
 # Author            : M. Nabil Adani <nblid48[at]gmail[dot]com>
 # Date              : Minggu, 28/02/2021 11:41 WIB
-# Last Modified Date: Senin, 01/03/2021 11:31 WIB
+# Last Modified Date: Sabtu, 26/06/2021 11:01 WIB
 # Last Modified By  : M. Nabil Adani <nblid48[at]gmail[dot]com>
 # Inspired By       : https://github.com/tanuj101/awesome-dmenu/blob/master/recorder/dmenurecord.sh
 
-DMENU="rofi -dmenu -lines 5 -width 30 -i -p Record"
+DMENU="rofi -dmenu -lines 5 -width 30 -i"
 OUTDIR="$HOME/Videos"
 recordid="/tmp/recordid"
 
+function getInputAudio() {
+    pactl list | grep "Name" | grep "alsa" | awk '{print $2}' | $DMENU -p "Input Audio"
+}
+
 function audioVideo() {
-    notify-send "Start Recording" "With:\nVideo On\nAudio On"
-
-    filename="$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mkv"
+    filename="$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mp4"
     dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
-    ffmpeg -y -f x11grab -framerate 30 -s $dimensions \
-        -i :0.0 -f alsa -i default \
-        -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
-        -c:a aac $filename &
+    audio=$(getInputAudio)
 
-    echo $! >$recordid
+    if [ -n "$audio" ]; then
+        notify-send "Start Recording" "With:\nVideo On\nAudio On"
+        ffmpeg -y -f x11grab -framerate 30 -s $dimensions \
+            -i :0.0 -f pulse -i $audio -ac 1 \
+            -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
+            -c:a aac $filename &
+
+        echo $! >$recordid
+    fi
 }
 
 function video() {
-    notify-send "Start Recording" "With:\nVideo On\nAudio Off"
-
     filename="$OUTDIR/video-$(date '+%y%m%d-%H%M-%S').mp4"
     dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
+
+    notify-send "Start Recording" "With:\nVideo On\nAudio Off"
     ffmpeg -y -f x11grab -framerate 30 -s $dimensions \
         -i :0.0 -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 \
         -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 $filename &
@@ -37,33 +44,38 @@ function video() {
 }
 
 function audio() {
-    notify-send "Start Recording" "With:\nVideo Off\nAudio On"
-
     filename="$OUTDIR/audio-$(date '+%y%m%d-%H%M-%S').mp3"
-    dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
-    ffmpeg -f alsa -i default -ac 2 -acodec libmp3lame -ab 128k $filename &
+    audio=$(getInputAudio)
 
-    echo $! >$recordid
+    if [ -n "$audio" ]; then
+        notify-send "Start Recording" "With:\nVideo Off\nAudio On"
+        ffmpeg -f pulse -i $audio -ac 1 -acodec libmp3lame -ab 128k $filename &
+
+        echo $! >$recordid
+    fi
 }
 
 function stream() {
     output=$2
     platform=$1
     dimensions=$(xdpyinfo | grep dimensions | awk '{print $2;}')
+    audio=$(getInputAudio)
 
-    notify-send "Start Streaming On $platform" "With:\nVideo On\nAudio On"
-    ffmpeg -y -f x11grab -framerate 23 -s $dimensions \
-        -i :0.0 -f alsa -i default \
-        -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
-        -b:v 500k -b:a 128k \
-        -vf scale=854x480 \
-        -f flv $output &
+    if [ -n "$audio" ]; then
+        notify-send "Start Streaming On $platform" "With:\nVideo On\nAudio On"
+        ffmpeg -y -f x11grab -framerate 23 -s $dimensions \
+            -i :0.0 -f pulse -i $audio -ac 1 \
+            -c:v libx264 -pix_fmt yuv420p -preset veryfast -q:v 1 \
+            -b:v 500k -b:a 128k \
+            -vf scale=854x480 \
+            -f flv $output &
 
-    echo $1 >$recordid
+        echo $1 >$recordid
+    fi
 }
 
 function getStreamToken() {
-    $DMENU -mesg "Insert $1 Token" -lines 0
+    $DMENU -p "Stream" -mesg "Insert $1 Token" -lines 0
 }
 
 function startStreaming() {
@@ -110,10 +122,9 @@ function stoprecord() {
     fi
 }
 
-
 function endrecord() {
     OPTIONS='["Yes", "No"]'
-    select=$(echo $OPTIONS | jq -r ".[]" | $DMENU -mesg "Stop Recording")
+    select=$(echo $OPTIONS | jq -r ".[]" | $DMENU -p "Record" -mesg "Stop Recording")
     [ "$select" == "Yes" ] && stoprecord
 }
 
@@ -130,7 +141,7 @@ function startrecord() {
         ["  Stream On Vimeo",    "streamOnVimeo"]
     ]
     '''
-    select=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
+    select=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU -p "Record")
     eval $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$select\") | .[1]")
 }
 

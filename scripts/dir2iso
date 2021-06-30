@@ -1,36 +1,25 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# File              : dir2iso.py
+#!/bin/bash
+# File              : dir2iso
 # License           : MIT License
-# Author            : M. Nabil Adani <macroid48@gmail.com>
-# Date              : Sabtu, 07/09/2019 07:09 WIB
-# Last Modified Date: Sabtu, 07/09/2019 07:09 WIB
-# Last Modified By  : M. Nabil Adani <macroid48@gmail.com>
+# Author            : M. Nabil Adani <nblid48[at]gmail[dot]com>
+# Date              : Rabu, 30/06/2021 12:01 WIB
+# Last Modified Date: Rabu, 30/06/2021 12:49 WIB
+# Last Modified By  : M. Nabil Adani <nblid48[at]gmail[dot]com>
 
-import subprocess
-import shlex
-import argparse
-import sys
-def command(argv=None):
-    "untuk melakukan perintah cli "
-    parse=argparse.ArgumentParser(description="dir2iso is a simple CLI program for convert or make iso image from directory using genisoimage")
-    parse.add_argument("-f","--folder",help="name folder")
-    parse.add_argument("-l","--label",help="label for iso image")
-    parse.add_argument("-o","--output", help="name file for iso file")
-    
-    result=parse.parse_args(argv)
-    return(result.folder,result.label,result.output)
+FILENAME="$1"
+LABEL="$1"
 
-def convert(label,hasil,folder):
-    # genisoimage -f -J -joliet-long -r -allow-lowercase -allow-multidot -iso-level 3 -volid "directory" -sysid LINUX -volset-size 1 -volset-seqno 1 -o "result.iso" "directory"'
-    "fungsi untuk membuat file iso dari folder"
-    query='genisoimage -f -J -joliet-long -r -allow-lowercase -allow-multidot -iso-level 3 -volid "{0}" -sysid LINUX -volset-size 1 -volset-seqno 1 -no-cache-inodes -full-iso9660-filenames -o "{1}" "{2}"'.format(label,hasil,folder)
-    cmd = shlex.split(shlex.quote(query))
-    execution = subprocess.Popen(cmd, shell=True).communicate()
-    return execution
+if [ ! $(command -v genisoimage) ]; then
+    echo "command \"genisoimage\" not exists on system"
+    exit
+fi
 
-if __name__ == "__main__":
-    folder,label,hasil=command(sys.argv[1:])
-    # print(command(sys.argv[1:]))    
-    convert(label=label,hasil=hasil,folder=folder)
+folder_exist=$(realpath "./$FILENAME")
+iso_exist=$(realpath "./$FILENAME.iso")
 
+if [ -d "$folder_exist" ] && [ ! -f "$iso_exist" ]; then
+    if ((${#LABEL} > 32)); then
+        LABEL=$(echo $LABEL | cut -c 1-32)
+    fi
+    genisoimage -f -J -joliet-long -r -allow-lowercase -allow-multidot -iso-level 3 -volid "$LABEL" -sysid LINUX -volset-size 1 -volset-seqno 1 -no-cache-inodes -full-iso9660-filenames -o "$FILENAME.iso" "$FILENAME"
+fi

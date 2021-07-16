@@ -461,7 +461,8 @@ c.url.searchengines = {
     "yt": "https://www.youtube.com/results?search_query={}",
     "gc": "https://scholar.google.com/scholar?hl=id&q={}",
     "ad": "https://anidl.org/?s={}",
-    "td": "https://listen.tidal.com/search?q={}"
+    "td": "https://listen.tidal.com/search?q={}",
+    "nyaa": "https://nyaa.si/?q={}"
 }
 
 # Page(s) to open at the start.

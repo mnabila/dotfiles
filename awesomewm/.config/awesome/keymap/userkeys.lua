@@ -201,6 +201,17 @@ function M.get()
                 awful.spawn("ytfzf -fDH")
             end,
             {description = "youtube viewer", group = "launcher"}
+        ),
+
+        awful.key(
+            {modkey},
+            "F5",
+            function()
+                awful.spawn.easy_async(terminal)
+                awful.spawn.easy_async("qutebrowser")
+                awful.spawn.easy_async("telegram-desktop")
+            end,
+            {description = "main apps", group = "launcher"}
         )
     )
     return userkeys

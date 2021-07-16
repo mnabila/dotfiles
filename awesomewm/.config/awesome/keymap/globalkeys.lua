@@ -188,7 +188,7 @@ function M.get()
             function()
                 awful.tag.incgap(2)
             end,
-            {description = "increase the spacing between clients", group = "tag"}
+            {description = "increase spacing between clients", group = "tag"}
         ),
 
         awful.key(
@@ -197,10 +197,18 @@ function M.get()
             function()
                 awful.tag.incgap(-2)
             end,
-            {description = "decrease the spacing between clients", group = "tag"}
-        )
+            {description = "decrease spacing between clients", group = "tag"}
+        ),
 
-        -- TODO: add keybindings for reset gaps
+        awful.key(
+            {modkey},
+            "equal",
+            function()
+                local t = awful.tag.selected()
+                t.gap = beautiful.useless_gap
+            end,
+            {description = "reset spacing between clients", group = "tag"}
+        )
     )
 
     return globalkeys

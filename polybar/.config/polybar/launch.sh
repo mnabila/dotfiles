@@ -51,10 +51,7 @@ function toggle() {
 }
 
 case $1 in
-start | restart)
-    stop
-    start
-    ;;
+start) start ;;
 stop) stop ;;
 toggle) toggle ;;
 *)

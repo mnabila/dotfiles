@@ -6,21 +6,21 @@ local tasklist = require("widget.tasklist")
 
 local M = {}
 
-local bar = awful.wibar({position = "top", screen = s, height= 20, bg="#00000000"})
+local bar = awful.wibar({ position = "top", screen = s, height = 20, bg = "#00000000" })
 
 function M.bar(s)
     -- Create the wibox
     -- Add widgets to the wibox
-    bar:setup {
-            layout = wibox.layout.align.horizontal,
-            {
-                layout = wibox.layout.fixed.horizontal,
-            },
-            tasklist.widget(s),
-            {
-                layout = wibox.layout.fixed.horizontal,
-            }
-        }
+    bar:setup({
+        layout = wibox.layout.align.horizontal,
+        {
+            layout = wibox.layout.fixed.horizontal,
+        },
+        tasklist.widget(s),
+        {
+            layout = wibox.layout.fixed.horizontal,
+        },
+    })
     return bar
 end
 

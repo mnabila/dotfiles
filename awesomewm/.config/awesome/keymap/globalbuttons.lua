@@ -10,6 +10,8 @@ function M.get()
     return buttons
 end
 
-return setmetatable({}, { __call = function(_, ...)
-    return M.get(...)
-end })
+return setmetatable({}, {
+    __call = function()
+        return M.get()
+    end,
+})

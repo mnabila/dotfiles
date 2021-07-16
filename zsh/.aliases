@@ -10,6 +10,7 @@ alias nvim-update="paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync
 alias docui="env LC_CTYPE=en_US.UTF-8 TERM=xterm-256color docui"
 alias srcinfo="rm .SRCINFO; makepkg --printsrcinfo > .SRCINFO && git status"
 alias cekisp="curl ipinfo.io"
+alias td="tidal-dl -l"
 
 # pacman
 alias pmu="pekmen;sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"

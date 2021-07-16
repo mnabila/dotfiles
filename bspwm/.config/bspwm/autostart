@@ -16,5 +16,5 @@ bsprun jgmenu
 bsprun xcompmgr
 bsprun conky -c ~/.config/conky/todolist.conkyrc
 bsprun clipmenud
-bsprun ~/.config/polybar/launch.sh start
+~/.config/polybar/launch.sh start
 feh --bg-scale ~/Pictures/diy/bspwm.png

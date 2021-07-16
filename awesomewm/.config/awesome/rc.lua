@@ -15,7 +15,7 @@ require("main.errorhandling")
 -- }}}
 
 -- {{{ Notification
-require("themes.xresources.naughty")
+-- require("themes.xresources.naughty")
 -- }}}
 
 -- {{{ Variable definitions
@@ -58,12 +58,14 @@ require("statusbar")
 -- set mouse
 root.buttons(keymap.globalbuttons())
 -- Set keys
-root.keys(gears.table.join(
-    keymap.bindtotags(keymap.globalkeys()),
-    keymap.mediakeys(),
-    keymap.userkeys(),
-    keymap.statusbarkeys()
-))
+root.keys(
+    gears.table.join(
+        keymap.bindtotags(keymap.globalkeys()),
+        keymap.mediakeys(),
+        keymap.userkeys(),
+        keymap.statusbarkeys()
+    )
+)
 -- }}}
 
 -- {{{ Rules

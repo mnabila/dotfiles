@@ -1,5 +1,6 @@
 local gears = require("gears")
 local awful = require("awful")
+local modkey = require("modules.variable").modkey
 
 local M = {}
 

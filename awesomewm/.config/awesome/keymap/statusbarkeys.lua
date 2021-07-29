@@ -1,10 +1,12 @@
 local gears = require("gears")
 local awful = require("awful")
+local modkey = require("modules.variable").modkey
 
 local visible = {
     topbar = require("statusbar.bar.top").visible,
     bottombar = require("statusbar.bar.bottom").visible,
 }
+
 local M = {}
 
 function M.get()

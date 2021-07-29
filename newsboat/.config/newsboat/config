@@ -11,13 +11,13 @@ browser "/usr/bin/qutebrowser"
 #
 # Colorscheme
 #
-color background         default   default
-color listnormal         default   default
-color listnormal_unread  default   default bold
-color listfocus          black     yellow
-color listfocus_unread   black     yellow bold
-color info               yellow    black
-color article            default   default
+color background        default default
+color listnormal        color7  default
+color listnormal_unread default default bold
+color listfocus         default  yellow
+color listfocus_unread  default  yellow  bold
+color info              yellow  default
+color article           default default
 
 #
 # Hightlight
@@ -25,6 +25,7 @@ color article            default   default
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
+highlight feedlist "----.*" yellow default bold
 
 #
 # Keybinding
@@ -53,7 +54,7 @@ bind-key U show-urls
 # Macro
 #
 macro . open-in-browser
-macro v set browser "i3 exec mpv"; open-in-browser ; set browser linkhandler
+macro m set browser "ytfzf -fD %u &"; open-in-browser; set browser "xdg-open %u"
 macro y set browser "spawndl"; open-in-browser ; set browser linkhandler
 macro w set browser "w3m"; open-in-browser ; set browser linkhandler
 macro p set browser "dmnuhandler"; open-in-browser ; set browser linkhandler

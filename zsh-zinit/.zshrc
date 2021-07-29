@@ -38,17 +38,34 @@ zinit snippet ~/.zsh/functions/git-svn.zsh
 zinit ice wait lucid id-as="config/completion"
 zinit snippet ~/.zsh/config/completion.zsh
 
-zinit wait lucid for \
-    OMZ::plugins/git
-
-# zinit plugins configurations
-[ -f ~/.zinitrc ] && source ~/.zinitrc
+# input enhancements
+# zinit ice wait lucid id-as="config/input"
+# zinit snippet ~/.zsh/config/input.zsh
 
 ### End of Zinit's installer chunk
 
-# aliases
-[ -f ~/.aliases ] && source ~/.aliases
+
+# enable autocd
+setopt autocd
+
+# History
+HISTFILE="$HOME/.zhistory"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+
+# Set editor default keymap to emacs (`-e`) or vi (`-v`)
+bindkey -v
+KEYTIMEOUT=1
+
+# zsh-autosuggestions
+ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 # prompt
 export STARSHIP_CONFIG=~/.zsh/starship.toml
 eval "$(starship init zsh)"
+
+# aliases
+[ -f ~/.aliases ] && source ~/.aliases

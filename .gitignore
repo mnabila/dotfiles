@@ -9,8 +9,6 @@
 **/qsettings
 **/watch_later/*
 mpd/.config/mpd/mpdstate
-newsboat/.config/newsboat/history.cmdline
-newsboat/.config/newsboat/history.search
 qutebrowser/.config/qutebrowser/autoconfig.yml
 tmux/.tmux/resurrect/*
 icons/dark/DarK-svg

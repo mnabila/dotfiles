@@ -20,9 +20,10 @@ export TERMINAL="env LIBGL_ALWAYS_SOFTWARE=1 kitty"
 # Clipmenu Environment Variables
 export CM_LAUNCHER=rofi
 export CM_DIR=/tmp/clipmenu
+export CM_SELECTIONS=clipboard
 
 # dmenu_udisk
-export UDISKIE_DMENU_LAUNCHER="rofi"
+export UDISKIE_DMENU_LAUNCHER=rofi
 
 # default terminal ranger
 export TERMCMD="env LIBGL_ALWAYS_SOFTWARE=1 kitty"

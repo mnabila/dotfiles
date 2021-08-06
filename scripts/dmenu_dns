@@ -20,9 +20,20 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-function change() {
+function get_ssid() {
+    nmcli device show wlan0 | grep CONNECTION | cut -d : -f 2 | tr -d " "
+}
+
+function default_dns() {
+    ssid=$(get_ssid)
+    nmcli connection modify $ssid ipv4.method auto
+    nmcli connection modify $ssid ipv4.ignore-auto-dns false
+    nmcli connection up $ssid && notify-send "DNS Switcher" "success recconect to $ssid"
+}
+
+function change_dns() {
     dns="$1"
-    ssid=$(nmcli device show wlan0 | grep CONNECTION | cut -d : -f 2 | tr -d " ")
+    ssid=$(get_ssid)
     nmcli connection modify $ssid ipv4.method auto
     nmcli connection modify $ssid ipv4.ignore-auto-dns true
     nmcli connection modify $ssid ipv4.dns $dns
@@ -30,18 +41,24 @@ function change() {
     nmcli connection up $ssid && notify-send "DNS Switcher" "success recconect to $ssid"
 }
 
-DMENU="rofi -dmenu -lines 4 -width 30 -i"
+DMENU="rofi -dmenu -lines 5 -width 30 -i"
 OPTIONS='''
 [
-	["DNS Google", "8.8.8.8"],
-	["DNS CloudFlare", "1.1.1.1"],
-	["Systemd Resolve", "127.0.0.1"]
+	["DNS Google",      "8.8.8.8"],
+	["DNS CloudFlare",  "1.1.1.1"],
+    ["DNS Quad9",       "9.9.9.9"],
+	["Systemd Resolve", "127.0.0.1"],
+    ["Default",         "default"]
 ]
 '''
 
-label=$(echo $OPTIONS | jq -r "sort | .[][0]" | $DMENU -p "DNS Switcher")
+label=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU -p "DNS Switcher")
 dns=$(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$label\") | .[1]")
 
 if [ -n "$dns" ]; then
-    change $dns
+    if [ "$dns" == "default" ]; then
+        default_dns
+    else
+        change_dns $dns
+    fi
 fi

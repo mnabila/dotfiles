@@ -12,9 +12,9 @@ SCREENSHOTDIR="$HOME/Pictures/screenshot"
 ICON="$HOME/Dotfiles/icons/gruvbox/camera.png"
 FILENAME="$SCREENSHOTDIR/Screenshot_$TIMESTAMP.png"
 DMENU="rofi -dmenu -p Screenshot -lines 6 -width 30"
-LONGTEXT="$(date '+%A, %d/%m/%Y') $(date '+%H:%M:%S')"
-SHORTTEXT="$(date '+%d/%m/%Y')"
-FONT="Iosevka"
+LONGTEXT=" $(date '+%A, %d/%m/%Y')  $(date '+%H:%M:%S')"
+SHORTTEXT=" $(date '+%d/%m/%Y')"
+FONT="Iosevka-Nerd-Font-Complete"
 
 takeOnWindow() {
     rofi -e "Select window to capture"

@@ -1,5 +1,4 @@
 local wibox = require("wibox")
-local gears = require("gears")
 local awful = require("awful")
 local func = require("utils.function")
 local beautiful = require("beautiful")

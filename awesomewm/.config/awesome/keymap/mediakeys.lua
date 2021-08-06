@@ -1,6 +1,5 @@
 local gears = require("gears")
 local awful = require("awful")
-local modkey = require("modules.variable").modkey
 
 local M = {}
 
@@ -88,7 +87,7 @@ function M.get()
 end
 
 return setmetatable({}, {
-    __call = function(_, ...)
-        return M.get(...)
+    __call = function()
+        return M.get()
     end,
 })

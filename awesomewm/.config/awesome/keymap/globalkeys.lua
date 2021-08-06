@@ -183,7 +183,7 @@ function M.get()
 end
 
 return setmetatable({}, {
-    __call = function(_, ...)
-        return M.get(...)
+    __call = function()
+        return M.get()
     end,
 })

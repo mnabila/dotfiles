@@ -3,8 +3,8 @@ local awful = require("awful")
 local modkey = require("modules.variable").modkey
 
 local visible = {
-    topbar = require("statusbar.bar.top").visible,
-    bottombar = require("statusbar.bar.bottom").visible,
+    topbar = require("statusbar.top").visible,
+    bottombar = require("statusbar.bottom").visible,
 }
 
 local M = {}
@@ -37,7 +37,7 @@ function M.get()
 end
 
 return setmetatable({}, {
-    __call = function(_, ...)
-        return M.get(...)
+    __call = function()
+        return M.get()
     end,
 })

@@ -19,7 +19,8 @@ zinit light-mode for \
     zsh-users/zsh-autosuggestions \
     zdharma/fast-syntax-highlighting \
     zimfw/input \
-    zimfw/utility
+    zimfw/utility \
+    spwhitt/nix-zsh-completions
 
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
     zsh-users/zsh-completions
@@ -37,10 +38,6 @@ zinit snippet ~/.zsh/functions/git-svn.zsh
 # completion enhancements
 zinit ice wait lucid id-as="config/completion"
 zinit snippet ~/.zsh/config/completion.zsh
-
-# input enhancements
-# zinit ice wait lucid id-as="config/input"
-# zinit snippet ~/.zsh/config/input.zsh
 
 ### End of Zinit's installer chunk
 
@@ -69,3 +66,6 @@ eval "$(starship init zsh)"
 
 # aliases
 [ -f ~/.aliases ] && source ~/.aliases
+
+# nix
+if [ -e /home/nabil/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nabil/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

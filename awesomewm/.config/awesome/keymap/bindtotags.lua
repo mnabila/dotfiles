@@ -1,11 +1,12 @@
 local gears = require("gears")
 local awful = require("awful")
-local modkey = require("modules.variable").modkey
+local vars = require("modules.variable")
+local modkey = vars.modkey
 
 local M = {}
 
 function M.get(globalkeys)
-    for i = 1, 9 do
+    for i = 1, #vars.tags do
         globalkeys = gears.table.join(
             globalkeys,
             -- View tag only.

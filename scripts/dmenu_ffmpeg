@@ -8,7 +8,7 @@
 # Inspired By       : https://github.com/tanuj101/awesome-dmenu/blob/master/recorder/dmenurecord.sh
 
 DMENU="rofi -dmenu -lines 5 -width 30 -i"
-OUTDIR="$HOME/Videos"
+OUTDIR="$HOME/Videos/screenrecord"
 recordid="/tmp/recordid"
 
 function getInputAudio() {

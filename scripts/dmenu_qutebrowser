@@ -41,8 +41,7 @@
 DMENU="rofi -dmenu -i -p Qute $@"
 QUTE_CONFIG_DIR="$HOME/.config/qutebrowser"
 
-# url=$(echo "$QUTE_URL" | cat - "$QUTE_CONFIG_DIR/quickmarks" "$QUTE_DATA_DIR/history" | $DMENU)
-url=$(echo "$QUTE_URL" | sqlite3 "$HOME/.local/share/qutebrowser/history.sqlite" 'SELECT DISTINCT url FROM History ASC' | cat - "$QUTE_CONFIG_DIR/quickmarks" "$QUTE_CONFIG_DIR/bookmarks/urls"| $DMENU)
+url=$(printf "%s\n%s" "$QUTE_URL" "$(sqlite3 -separator ' ' "$QUTE_DATA_DIR/history.sqlite" 'select title, url from CompletionHistory')" | cat "$QUTE_CONFIG_DIR/quickmarks" - | $DMENU)
 url=$(echo "$url" | sed -E 's/[^ ]+ +//g' | grep -E "https?:" || echo "$url")
 
 [ -z "${url// }" ] && exit

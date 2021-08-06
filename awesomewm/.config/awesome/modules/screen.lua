@@ -1,6 +1,6 @@
 local awful = require("awful")
-local tbar = require("statusbar.bar.top")
-local bbar = require("statusbar.bar.bottom")
+local tbar = require("statusbar.top")
+local bbar = require("statusbar.bottom")
 local func = require("utils.function")
 local vars = require("modules.variable")
 

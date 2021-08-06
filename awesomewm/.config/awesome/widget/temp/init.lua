@@ -11,7 +11,7 @@ M.icon = wibox.widget.imagebox(colorize(icon, beautiful.widget_icon))
 
 local get_temp_status = [[
     sh -c "
-    sensors | awk '/^Core 0:/{gsub(/[^0-9]/, \" \"); print $2\"°C\"}'
+    sed 's/000$/°C/' /sys/class/thermal/thermal_zone0/temp
     "
 ]]
 

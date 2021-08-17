@@ -66,6 +66,3 @@ eval "$(starship init zsh)"
 
 # aliases
 [ -f ~/.aliases ] && source ~/.aliases
-
-# nix
-if [ -e /home/nabil/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nabil/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

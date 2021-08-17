@@ -20,8 +20,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# required
+# - iproute2
+# - networkmanager
+# - rofi
+# - jq
+
+function get_interface() {
+    ip route | grep '^default' | cut -d " " -f 5 | head -1
+}
+
 function get_ssid() {
-    nmcli device show wlan0 | grep CONNECTION | cut -d : -f 2 | tr -d " "
+    nmcli device show $(get_interface) | grep CONNECTION | cut -d : -f 2 | tr -d " "
 }
 
 function default_dns() {

@@ -8,11 +8,9 @@ alias aria2d="aria2c --enable-rpc"
 alias ssh="env TERM=xterm-256color ssh"
 alias nu="paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync"
 alias docui="env LC_CTYPE=en_US.UTF-8 TERM=xterm-256color docui"
-alias srcinfo="rm .SRCINFO; makepkg --printsrcinfo > .SRCINFO && git status"
 alias cekisp="curl ipinfo.io"
 alias td="tidal-dl -l"
 alias pc="proxychains"
-
 
 # pacman
 alias pmu="pekmen;sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist"
@@ -36,4 +34,14 @@ function ytmp41080() {
 
 function ytmp3() {
     youtube-dl --format bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --output "~/Music/youtube/%(title)s.%(ext)s" $@
+}
+
+# aur release
+function aur-release() {
+    version=$(cat PKGBUILD | grep pkgver= | cut -d = -f 2)
+    rm .SRCINFO
+    makepkg --printsrcinfo >.SRCINFO
+    git status
+    git commit -m "chore: release $version"
+    git push origin master
 }

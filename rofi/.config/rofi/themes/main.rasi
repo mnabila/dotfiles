@@ -17,7 +17,7 @@ inputbar {
     padding:    0;
     margin:     0;
     text-color: @normal-foreground;
-    children:   [ prompt, entry];
+    children:   [ prompt, entry, num-filtered-rows, textbox-sep, num-rows];
 }
 
 prompt {
@@ -30,6 +30,16 @@ prompt {
 entry {
     padding:    3px;
     text-color: @normal-foreground;
+}
+
+num-filtered-rows, num-rows, textbox-sep {
+    text-color: @gruvbox-dark-gray;
+}
+
+textbox-sep {
+    expand:  false;
+    str:     "/";
+    padding: 0 2px;
 }
 
 message {

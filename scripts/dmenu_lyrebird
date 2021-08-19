@@ -1,0 +1,100 @@
+#!/bin/bash
+# dmenu_vc
+# Copyright (c) 2021 M. Nabil Adani <nblid48[at]gmail[dot]com>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# original source from lyrebird 
+# https://github.com/lyrebird-voice-changer/lyrebird
+
+# required
+# - jq
+# - sox
+# - rofi
+# - pipewire-pulse/pulseaudio
+
+DMENU="rofi -dmenu -i -width 30"
+SINKNAME="lyrebird"
+PID="/tmp/lyrebird.pid"
+OPTIONS='''
+[
+    ["Man",          "-150"],
+    ["Woman",        "250"],
+    ["Boy",          "125"],
+    ["Girl",         "280"],
+    ["DartVader",    "-600"],
+    ["Chipmunk",     "1000"]
+]
+'''
+
+function loadModule() {
+	input="$SINKNAME-Input"
+	output="$SINKNAME-Output"
+	monitor="$SINKNAME.monitor"
+    pactl load-module module-null-sink sink_name="$SINKNAME"
+    pactl load-module module-remap-source source_name="$SINKNAME" master="$monitor"
+    pactl update-sink-proplist "$output" device.description="Voice Change Output"
+    pactl update-source-proplist "$input" device.description="Voice Change Virtual Input"
+}
+
+function unloadModule() {
+    if [ -n "$(moduleIsExist)" ]; then
+        pactl unload-module module-null-sink
+        pactl unload-module module-remap-source
+    fi
+}
+
+function moduleIsExist() {
+    pactl list | grep "Name: $SINKNAME"
+}
+
+function voiceChange() {
+    sox --buffer 1024 -q -t pulseaudio default -t pulseaudio $OUTPUTNAME pitch "$1" &
+
+    echo $! > $PID
+}
+
+function stopVoiceChange() {
+    if [ -f $PID ]; then
+        kill -15 $(cat $PID)
+        unloadModule
+        rm $PID
+    fi
+}
+
+function startVoiceChange() {
+    label=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU -lines 6 -p "Voice Change")
+    pitch=$(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$label\") | .[1]")
+    if [ -n "$pitch" ]; then
+        loadModule
+        voiceChange "$pitch"
+    fi
+}
+
+function endVoiceChange() {
+    OPTIONS='["Yes", "No"]'
+    select=$(echo $OPTIONS | jq -r ".[]" | $DMENU -p "Voice Change" -mesg "Stop voice change" -lines 2)
+    [ "$select" == "Yes" ] && stopVoiceChange
+}
+
+if [ -f $PID ]; then
+    endVoiceChange
+else
+    startVoiceChange
+fi

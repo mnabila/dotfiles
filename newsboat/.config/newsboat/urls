@@ -1,73 +1,14 @@
-# Artikel
---------------------------------------------------DOTFRIENDS
-http://feeds.feedburner.com/Petruknisme 
-http://feeds.feedburner.com/fathurhoho 
-http://lifepluslinux.blogspot.com/feeds/posts/default 
-http://romisatriawahono.net/feed/atom/
-http://www.himawan.nu/feeds/posts/default
-https://addy-dclxvi.github.io/index.xml
-https://agung-setiawan.com/feed/
-https://alunux.github.io/index.xml
-https://bandithijo.com/feed/blog.xml
-https://blog.aflasio.com/atom.xml 
-https://epsi-rns.github.io/feed.xml
-https://epsi-rns.gitlab.io/index.xml
-https://lukesmith.xyz/rss.xml 
-https://ngonfig.net/feed
-https://okitavera.me/article/feed.xml
-https://raniaamina.github.io/atom.xml 
-https://rizafahmi.com/rss.xml 
-https://satriadharma.com/feed/ 
-https://situsali.com/feed/
-https://sucipto.net/atom.xml
-https://themsaid.com/feed
-https://wonderneko.wordpress.com/feed/
-https://www.meutiarahmah.com/index.xml 
-https://yupraw.me/rss.xml 
+# anime
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-ANIME
+https://www.livechart.me/feeds/headlines ~Livechart:News
+https://doronime.id/feed                 ~Doronime:Post
+https://samehadaku.care/feed             ~Samehadaku:Post
+https://lendrive.web.id/feed             ~Lendrive:Post
+https://anitoki.com/feed                 ~Anitoki:Post
+https://oploverz.bz/feed                 ~Oploverz:Post
 
-# News
--------------------------------------------------LINUX_MAGAZINES
-http://feeds.arstechnica.com/arstechnica/index
-http://feeds.feedburner.com/TheHackersNews
-http://feeds2.feedburner.com/tympanus
-http://fossbytes.com/feed/
-http://planet.gnome.org/atom.xml
-http://stallman.org/rss/rss.xml
-http://www.kalitutorials.net/feeds/posts/default
-http://www.linux-mag.com/feed/
-http://www.linuxku.com/atom.xml?redirect=false&start-index=1&max-results=100
-http://www.python.or.id/feeds/posts/default
-https://arcan-fe.com/feed/
-https://blog.cilsy.id/feed
-https://blog.mozilla.org/feed/
-https://blog.webjeda.com/feed.xml
-https://chromplex.com/feed/
-https://fedoramagazine.org/feed/
-https://hackernoon.com/feed
-https://hub.packtpub.com/feed/
-https://igurublog.wordpress.com/feed/
-https://kabarlinux.id/feed/
-https://katahugo.info/feed/
-https://linux-audit.com/feed/
-https://opensuse.id/feed/
-https://shannonmorse.podbean.com/feed.xml
-https://tutorialinux.com/feed/
-https://www.archlinux.org/feeds/news/
-https://www.cyberciti.biz/atom/atom.xml
-https://www.hackerone.com/blog.rss
-https://www.linux.or.id/feed
-https://www.linuxinsider.com/perl/syndication/rssfull.pl
-https://www.linuxtoday.com/biglt.rss
-https://www.phoronix.com/rss.php
-https://www.smashingmagazine.com/feed/
-https://www.thelinuxrain.com/feed
-
-# Programming Language & Framework
---------------------------------------------------PROGRAMMING_LANGUAGE
-https://realpython.com/atom.xml
-https://www.djangoproject.com/rss/weblog/
-https://www.python.org/dev/peps/peps.rss/
-
-# Anime
---------------------------------------------------ANIME
-https://www.livechart.me/feeds/headlines
+# github
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-GITHUB
+https://github.com/lighttiger2505/sqls/releases.atom      ~Github:sqls:releases
+https://github.com/JohnnyMorganz/StyLua/releases.atom     ~Github:StyLua:releases
+https://github.com/telegramdesktop/tdesktop/releases.atom ~Github:telegramdesktop:releases

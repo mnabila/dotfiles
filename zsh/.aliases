@@ -42,6 +42,7 @@ function aur-release() {
     rm .SRCINFO
     makepkg --printsrcinfo >.SRCINFO
     git status
+    git add .
     git commit -m "chore: release $version"
     git push origin master
 }

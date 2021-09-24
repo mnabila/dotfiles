@@ -5,7 +5,6 @@
 # auto-reload yes
 datetime-format "%Y/%m/%d, %R"
 external-url-viewer "urlview"
-# browser "env GTK_THEME=Adwaita /usr/lib/firefox/firefox %u"
 browser "/usr/bin/qutebrowser"
 
 #

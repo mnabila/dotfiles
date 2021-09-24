@@ -19,8 +19,7 @@ zinit light-mode for \
     zsh-users/zsh-autosuggestions \
     zdharma/fast-syntax-highlighting \
     zimfw/input \
-    zimfw/utility \
-    spwhitt/nix-zsh-completions
+    zimfw/utility
 
 zinit wait lucid atload"zicompinit; zicdreplay" blockf for \
     zsh-users/zsh-completions

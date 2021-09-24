@@ -459,6 +459,7 @@ c.url.searchengines = {
     "r": "https://www.reddit.com/search/?q={}",
     "wp": "https://id.wikipedia.org/w/index.php?search={}",
     "yt": "https://www.youtube.com/results?search_query={}",
+    "ytm": "https://music.youtube.com/search?q={}",
     "gc": "https://scholar.google.com/scholar?hl=id&q={}",
     "ad": "https://anidl.org/?s={}",
     "td": "https://listen.tidal.com/search?q={}",

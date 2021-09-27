@@ -60,7 +60,7 @@ KEYTIMEOUT=1
 ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 # prompt
-export STARSHIP_CONFIG=~/.zsh/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/config.toml
 eval "$(starship init zsh)"
 
 # aliases

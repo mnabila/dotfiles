@@ -137,7 +137,7 @@ COUNTRY='''
 ]
 '''
 
-translateText() {
+function translateText() {
     text="$1"
     if [ -z "$text" ]; then
         exit
@@ -149,7 +149,7 @@ translateText() {
         again=true
 
         notify-send -i $ICON "Translate" "Result saved to clipboard"
-        echo  -n "$result" | xclip
+        echo -n "$result" | xclip -selection clipboard
 
         while $again; do
             speak=$(echo -e "Yes\nNo" | $DMENU -lines 2 -p "Play Audio" -mesg "Result: $result")
@@ -163,21 +163,29 @@ translateText() {
     fi
 }
 
-case "$1" in
-"-c" | "--clipboard")
-    text=$(xclip -selection clipboard -o | tr --delete '\n')
+function fromClip() {
+    text=$(xclip -selection clipboard -o)
     translateText "$text"
-    ;;
-"-i" | "--input")
+}
+
+function fromInput() {
     text=$($DMENU -p "Translate" -l 0)
     translateText "$text"
+}
+
+case "$1" in
+"-c" | "--clipboard")
+    fromClip
+    ;;
+"-i" | "--input")
+    fromInput
     ;;
 *)
     echo "Usage dmenu_translate [options]"
     echo ""
     echo "Available Options:"
-    echo "-c  --clipboard   read text from clipboard"
-    echo "-i  --input       read text from user input"
+    echo "-c   --clipboard   read text from clipboard"
+    echo "-i   --input       read text from user input"
     echo ""
     ;;
 esac

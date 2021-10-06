@@ -22,12 +22,7 @@ config.bind("zl", "spawn --userscript qute-pass -d 'rofi -dmenu -i -p Qute Pass'
 config.bind("zul", "spawn --userscript qute-pass -e -d 'rofi -dmenu -i -p Qute Pass' ", "normal")
 config.bind("zpl", "spawn --userscript qute-pass -w -d 'rofi -dmenu -i -p Qute Pass' ", "normal")
 config.bind("zol", "spawn --userscript qute-pass -o -d 'rofi -dmenu -i -p Qute Pass' ", "normal")
-config.bind(",d", "hint links spawn qb2aria '{hint-url}'", "normal")
-config.bind(",y1", "hint links spawn mpv --ytdl-format='bestvideo[height<=?144]+bestaudio/best' '{hint-url}'", "normal")
-config.bind(",y2", "hint links spawn mpv --ytdl-format='bestvideo[height<=?240]+bestaudio/best' '{hint-url}'", "normal")
-config.bind(",y3", "hint links spawn mpv --ytdl-format='bestvideo[height<=?360]+bestaudio/best' '{hint-url}'", "normal")
-config.bind(",y4", "hint links spawn mpv --ytdl-format='bestvideo[height<=?480]+bestaudio/best' '{hint-url}'", "normal")
-config.bind(",y7", "hint links spawn mpv --ytdl-format='bestvideo[height<=?720]+bestaudio/best' '{hint-url}'", "normal")
-config.bind(",y8", "hint links spawn mpv --ytdl-format='bestvideo[height<=?1080]+bestaudio/best' '{hint-url}'", "normal")
-
- 
+config.bind(",o", "spawn --userscript open_download", "normal")
+config.bind(",d", "hint links userscript qb2aria", "normal")
+config.bind(",y", "hint links userscript yt2mpv", "normal")
+config.bind(",t", "spawn --userscript qb2translate", "normal")

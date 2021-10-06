@@ -54,11 +54,11 @@ function change_dns() {
 DMENU="rofi -dmenu -lines 5 -width 30 -i"
 OPTIONS='''
 [
-	["DNS Google",      "8.8.8.8"],
-	["DNS CloudFlare",  "1.1.1.1"],
-    ["DNS Quad9",       "9.9.9.9"],
-	["Systemd Resolve", "127.0.0.1"],
-    ["Default",         "default"]
+	["DNS Google",     "8.8.8.8"],
+	["DNS CloudFlare", "1.1.1.1"],
+    ["DNS Quad9",      "9.9.9.9"],
+	["DNS Local",      "127.0.0.1"],
+    ["Default",        "default"]
 ]
 '''
 

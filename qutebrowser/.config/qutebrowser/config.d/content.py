@@ -309,7 +309,7 @@ c.content.blocking.enabled = True
 # both    : Use both hosts blocking and Brave’s ABP-style adblocker
 # Default: auto
 # Type: String
-c.content.blocking.method = "adblock"
+c.content.blocking.method = "both"
 
 # List of URLs to ABP-style adblocking rulesets.
 # Type: List of Url
@@ -335,4 +335,6 @@ c.content.blocking.adblock.lists = [
 
 # List of URLs to host blocklists for the host blocker.
 # Type: List of Url
-c.content.blocking.hosts.lists = []
+c.content.blocking.hosts.lists = [
+    "https://raw.githubusercontent.com/Ewpratten/youtube_ad_blocklist/master/blocklist.txt"
+]

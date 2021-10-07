@@ -22,11 +22,15 @@
 
 # dependency
 # 1. gdown (https://github.com/wkentaro/gdown)
+# 2. libtmux (https://github.com/tmux-python/libtmux)
 
-from typing import Tuple, Type, Union
 from urllib import parse
-import shlex
-from subprocess import Popen, PIPE
+import libtmux
+import os
+
+tmux = libtmux.Server()
+session_name = "gdown"
+url = os.getenv("QUTE_URL")
 
 
 def getId(url: str) -> str:
@@ -36,16 +40,10 @@ def getId(url: str) -> str:
     return gid["id"]
 
 
-def shell(command: str) -> Union[str, bool]:
-    cmd = shlex.split(command)
-    output, err = Popen(cmd, stdout=PIPE, stderr=PIPE).communicate()
-    if err:
-        pass
+if tmux.has_session(session_name):
+    session = tmux.find_where({ "session_name": session_name })
+else:
+    session=tmux.new_session(session_name, attach=False)
 
-
-def tmuxSendKey(value: str) -> bool:
-    # tmux send-keys -t mySession.0 "echo 'Hello World'" ENTER
-    pass
-
-
-print(shell("ls /"))
+command = f'cd ~/Downloads && gdown --id "{getId(url)}"'
+session.new_window(attach=False, window_shell=f"fish -c '{command}'")

@@ -24,5 +24,6 @@ config.bind("zpl", "spawn --userscript qute-pass -w -d 'rofi -dmenu -i -p Qute P
 config.bind("zol", "spawn --userscript qute-pass -o -d 'rofi -dmenu -i -p Qute Pass' ", "normal")
 config.bind(",o", "spawn --userscript open_download", "normal")
 config.bind(",d", "hint links userscript qb2aria", "normal")
-config.bind(",y", "hint links userscript yt2mpv", "normal")
+config.bind(",m", "hint links userscript qb2mpv", "normal")
 config.bind(",t", "spawn --userscript qb2translate", "normal")
+config.bind(",g", "spawn --userscript qb2gdown", "normal")

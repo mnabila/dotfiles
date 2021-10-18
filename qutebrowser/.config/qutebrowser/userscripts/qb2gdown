@@ -35,15 +35,17 @@ url = os.getenv("QUTE_URL")
 
 def getId(url: str) -> str:
     parsed = parse.urlsplit(url)
-    parsed = parse.parse_qsl(parsed.query)
-    gid = dict(parsed)
-    return gid["id"]
+    if parsed.query:
+        parsed = parse.parse_qsl(parsed.query)
+        gid = dict(parsed)
+        return gid["id"]
+    return parsed.path.split("/")[3]
 
 
 if tmux.has_session(session_name):
-    session = tmux.find_where({ "session_name": session_name })
+    session = tmux.find_where({"session_name": session_name})
 else:
-    session=tmux.new_session(session_name, attach=False)
+    session = tmux.new_session(session_name, attach=False)
 
-command = f'cd ~/Downloads && gdown --id "{getId(url)}"'
+command = f'cd ~/Downloads && gdown -c --id "{getId(url)}"'
 session.new_window(attach=False, window_shell=f"fish -c '{command}'")

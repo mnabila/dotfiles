@@ -1,5 +1,9 @@
 function aur --argument-names args --description "AUR helper for package maintainer"
     switch "$args"
+        case si srcinfo
+            rm .SRCINFO
+            makepkg --printsrcinfo >.SRCINFO
+
         case r release
             set version (cat PKGBUILD | grep pkgver= | cut -d = -f 2)
             rm .SRCINFO
@@ -20,6 +24,7 @@ function aur --argument-names args --description "AUR helper for package maintai
             echo "Available Options:"
             echo "r   release   Push package to repository"
             echo "l   list      List package in repository"
+            echo "si   srcinfo   Generate SRCINFO"
             echo "h   help      Show help"
     end
 end

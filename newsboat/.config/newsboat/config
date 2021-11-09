@@ -6,6 +6,7 @@
 datetime-format "%Y/%m/%d, %R"
 external-url-viewer "urlview"
 browser "/usr/bin/qutebrowser"
+max-items 200
 
 #
 # Colorscheme

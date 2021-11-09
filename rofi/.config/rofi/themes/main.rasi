@@ -1,45 +1,51 @@
-@import "color/gruvbox.rasi"
+@import "colors/gruvbox"
 
 window {
-    background-color: @background;
+    background-color: @color0;
+    border-color:     @color3;
     border:           2;
     padding:          4px;
     margin:           0;
+    width : 40%;
 }
 
 mainbox {
+    background-color: @color0;
     border:  0;
     padding: 0;
 }
 
 inputbar {
+    background-color: @color0;
     spacing:    0;
     padding:    0;
     margin:     0;
-    text-color: @normal-foreground;
+    text-color: @color15;
     children:   [ prompt, entry, num-filtered-rows, textbox-sep, num-rows];
 }
 
 prompt {
-    background-color: @gruvbox-dark-yellow-dark;
+    background-color: @color3;
     padding:          3px 6px;
-    text-color:       @normal-background;
+    text-color:       @color0;
     margin:           0px;
 }
 
 entry {
     padding:    3px;
-    text-color: @normal-foreground;
+    text-color: @color15;
+    background-color: @color0;
 }
 
 num-filtered-rows, num-rows, textbox-sep {
-    text-color: @gruvbox-dark-gray;
+    text-color: @color7;
+    background-color: @color0;
+    margin:3px;
 }
 
 textbox-sep {
     expand:  false;
     str:     "/";
-    padding: 0 2px;
 }
 
 message {
@@ -47,79 +53,46 @@ message {
 }
 
 textbox {
-    highlight:  @highlight;
-    text-color: @foreground;
+    highlight:  bold italic;
+    text-color: @color15;
 }
 
 listview {
     margin:    2px 0px 0px 0px;
     spacing:   2px;
-    scrollbar: @scrollbar;
+    scrollbar: false;
+    background-color: @color0;
+    lines: 8;
 }
 
-element {
+element-text {
     border:  0;
     padding: 2px;
+    background-color: @color0;
+    text-color:       @color15;
+}
+element-text selected {
+    background-color: @color3;
+    text-color:       @color0;
+
 }
 
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-}
-
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-}
-
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-}
-
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-}
-
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-}
-
-element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-}
-
-element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-}
-
-element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-}
 
 mode-switcher {
     margin: 3px;
+    background-color: @color0;
 }
 
 button {
-    padding:    2px;
+    padding:    2px 10px;
     margin:     0px;
-    text-color: @gruvbox-dark-bg3;
+    background-color: @color0;
+    text-color: @color15;
 }
 
 button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @color3;
+    text-color:       @color0;
 }
 
 

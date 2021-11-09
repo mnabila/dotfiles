@@ -1,19 +1,19 @@
 configuration {
-    case-sensitive: false;
-    fake-transparency: true;
-    font: "Iosevka 11";
-    lines: 8;
+    modi: "drun,run";
+    font: "Iosevka Nerd Font 11";
     location: 0;
-    modi: [drun, run];
-    padding: 5;
-    pid: "/run/user/1000/rofi.pid";
-    show-icons: false;
-    sidebar-mode: false;
-    terminal: "env LIBGL_ALWAYS_SOFTWARE=1 kitty";
-    theme: "~/.config/rofi/themes/main.rasi";
-    window-match-fields: "name";
-    yoffset: -50;
-    width: 45;
+	fixed-num-lines: true;
+	window-match-fields: "name";
+	theme: "main" ;
     display-run: " Command";
     display-drun: " Apps";
+    sidebar-mode: false;
+    timeout {
+        action: "kb-cancel";
+        delay:  0;
+    }
+    filebrowser {
+        directories-first: true;
+        sorting-method:    "name";
+    }
 }

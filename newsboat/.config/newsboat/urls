@@ -1,14 +1,19 @@
 # anime
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-ANIME
-https://www.livechart.me/feeds/headlines ~Livechart:News
-https://doronime.id/feed                 ~Doronime:Post
-https://samehadaku.care/feed             ~Samehadaku:Post
-https://lendrive.web.id/feed             ~Lendrive:Post
-https://anitoki.com/feed                 ~Anitoki:Post
-https://oploverz.bz/feed                 ~Oploverz:Post
+https://www.livechart.me/feeds/headlines                    ~Livechart:News
+https://doronime.id/feed                                    ~Doronime:Post
+https://samehadaku.care/feed                                ~Samehadaku:Post
+https://lendrive.web.id/feed                                ~Lendrive:Post
+https://anitoki.com/feed                                    ~Anitoki:Post
+https://oploverz.bz/feed                                    ~Oploverz:Post
+http://www.huntersekai.download/feeds/posts/default?alt=rss ~Huntersekai:Post
 
 # github
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-GITHUB
-https://github.com/lighttiger2505/sqls/releases.atom      ~Github:sqls:releases
-https://github.com/JohnnyMorganz/StyLua/releases.atom     ~Github:StyLua:releases
-https://github.com/telegramdesktop/tdesktop/releases.atom ~Github:telegramdesktop:releases
+https://github.com/lighttiger2505/sqls/releases.atom       ~Github:sqls:releases
+https://github.com/JohnnyMorganz/StyLua/releases.atom      ~Github:StyLua:releases
+https://github.com/telegramdesktop/tdesktop/releases.atom  ~Github:telegramdesktop:releases
+https://github.com/kiwibrowser/src/releases.atom           ~Github:kiwibrowser:releases
+# programming
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-CODE
+https://realpython.com/atom.xml ~RealPython:post

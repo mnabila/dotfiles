@@ -1,4 +1,5 @@
 complete --command aur --exclusive --long help --description "Show help"
-complete --command aur --exclusive --condition __fish_use_subcommand --arguments release --description "Push package to repository"
+complete --command aur --exclusive --condition __fish_use_subcommand --arguments init --description "Create AUR package"
+complete --command aur --exclusive --condition __fish_use_subcommand --arguments commit --description "Commit package"
+complete --command aur --exclusive --condition __fish_use_subcommand --arguments push --description "Push package to repository"
 complete --command aur --exclusive --condition __fish_use_subcommand --arguments list --description "List package in repository"
-complete --command aur --exclusive --condition __fish_use_subcommand --arguments srcinfo --description "Generate SRCINFO"

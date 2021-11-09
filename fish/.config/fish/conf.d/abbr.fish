@@ -24,9 +24,4 @@ if status is-interactive
     # nmcli
     abbr --add --global neton "nmcli connection up"
     abbr --add --global netoff "nmcli connection down"
-
-    # systemctl
-    abbr --add --global reload "sudo systemctl reload"
-    abbr --add --global stop "sudo systemctl stop"
-    abbr --add --global start "sudo systemctl start"
 end

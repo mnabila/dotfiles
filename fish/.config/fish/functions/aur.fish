@@ -2,9 +2,13 @@ function aur --argument-names args --description "AUR helper for package maintai
     switch "$args"
         case init
             set pkgname (basename $PWD)
+            set remote_url "ssh://aur@aur.archlinux.org/$pkgname"
             git init
             git branch -m main master
-            echo "ssh://aur@aur.archlinux.org/$pkgname"
+            echo "$remote_url"
+            git remote add origin "$remote_url"
+            printf "*.tar.*\npkg/\nsrc/\n$pkgname" > .gitignore
+
 
         case commit
             rm .SRCINFO

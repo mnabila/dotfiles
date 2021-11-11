@@ -34,6 +34,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Dotfiles/scripts:$PATH"
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export PATH="$HOME/.cargo/bin/:$PATH"
+export PATH="$HOME/go/bin/:$PATH"
 
 
 # fzf

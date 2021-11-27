@@ -67,4 +67,12 @@ M.ssid = awful.widget.watch(get_ssid, 5, function(widget, stdout)
     end
 end)
 
+M.ssid:add_button(awful.button({}, 1, function(event)
+    awful.spawn.with_shell("dmenu_nmcli")
+end))
+
+M.ssid:add_button(awful.button({}, 3, function(event)
+    awful.spawn.with_shell("dmenu_dns")
+end))
+
 return M

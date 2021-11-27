@@ -17,7 +17,7 @@ M.widget = {
     sda = awful.widget.watch(temp.sda, 5, function(widget, stdout)
         widget:set_markup(markup(stdout, { fg = beautiful.widget_text }))
     end),
-    sdb = awful.widget.watch(temp.sda, 5, function(widget, stdout)
+    sdb = awful.widget.watch(temp.sdb, 5, function(widget, stdout)
         widget:set_markup(markup(stdout, { fg = beautiful.widget_text }))
     end),
 }

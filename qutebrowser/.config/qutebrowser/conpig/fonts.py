@@ -1,0 +1,5 @@
+c.fonts.default_family = "Iosevka"
+c.fonts.messages.error = "11pt default_family"
+c.fonts.messages.info = "11pt default_family"
+c.fonts.messages.warning = "11pt default_family"
+c.fonts.statusbar = "bold default_size default_family"

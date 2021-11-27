@@ -38,7 +38,11 @@ def getEncodedUrl(url: str) -> Optional[str]:
 
 encodedUrl = getEncodedUrl(os.getenv("QUTE_URL"))
 if encodedUrl:
-    url = base64.b64decode(encodedUrl).decode("utf-8")
+    try:
+        url = base64.b64decode(encodedUrl).decode("utf-8")
+    except:
+        url = encodedUrl
+
     with open(os.getenv("QUTE_FIFO"), "w") as fifo:
         fifo.write(f"open -t {url}")
         fifo.flush()

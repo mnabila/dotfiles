@@ -31,24 +31,24 @@ function get_interface() {
 }
 
 function get_ssid() {
-    nmcli device show $(get_interface) | grep CONNECTION | cut -d : -f 2 | tr -d " "
+    nmcli device show $(get_interface) | grep CONNECTION | cut -d : -f 2 | cut -c22-
 }
 
 function default_dns() {
     ssid=$(get_ssid)
-    nmcli connection modify $ssid ipv4.method auto
-    nmcli connection modify $ssid ipv4.ignore-auto-dns false
-    nmcli connection up $ssid && notify-send "DNS Switcher" "success recconect to $ssid"
+    nmcli connection modify "$ssid" ipv4.method auto
+    nmcli connection modify "$ssid" ipv4.ignore-auto-dns false
+    nmcli connection up "$ssid" && notify-send "DNS Switcher" "success recconect to $ssid"
 }
 
 function change_dns() {
     dns="$1"
     ssid=$(get_ssid)
-    nmcli connection modify $ssid ipv4.method auto
-    nmcli connection modify $ssid ipv4.ignore-auto-dns true
-    nmcli connection modify $ssid ipv4.dns $dns
-    nmcli connection modify $ssid ipv4.dns-search $dns
-    nmcli connection up $ssid && notify-send "DNS Switcher" "success recconect to $ssid"
+    nmcli connection modify "$ssid" ipv4.method auto
+    nmcli connection modify "$ssid" ipv4.ignore-auto-dns true
+    nmcli connection modify "$ssid" ipv4.dns $dns
+    nmcli connection modify "$ssid" ipv4.dns-search $dns
+    nmcli connection up "$ssid" && notify-send "DNS Switcher" "success recconect to $ssid"
 }
 
 DMENU="rofi -dmenu -lines 5 -width 30 -i"

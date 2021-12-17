@@ -42,8 +42,9 @@ c.colors.downloads.start.bg = xrdb["color4"]
 c.colors.downloads.stop.bg = xrdb["color10"]
 
 # hint
+c.colors.hints.bg = xrdb["color3"]
 c.colors.hints.fg = xrdb["color0"]
-c.colors.hints.match.fg = xrdb["color2"]
+c.colors.hints.match.fg = xrdb["color8"]
 
 # keyhint
 c.colors.keyhint.bg = "rgba(40, 40, 40, 100%)"
@@ -70,11 +71,11 @@ c.colors.prompts.selected.fg =xrdb["color0"]
 
 # statusbar
 c.colors.statusbar.insert.bg = xrdb["color10"]
-c.colors.statusbar.insert.fg = xrdb["color15"]
+c.colors.statusbar.insert.fg = xrdb["color0"]
 c.colors.statusbar.normal.bg = xrdb["color0"]
 c.colors.statusbar.normal.fg = xrdb["color15"]
-c.colors.statusbar.passthrough.bg = xrdb["color4"]
-c.colors.statusbar.passthrough.fg = xrdb["color15"]
+c.colors.statusbar.passthrough.bg = xrdb["color12"]
+c.colors.statusbar.passthrough.fg = xrdb["color0"]
 c.colors.statusbar.private.bg = xrdb["color8"]
 c.colors.statusbar.private.fg = xrdb["color15"]
 c.colors.statusbar.progress.bg = xrdb["color15"]

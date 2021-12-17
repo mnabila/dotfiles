@@ -22,27 +22,36 @@
 
 
 import os
-from typing import Optional
-from urllib import parse
 import base64
+from urllib import parse
 
 
-def getEncodedUrl(url: str) -> Optional[str]:
-    parsed = parse.urlsplit(url)
-    if parsed.query:
-        parsed = parse.parse_qsl(parsed.query)
-        result = dict(parsed)
-        return result["url"]
-    return None
-
-
-encodedUrl = getEncodedUrl(os.getenv("QUTE_URL"))
-if encodedUrl:
+def noSafeLinku(query):
+    parsed = parse.parse_qsl(query)
+    result = dict(parsed)
+    url = result["url"]
     try:
-        url = base64.b64decode(encodedUrl).decode("utf-8")
+        openInQb(base64.b64decode(url).decode("utf-8"))
     except:
-        url = encodedUrl
+        openInQb(url)
 
-    with open(os.getenv("QUTE_FIFO"), "w") as fifo:
-        fifo.write(f"open -t {url}")
-        fifo.flush()
+
+def noOuo(url):
+    pass
+
+
+def openInQb(url):
+    fifo = open(os.getenv("QUTE_FIFO"), "w")
+    fifo.write(f"open -t {url}")
+    fifo.flush()
+
+
+qute_url = os.getenv("QUTE_URL")
+parsed = parse.urlsplit(qute_url)
+
+if "ouo.io" in parsed.netloc:
+    noOuo(qute_url)
+else:
+    print(type(parsed.query))
+    if parsed.query:
+        noSafeLinku(parsed.query)

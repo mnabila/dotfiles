@@ -1,12 +1,11 @@
 configuration {
-    modi: "drun,run";
-    font: "Iosevka Nerd Font 11";
+    font: "Iosevka Nerd Font 10.5";
     location: 0;
 	fixed-num-lines: true;
 	window-match-fields: "name";
-	theme: "main" ;
-    display-run: " Command";
-    display-drun: " Apps";
+    display-run: "  Command";
+    display-drun: "  Apps";
+    display-filebrowser: "  File";
     sidebar-mode: false;
     timeout {
         action: "kb-cancel";
@@ -17,3 +16,4 @@ configuration {
         sorting-method:    "name";
     }
 }
+@theme "main"

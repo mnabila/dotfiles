@@ -45,7 +45,8 @@ OPTIONS='''
   [ "figma",                  "chromium --new-window --app=https://www.figma.com/files/drafts" ],
   [ "iptv",                   "dmenu_iptv" ],
   [ "virtual session",        "dmenu_virtualsession" ],
-  [ "dns switcher",           "dmenu_dns"]
+  [ "dns switcher",           "dmenu_dns"],
+  [ "adb clipoard",           "adbclip"]
 ]
 '''
 

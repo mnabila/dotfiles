@@ -11,7 +11,7 @@ TIMESTAMP="$(date +%Y%m%d_%H%M%S)"
 SCREENSHOTDIR="$HOME/Pictures/screenshot"
 ICON="$HOME/Dotfiles/icons/gruvbox/camera.png"
 FILENAME="$SCREENSHOTDIR/Screenshot_$TIMESTAMP.png"
-DMENU="rofi -dmenu -p Screenshot -lines 6 -width 30"
+DMENU="rofi -dmenu -p Screenshot"
 LONGTEXT=" $(date '+%A, %d/%m/%Y')  $(date '+%H:%M:%S')"
 SHORTTEXT=" $(date '+%d/%m/%Y')"
 FONT="Iosevka-Nerd-Font-Complete"
@@ -89,5 +89,5 @@ OPTIONS='''
 ]
 '''
 
-menu=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
+menu=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU -theme-str 'window {width: 30%;} listview {lines: 6;}')
 $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$menu\") | .[1]")

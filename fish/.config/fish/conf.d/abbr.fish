@@ -1,9 +1,8 @@
 if status is-interactive
     # ungrouped alias
     abbr --add --global sysinfo "neofetch --ascii ~/.config/neofetch/chess.txt"
-    abbr --add --global vim "nvim --noplugin -u /dev/null"
     abbr --add --global aur-pkg "ssh aur@aur.archlinux.org list-repos"
-    abbr --add --global aria2d "aria2c --enable-rpc"
+    abbr --add --global aria2d "aria2c --enable-rpc --auto-file-renaming=false"
     abbr --add --global ssh "env TERM=xterm-256color ssh"
     abbr --add --global nu "paru --sudoloop -S --noconfirm neovim-git && nvim +PackerSync"
     abbr --add --global docui "env LC_CTYPE=en_US.UTF-8 TERM=xterm-256color docui"

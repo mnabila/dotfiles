@@ -152,7 +152,7 @@ function translateText() {
         echo -n "$result" | xclip -selection clipboard
 
         while $again; do
-            speak=$(echo -e "Yes\nNo" | $DMENU -lines 2 -p "Play Audio" -mesg "Result: $result")
+            speak=$(echo -e "Yes\nNo" | $DMENU -theme-str "listview {lines:2;}" -p "Play Audio" -mesg "Result: $result")
             if [[ $speak == "Yes" ]]; then
                 notify-send -i $ICON "Translate" "Listen to the translation."
                 mpv /tmp/trans.ts

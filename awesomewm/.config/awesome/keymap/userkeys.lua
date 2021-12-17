@@ -187,6 +187,13 @@ function M.get()
         end, {
             description = "main apps",
             group = "launcher",
+        }),
+
+        awful.key({ modkey }, "v", function()
+            awful.spawn("adbclip")
+        end, {
+            description = "send clipboard to android",
+            group = "launcher",
         })
     )
     return userkeys

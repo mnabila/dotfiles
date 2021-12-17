@@ -9,7 +9,6 @@ function aur --argument-names args --description "AUR helper for package maintai
             git remote add origin "$remote_url"
             printf "*.tar.*\npkg/\nsrc/\n$pkgname" > .gitignore
 
-
         case commit
             rm .SRCINFO
             makepkg --printsrcinfo >.SRCINFO

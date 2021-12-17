@@ -19,6 +19,12 @@ https://github.com/JohnnyMorganz/StyLua/releases.atom     ~Github:StyLua:release
 https://github.com/telegramdesktop/tdesktop/releases.atom ~Github:telegramdesktop:releases
 https://github.com/kiwibrowser/src/releases.atom          ~Github:kiwibrowser:releases
 https://github.com/qutebrowser/qutebrowser/releases.atom  ~Github:qutebrowser:releases
+
 # programming
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-CODE
 https://realpython.com/atom.xml ~RealPython:post
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-YOUTUBE
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDBPMBKOXO8ZWsb5s9HLbCA ~Youtube:ThomasLanghorst
+
+

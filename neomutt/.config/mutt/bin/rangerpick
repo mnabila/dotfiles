@@ -1,0 +1,9 @@
+#!/bin/sh
+# source: https://www.reddit.com/r/commandline/comments/cbxvdf/combine_neomutt_with_ranger/
+
+tmpfile=/tmp/rangerpick
+if \[ -z "$1" \]; then
+   ranger --choosefiles $tmpfile && echo "$(awk 'BEGIN {printf "%s", "push "} {printf "%s", "<attach-file>"$0"<enter>"}'  $tmpfile)" > $tmpfile
+elif \[ $1 == "clean" \]; then
+  rm $tmpfile
+fi

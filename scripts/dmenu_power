@@ -3,10 +3,10 @@
 # License           : MIT License
 # Author            : M. Nabil Adani <nblid48[at]gmail[dot]com>
 # Date              : Senin, 26/04/2021 07:48 WIB
-# Last Modified Date: Senin, 26/04/2021 07:48 WIB
+# Last Modified Date: Minggu, 07/11/2021 11:23 WIB
 # Last Modified By  : M. Nabil Adani <nblid48[at]gmail[dot]com>
 
-DMENU="rofi -dmenu -lines 4 -width 30 -i -p Power"
+DMENU="rofi -dmenu -i -p Power"
 
 OPTIONS='''
 [
@@ -17,5 +17,5 @@ OPTIONS='''
 ]
 '''
 
-label=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU)
+label=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU -theme-str 'window {width: 30%;} listview {lines: 4;}')
 exec $(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$label\") | .[1]")

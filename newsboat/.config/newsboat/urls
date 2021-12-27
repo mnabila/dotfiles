@@ -25,6 +25,10 @@ https://github.com/qutebrowser/qutebrowser/releases.atom  ~Github:qutebrowser:re
 https://realpython.com/atom.xml ~RealPython:post
 
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-YOUTUBE
-https://www.youtube.com/feeds/videos.xml?channel_id=UCDBPMBKOXO8ZWsb5s9HLbCA ~Youtube:ThomasLanghorst
-
-
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDBPMBKOXO8ZWsb5s9HLbCA "~Youtube:Thomas Langhorst"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCxNrN9kKErgvpjopJLBdiSA "~Youtube:i Did IT - Koding Aja Dulu"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCbyVnlQdFIcdViuoPIPK68A "~Youtube:Jagat Review"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC14ZKB9XsDZbnHVmr4AmUpQ "~Youtube:Programer Zaman Now"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCV0qA-eDDICsRR9rPcnG7tw "~Youtube:Joma Tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC6MtKoJrZLNELkS96F99eIQ "~Youtube:Tech School"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCEXtPiqFrcdzFRKqwazI1NA "~Youtube:Golang Dojo"

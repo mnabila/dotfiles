@@ -16,9 +16,9 @@ if status is-interactive
     abbr --add --global psu "sudo pacman -Syyuw"
 
     # youtube-dl
-    abbr --add --global ytmkv "youtube-dl --merge-output-format mkv"
-    abbr --add --global ytmp4 "youtube-dl --merge-output-format mp4"
-    abbr --add --global ytmp3 "youtube-dl --format bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --output '~/Music/youtube/%(title)s.%(ext)s'"
+    abbr --add --global ytmkv "yt-dlp --merge-output-format mkv"
+    abbr --add --global ytmp4 "yt-dlp --merge-output-format mp4"
+    abbr --add --global ytmp3 "yt-dlp --format bestaudio --extract-audio --audio-format mp3 --audio-quality 0 --output '~/Music/youtube/%(title)s.%(ext)s'"
 
     # nmcli
     abbr --add --global neton "nmcli connection up"

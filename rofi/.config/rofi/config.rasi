@@ -1,4 +1,5 @@
 configuration {
+    modi: "drun";
     font: "Iosevka Nerd Font 10.5";
     location: 0;
 	fixed-num-lines: true;

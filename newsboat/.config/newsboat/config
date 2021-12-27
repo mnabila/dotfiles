@@ -25,15 +25,13 @@ color article           default default
 highlight article "^(Title):.*$" blue default
 highlight article "https?://[^ ]+" red default
 highlight article "\\[image\\ [0-9]+\\]" green default
-highlight feedlist "----.*" yellow default bold
+highlight feedlist "-_-.*" yellow default bold
 
 #
 # Keybinding
 #
 bind-key j down
 bind-key k up
-#bind-key j next articlelist
-#bind-key k prev articlelist
 bind-key J next-feed articlelist
 bind-key K prev-feed articlelist
 bind-key G end
@@ -45,22 +43,20 @@ bind-key h quit
 bind-key a toggle-article-read
 bind-key n next-unread
 bind-key N prev-unread
-#bind-key D pb-download
 bind-key x pb-delete
 bind-key D delete-article
 bind-key U show-urls
 
+
+#
+# Macro Prefix
+#
+unbind-key ,
+bind-key SPACE macro-prefix
+
 #
 # Macro
 #
-macro . open-in-browser
-macro m set browser "ytfzf -fD %u &"; open-in-browser; set browser "xdg-open %u"
-macro y set browser "spawndl"; open-in-browser ; set browser linkhandler
-macro w set browser "w3m"; open-in-browser ; set browser linkhandler
-macro p set browser "dmnuhandler"; open-in-browser ; set browser linkhandler
-# c copies the link to the clipboard
-# The line below is probably the skiddiest lien i've ever writer.
-macro c set browser "copy(){ echo $1 | xclip ;}; copy "; open-in-browser ; set browser linkhandler
-
-
-
+macro c set browser "copy(){ echo $1 | xclip -selection clipboard ;}; copy "; open-in-browser ; set browser xdg-open -- "Copy to clipboard"
+macro m set browser "mpv --ytdl-raw-options='geo-bypass=' --ytdl-format='bestvideo[height<=?480]+bestaudio/best'"; open-in-browser ; set browser xdg-open -- "Open in MPV"
+macro d set browser "getdl get"; open-in-browser ; set browser xdg-open -- "Get Download Link"

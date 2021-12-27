@@ -29,17 +29,21 @@ function get_container() {
 function menu() {
     OPTIONS='["Start", "Stop", "Restart"]'
     select=$(echo $OPTIONS | jq -r ".[]" | $DMENU -mesg "Container Name : $1" -theme-str 'window {width: 30%;} listview {lines: 1; columns:3;} element-text {horizontal-align: 0.5;}')
-	if [ "$select" = "Stop" ]; then
-		docker container stop $1 && notify-send "Docker" "Stop : $1"
-	elif [ "$select" = "Restart" ]; then
-		docker container restart $1 && notify-send "Docker" "Restart : $1"
-	elif [ "$select" = "Start" ]; then
-		docker container start $1 && notify-send "Docker" "Start : $1"
-	fi
+    if [ "$select" = "Stop" ]; then
+        docker container stop $1 && notify-send "Docker" "Stop : $1"
+    elif [ "$select" = "Restart" ]; then
+        docker container restart $1 && notify-send "Docker" "Restart : $1"
+    elif [ "$select" = "Start" ]; then
+        docker container start $1 && notify-send "Docker" "Start : $1"
+    fi
 }
 
-container=$(get_container)
-if [ "$container" != "" ]; then
-    container_name=$(echo $container | cut -d " " -f 2)
-    menu $container_name
+if [ -f "/run/docker.pid" ]; then
+    container=$(get_container)
+    if [ "$container" != "" ]; then
+        container_name=$(echo $container | cut -d " " -f 2)
+        menu $container_name
+    fi
+else
+    notify-send "Docker" "Docker is not running"
 fi

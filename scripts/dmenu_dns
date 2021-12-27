@@ -36,22 +36,21 @@ function get_ssid() {
 
 function default_dns() {
     ssid=$(get_ssid)
-    nmcli connection modify $ssid ipv4.method auto
-    nmcli connection modify $ssid ipv4.ignore-auto-dns false
-    nmcli connection up $ssid && notify-send "DNS Switcher" "success recconect to $ssid"
+    nmcli connection modify "$ssid" ipv4.method auto
+    nmcli connection modify "$ssid" ipv4.ignore-auto-dns false
+    nmcli connection up "$ssid" && notify-send "DNS Switcher" "success recconect to $ssid"
 }
 
 function change_dns() {
     dns="$1"
     ssid=$(get_ssid)
-    nmcli connection modify $ssid ipv4.method auto
-    nmcli connection modify $ssid ipv4.ignore-auto-dns true
-    nmcli connection modify $ssid ipv4.dns $dns
-    nmcli connection modify $ssid ipv4.dns-search $dns
-    nmcli connection up $ssid && notify-send "DNS Switcher" "success recconect to $ssid"
+    nmcli connection modify "$ssid" ipv4.method auto
+    nmcli connection modify "$ssid" ipv4.ignore-auto-dns true
+    nmcli connection modify "$ssid" ipv4.dns "$dns"
+    nmcli connection modify "$ssid" ipv4.dns-search "$dns"
+    nmcli connection up "$ssid" && notify-send "DNS Switcher" "success recconect to $ssid"
 }
 
-DMENU="rofi -dmenu -lines 5 -width 30 -i"
 OPTIONS='''
 [
 	["DNS Google",     "8.8.8.8"],
@@ -62,13 +61,13 @@ OPTIONS='''
 ]
 '''
 
-label=$(echo $OPTIONS | jq -r ".[][0]" | $DMENU -p "DNS Switcher")
+label=$(echo $OPTIONS | jq -r ".[][0]" | rofi -dmenu -p "DNS Switcher" -theme-str 'window {width: 25%;} listview {lines:5;}')
 dns=$(echo $OPTIONS | jq -r ".[] | select(.[0] == \"$label\") | .[1]")
 
 if [ -n "$dns" ]; then
     if [ "$dns" == "default" ]; then
         default_dns
     else
-        change_dns $dns
+        change_dns "$dns"
     fi
 fi

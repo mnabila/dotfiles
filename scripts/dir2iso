@@ -14,8 +14,8 @@ if [ ! $(command -v genisoimage) ]; then
     exit
 fi
 
-folder_exist=$(realpath "./$FILENAME")
-iso_exist=$(realpath "./$FILENAME.iso")
+folder_exist=$(realpath "$FILENAME")
+iso_exist=$(realpath "$FILENAME.iso")
 
 if [ -d "$folder_exist" ] && [ ! -f "$iso_exist" ]; then
     if ((${#LABEL} > 32)); then

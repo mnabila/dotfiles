@@ -1,0 +1,11 @@
+#!/bin/bash
+
+case $(file --mime-type "$1" -bL) in
+    application/zip) unzip -l "$1" ;;
+	application/x-shellscript ) cat "$1" ;;
+    application/x-7z-compressed) 7z l "$1" ;;
+    application/gzip) tar -tvf "$1" ;;
+    application/x-iso9660-image) iso-info --no-header -f "$1" ;;
+    text/*) bat --color=always --style="plain" "$1" ;;
+    *) mediainfo "$1" ;;
+esac

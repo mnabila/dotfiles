@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set ignorecase true
+set scrolloff 10
+set icons
+set ratios 1:2:3
+set previewer ~/.config/lf/script/previewer
+set promptfmt "\033[32;1m%u\033[0m ❱ \033[34;1m%d\033[0m\033[1m%f\033[0m"
+

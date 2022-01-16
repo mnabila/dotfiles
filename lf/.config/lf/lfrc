@@ -1,0 +1,5 @@
+#!/bin/sh
+# source another config
+source ~/.config/lf/config.d/options
+source ~/.config/lf/config.d/keymap
+source ~/.config/lf/config.d/command

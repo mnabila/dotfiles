@@ -193,6 +193,22 @@ git-svn(){
   fi
 }
 ```
+untuk pengguna fish bisa tamabahkan script berikut ini dalam file ~/.config/fish/functions/git-svn.fish
+
+```
+
+function git-svn --description "Download subfolder in git repository"
+    set repository $argv[1]
+    set subfolder $argv[2]
+    if test -n $repository && test -n $subfolder
+        echo "Starting clone/copy ..."
+        set repo (echo $repository | sed 's/\/$\|.git$//')
+        svn export "$repo/trunk/$subfolder"
+    else
+        echo "Use: git-svn <repository> <subdirectory>"
+    end
+end
+```
 
 untuk menggunakan cukup ketikkan perintah seperti dibawah ini
 

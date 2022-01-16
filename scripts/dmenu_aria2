@@ -11,10 +11,18 @@
 # 1. aria2p (https://github.com/pawamoy/aria2p)
 # 2. clipmenu (https://github.com/cdown/clipmenu)
 
-DMENU="rofi -dmenu -i -p Download $@"
+DMENU="rofi -dmenu -i -p Download"
+ARIA2URI="http://localhost:6800/jsonrpc"
+
+function datagen() {
+    jq -n --arg id "$(date +%N)" --arg url "$1" \
+        '{ "jsonrpc": "2.0", "id": $id, "method":"aria2.addUri", "params":[[$url]], }'
+}
+
 url=$(cat /tmp/clipmenu/*/line_cache | sort -r | cut -c 21- | grep -Po '(http|https|ftp|ftps):\/\/\w.+' | $DMENU)
 # url=$(clipdel '^http[s]:\/\/.*' | sort -r | dmenu -p Aria2 "$@")
 if [[ ! -z $url ]]; then
     notify-send "Aria2 | Downloading" "$url" -u normal
-    aria2p call addUri -J "[[\"$url\"]]"
+    data=$(datagen "$url")
+    curl -s --request POST --url $ARIA2URI --header 'Content-Type: application/json' --data "$data"
 fi

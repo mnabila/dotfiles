@@ -6,6 +6,6 @@ function fish_clipboard_paste
     end
     set data (xclip -o)
     if test -n "$data"
-        commandline -i -- "'$data'"
+        commandline -i -- "\"$data\""
     end
 end

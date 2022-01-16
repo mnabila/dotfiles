@@ -1,0 +1,130 @@
+#!/bin/sh
+
+# file opener
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*) nvim "$fx" ;;
+        image/*) sxiv "$fx" 2&>/dev/null &;;
+        application/x-iso9660-image) udisksctl loop-setup --file "$fx";;
+        application/x-executable) lf -remote "send $id echo 'not allowed'";;
+        *) xdg-open "$f" &>/dev/null & ;;
+    esac
+}}
+
+# create directory
+cmd mkdir ${{
+    printf "Directory Name: "
+    read name
+    if [ ! -z "$name" ]; then
+        mkdir "$name"
+    fi
+}}
+
+# create file
+cmd touch ${{
+    printf "File Name: "
+    read name
+    if [ ! -z "$name" ]; then
+        $EDITOR "$name"
+    fi
+}}
+
+# rename selected file/folder
+cmd bulkrename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    [ -n "$fs" ] && fs="$(ls)"
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+# fuzzy finder
+cmd fzf_select ${{
+    res="$(find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m)"
+    if [ -d "$res" ]; then
+        cmd="cd"
+    else 
+        cmd="select"
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+
+# copy file to clipboard
+cmd yank2clipboard ${{
+    xclip -selection clipboard -i "$f" -t $(file --mime-type "$f" | cut -d ":" -f 2 | xargs)
+}}
+
+
+# print mimetype
+cmd mimetype &{{
+    mim=$(file --mime-type -bL "$f")
+    lf -remote "send $id echomsg 'mimetype : $mim'" &
+}}
+
+# extract current file or selected files
+cmd extract ${{
+    set -f
+    case "$f" in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf "$f";;
+        *.tar.gz|*.tgz) tar xzvf "$f";;
+        *.tar.xz|*.txz) tar xJvf "$f";;
+        *.zip) unzip "$f";;
+        *.rar) unrar x "$f";;
+        *.7z) 7z x "$f";;
+    esac
+}}
+
+# compress current file or selected files with tar and gunzip
+cmd tar ${{
+    set -f
+    mkdir "$1"
+    cp -r $fx "$1"
+    tar czf "$1.tar.gz" "$1"
+    rm -rf "$1"
+}}
+
+# compress current file or selected files with zip
+cmd zip ${{
+    set -f
+    mkdir "$1"
+    cp -r $fx "$1"
+    zip -r "$1.zip" "$1"
+    rm -rf "$1"
+}}
+
+# compress current file or selected files with 7z
+cmd 7z ${{
+    set -f
+    mkdir "$1"
+    cp -r $fx "$1"
+    7z a "$1.7z" "$1"
+    rm -rf "$1"
+}}
+
+
+cmd rclone ${{
+    function rmount () {
+        if [ ! -d "/tmp/rclone" ]; then
+            mkdir /tmp/lfrclone
+        fi
+        rclone mount "$1" /tmp/lfrclone --daemon && notify-send "LF - Rclone" "Success Mount $1"
+    }
+
+    case $1 in
+        m|mount) rmount "$2";;
+        u|umount) fusermount -u /tmp/lfrclone && rmdir /tmp/lfrclone && notify-send "LF - Rclone" "Success Umount" ;;
+        *) lf -remote "send $id echo example: rclone m remote:/path and rclone u"
+    esac
+}}

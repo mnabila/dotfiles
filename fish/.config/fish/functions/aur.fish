@@ -7,7 +7,7 @@ function aur --argument-names args --description "AUR helper for package maintai
             git branch -m main master
             echo "$remote_url"
             git remote add origin "$remote_url"
-            printf "*.tar.*\npkg/\nsrc/\n$pkgname" > .gitignore
+            printf "*.tar.*\npkg/\nsrc/\n$pkgname" >.gitignore
 
         case commit
             rm .SRCINFO
@@ -18,6 +18,7 @@ function aur --argument-names args --description "AUR helper for package maintai
             git status
             git add .
             git commit -m "chore: release $pkgver-$pkgrel"
+            git log --name-status HEAD^..HEAD
 
         case push
             git push origin master

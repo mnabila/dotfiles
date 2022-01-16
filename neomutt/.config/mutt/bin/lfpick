@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# add this to muttrc
+# macro compose A "<shell-escape>bash $HOME/.config/mutt/bin/lfpick<enter><enter-command>source /tmp/rangerpick<enter><shell-escape>bash $HOME/.config/mutt/bin/rangerpick clean<enter>" "Attach with Ranger"
+
+tmpfile=/tmp/lfpick
+if \[ -z "$1" \]; then
+   lf -selection-path=$tmpfile && echo "$(awk 'BEGIN {printf "%s", "push "} {printf "%s", "<attach-file>"$0"<enter>"}'  $tmpfile)" > $tmpfile
+elif \[ $1 == "clean" \]; then
+  rm $tmpfile
+fi

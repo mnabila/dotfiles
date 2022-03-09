@@ -1,0 +1,42 @@
+(defwidget popup-network []
+  (box :orientation "v" :space-evenly false :spacing 5 :class "popup-network"
+    (label :class "ssid" :text ssid)
+    (box :orientation "h" :space-evenly false :halign "start" :class "row"
+      (label :class "label" :text "" :width 35 :height 35)
+      (label :class "value" :text network-ip)
+    )
+    (box :orientation "h" :space-evenly false :halign "start" :class "row"
+      (label :class "label" :text "" :width 35 :height 35)
+      (label :class "value" :text network-gateway)
+    )
+    (box :orientation "h" :space-evenly false :halign "start" :class "row"
+      (label :class "label" :text "" :width 35 :height 35)
+      (label :class "value" :text network-dns :hexpand false)
+    )
+    (box :orientation "h" :space-evenly false :class "row speed"
+      (label :class "label down" :text "")
+      (label :class "value speed-down" :text "${round(EWW_NET.wlan0.NET_DOWN / 1024, 2)} Kb")
+      (label :class "label up" :text "")
+      (label :class "value" :text "${round(EWW_NET.wlan0.NET_UP / 1024, 2)} Kb")
+    )
+  )
+)
+
+
+(defpoll network-gateway :interval "12h"
+  "ip route show | grep default | cut -d \" \" -f 3")
+
+(defpoll network-dns :interval "12h"
+  "cat /etc/resolv.conf | grep search | cut -d \" \" -f 2")
+
+(defpoll network-ip :interval "12h"
+  "ip addr show | grep wlan0 | grep inet | cut -d \" \" -f 6")
+
+(defwindow popup-network
+  :geometry (geometry :x "-220px"
+                      :y "-30px"
+                      :width "200px"
+                      :height "100px"
+                      :anchor "bottom right")
+  (popup-network)
+)

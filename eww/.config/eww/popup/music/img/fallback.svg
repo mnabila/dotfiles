@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="fallback.svg"
+   inkscape:export-filename="/home/nabil/.config/eww/popup/music/img/fallback.png"
+   inkscape:export-xdpi="97.300003"
+   inkscape:export-ydpi="97.300003"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.51580387"
+     inkscape:cx="343.15369"
+     inkscape:cy="689.21545"
+     inkscape:window-width="1342"
+     inkscape:window-height="718"
+     inkscape:window-x="10"
+     inkscape:window-y="10"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#d79921;fill-opacity:1;stroke-width:0.841899"
+       id="rect939"
+       width="158.75"
+       height="238.125"
+       x="31.314795"
+       y="74.982018"
+       inkscape:export-filename="/home/nabil/.config/eww/popup/music/img/fallback.png"
+       inkscape:export-xdpi="97.300003"
+       inkscape:export-ydpi="97.300003" />
+    <path
+       d="m 110.6898,96.459586 c -29.228195,0 -52.916672,23.688484 -52.916672,52.916674 0,29.22819 23.688477,52.91666 52.916672,52.91666 29.22818,0 52.91666,-23.68847 52.91666,-52.91666 0,-29.22819 -23.68848,-52.916674 -52.91666,-52.916674 z M 74.458415,149.37626 h -0.225308 c -1.876476,0 -3.389975,-1.65592 -3.216342,-3.58428 1.713591,-19.15335 17.03875,-34.43718 36.221045,-36.09082 1.86035,-0.16123 3.45199,1.38286 3.45199,3.31349 0,1.726 -1.28468,3.15846 -2.94969,3.30523 -15.922549,1.40973 -28.655621,14.10146 -30.092226,30.03848 -0.155028,1.69498 -1.525488,3.0179 -3.189469,3.0179 z m 36.231385,19.65772 c -10.959549,0 -19.843753,-8.88836 -19.843753,-19.65772 0,-10.76937 8.884204,-19.84375 19.843753,-19.84375 10.95954,0 19.84374,8.88835 19.84374,19.84375 0,10.9554 -8.88834,19.65772 -19.84374,19.65772 z m 0,-26.2723 c -3.6587,0 -6.61459,2.93522 -6.61459,6.61458 0,3.67936 2.95589,6.61458 6.61459,6.61458 3.65868,0 6.61458,-2.94555 6.61458,-6.61458 0,-3.66903 -2.9559,-6.61458 -6.61458,-6.61458 z"
+       id="path963"
+       style="fill:#282828;fill-opacity:1;stroke-width:0.206705"
+       inkscape:export-filename="/home/nabil/.config/eww/popup/music/img/fallback.png"
+       inkscape:export-xdpi="97.300003"
+       inkscape:export-ydpi="97.300003" />
+  </g>
+</svg>

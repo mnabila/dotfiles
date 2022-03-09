@@ -1,0 +1,15 @@
+(defwidget popup-cal [] 
+  (eventbox :onhoverlost "eww close popup-calendar"
+    (box :class "popup-calendar" :orientation "v" 
+      (box :class "container" 
+        (calendar :class "cal" )
+      )
+    )
+  )
+)
+(defwindow popup-calendar
+  :geometry (geometry :x "-10px"
+                      :y "-30px"
+                      :anchor "bottom right")
+  (popup-cal)
+)

@@ -1,0 +1,39 @@
+(include "bar/widget/workspaces.yuck")
+(include "bar/widget/time.yuck")
+(include "bar/widget/brightness.yuck")
+(include "bar/widget/volume.yuck")
+(include "bar/widget/temperature.yuck")
+(include "bar/widget/network.yuck")
+(include "bar/widget/music.yuck")
+(include "bar/widget/cpu.yuck")
+(include "bar/widget/memory.yuck")
+
+(defwidget bottom []
+  (box :orientation "h" :class "bottom"
+    (box :orientation "h" :halign "start" :space-evenly false
+      (workspaces)
+      (music)
+    )
+    (box :orientation "h" :halign "end" :space-evenly false
+      (network)
+      (cpu)
+      (memory)
+      (temperature)
+      (volume)
+      (brightness)
+      (time)
+    )
+  )
+)
+
+(defwindow bar-bottom
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "25px"
+                      :anchor "bottom center")
+  :reserve (struts :side "bottom" :distance "25px")
+  (bottom)
+)

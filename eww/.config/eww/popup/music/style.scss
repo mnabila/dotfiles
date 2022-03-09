@@ -1,0 +1,59 @@
+.popup-music {
+  background: $background;
+  border-radius: 10px;
+  border: 1px $color3 solid;
+  font-family: Iosevka;
+  background-repeat: no-repeat;
+  background-size: 250px 300px;
+  min-width: 250px;
+  .blur {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding-top: 182px;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px 10px;
+  }
+  .artist {
+    font-style: italic;
+    font-size: 15px;
+    margin: 5px 10px;
+  }
+}
+
+.popup-music .control {
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+
+  .btn {
+    font-family: "Font Awesome 6 Free";
+  }
+  .btn:hover {
+    color: $background;
+    background: $color3;
+  }
+  .prev:hover {
+    border-bottom-left-radius: 9px;
+  }
+  .next:hover {
+    border-bottom-right-radius: 9px;
+  }
+}
+
+.popup-music {
+  progressbar trough {
+    all: unset;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    min-height: 10px;
+    min-width: 100px;
+    margin: 5px 10px 5px 10px;
+  }
+  progressbar trough progress {
+    all: unset;
+    background-color: $color3;
+    border-radius: 10px;
+  }
+}

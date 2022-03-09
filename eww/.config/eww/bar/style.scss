@@ -1,0 +1,82 @@
+.widget {
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: $background;
+  color: $foreground;
+}
+
+.icon {
+  font-size: 15px;
+  font-family: "Font Awesome 6 Free Solid";
+  margin-right: 5px;
+  color: $color3;
+  margin-bottom: 3px;
+}
+
+.value {
+  font-family: Iosevka;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+scale trough {
+  all: unset;
+  background-color: $color8;
+  border-radius: 50px;
+  min-height: 10px;
+  min-width: 100px;
+  margin: 0 10px 0 10px;
+}
+scale trough highlight {
+  all: unset;
+  background-color: $color3;
+  border-radius: 10px;
+}
+
+.bottom {
+  background: $background;
+}
+
+.workspaces {
+  all: unset;
+  font-family: Iosevka;
+  font-weight: bold;
+  font-size: 12px;
+  background: $background;
+  padding-left: 10px;
+
+  button {
+    padding: 5px 10px;
+    color: $foreground;
+  }
+  .occupied {
+    background: $color8;
+    color: $background;
+  }
+  .focused,
+  button:hover {
+    background: $color3;
+    color: $background;
+  }
+  .urgent {
+    color: $color1;
+  }
+  .empty {
+    color: $foreground;
+  }
+}
+
+.time {
+  .value {
+    margin-bottom: 1px;
+  }
+  margin-right: 10px;
+}
+
+.music {
+  .artist {
+    color: $color8;
+    margin-right: 10px;
+  }
+}

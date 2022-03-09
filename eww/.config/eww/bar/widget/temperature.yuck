@@ -1,0 +1,6 @@
+(defwidget temperature []
+  (box :class "widget temperature" :orientation "h" :halign "center" :space-evenly false :tooltip "Temperature CPU ${EWW_TEMPS.CPU}*C"
+    (label :class "icon" :text "")
+    (label :class "value" :text "${EWW_TEMPS.CPU}")
+  )
+)

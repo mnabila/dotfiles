@@ -1,0 +1,14 @@
+#!/bin/sh
+
+MUSIC_DIR="/home/$USER/Music/"
+COVER="/tmp/eww_album.png"
+
+ffmpeg -i "${MUSIC_DIR}/$(mpc current -f %file%)" "${COVER}" -y &>/dev/null
+STATUS=$?
+
+# Check if the file has a embbeded album art
+if [ "$STATUS" -eq 0 ]; then
+	echo "$COVER"
+else
+	echo "popup/music/img/fallback.png"
+fi

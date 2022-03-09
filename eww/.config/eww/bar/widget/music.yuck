@@ -1,0 +1,24 @@
+(defvar rmusic false)
+(defwidget music []
+  (eventbox :onhover "eww update rmusic=true" :onhoverlost "eww update rmusic=false"
+    (button :onclick "eww open popup-music"
+      (box :class "widget music" :orientation "h" :halign "center" :space-evenly false
+        (label :class "icon" :text "")
+        (revealer :transition "slideleft" :reveal rmusic :duration "250ms"
+          (label :class "value artist" :text "${music-artist}" :limit-width 30)
+        )
+        (label :class "value" :text {music-title != "" ? music-title : "😱 playlist empty 😱"} :limit-width 35)
+      )
+    )
+  )
+)
+
+(defpoll music-title :interval "3s"
+  "mpc -f '[%title%]|[%file%]' current"
+)
+
+(defpoll music-artist :interval "3s"
+  "mpc -f '[%artist%]' current"
+)
+
+

@@ -1,0 +1,35 @@
+.popup-network {
+  background: $background;
+  border-radius: 10px;
+  border: 2px $color3 solid;
+  padding: 10px 15px;
+
+  .ssid {
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .label {
+    padding: 2px 10px;
+    font-size: 15px;
+    font-family: "Font Awesome 6 Free";
+    background: $color3;
+    color: $color0;
+    border-radius: 5px;
+  }
+  .value {
+    margin-top: 2px;
+    padding: 5px 10px;
+  }
+  .separator {
+    background: red;
+  }
+}
+
+.speed {
+  margin-top: 10px;
+  .label {
+    font-family: "Font Awesome 6 Free";
+  }
+}

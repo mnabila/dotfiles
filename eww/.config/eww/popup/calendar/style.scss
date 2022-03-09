@@ -1,0 +1,45 @@
+// Calendar
+.popup-calendar {
+  background-color: $background;
+  font-family: Iosevka;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px $color3 solid;
+  border-radius: 10px;
+
+  .container {
+    padding: 0px 10px 0px 10px;
+    color: $foreground;
+
+    .cal {
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+}
+
+calender {
+  color: #fff;
+}
+calendar:selected {
+    color:$background;
+    background:$color3;
+}
+
+calendar.header {
+  color: $foreground;
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $color3;
+}
+
+calendar.highlight {
+  color: $foreground;
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: $color8;
+}

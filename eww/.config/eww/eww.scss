@@ -1,0 +1,14 @@
+* {
+  all: unset;
+}
+
+// colors
+@import "./colors/gruvbox.scss";
+
+//bar styleshet
+@import "./bar/style.scss";
+
+// popup
+@import "./popup/network/style.scss";
+@import "./popup/calendar/style.scss";
+@import "./popup/music/style.scss";

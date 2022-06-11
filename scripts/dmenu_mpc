@@ -9,7 +9,7 @@
 DMENU="rofi -dmenu -i"
 
 function getPlaylist() {
-    mpc playlist -f "[%position%];[[[%artist%;]%title%]|[%file%]]" | column -t -s ";"| $DMENU -p " MPD" | cut -d " " -f 1
+    mpc playlist -f "[%position%];[[%title%;[%artist%]]|[%file%]]" | column -t -s ";"| $DMENU -p " MPD" | cut -d " " -f 1
 }
 
 play=$(getPlaylist)

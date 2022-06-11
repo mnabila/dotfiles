@@ -1,15 +1,12 @@
 (defvar rbrightness false)
 (defwidget brightness []
   (eventbox :onhover "eww update rbrightness=true" :onhoverlost "eww update rbrightness=false"
-    (box :class "brightness" :orientation "h" :halign "center" :space-evenly false
+    (box :class "widget brightness" :orientation "h" :halign "center" :space-evenly false
       (label :class "icon" :text "")
       (label :class "value" :text "${get-brightness}%")
       (revealer :transition "slideleft" :reveal rbrightness :duration "250ms"
-        (scale :min 0 :max 100 :value get-brightness :onchange "light -S {}")
-      )
-    )
-  )
-)
+        (scale :class "slider" :min 0 :max 100 :value get-brightness :onchange "light -S {}")))))
+
 
 (defpoll get-brightness :interval "1s"
   "light -G | cut -d . -f 1")

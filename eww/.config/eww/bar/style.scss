@@ -20,21 +20,26 @@
   margin-bottom: 2px;
 }
 
-scale trough {
-  all: unset;
-  background-color: $color8;
-  border-radius: 50px;
-  min-height: 10px;
-  min-width: 100px;
-  margin: 0 10px 0 10px;
-}
-scale trough highlight {
-  all: unset;
-  background-color: $color3;
-  border-radius: 10px;
+.slider {
+  trough {
+    all: unset;
+    background-color: $color8;
+    border-radius: 50px;
+    min-height: 10px;
+    min-width: 100px;
+    margin: 0 10px 0 10px;
+
+    highlight {
+      all: unset;
+      background-color: $color3;
+      color: blue;
+      border-radius: 10px;
+    }
+  }
 }
 
-.bottom {
+.bottom,
+.top {
   background: $background;
 }
 
@@ -78,5 +83,11 @@ scale trough highlight {
   .artist {
     color: $color8;
     margin-right: 10px;
+  }
+}
+.tasklist {
+  button:hover,
+  .active {
+    background: red;
   }
 }

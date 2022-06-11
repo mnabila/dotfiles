@@ -20,6 +20,6 @@
   "date '+%H:%M'")
 
 (defpoll date :interval "10s"
-  "date '+%d %B %Y'")
+  "date '+%A, %d %B %Y'")
 
 

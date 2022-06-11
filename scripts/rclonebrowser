@@ -1,0 +1,20 @@
+#!/bin/bash
+# rclonebrowser
+# Copyright (c) 2022 M. Nabil Adani <nblid48[at]gmail[dot]com>
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+REMOTE=$1
+MOUNTPOINT="/tmp/rclone"
+
+if [ ! -d $MOUNTPOINT ]; then
+	mkdir $MOUNTPOINT
+fi
+
+rclone mount --daemon "$REMOTE:/" $MOUNTPOINT
+lf $MOUNTPOINT
+fusermount -u $MOUNTPOINT
+rclone cleanup "$REMOTE:/" >/dev/null
+rclone about "$REMOTE:/"

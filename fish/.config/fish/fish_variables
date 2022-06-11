@@ -7,7 +7,7 @@ SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR TO_DIR:/home/nabil/\x2etofish
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fisher_brgmnn_2F_fish_2D_docker_2D_compose_files:/home/nabil/\x2econfig/fish/completions/docker\x2dcompose\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:/home/nabil/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/home/nabil/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/home/nabil/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_joehillen_2F_to_2D_fish_files:/home/nabil/\x2econfig/fish/functions/to\x2efish\x1e/home/nabil/\x2econfig/fish/conf\x2ed/to\x2efish\x1e/home/nabil/\x2econfig/fish/completions/to\x2efish
@@ -40,3 +40,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:d79921\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3d928374
+SETUVAR fish_pager_color_selected_background:\x2dr

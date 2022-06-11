@@ -23,7 +23,7 @@ fi
 xsetroot -cursor_name left_ptr
 
 # Untuk SLiM Session
-export XDG_CURRENT_DESKTOP=awesome
+export XDG_CURRENT_DESKTOP=bspwm
 case "$1" in
     awesome) exec awesome ;;
     dwm) exec dwm ;;

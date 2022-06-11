@@ -3,13 +3,21 @@
 # file opener
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
-        text/*) nvim "$fx" ;;
-        image/*) sxiv "$fx" 2&>/dev/null &;;
-        application/x-iso9660-image) udisksctl loop-setup --file "$fx";;
+        text/*) nvim "$f" ;;
+        image/*) lf -remote "send $id multifile feh";;
+        application/x-iso9660-image) udisksctl loop-setup --file "$f";;
         application/x-executable) lf -remote "send $id echo 'not allowed'";;
+        video/*) lf -remote "send $id multifile mpv";;
+        application/epub+zip) zathura "$f" &>/dev/null &;;
         *) xdg-open "$f" &>/dev/null & ;;
     esac
 }}
+
+# multiple file handler
+cmd multifile &{{
+    IFS="";eval "$1 $(echo $fx | awk '{ printf "\"%s\" ", $0 }')"
+}}
+
 
 # create directory
 cmd mkdir ${{
@@ -127,4 +135,23 @@ cmd rclone ${{
         u|umount) fusermount -u /tmp/lfrclone && rmdir /tmp/lfrclone && notify-send "LF - Rclone" "Success Umount" ;;
         *) lf -remote "send $id echo example: rclone m remote:/path and rclone u"
     esac
+}}
+
+cmd du ${{
+    size=$(du -sh "$f" | cut -d " " -f 1)
+    lf -remote "send $id echo Size : $size"
+}}
+
+cmd dir2iso ${{
+    FILEPATH="$f"
+    if [ -f "$f" ]; then
+        FILEPATH=$(dirname "$f")
+    fi
+    LABEL=$(basename "$FILEPATH")
+
+    if ((${#LABEL} > 32)); then
+        LABEL=$(echo $LABEL | cut -c 1-32)
+    fi
+
+    genisoimage -f -J -joliet-long -r -allow-lowercase -allow-multidot -iso-level 3 -volid "$LABEL" -sysid LINUX -volset-size 1 -volset-seqno 1 -no-cache-inodes -full-iso9660-filenames -o "$FILEPATH.iso" "$FILEPATH"
 }}

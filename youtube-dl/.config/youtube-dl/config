@@ -7,7 +7,6 @@
 # Video Format Options
 #
 --format best[height<=720]
---merge-output-format mkv
 --youtube-skip-dash-manifest
 
 #
@@ -19,13 +18,13 @@
 #
 # Subtitle Options:
 #
-# --sub-lang en
-# --write-auto-sub
-# --sub-format ass
+--sub-lang en
+--write-auto-sub
+--sub-format ass
 
 #
 # Post-processing Options:
 #
 # --audio-format m4a
 # --audio-quality 0
-# --embed-subs
+--embed-subs

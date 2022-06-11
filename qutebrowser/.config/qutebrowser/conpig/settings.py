@@ -32,15 +32,15 @@ c.fileselect.multiple_files.command = [
     "LIBGL_ALWAYS_SOFTWARE=1",
     "kitty",
     "-e",
-    "ranger",
-    "--choosefiles={}",
+    "lf",
+    "-selection-path={}",
 ]
 c.fileselect.single_file.command = [
     "env",
     "LIBGL_ALWAYS_SOFTWARE=1",
     "kitty",
     "-e",
-    "ranger",
-    "--choosefile={}",
+    "lf",
+    "-selection-path={}",
 ]
 c.keyhint.radius = 0

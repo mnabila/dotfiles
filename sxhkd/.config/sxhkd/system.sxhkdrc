@@ -8,7 +8,7 @@ super + Escape
 
 # terminal emulator
 super + Return
-    env LIBGL_ALWAYS_SOFTWARE=1 kitty
+    env LIBGL_ALWAYS_SOFTWARE=1 alacritty
 
 # program launcher
 super + {_,shift +} d
@@ -16,15 +16,15 @@ super + {_,shift +} d
 
 # audio control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-    amixer set Master {5%+, 5%-, toggle}
+    pamixer  {--increase 5, --decrease 5, --toggle-mute}
 
 # brightness controls
 XF86MonBrightness{Up,Down}
     light -{A,U} 5
 
 # take screenshot
-{_, shift} + Print
-    {dmenu_screenshot, flameshot full -p "$HOME/Pictures/screenshot"}
+Print
+    dmenu_screenshot
 
 # cliboard manager
 super + {_, shift +} Menu
@@ -50,11 +50,11 @@ super + {ctrl,shift} + BackSpace
 
 # network manager
 # NetworkManager
-# super + {_, shift + } F8
-#     {dmenu_wifi -width 30 -lines 5, nm-connection-editor}
+super + {_, shift + } F8
+    {dmenu_wifi -width 30 -lines 5, nm-connection-editor}
 # connman
-super + F8
-    connman-gtk
+# super + F8
+#     connman-gtk
 
 # locksceen 
 XF86ScreenSaver

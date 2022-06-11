@@ -2,19 +2,19 @@
 
 map f fzf_select
 map D delete
-map x %dragon -a -x "$fx" 2&> /dev/null &
+map x &dragon -a -x "$fx"
 map R reload
 
 # removable disk
-map <f-12>u %udiskie-umount "$fx"
-map <f-12>d %udiskie-umount "$fx" --force --detach
-map <f-12>e %udiskie-umount "$fx" --force --eject
-map <f-12>l %udiskie-umount "$fx" --lock
+map <f-12>u &udiskie-umount "$fx"
+map <f-12>d &udiskie-umount "$fx" --force --detach
+map <f-12>e &udiskie-umount "$fx" --force --eject
+map <f-12>l &udiskie-umount "$fx" --lock
 
 # iso file
-map <f-11>m %udisksctl loop-setup --file "$f"
-map <f-11>u %dmenu_iso &
-map <f-11>c %dir2iso "$f"
+map <f-11>m &udisksctl loop-setup --file "$f"
+map <f-11>u &dmenu_iso
+map <f-11>c !dir2iso "$f"
 
 # Directory
 map gi cd /run/media/
@@ -31,3 +31,14 @@ map <a-h> %tmux select-pane -L
 map <a-j> %tmux select-pane -D
 map <a-k> %tmux select-pane -U
 map <a-l> %tmux select-pane -R
+
+# yank file name
+map Yn &echo -n $(basename "$f") | xclip -selection clipboard
+map Yp &echo -n "$f" | xclip -selection clipboard
+map Yd &echo -n $(dirname "$f") | xclip -selection clipboard
+
+# ratios
+map <a-0> set ratios 1:3:2
+map <a-1> :set nopreview; set ratios 1
+map <a-2> :set preview; set ratios 2:2
+map <a-3> :set preview; set ratios 1:2:3

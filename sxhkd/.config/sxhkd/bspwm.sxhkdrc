@@ -121,3 +121,8 @@ super + {Left,Down,Up,Right}
 # balance the split ratio
 super + {_,shift +} equal
     bspc node @/ {-E, -B}
+
+
+#
+# Gap
+#

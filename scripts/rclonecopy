@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# Copyright (c) 2021 M. Nabil Adani <nblid48[at]gmail[dot]com>
+#!/bin/bash
+# fzf_rclone
+# Copyright (c) 2022 M. Nabil Adani <nblid48[at]gmail[dot]com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,40 +20,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-
-import os
-import base64
-from urllib import parse
-import requests
-
-
-def noSafeLinku(query):
-    parsed = parse.parse_qsl(query)
-    result = dict(parsed)
-    url = result["url"]
-    try:
-        openInQb(base64.b64decode(url).decode("utf-8"))
-    except:
-        openInQb(url)
-
-
-def noOuo(qute_url):
-    html = requests.get(qute_url)
-    print(html.text)
-
-
-def openInQb(url):
-    fifo = open(os.getenv("QUTE_FIFO"), "w")
-    fifo.write(f"open -t {url}")
-    fifo.flush()
-
-
-qute_url = os.getenv("QUTE_URL")
-parsed = parse.urlsplit(qute_url)
-
-if "ouo.io" in parsed.netloc:
-    noOuo(qute_url)
-else:
-    print(type(parsed.query))
-    if parsed.query:
-        noSafeLinku(parsed.query)
+REMOTE="$1"
+FILENAME=$(echo $(rclone ls $REMOTE | fzf) | cut -d " " -f 2-)
+if [ -n "$FILENAME" ]; then
+	rclone copy --max-age 24h -P "$REMOTE$FILENAME" .
+fi

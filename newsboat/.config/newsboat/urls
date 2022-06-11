@@ -5,8 +5,9 @@ https://doronime.id/feed                                    ~Doronime:Post
 https://samehadaku.care/feed                                ~Samehadaku:Post
 https://lendrive.web.id/feed                                ~Lendrive:Post
 https://anitoki.com/feed                                    ~Anitoki:Post
-https://oploverz.bz/feed                                    ~Oploverz:Post
+https://oploverz.asia/feed                                    ~Oploverz:Post
 http://www.huntersekai.download/feeds/posts/default?alt=rss ~Huntersekai:Post
+https://www.okatsu.site/feeds/posts/default?alt=rss         ~Okatsu:Post
 
 # donghua
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-DONGHUA
@@ -33,4 +34,3 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCV0qA-eDDICsRR9rPcnG7tw "~Y
 https://www.youtube.com/feeds/videos.xml?channel_id=UC6MtKoJrZLNELkS96F99eIQ "~Youtube:Tech School"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCEXtPiqFrcdzFRKqwazI1NA "~Youtube:Golang Dojo"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC1dI4tO13ApuSX0QeX8pHng "~Youtube:Gadgetin"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Youtube:Brodie Robertson"

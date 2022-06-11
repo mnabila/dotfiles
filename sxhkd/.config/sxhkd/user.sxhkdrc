@@ -3,30 +3,22 @@
 #
 
 # dmenu collections
-super + {End,space,Delete,Home}
-    dmenu_{power,mager,kill,record} 
+super + {End,space,Delete,Print}
+    dmenu_{power,mager,kill,ffmpeg}
 super + F1
-    dmenu_sxhkd 
+    dmenu_sxhkd
 super + F2
     dmenu_systemd -lines 5
 super + F10
     dmenu_todo
-super + {q,u}
-    dmenu_{qutebrowser,aria2} 
+super + {q,a}
+    dmenu_{qutebrowser,aria2}
 super + shift + Tab
     rofi -show window
 
 
 # mpd control
 super + {_,shift + } Pause
-    {mpc toggle, dmenu_mpdmenu}
+    {mpc toggle, dmenu_mpc}
 XF86Audio{Next,Prev,Play,Stop}
     mpc {next, prev, toggle, stop}
-
-# viper4linux 
-super + ctrl + Pause
-    viper restart 
-
-# polybar 
-super + {_,shift +, ctrl +} n
-    {~/.config/polybar/scripts/systray, polybar-msg cmd toggle;bspc config top_padding 0;bspc config bottom_padding 0 , ~/.config/polybar/launch.sh toggle}

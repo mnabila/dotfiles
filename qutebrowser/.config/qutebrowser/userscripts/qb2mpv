@@ -27,7 +27,7 @@ function youtube() {
     label=$(echo $OPTIONS | jq -r ".[]" | $DMENU -lines 6 -p "Youtube" -mesg "Kualitas Video")
     if [ -n "$label" ]; then
         label=$(echo $label | sed 's/p//')
-        mpv --ytdl-raw-options="yes-playlist=,geo-bypass=" --ytdl-format="bestvideo[height<=?$label]+bestaudio/best" "$QUTE_URL"
+        mpv --ytdl-raw-options="yes-playlist=,geo-bypass=,sub-lang=en" --ytdl-format="bestvideo[height<=?$label]+bestaudio/best" "$QUTE_URL"
     fi
 }
 

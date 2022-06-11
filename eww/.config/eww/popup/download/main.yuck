@@ -1,5 +1,5 @@
-(defwidget popup-network []
-  (box :orientation "v" :space-evenly false :spacing 5 :class "popup-network"
+(defwidget popup-download []
+  (box :orientation "v" :space-evenly false :spacing 5 :class "popup-download"
     (label :class "ssid" :text ssid)
     (box :orientation "h" :space-evenly false :halign "start" :class "row"
       (label :class "label" :text "" :width 35 :height 35)
@@ -26,24 +26,8 @@
   )
 )
 
+; (defpoll check_server :interval 2)
 
-(defpoll network-gateway :interval "12h"
-  "ip route show | grep default | cut -d \" \" -f 3")
-
-(defpoll network-dns :interval "12h"
-  "cat /etc/resolv.conf | grep search | cut -d \" \" -f 2")
-
-(defpoll network-ip :interval "12h"
-  "ip addr show | grep wlan0 | grep inet | cut -d \" \" -f 6")
-
-(defpoll network-speed-up :interval "1s"
-  "~/.config/eww/popup/network/scripts/speed up")
-
-(defpoll network-speed-down :interval "1s"
-  "~/.config/eww/popup/network/scripts/speed down")
-
-(defpoll network-usage :interval "1h"
-  "vnstat -i wlan0 -d 1 --oneline | cut -d \";\" -f6")
 
 (defwindow popup-network
   :geometry (geometry :x "-220px"

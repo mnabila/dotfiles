@@ -6,15 +6,21 @@ function bsprun() {
     fi
 }
 
-sxhkdrcgen
 bsprun xautolock -time 15 -detectsleep -locker "gpg-connect-agent reloadagent /bye;slimlock"
 bsprun /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 bsprun xfce4-power-manager
-bsprun light -S 30
 bsprun udiskie
-bsprun jgmenu
-bsprun xcompmgr
-bsprun conky -c ~/.config/conky/todolist.conkyrc
 bsprun clipmenud
-~/.config/polybar/launch.sh start
-feh --bg-scale ~/Pictures/diy/bspwm.png
+bsprun eww daemon
+# bsprun picom
+
+# systray menurun
+bsprun stalonetray --transparent --window-type desktop --geometry 1x10+1330+10 --grow-gravity NW
+# systray mendatar kekiri
+# bsprun stalonetray --transparent --window-type desktop --geometry 10x1-10+10 --grow-gravity E --icon-gravity NE
+
+sxhkdrcgen &
+feh --bg-scale ~/Pictures/diy/mnabila.png &
+light -S 30 &
+eww open bar-bottom &
+

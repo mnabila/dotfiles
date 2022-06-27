@@ -8,13 +8,8 @@
         (revealer :transition "slideleft" :reveal rtime :duration "250ms"
           (box :class "widget date" :orientation "h" :halign "center" :space-evenly false
             (label :class "icon" :text " ")
-            (label :class "value" :text date)
-          )
-        )
-      )
-    )
-  )
-)
+            (label :class "value" :text date)))))))
+
 
 (defpoll time :interval "10s"
   "date '+%H:%M'")

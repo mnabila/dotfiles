@@ -12,21 +12,19 @@
   (box :orientation "h" :class "bottom"
     (box :orientation "h" :halign "start" :space-evenly false
       (workspaces)
-      (music)
-    )
-    (box :orientation "h" :halign "end" :space-evenly false
-      (network)
-      (cpu)
-      (memory)
-      (temperature)
-      (volume)
-      (brightness)
-      (time)
-    )
-  )
-)
+      (music))
 
-(defwindow bar-bottom
+    (box :orientation "h" :halign "end" :space-evenly false
+     (network)
+     (cpu)
+     (memory)
+     (temperature)
+     (volume)
+     (brightness)
+     (time))))
+
+
+(defwindow bottombar
   :monitor 0
   :windowtype "dock"
   :geometry (geometry :x "0%"
@@ -34,6 +32,6 @@
                       :width "100%"
                       :height "25px"
                       :anchor "bottom center")
-  :reserve (struts :side "bottom" :distance "25px")
-  (bottom)
-)
+  :reserve (struts :side "bottom" :distance "20px")
+  (bottom))
+

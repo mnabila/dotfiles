@@ -1,53 +1,57 @@
 #!/bin/sh
 bspc subscribe node_focus node_remove desktop_focus | while read -r _; do
+	# get all monitors
+	monitors=$(bspc query -M)
 
-    # get all monitors
-    monitors=$( bspc query -M )
+    # save eww widget in here
+	result=""
 
-    for monitor in $monitors; do
-        index=$((index + 1))
+	for monitor in $monitors; do
+		# get last focused desktop on given monitor
+		last_focused_desktop=$(bspc query -D -m "$monitor" -d .active)
 
-        # get last focused desktop on given monitor
-        last_focused_desktop=$( bspc query -D -m "$monitor" -d .active )
-        echo $last_focused_desktop
-        echo "ada"
+		# get windows from last focused desktop on given monitor
+		winids_on_desktop=$(bspc query -N -n .window -m "$monitor" -d "$last_focused_desktop")
 
-        # get windows from last focused desktop on given monitor
-        winids_on_desktop=$( bspc query -N -n .window -m "$monitor" -d "$last_focused_desktop" )
+		# get number of windows on desktop
+		number_of_windows=$(printf "$winids_on_desktop" | tr '\n' ' ' | wc -w)
 
-        # get number of windows on desktop
-        number_of_windows=$( printf "$winids_on_desktop" | tr '\n' ' ' | wc -w  )
+		# get a list of all windows
+		winlist=$(wmctrl -l -x)
 
-        # get a list of all windows
-        winlist=$( wmctrl -l -x )
+		for window_id in $winids_on_desktop; do
+			# replace all spaces and tabs with single spaces for easier cutting
+			window=$(echo "$winlist" | grep -i "$window_id" | tr -s '[:blank:]')
+			# get window name
+			window_name=$(echo "$window" | cut -d " " -f 5-)
+			# longer window titles if there is only one window
+			[[ "$number_of_windows" == "1" ]] && char_cut="40" || char_cut="20"
+			# cut the window name
+			window_name_short=$(echo "$window_name" | cut -c1-"$char_cut")
 
-        for window_id in $winids_on_desktop; do
-            # replace all spaces and tabs with single spaces for easier cutting
-            window=$( echo "$winlist" | grep -i "$window_id" | tr -s '[:blank:]' )
-            # get window name
-            window_name=$( echo "$window" | cut -d " " -f 5- )
-            # longer window titles if there is only one window
-            [[ "$number_of_windows" == "1" ]] && char_cut="40" || char_cut="20"
-            # cut the window name
-            window_name_short=$( echo "$window_name" | cut -c1-"$char_cut" )
+			# get window class and match after a dot to get app name
+			window_class=$(echo "$window" | cut -d " " -f 3 | sed 's/.*\.//')
 
-            # get window class and match after a dot to get app name
-            window_class=$( echo "$window" | cut -d " " -f 3 | sed 's/.*\.//')
+			# if window id matched with list == not empty
+			if [[ -n "$window_name" ]]; then
+				# trim window name
+				window_name=$(echo "$window_name_short" | sed -e 's/^[[:space:]]*//')
 
-            # if window id matched with list == not empty
-            if [[ -n "$window_name" ]]; then
-                # trim window name
-                window_name=$( echo "$window_name_short" | sed -e 's/^[[:space:]]*//' )
+				# display instance name if there is no window title
+				if [[ "$window_name" == "N/A" ]]; then
+					window_name=$(echo "$window" | cut -d " " -f 3 | cut -d "." -f 2)
+				fi
 
-                # display instance name if there is no window title
-                if [[ "$window_name" == "N/A" ]]; then
-                    window_name=$(echo "$window" | cut -d " " -f 3 | cut -d "." -f 2 )
-                fi
-                echo $window_name
-            fi
-        done
-    done
-
-    unset index
+				# apply formatting
+				if [[ $(bspc query -N -n focused) == "$window_id" ]]; then
+					result="$result (eventbox :cursor \"pointer\" (button :class \"active\" :onclick \"bspc node -f $window_id\" \"$window_name\"))"
+				else
+					# result="$result (eventbox :cursor \"pointer\" :vexpand true (button :class \"inactive\" \"$window_name\"))"
+					result="$result (eventbox :cursor \"pointer\" (button :class \"inactive\" :onclick \"bspc node -f $window_id\" \"$window_name\" ))"
+				fi
+			fi
+		done
+	done
+	echo "(box :class \"widget tasklist\" $result)"
 
 done

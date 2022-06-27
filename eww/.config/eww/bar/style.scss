@@ -85,9 +85,17 @@
     margin-right: 10px;
   }
 }
+
 .tasklist {
-  button:hover,
+  margin-left: 6px;
+  margin-right: 6px;
+  button {
+    color: $foreground;
+    min-height: 21px;
+  }
   .active {
-    background: red;
+    background: $color3;
+    color: $background;
+    font-weight: bold;
   }
 }

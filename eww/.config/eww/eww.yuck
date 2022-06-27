@@ -1,4 +1,5 @@
 (include "./bar/bottom.yuck")
+(include "./bar/top.yuck")
 (include "./popup/network/main.yuck")
 (include "./popup/calendar/main.yuck")
 (include "./popup/music/main.yuck")

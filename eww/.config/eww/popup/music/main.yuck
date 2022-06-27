@@ -8,14 +8,10 @@
         (box :class "control" :orientation "h" :height 45
           (button :class "btn prev" :tooltip "Previouse" :onclick "mpc prev" "")
           (button :class "btn repeat" :tooltip {mpc-repeat == "on" ? "Repeat ON" : "Repeat OFF"} :onclick {mpc-repeat == "on" ? "mpc repeat off" : "mpc repeat on"} "")
-          (button :class "btn toggle" :tooltip {mpc-state == "playing" ? "Pause" : "Play" } :onclick "mpc toggle" {mpc-state == "playing" ? "" : "" })
-          (button :class "btn random" :tooltip {mpc-random == "on" ? "Random ON" : "Random OFF"} :onclick {mpc-random == "on" ? "mpc random off" : "mpc random on"} "" )
-          (button :class "btn next" :tooltip "Next" :onclick "mpc next" "")
-        )
-      )
-    )
-  )
-)
+          (button :class "btn toggle" :tooltip {mpc-state == "playing" ? "Pause" : "Play" } :onclick "mpc toggle" {mpc-state == "playing" ? "" : ""})
+          (button :class "btn random" :tooltip {mpc-random == "on" ? "Random ON" : "Random OFF"} :onclick {mpc-random == "on" ? "mpc random off" : "mpc random on"} "")
+          (button :class "btn next" :tooltip "Next" :onclick "mpc next" ""))))))
+
 
 (defpoll mpc-title :interval "2s"
   "mpc -f '[%title%]|[%file%]' current")
@@ -40,5 +36,5 @@
 
 
 (defwindow popup-music :monitor 0 :windowtype "dock" :wm-ignore false :geometry (geometry :x "150px" :y "-30px" :width "150px" :height "200px" :anchor "bottom left")
-  (popup-music)
-)
+  (popup-music))
+

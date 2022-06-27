@@ -3,14 +3,11 @@
 (defwidget volume []
   (eventbox :onhover "eww update rvolume=true" :onhoverlost "eww update rvolume=false"
     (box :class "widget volume" :orientation "h" :halign "center" :space-evenly false
-      (label :class "icon" :text {volume_mute ? "" : "" })
+      (label :class "icon" :text {volume_mute ? "" : ""})
       (label :class "value" :text "${get-volume}%")
       (revealer :transition "slideleft" :reveal rvolume :duration "250ms"
-        (scale :class "slider" :min 0 :max 100 :value get-volume :onchange "amixer -D pulse sset Master {}%" :tooltip "Volume ${get-volume}%")
-      )
-    )
-  )
-)
+        (scale :class "slider" :min 0 :max 100 :value get-volume :onchange "amixer -D pulse sset Master {}%" :tooltip "Volume ${get-volume}%")))))
+
 
 (defpoll get-volume :interval "1s"
   "pamixer --get-volume; true")

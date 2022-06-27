@@ -3,28 +3,26 @@
     (label :class "ssid" :text ssid)
     (box :orientation "h" :space-evenly false :halign "start" :class "row"
       (label :class "label" :text "" :width 35 :height 35)
-      (label :class "value" :text network-ip)
-    )
+      (label :class "value" :text network-ip))
+    
     (box :orientation "h" :space-evenly false :halign "start" :class "row"
       (label :class "label" :text "" :width 35 :height 35)
-      (label :class "value" :text network-gateway)
-    )
+      (label :class "value" :text network-gateway))
+    
     (box :orientation "h" :space-evenly false :halign "start" :class "row"
       (label :class "label" :text "" :width 35 :height 35)
-      (label :class "value" :text network-dns :hexpand false)
-    )
+      (label :class "value" :text network-dns :hexpand false))
+    
     (box :orientation "h" :space-evenly false :halign "start" :class "row"
       (label :class "label" :text "" :width 35 :height 35)
-      (label :class "value" :text network-usage :hexpand false)
-    )
+      (label :class "value" :text network-usage :hexpand false))
+    
     (box :orientation "h" :space-evenly false :class "row speed"
       (label :class "label down" :text "")
       (label :class "value speed-down" :text network-speed-down)
       (label :class "label up" :text "")
-      (label :class "value" :text network-speed-up)
-    )
-  )
-)
+      (label :class "value" :text network-speed-up))))
+
 
 ; (defpoll check_server :interval 2)
 
@@ -35,5 +33,5 @@
                       :width "200px"
                       :height "100px"
                       :anchor "bottom right")
-  (popup-network)
-)
+  (popup-network))
+

@@ -17,13 +17,13 @@ if [ -d /etc/X11/xinit/xinitrc.d  ]; then
 fi
 
 # Load .xprofile
-[ -f ~/.profile ] && . ~/.profile
+[ -f ~/.xprofile ] && . ~/.xprofile
 
 # set cursor
 xsetroot -cursor_name left_ptr
 
 # Untuk SLiM Session
-export XDG_CURRENT_DESKTOP=bspwm
+export XDG_CURRENT_DESKTOP=awesome
 case "$1" in
     awesome) exec awesome ;;
     dwm) exec dwm ;;

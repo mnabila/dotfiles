@@ -20,18 +20,6 @@ map <f-11>c !dir2iso "$f"
 map gi cd /run/media/
 map gm cd /mnt/
 
-# split window
-map <a-H> %tmux split -hb lf
-map <a-J> %tmux split lf
-map <a-K> %tmux split -vb lf
-map <a-L> %tmux split -h lf
-
-# select window
-map <a-h> %tmux select-pane -L
-map <a-j> %tmux select-pane -D
-map <a-k> %tmux select-pane -U
-map <a-l> %tmux select-pane -R
-
 # yank file name
 map Yn &echo -n $(basename "$f") | xclip -selection clipboard
 map Yp &echo -n "$f" | xclip -selection clipboard

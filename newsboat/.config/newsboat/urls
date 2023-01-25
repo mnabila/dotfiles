@@ -4,10 +4,9 @@ https://www.livechart.me/feeds/headlines                    ~Livechart:News
 https://doronime.id/feed                                    ~Doronime:Post
 https://samehadaku.care/feed                                ~Samehadaku:Post
 https://lendrive.web.id/feed                                ~Lendrive:Post
-https://anitoki.com/feed                                    ~Anitoki:Post
-https://oploverz.asia/feed                                    ~Oploverz:Post
+https://oploverz.asia/feed                                  ~Oploverz:Post
 http://www.huntersekai.download/feeds/posts/default?alt=rss ~Huntersekai:Post
-https://www.okatsu.site/feeds/posts/default?alt=rss         ~Okatsu:Post
+https://animekompi.net/feed/                                ~Animekompi:Post
 
 # donghua
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-DONGHUA
@@ -20,6 +19,7 @@ https://github.com/JohnnyMorganz/StyLua/releases.atom     ~Github:StyLua:release
 https://github.com/telegramdesktop/tdesktop/releases.atom ~Github:telegramdesktop:releases
 https://github.com/kiwibrowser/src/releases.atom          ~Github:kiwibrowser:releases
 https://github.com/qutebrowser/qutebrowser/releases.atom  ~Github:qutebrowser:releases
+https://github.com/neovim/neovim/releases.atom  ~Github:neovim:releases
 
 # programming
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-CODE

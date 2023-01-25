@@ -5,20 +5,20 @@
 # auto-reload yes
 datetime-format "%Y/%m/%d, %R"
 external-url-viewer "urlview"
-browser "/usr/bin/qutebrowser"
+browser "/usr/bin/xdg-open"
 max-items 200
 
 #
 # Colorscheme
 #
-color background        default default
-color listnormal        color7  default
-color listnormal_unread default default bold
-color listfocus         default  yellow
-color listfocus_unread  default  yellow  bold
-color info              yellow  default
-color article           default default
-
+color  background         default  default
+color  listnormal         color7   default
+color  listnormal_unread  default  default  bold
+color  listfocus          color0   color3
+color  listfocus_unread   color0   color3   bold
+color  info               default  default
+color  article            default  default
+color  title              color7   default  bold
 #
 # Hightlight
 #

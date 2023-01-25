@@ -23,5 +23,5 @@ sxhkdrcgen &
 feh --bg-scale ~/Pictures/diy/mnabila.png &
 light -S 30 &
 eww open bottombar &
-eww open topbar &
+# eww open topbar &
 

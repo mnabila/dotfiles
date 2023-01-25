@@ -1,4 +1,4 @@
-@import "colors/gruvbox"
+@import "colors/ayu_dark"
 
 window {
     background-color: @color0;

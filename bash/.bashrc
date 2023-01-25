@@ -1,0 +1,37 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+#
+# FZF
+#
+[ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
+[ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
+
+#
+# Prompt
+#
+eval "$(starship init bash)"
+
+#
+# Alias
+#
+alias ls="ls --color=auto"
+alias aria2d="aria2c --enable-rpc --auto-file-renaming=false"
+alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
+
+#
+# function
+#
+nvimrc() {
+	cd ~/Dotfiles
+	git subtree push --prefix=neovim/.config/nvim subtree-nvimrc master:master
+	cd ~/.config/nvim
+}
+
+pmu() {
+	sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist $@
+}

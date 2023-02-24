@@ -17,6 +17,11 @@
 eval "$(starship init bash)"
 
 #
+# ENV
+#
+export HISTSIZE=5000
+
+#
 # Alias
 #
 alias ls="ls --color=auto"

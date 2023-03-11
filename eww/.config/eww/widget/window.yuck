@@ -1,0 +1,6 @@
+(defwidget window [?icon]
+  (box :class "widget window" :orientation "horizontal" :halign "start" :space-evenly false :visible {window_listen != ""}
+    (label :class "icon" :text icon)
+    (label :class "value" :text window_listen)))
+
+(deflisten window_listen "scripts/window")

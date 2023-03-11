@@ -5,20 +5,12 @@
 # dmenu collections
 super + {End,space,Delete,Print}
     dmenu_{power,mager,kill,ffmpeg}
-super + F1
-    dmenu_sxhkd
-super + F2
-    dmenu_systemd -lines 5
-super + F10
-    dmenu_todo
-super + {q,a}
-    dmenu_{qutebrowser,aria2}
-super + shift + Tab
+super + Home
     rofi -show window
 
 
-# mpd control
-super + {_,shift + } Pause
-    {mpc toggle, dmenu_mpc}
+# mpris control
+super + Pause
+    playerctl play-pause
 XF86Audio{Next,Prev,Play,Stop}
-    mpc {next, prev, toggle, stop}
+    playerctl {next, previous, play-pause, pause}

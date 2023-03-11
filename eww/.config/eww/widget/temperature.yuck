@@ -1,0 +1,4 @@
+(defwidget temperature [?icon]
+  (box :class "widget temperature" :orientation "horizontal" :halign "center" :space-evenly true
+    (label :class "icon" :text icon)
+    (label :class "value" :text "${EWW_TEMPS.ACPITZ_TEMP1}")))

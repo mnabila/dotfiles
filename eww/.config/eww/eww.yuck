@@ -1,5 +1,13 @@
-(include "./bar/bottom.yuck")
-(include "./bar/top.yuck")
-(include "./popup/network/main.yuck")
-(include "./popup/calendar/main.yuck")
-(include "./popup/music/main.yuck")
+(include "bar/top.yuck")
+
+(defwindow topbar
+  :monitor 0
+  :windowtype "desktop"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "25px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "15px")
+  (top))
+

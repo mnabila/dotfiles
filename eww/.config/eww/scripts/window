@@ -1,0 +1,10 @@
+#!/bin/env bash
+window() {
+    title=$(xdotool getwindowfocus getwindowclassname)
+    echo $title
+}
+
+window
+bspc subscribe node_focus desktop | while read -r _; do
+	window
+done

@@ -1,18 +1,26 @@
-(include "bar/widget/tasklist.yuck")
+(include "widget/datetime.yuck")
+(include "widget/brightness.yuck")
+(include "widget/temperature.yuck")
+(include "widget/memory.yuck")
+(include "widget/cpu.yuck")
+(include "widget/battery.yuck")
+(include "widget/volume.yuck")
+(include "widget/workspace.yuck")
+(include "widget/window.yuck")
 
 (defwidget top []
-  (box :orientation "h" :class "top"
-    (tasklist)))
-
-
-(defwindow topbar
-  :monitor 0
-  :windowtype "dock"
-  :geometry (geometry :x "0%"
-                      :y "0%"
-                      :width "100%"
-                      :height "22px"
-                      :anchor "top center")
-  :reserve (struts :side "top" :distance "15px")
-  (top))
+  (centerbox :orientation "horizontal" :class "topbar"
+      (box :orientation "horizontal" :halign "start" :space-evenly false
+        (workspace)
+        (window :icon ""))
+      (box :orientation "horizontal" :halign "center" :space-evenly false
+        (datetime))
+      (box :orientation "horizontal" :halign "end" :space-evenly true
+        (temperature :icon "")
+        (memory :icon "")
+        (cpu :icon "")
+        (brightness :icon "")
+        (volume :icon "")
+        (battery :icon "")
+        )))
 

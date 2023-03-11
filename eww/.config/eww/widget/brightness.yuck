@@ -1,0 +1,8 @@
+(defwidget brightness [?icon]
+      (box :class "widget brightness" :orientation "horizontal" :halign "center" :space-evenly true
+        (label :class "icon" :text icon)
+        (label :class "value" :text "${get-brightness}")))
+
+(defpoll get-brightness :interval "1s"
+  "xbacklight -get")
+

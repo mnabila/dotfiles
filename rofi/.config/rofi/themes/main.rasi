@@ -1,8 +1,8 @@
-@import "colors/ayu_dark"
+@import "colors/gruvbox"
 
 window {
     background-color: @color0;
-    border-color:     @color3;
+    border-color:     @color15;
     border:           2;
     padding:          4px;
     margin:           0;
@@ -25,7 +25,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @color3;
+    background-color: @color15;
     padding:          3px 6px;
     text-color:       @color0;
     margin:           0px;
@@ -72,7 +72,7 @@ element-text {
     text-color:       @color15;
 }
 element-text selected {
-    background-color: @color3;
+    background-color: @color15;
     text-color:       @color0;
 
 }
@@ -92,7 +92,7 @@ button {
 }
 
 button.selected {
-    background-color: @color3;
+    background-color: @color15;
     text-color:       @color0;
 }
 

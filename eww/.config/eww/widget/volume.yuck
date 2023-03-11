@@ -1,0 +1,7 @@
+(defwidget volume [?icon]
+      (box :class "widget volume" :orientation "horizontal" :halign "center" :space-evenly true
+        (label :class "icon" :text icon)
+        (label :class "value" :text get-volume)))
+
+(defpoll get-volume :interval "2s"
+  "pamixer --get-volume")

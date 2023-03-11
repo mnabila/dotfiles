@@ -1,5 +1,0 @@
-(defwidget tasklist []
-  (literal :content tasklist_subscribe))
-
-
-(deflisten tasklist_subscribe "sh ~/.config/eww/bar/scripts/tasklist")

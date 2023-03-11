@@ -6,22 +6,17 @@ function bsprun() {
     fi
 }
 
-bsprun xautolock -time 15 -detectsleep -locker "gpg-connect-agent reloadagent /bye;slimlock"
 bsprun /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
 bsprun xfce4-power-manager
-bsprun udiskie
-bsprun clipmenud
-bsprun eww daemon
 # bsprun picom
+bsprun dunst
+bsprun nm-applet
+bsprun greenclip daemon
+bsprun flameshot
+bsprun eww open topbar
 
-# systray menurun
-bsprun stalonetray --transparent --window-type desktop --geometry 22x10+1330+30 --grow-gravity NW
-# systray mendatar kekiri
-# bsprun stalonetray --transparent --window-type desktop --geometry 10x1-10+10 --grow-gravity E --icon-gravity NE
+# systray
+bsprun stalonetray --background "#282828" --window-type dock --icon-size 22 --geometry 1x1+1285+2 --grow-gravity SE --icon-gravity SE
 
 sxhkdrcgen &
-feh --bg-scale ~/Pictures/diy/mnabila.png &
-light -S 30 &
-eww open bottombar &
-# eww open topbar &
-
+feh --bg-scale /home/saya/Pictures/wallpaper/wallhaven-1pqq1w.jpg

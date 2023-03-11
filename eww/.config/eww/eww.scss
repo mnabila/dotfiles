@@ -2,13 +2,49 @@
   all: unset;
 }
 
-// colors
 @import "./colors/gruvbox.scss";
 
-//bar styleshet
-@import "./bar/style.scss";
+.icon {
+  font-size: 15px;
+  font-family: "Font Awesome 6 Free Solid";
+  margin-right: 5px;
+  color: $hl;
+  margin-bottom: 3px;
+}
 
-// popup
-@import "./popup/network/style.scss";
-@import "./popup/calendar/style.scss";
-@import "./popup/music/style.scss";
+.value {
+  font-family: Iosevka;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.widget {
+  background-color: $bg;
+  color: $fg;
+}
+
+.topbar {
+  background-color: $bg;
+  padding: 4px;
+}
+
+.workspace {
+  button {
+    font-family: "Font Awesome 6 Free Solid";
+    margin: 0 5px;
+    background: $bg;
+    color: $disable;
+  }
+  .active,
+  button:hover {
+    color: $fg;
+  }
+
+  .occupied {
+    background: $hl;
+  }
+}
+.window {
+  margin: 0px 10px;
+}

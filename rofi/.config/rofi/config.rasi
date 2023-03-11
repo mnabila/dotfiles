@@ -4,9 +4,9 @@ configuration {
     location: 0;
 	fixed-num-lines: true;
 	window-match-fields: "name";
-    display-run: "  Command";
-    display-drun: "  Apps";
-    display-filebrowser: "  File";
+    display-run: "Command";
+    display-drun: "Apps";
+    display-filebrowser: "File";
     sidebar-mode: false;
     timeout {
         action: "kb-cancel";

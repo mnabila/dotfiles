@@ -8,7 +8,7 @@ super + Escape
 
 # terminal emulator
 super + Return
-    env LIBGL_ALWAYS_SOFTWARE=1 alacritty
+    alacritty
 
 # program launcher
 super + {_,shift +} d
@@ -20,19 +20,19 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 
 # brightness controls
 XF86MonBrightness{Up,Down}
-    light -{A,U} 5
+    xbacklight -{inc,dec} 5
 
 # take screenshot
 Print
-    dmenu_screenshot
+    flameshot gui
 
 # cliboard manager
-super + {_, shift +} Menu
-    {clipmenu -p "Clip", notify-send "Clipmenu" "Clipboard Empty"; clipdel -d ".*"; pkill -9 clipmenud; pkill -9 clipnotify; clipmenud}
+super + {_, shift + } x
+    {rofi -modi "clipboard:greenclip print" -show clipboard, greenclip clear}
 
 # multi monitor setup
-super + {_, shift +} F5
-    {dmenu_monitor -lines 5, arandr}
+super + F5
+    arandr
 
 # sleep
 XF86Sleep
@@ -44,18 +44,14 @@ super + {_,shift +} F9
 
 # passman
 super + BackSpace
-    notify-send -i ~/Dotfiles/icons/gruvbox/lock.png "Pass Man" "Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)"
+    notify-send "Pass Man" "Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)"
 super + {ctrl,shift} + BackSpace
     {pwclip, dmenu_pass -p "Pass Man"}
 
 # network manager
-# NetworkManager
 super + {_, shift + } F8
     {dmenu_wifi -width 30 -lines 5, nm-connection-editor}
-# connman
-# super + F8
-#     connman-gtk
 
 # locksceen 
 XF86ScreenSaver
-    slimlock
+    dm-tool lock

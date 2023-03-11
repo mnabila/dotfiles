@@ -1,0 +1,24 @@
+#!/bin/env sh
+workspaces(){
+	desktops=$(bspc query -D --names)
+    focused=$(bspc query -D -d focused --names)
+	occupied=$(bspc query -D -d .occupied --names)
+    icon=""
+    
+    btn=""
+    for d in $desktops; do
+        if [ $d = $focused ]; then
+            btn="$btn (eventbox :cursor \"pointer\" :tooltip \"Workspace $d\" (button :class \"active\" :onclick \"bspc desktop -f $d\" \"$icon\"))"
+            continue
+        fi
+		btn="$btn (eventbox :cursor \"pointer\" :tooltip \"Workspace $d\" (button :onclick \"bspc desktop -f $d\" \"$icon\"))"
+    done
+
+    echo "(box :class \"widget workspace\" :orientation \"horizontal\" :halign \"center\" :space-evenly true $btn)"
+}
+
+workspaces
+bspc subscribe desktop node_transfer | while read -r _; do
+	workspaces
+done
+

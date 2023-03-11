@@ -1,0 +1,5 @@
+(defwidget workspace []
+    (literal :content workspaces_listen))
+    
+(deflisten workspaces_listen "scripts/workspace")
+

@@ -1,4 +1,0 @@
-(defwidget workspaces []
-    (literal :content workspaces_listen))
-
-(deflisten workspaces_listen "sh ~/.config/eww/bar/scripts/workspace")

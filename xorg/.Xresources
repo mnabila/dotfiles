@@ -1,0 +1,2 @@
+#include ".Xresources.d/colors/gruvbox-dark"
+#include ".Xresources.d/cursor"

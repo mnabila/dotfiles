@@ -21,6 +21,5 @@
         (cpu :icon "")
         (brightness :icon "")
         (volume :icon "")
-        (battery :icon "")
-        )))
+        (battery :icon ""))))
 

@@ -1,6 +1,5 @@
-(defvar rtime false)
 (defwidget datetime [?icon]
-    (button :onclick "notify-send hello " 
+    (button :onclick "sxhkdrcgen" 
       (box :class "widget datetime" :orientation "horizontal" :halign "center" :space-evenly false
         (label :class "icon" :text icon)
         (label :class "value" :text date))))

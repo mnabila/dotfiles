@@ -1,0 +1,20 @@
+(defwidget notification []
+(box :class "notification" :orientation "vertical" :valign "start" :height 380 :space-evenly false
+    (box :class "header" :orientation "horizontal" :halign "fill" :space-evenly true
+        (label :class "label" :halign "start" :text "Notification")
+        (button :class "action" :halign "end" :onclick "dunstctl history-clear" ""  ))
+    (box :class "message-empty" :orientation "vertical" :valign "fill" :space-evenly true :visible {arraylength(get-notification) <= 0 ? true : false}
+        (label :class "icon" :halign "center" :text "")
+        (label :class "label" :halign "center" :text "Notification Empty"))
+    (scroll :hscroll false :vexpand true :visible {arraylength(get-notification) >= 1 ? true : false}
+        (box :class "body" :orientation "vertical" :valign "start" :space-evenly true :spacing 10
+            ( for message in get-notification
+                (button :onrightclick "dunstctl history-rm ${message.id.data}"
+                    (box :class "message border" :orientation "horizontal" :halign "fill" :space-evenly false
+                        (label :class "icon" :text "")
+                        (box :orientation "vertical" :halign "start" :space-evenly false
+                            (label :xalign "0.01" :class "title" :text "${message.summary.data}")
+                            (label :xalign "0.02" :class "description" :wrap true :markup "${message.body.data}" )))))))))
+
+(defpoll get-notification :interval "2s" 
+    "dunstctl history | jq '.data[]'")

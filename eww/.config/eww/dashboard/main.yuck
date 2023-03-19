@@ -1,0 +1,16 @@
+(include "dashboard/widget/session.yuck")
+(include "dashboard/widget/clock.yuck")
+(include "dashboard/widget/calendar.yuck")
+(include "dashboard/widget/notification.yuck")
+
+(defwidget dashboard []
+(eventbox :onhoverlost "eww close dashboard"
+    (box :orientation "horizontal" :halign "fill" :space-evenly true :class "dashboard" 
+        (box :orientation "vertical" :valign "fill" :space-evenly true
+            (notification))
+        (box :orientation "vertical" :valign "fill" :space-evenly false :spacing 20
+            (box :orientation "vertical" :valign "start" :space-evenly false :spacing 10
+                (clock)
+                (cal))
+            (box :orientation "vertical" :valign "end" :space-evenly false 
+                (session))))))

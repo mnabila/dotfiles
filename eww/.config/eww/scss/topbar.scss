@@ -1,0 +1,44 @@
+.topbar {
+  background-color: $bg;
+  padding: 4px;
+
+  .icon {
+    font-size: 15px;
+    font-family: "Font Awesome 6 Free Solid";
+    margin-right: 5px;
+    color: $hl;
+  }
+
+  .value {
+    font-family: Iosevka;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .widget {
+    background-color: $bg;
+    color: $fg;
+  }
+
+  .workspace {
+    button {
+      font-family: "Font Awesome 6 Free Solid";
+      margin: 2px 5px;
+    }
+    .empty {
+      background: $bg;
+      color: $gray;
+    }
+    .focused,
+    button:hover {
+      color: $fg;
+    }
+    .occupied {
+      color: $hl;
+    }
+  }
+  .window {
+    margin: 0px 10px;
+  }
+}
+

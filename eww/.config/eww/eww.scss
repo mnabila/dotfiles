@@ -2,50 +2,6 @@
   all: unset;
 }
 
-@import "./colors/gruvbox.scss";
-
-.icon {
-  font-size: 15px;
-  font-family: "Font Awesome 6 Free Solid";
-  margin-right: 5px;
-  color: $hl;
-  margin-bottom: 3px;
-}
-
-.value {
-  font-family: Iosevka;
-  font-weight: bold;
-  font-size: 12px;
-  margin-bottom: 2px;
-}
-
-.widget {
-  background-color: $bg;
-  color: $fg;
-}
-
-.topbar {
-  background-color: $bg;
-  padding: 4px;
-}
-
-.workspace {
-  button {
-    font-family: "Font Awesome 6 Free Solid";
-    margin: 2px 5px;
-  }
-  .empty {
-    background: $bg;
-    color: $disable;
-  }
-  .focused,
-  button:hover {
-    color: $fg;
-  }
-  .occupied {
-    color: $hl;
-  }
-}
-.window {
-  margin: 0px 10px;
-}
+@import "./scss/gruvbox.scss";
+@import "./scss/topbar.scss";
+@import "./scss/dashboard.scss";

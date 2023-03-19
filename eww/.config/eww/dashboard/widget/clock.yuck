@@ -1,0 +1,13 @@
+(defwidget clock []
+(box :class "clock" :orientation "vertical" :valign "start" :space-evenly true
+    (box :orientation "horizontal" :halign "start" :space-evenly false
+        (label :class "icon" :text "")
+        (box :orientation "vertical" :valign "start" :space-evenly true
+            (label :xalign "0.02" :text get-day)
+            (label :xalign "0.02" :text get-date)))))
+
+(defpoll get-day :interval "10s"
+    "LC_TIME=id_ID.UTF-8 date '+%A'")
+
+(defpoll get-date :interval "10s"
+    "LC_TIME=id_ID.UTF-8 date '+%d %B %Y'")

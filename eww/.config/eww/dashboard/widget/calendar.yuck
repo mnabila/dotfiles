@@ -1,0 +1,7 @@
+(defwidget cal []
+      (box :class "container"
+        (calendar :class "cal" :day get-today)))
+
+(defpoll get-today :interval "1h"
+  "date '+%d'")
+

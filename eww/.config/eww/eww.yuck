@@ -1,11 +1,21 @@
-(include "bar/top.yuck")
+(include "panel/top.yuck")
+(include "dashboard/main.yuck")
 
 (defwindow topbar
   :monitor 0
   :windowtype "desktop"
   :geometry (geometry :x "0%"
-                      :y "0%"
+                      :y "0"
                       :width "100%"
-                      :height "25px"
                       :anchor "top center")
   (top))
+
+(defwindow dashboard
+  :monitor 0
+  :windowtype "dialog"
+  :wm-ignore true
+  :geometry (geometry :x "0%"
+                      :y "35px"
+                      :width "50%"
+                      :anchor "top center")
+  (dashboard))

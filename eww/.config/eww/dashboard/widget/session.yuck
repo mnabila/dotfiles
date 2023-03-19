@@ -1,0 +1,9 @@
+(defwidget session [?icon]
+  (box :class "session" :orientation "horizontal" :halign "fill" :space-evenly true
+        (button :class "power" :tooltip "Logout" :onclick "bspc quit" "")
+        (button :class "power" :tooltip "Sleep" :onclick "systemctl suspend" "")
+        (button :class "power" :tooltip "Reboot" :onclick "systemctl reboot" "")
+        (button :class "power shutdown" :tooltip "Shutdown" :onclick "systemctl poweroff" "")
+    ))
+    
+

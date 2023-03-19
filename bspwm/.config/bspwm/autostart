@@ -7,16 +7,17 @@ function bsprun() {
 }
 
 bsprun /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
-bsprun xfce4-power-manager
+bsprun mate-power-manager
 # bsprun picom
 bsprun dunst
 bsprun nm-applet
 bsprun greenclip daemon
 bsprun flameshot
 bsprun eww open topbar
+bsprun batsignal -b -c 20 -w 25 -d 10
 
 # systray
 bsprun stalonetray --background "#282828" --window-type dock --icon-size 22 --geometry 1x1+1285+2 --grow-gravity SE --icon-gravity SE
 
 sxhkdrcgen &
-feh --bg-scale /home/saya/Pictures/wallpaper/wallhaven-1pqq1w.jpg
+feh --bg-scale /home/saya/Pictures/wallpaper/wallhaven-1k19g3.png

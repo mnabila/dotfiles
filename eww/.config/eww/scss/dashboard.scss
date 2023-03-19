@@ -1,0 +1,106 @@
+.dashboard {
+  background: $bg;
+  padding: 20px;
+
+  .border {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: $gray;
+    border-style: solid;
+  }
+
+  .session {
+    padding: 5px;
+    .power {
+      font-size: 25px;
+      font-family: "Font Awesome 6 Free Solid";
+      padding: 10px 0px;
+      border-radius: 5px;
+      color: $fg;
+    }
+    .power:hover {
+      background: $hl;
+      color: $bg;
+    }
+    .shutdown {
+      background: $red;
+      color: $bg;
+    }
+  }
+
+  .clock {
+    font-size: 18px;
+    font-weight: bold;
+    color: $fg;
+    .icon {
+      font-size: 40px;
+      font-family: "Font Awesome 6 Free Solid";
+      margin-right: 5px;
+      color: $fg;
+    }
+  }
+
+  .cal {
+    padding: 5px;
+    color: $fg;
+  }
+  .cal:selected {
+    background: $hl;
+    color: $bg;
+    font-weight: bold;
+  }
+
+  .notification {
+    margin-right: 10px;
+    .header {
+      padding: 10px 15px;
+      .action {
+        font-size: 20px;
+        font-family: "Font Awesome 6 Free Solid";
+        padding: 10px;
+        color: $fg;
+        border-radius: 5px;
+      }
+      .action:hover {
+        background: $hl;
+        color: $bg;
+      }
+      .label {
+        font-family: Iosevka;
+        font-size: 15px;
+        font-weight: bold;
+        color: $fg;
+      }
+    }
+    .message {
+      background: $gray;
+      padding: 5px;
+    }
+    .icon {
+      font-size: 30px;
+      font-family: "Font Awesome 6 Free Solid";
+      padding: 0px 15px;
+      color: $fg;
+    }
+    .title,
+    .description {
+      font-family: Iosevka;
+      font-size: 12px;
+    }
+    .title {
+      font-weight: bold;
+    }
+    .message-empty {
+      padding: 25px;
+      .icon {
+        font-size: 40px;
+        font-family: "Font Awesome 6 Free Solid";
+        padding: 0px 15px;
+        color: $hl;
+      }
+      .label {
+        color: $hl;
+      }
+    }
+  }
+}

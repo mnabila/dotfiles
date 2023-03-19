@@ -1,12 +1,13 @@
-(include "widget/datetime.yuck")
-(include "widget/brightness.yuck")
-(include "widget/temperature.yuck")
-(include "widget/memory.yuck")
-(include "widget/cpu.yuck")
-(include "widget/battery.yuck")
-(include "widget/volume.yuck")
-(include "widget/workspace.yuck")
-(include "widget/window.yuck")
+(include "panel/widget/datetime.yuck")
+(include "panel/widget/brightness.yuck")
+(include "panel/widget/temperature.yuck")
+(include "panel/widget/memory.yuck")
+(include "panel/widget/cpu.yuck")
+(include "panel/widget/battery.yuck")
+(include "panel/widget/volume.yuck")
+(include "panel/widget/workspace.yuck")
+(include "panel/widget/window.yuck")
+
 
 (defwidget top []
   (centerbox :orientation "horizontal" :class "topbar"

@@ -14,8 +14,8 @@ max-items 200
 color  background         default  default
 color  listnormal         color7   default
 color  listnormal_unread  default  default  bold
-color  listfocus          color0   color3
-color  listfocus_unread   color0   color3   bold
+color  listfocus          color0   color7
+color  listfocus_unread   color0   color7   bold
 color  info               default  default
 color  article            default  default
 color  title              color7   default  bold

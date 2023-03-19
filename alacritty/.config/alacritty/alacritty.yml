@@ -192,8 +192,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#0B0E14'
-    foreground: '#E6E1CF'
+    background: '#282828'
+    foreground: '#ebdbb2'
 
     # Bright and dim foreground colors
     #
@@ -214,8 +214,8 @@ colors:
   #  text: CellBackground
   #  cursor: CellForeground
   cursor:
-   text: '#0F1419'
-   cursor: '#E6E1CF'
+   text: '#282828'
+   cursor: '#ebdbb2'
 
   # Vi mode cursor colors
   #

@@ -46,7 +46,7 @@ super + {_,shift +} F9
 super + BackSpace
     notify-send "Pass Man" "Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)"
 super + {ctrl,shift} + BackSpace
-    {pwclip, dmenu_pass -p "Pass Man"}
+    {pwclip, rofi-pass}
 
 # network manager
 super + {_, shift + } F8

@@ -1,10 +1,7 @@
 #!/usr/bin/env sh
 
-# Set default resolution
-xrandr --output eDP-1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output HDMI-1-0 --off
-
 #
-# ENVIRONMENT SETUP 
+# ENVIRONMENT SETUP
 #
 export EDITOR=nvim
 export TERMINAL="alacritty"
@@ -27,4 +24,3 @@ export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist non
 #
 # END ENVIRONMENT SETUP
 #
-

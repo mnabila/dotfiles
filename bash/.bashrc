@@ -32,7 +32,7 @@ alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
 # function
 #
 nvimrc() {
-	cd ~/Dotfiles
+	cd ~/dotfiles
 	git subtree push --prefix=neovim/.config/nvim subtree-nvimrc master:master
 	cd ~/.config/nvim
 }

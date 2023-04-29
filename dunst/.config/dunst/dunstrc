@@ -17,7 +17,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = none
 
     ### Geometry ###
 
@@ -27,13 +27,13 @@
     width = 300
 
     # The maximum height of a single notification, excluding the frame.
-    height = 350
+    height = 300
 
     # Position the notification in the top right corner
     origin = top-right
 
     # Offset from the origin
-    offset = 10x10
+    offset = 5x32
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -73,6 +73,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
+    # If gap_size is greater than 0, this setting will be ignored.
     separator_height = 2
 
     # Padding between text and separator.
@@ -89,7 +90,13 @@
     frame_width = 2
 
     # Defines color of the frame around the notification window.
-    frame_color = "#d79921"
+    frame_color = "#ebdbb2"
+
+    # Size of gap to display between notifications - requires a compositor.
+    # If value is greater than 0, separator_height will be ignored and a border
+    # of size frame_width will be drawn around each notification instead.
+    # Click events on gaps do not currently propagate to applications below.
+    gap_size = 0
 
     # Define a color for the separator.
     # possible values are:
@@ -111,7 +118,7 @@
 
     ### Text ###
 
-    font = Iosevka 10
+    font = Monospace 8
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -184,19 +191,28 @@
 
     ### Icons ###
 
+    # Recursive icon lookup. You can set a single theme, instead of having to
+    # define all lookup paths.
+    enable_recursive_icon_lookup = true
+
+    # Set icon theme (only used for recursive icon lookup)
+    icon_theme = Adwaita
+    # You can also set multiple icon themes, with the leftmost one being used first.
+    # icon_theme = "Adwaita, breeze"
+
     # Align icons left/right/top/off
     icon_position = left
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 0
+    min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
+    max_icon_size = 128
 
-    # Paths to default icons.
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    # Paths to default icons (only neccesary when not using recursive icon lookup)
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status:/usr/share/icons/Papirus-Dark/16x16/devices/
 
     ### History ###
 
@@ -210,10 +226,10 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = rofi -dmenu -p dunst:
+    dmenu = /usr/bin/rofi -dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/qutebrowser
+    browser = /usr/bin/xdg-open
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
@@ -274,7 +290,7 @@
     # * context_all: Open context menu for all notifications.
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
-    mouse_left_click = close_current
+    mouse_left_click = do_action
     mouse_middle_click = do_action, close_current
     mouse_right_click = close_all
 
@@ -292,8 +308,8 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#282828"
+    foreground = "#ebdbb2"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
@@ -306,9 +322,9 @@
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#cc241d"
+    background = "#fb4934"
     foreground = "#282828"
-    frame_color = "#cc241d"
+    frame_color = "#fb4934"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #default_icon = /path/to/icon

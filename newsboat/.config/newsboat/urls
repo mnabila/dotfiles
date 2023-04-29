@@ -14,19 +14,14 @@ https://anichin.my.id/feed/ ~Anichin:Post
 
 # github
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-GITHUB
-https://github.com/lighttiger2505/sqls/releases.atom      ~Github:sqls:releases
-https://github.com/JohnnyMorganz/StyLua/releases.atom     ~Github:StyLua:releases
-https://github.com/telegramdesktop/tdesktop/releases.atom ~Github:telegramdesktop:releases
-https://github.com/kiwibrowser/src/releases.atom          ~Github:kiwibrowser:releases
-https://github.com/qutebrowser/qutebrowser/releases.atom  ~Github:qutebrowser:releases
-https://github.com/neovim/neovim/releases.atom  ~Github:neovim:releases
+https://github.com/telegramdesktop/tdesktop/releases.atom  ~Github:telegramdesktop:releases
+https://github.com/neovim/neovim/releases.atom             ~Github:neovim:releases
 
 # programming
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-CODE
 https://realpython.com/atom.xml ~RealPython:post
 
 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-YOUTUBE
-https://www.youtube.com/feeds/videos.xml?channel_id=UCDBPMBKOXO8ZWsb5s9HLbCA "~Youtube:Thomas Langhorst"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCxNrN9kKErgvpjopJLBdiSA "~Youtube:i Did IT - Koding Aja Dulu"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCbyVnlQdFIcdViuoPIPK68A "~Youtube:Jagat Review"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC14ZKB9XsDZbnHVmr4AmUpQ "~Youtube:Programer Zaman Now"

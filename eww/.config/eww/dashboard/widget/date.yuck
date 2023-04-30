@@ -1,5 +1,5 @@
-(defwidget clock []
-(box :class "clock" :orientation "vertical" :valign "start" :space-evenly true
+(defwidget date []
+(box :class "date" :orientation "vertical" :valign "start" :space-evenly true
     (box :orientation "horizontal" :halign "start" :space-evenly false
         (label :class "icon" :text "")
         (box :orientation "vertical" :valign "start" :space-evenly true

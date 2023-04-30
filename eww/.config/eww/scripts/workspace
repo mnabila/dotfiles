@@ -1,32 +1,7 @@
 #!/bin/env sh
 
-contains() {
-	for e in $1; do
-		[ "$e" -eq "$2" ] && echo 1 && return
-	done
-	echo 0
-}
-
 workspaces() {
-	desktops=$(bspc query -D --names)
-	focused=$(bspc query -D -d focused --names)
-	occupied=$(bspc query -D -d .occupied --names)
-	icon=""
-
-	btn=""
-	class=""
-	for d in $desktops; do
-		if [ $(contains "$focused" "$d") -eq 1 ]; then
-			class="focused"
-		elif [ $(contains "$occupied" "$d") -eq 1 ]; then
-			class="occupied"
-		else
-			class="empty"
-		fi
-		btn="$btn (eventbox :cursor \"pointer\" :tooltip \"Workspace $d\" (button :class \"$class\" :onclick \"bspc desktop -f $d\" \"$icon\"))"
-	done
-
-	echo "(box :class \"widget workspace\" :orientation \"horizontal\" :halign \"center\" :space-evenly true $btn)"
+	bspc query --tree --monitor focused
 }
 
 workspaces

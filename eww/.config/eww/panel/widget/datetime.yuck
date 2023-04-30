@@ -1,8 +1,0 @@
-(defwidget datetime [?icon]
-    (button :onclick "eww open dashboard" 
-      (box :class "widget datetime" :orientation "horizontal" :halign "center" :space-evenly false
-        (label :class "icon" :text icon)
-        (label :class "value" :text get-datetime))))
-
-(defpoll get-datetime :interval "10s"
-  "LC_TIME=id_ID.UTF-8 date '+%A, %d %B %Y  /  %H:%M %Z'")

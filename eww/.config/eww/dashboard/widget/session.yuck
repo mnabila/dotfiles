@@ -1,4 +1,4 @@
-(defwidget session [?icon]
+(defwidget session []
   (box :class "session" :orientation "horizontal" :halign "fill" :space-evenly true
         (button :class "power" :tooltip "Logout" :onclick "bspc quit" "")
         (button :class "power" :tooltip "Sleep" :onclick "systemctl suspend" "")

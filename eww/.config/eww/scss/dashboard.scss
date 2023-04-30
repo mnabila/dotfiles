@@ -1,12 +1,11 @@
 .dashboard {
   background: $bg;
   padding: 20px;
+  border: 2px solid $gray;
 
   .border {
     border-radius: 5px;
-    border-width: 2px;
-    border-color: $gray;
-    border-style: solid;
+    border: 2px $gray solid;
   }
 
   .session {
@@ -28,7 +27,7 @@
     }
   }
 
-  .clock {
+  .date {
     font-size: 18px;
     font-weight: bold;
     color: $fg;

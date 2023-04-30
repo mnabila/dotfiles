@@ -12,9 +12,8 @@ bsprun mate-power-manager
 bsprun dunst
 bsprun nm-applet
 bsprun greenclip daemon
-bsprun flameshot
 bsprun eww open topbar
-bsprun batsignal -b -c 20 -w 25 -d 10
+bsprun batsignal -b -c 20 -w 25 -d 10 -f 99
 
 # systray
 bsprun stalonetray --background "#282828" --window-type dock --icon-size 22 --geometry 1x1+1285+2 --grow-gravity SE --icon-gravity SE

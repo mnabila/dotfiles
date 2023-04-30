@@ -1,0 +1,13 @@
+(defwidget time [?icon]
+      (box :class "widget time" :orientation "horizontal" :halign "center" :space-evenly false :spacing 5
+        (label :class "value" :text get-asia-jakarta)
+        (label :class "icon" :text icon)
+        (label :class "value" :text get-utc)))
+
+(defpoll get-asia-jakarta :interval "10s"
+  "TZ='Asia/Jakarta' date '+%H:%M %Z'")
+
+(defpoll get-utc :interval "10s"
+  "TZ='UTC' date '+%H:%M %Z'")
+
+

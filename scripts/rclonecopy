@@ -1,5 +1,5 @@
 #!/bin/bash
-# fzf_rclone
+# rclonecopy
 # Copyright (c) 2022 M. Nabil Adani <nblid48[at]gmail[dot]com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,7 +21,7 @@
 # SOFTWARE.
 
 REMOTE="$1"
-FILENAME=$(echo $(rclone ls $REMOTE | fzf) | cut -d " " -f 2-)
+FILENAME=$(rclone lsjson $REMOTE | jq -r '.[].Path' | fzf)
 if [ -n "$FILENAME" ]; then
 	rclone copy --max-age 24h -P "$REMOTE$FILENAME" .
 fi

@@ -1,5 +1,7 @@
-(defwidget workspace []
-    (literal :content workspaces_listen))
-    
-(deflisten workspaces_listen "scripts/workspace")
+(defwidget workspace [] 
+	(box :class "widget workspace" :orientation "horizontal" :halign "center" :space-evenly true
+		(for ws in {workspaces_listen.desktops}
+			(eventbox :cursor "pointer" :tooltip "Workspace ${ws.name}"
+				(button :class {workspaces_listen.focusedDesktopId == ws.id ? "focused": ws.focusedNodeId != 0 ? "occupied": "empty"} :onclick "bspc desktop -f ${ws.name}" "")))))
 
+(deflisten workspaces_listen "scripts/workspace")

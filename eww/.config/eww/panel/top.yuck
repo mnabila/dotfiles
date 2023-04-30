@@ -1,4 +1,4 @@
-(include "panel/widget/datetime.yuck")
+(include "panel/widget/time.yuck")
 (include "panel/widget/brightness.yuck")
 (include "panel/widget/temperature.yuck")
 (include "panel/widget/memory.yuck")
@@ -14,13 +14,14 @@
       (box :orientation "horizontal" :halign "start" :space-evenly false
         (workspace)
         (window :icon ""))
+    (button :onclick "eww open dashboard" 
       (box :orientation "horizontal" :halign "center" :space-evenly false
-        (datetime))
+        (time :icon "")))
       (box :orientation "horizontal" :halign "end" :space-evenly true
         (temperature :icon "")
         (memory :icon "")
         (cpu :icon "")
         (brightness :icon "")
         (volume :icon "")
-        (battery :icon ""))))
+        (battery :full "" :half "" :empty "" :charging ""))))
 

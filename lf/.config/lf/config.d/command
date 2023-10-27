@@ -15,9 +15,8 @@ cmd open ${{
 
 # multiple file handler
 cmd multifile &{{
-    IFS="";eval "$1 $(echo $fx | awk '{ printf "\"%s\" ", $0 }')"
+	eval "$1 $(echo -e "$fx" | xargs -i echo "\\'{}\\'" | xargs echo)"
 }}
-
 
 # create directory
 cmd mkdir ${{
@@ -38,24 +37,10 @@ cmd touch ${{
 }}
 
 # rename selected file/folder
+# dependencies
+# - https://archlinux.org/packages/extra/x86_64/renameutils/
 cmd bulkrename ${{
-    old="$(mktemp)"
-    new="$(mktemp)"
-    [ -n "$fs" ] && fs="$(ls)"
-    printf '%s\n' "$fs" >"$old"
-    printf '%s\n' "$fs" >"$new"
-    $EDITOR "$new"
-    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
-    paste "$old" "$new" | while IFS= read -r names; do
-        src="$(printf '%s' "$names" | cut -f1)"
-        dst="$(printf '%s' "$names" | cut -f2)"
-        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
-            continue
-        fi
-        mv -- "$src" "$dst"
-    done
-    rm -- "$old" "$new"
-    lf -remote "send $id unselect"
+	eval "qmv -f do $(echo -e "$fx" | xargs -i echo "\\'{}\\'" | xargs echo)"
 }}
 
 # fuzzy finder
@@ -68,12 +53,6 @@ cmd fzf_select ${{
     fi
     lf -remote "send $id $cmd \"$res\""
 }}
-
-# copy file to clipboard
-cmd yank2clipboard ${{
-    xclip -selection clipboard -i "$f" -t $(file --mime-type "$f" | cut -d ":" -f 2 | xargs)
-}}
-
 
 # print mimetype
 cmd mimetype &{{

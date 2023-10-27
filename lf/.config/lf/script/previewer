@@ -7,7 +7,7 @@ if [ "$(pwd)" != "/tmp/rclone" ]; then
         application/x-7z-compressed) 7z l "$1" ;;
         application/gzip) tar -tvf "$1" ;;
         application/x-iso9660-image) iso-info --no-header -f "$1" ;;
-        text/*) bat --color=always --style="plain" "$1" ;;
+        text/*) cat "$1" ;;
         *) mediainfo "$1" ;;
 	esac
 fi

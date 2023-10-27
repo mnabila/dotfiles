@@ -3,14 +3,14 @@
 #
 
 # dmenu collections
-super + {End,space,Delete,Print}
+super + {KP_End,space,Delete,Print}
     dmenu_{power,mager,kill,ffmpeg}
-super + Home
+super + KP_Home
     rofi -show window
 
 
 # mpris control
 super + Pause
     playerctl play-pause
-XF86Audio{Next,Prev,Play,Stop}
+XF86Audio{Next,Prev,Play,Pause}
     playerctl {next, previous, play-pause, pause}

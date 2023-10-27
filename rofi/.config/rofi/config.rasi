@@ -1,6 +1,6 @@
 configuration {
     modi: "drun";
-    font: "Iosevka Nerd Font 10.5";
+    font: "Iosevka Nerd Font 12";
     location: 0;
 	fixed-num-lines: true;
 	window-match-fields: "name";

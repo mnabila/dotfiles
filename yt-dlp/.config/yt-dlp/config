@@ -8,6 +8,7 @@
 #
 --format best[height<=720]
 --youtube-skip-dash-manifest
+--merge-output-forma="mp4/mkv"
 
 #
 # Filesystem Options
@@ -28,3 +29,4 @@
 # --audio-format m4a
 # --audio-quality 0
 --embed-subs
+--embed-chapters

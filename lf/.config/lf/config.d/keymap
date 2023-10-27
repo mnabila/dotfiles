@@ -2,14 +2,14 @@
 
 map f fzf_select
 map D delete
-map x &dragon -a -x "$fx"
+map x &dragon-drop -a -x $fx
 map R reload
 
 # removable disk
-map <f-12>u &udiskie-umount "$fx"
-map <f-12>d &udiskie-umount "$fx" --force --detach
-map <f-12>e &udiskie-umount "$fx" --force --eject
-map <f-12>l &udiskie-umount "$fx" --lock
+map <f-12>u &udiskie-umount "$f"
+map <f-12>d &udiskie-umount "$f" --force --detach
+map <f-12>e &udiskie-umount "$f" --force --eject
+map <f-12>l &udiskie-umount "$f" --lock
 
 # iso file
 map <f-11>m &udisksctl loop-setup --file "$f"

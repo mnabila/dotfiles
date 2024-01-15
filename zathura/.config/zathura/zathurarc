@@ -48,7 +48,7 @@ set render-loading-fg "#ebdbb2"
 #
 
 # font
-set font "Iosevka Nerd Font 10"
+set font "Iosevka Nerd Font 12"
 
 # scrollbar
 set show-scrollbars true

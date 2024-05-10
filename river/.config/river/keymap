@@ -1,0 +1,101 @@
+#!/bin/sh
+
+# Various media key mapping examples for both normal and locked mode which do
+# not have a modifier
+for mode in normal locked; do
+	# Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
+	riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 5'
+	riverctl map $mode None XF86AudioLowerVolume spawn 'pamixer -d 5'
+	riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
+
+	# Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
+	riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
+	riverctl map $mode None XF86AudioPlay spawn 'playerctl play-pause'
+	riverctl map $mode None XF86AudioPrev spawn 'playerctl previous'
+	riverctl map $mode None XF86AudioNext spawn 'playerctl next'
+
+	# Control screen backlight brightness with brightnessctl (https://github.com/Hummer12007/brightnessctl)
+	riverctl map $mode None XF86MonBrightnessUp spawn 'xbacklight -inc 5'
+	riverctl map $mode None XF86MonBrightnessDown spawn 'xbacklight -dec 5'
+done
+
+for i in $(seq 1 5); do
+	tags=$((1 << ($i - 1)))
+
+	# Super+[1-5] to focus tag [0-5]
+	riverctl map normal Super $i set-focused-tags $tags
+
+	# Super+Shift+[1-9] to tag focused view with tag [0-8]
+	riverctl map normal Super+Shift $i set-view-tags $tags
+
+	# Super+Control+[1-9] to toggle focus of tag [0-8]
+	riverctl map normal Super+Control $i toggle-focused-tags $tags
+
+	# Super+Shift+Control+[1-9] to toggle tag [0-8] of focused view
+	riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
+done
+
+# Super+Return to start an instance of foot
+riverctl map normal Super Return spawn foot
+
+# Super+W to close the focused view
+riverctl map normal Super W close
+
+# Super+Alt+Q to exit river
+riverctl map normal Super+Alt Q exit
+
+# Super+M to bump the focused view to the top of the layout stack.
+riverctl map normal Super M zoom
+
+# Super+J and Super+K to focus the next/previous view in the layout stack
+riverctl map normal Super J focus-view next
+riverctl map normal Super K focus-view previous
+
+# Super+Shift+J and Super+Shift+K to swap the focused view with the next/previous
+# view in the layout stack
+riverctl map normal Super+Shift J swap next
+riverctl map normal Super+Shift K swap previous
+
+# Super+Period and Super+Comma to focus the next/previous output
+riverctl map normal Super Period focus-output next
+riverctl map normal Super Comma focus-output previous
+
+# Super+Shift+{Period,Comma} to send the focused view to the next/previous output
+riverctl map normal Super+Shift Period send-to-output next
+riverctl map normal Super+Shift Comma send-to-output previous
+
+# Super + Left Mouse Button to move views
+riverctl map-pointer normal Super BTN_LEFT move-view
+
+# Super + Right Mouse Button to resize views
+riverctl map-pointer normal Super BTN_RIGHT resize-view
+
+# Super + Middle Mouse Button to toggle float
+riverctl map-pointer normal Super BTN_MIDDLE toggle-float
+
+# Super+Shift+F to toggle float
+riverctl map normal Super+Shift F toggle-float
+
+# Super+F to toggle fullscreen
+riverctl map normal Super F toggle-fullscreen
+
+# Super+D to spawn rofi drun
+riverctl map normal Super D spawn 'rofi -show drun'
+
+# Super+D to spawn rofi run
+riverctl map normal Super+Shift D spawn 'rofi -show run'
+
+# Super+BackSpace to close password manager session
+riverctl map normal Super BackSpace spawn 'notify-send "Pass Man" "Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)"'
+
+# Super+Shift+BackSpace to open password manager session
+riverctl map normal Super+Shift BackSpace spawn rofi-pass
+
+# Super+X to open clipboard
+riverctl map normal Super X spawn 'cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy'
+
+# Super+Shift+C to clear clipboard
+riverctl map normal Super+Shift C spawn 'cliphist clear'
+
+# Print to take screenshot
+riverctl map normal None Print spawn 'grim - | satty --filename -'

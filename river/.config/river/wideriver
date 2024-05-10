@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Set the default layout generator to be rivertile and start it.
+# River will send the process group of the init executable SIGTERM on exit.
+riverctl default-layout wideriver
+
+# Super+Space to toggle layout
+riverctl map normal Super Space send-layout-cmd wideriver '--layout-toggle'
+
+# start layout manager
+riverctl spawn 'wideriver --layout left --stack even --outer-gaps 5 --inner-gaps 5 --border-color-focused "0xebdbb2" --border-color-unfocused "0x504945" --layout-alt monocle --border-width 2 --border-width-monocle 2 --no-smart-gaps --border-color-focused-monocle "0xebdbb2"'

@@ -1,0 +1,61 @@
+* {
+  font-family: "Iosevka Nerd Font Regular";
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+window#waybar {
+  background-color: #282828;
+  color: #ebdbb2;
+}
+
+#tags button {
+  background-color: #504945;
+  font-weight: bold;
+}
+
+#tags button.occupied {
+  background-color: #7c6f64;
+}
+
+#tags button.focused {
+  background-color: #ebdbb2;
+  color: #282828;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#wireplumber,
+#tray {
+  padding: 0 15px;
+  color: #ebdbb2;
+  background-color: #504945;
+}
+
+#tray>.passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+#tray menu {
+  padding: 5px;
+}
+
+#temperature.critical {
+  background-color: #eb4d4b;
+  color: #282828;
+}
+
+#window {
+  font-weight: bold;
+}

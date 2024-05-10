@@ -1,0 +1,74 @@
+{
+  "name": "top",
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "spacing": 5,
+  "modules-left": ["river/tags", "clock"],
+  "modules-center": ["river/window"],
+  "modules-right": [
+    "temperature",
+    "backlight",
+    "wireplumber",
+    "battery",
+    "memory",
+    "cpu",
+    "tray"
+  ],
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 5
+  },
+
+  "clock": {
+    "format": "{:%A, %d %B %Y  %H:%M %Z}"
+  },
+
+  "cpu": {
+    "format": "{usage}% 󰍛"
+  },
+
+  "memory": {
+    "format": "{}% 󰔚"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-icons": ["奔", "墳"],
+    "format-muted": "婢",
+    "max-volume": 100,
+    "scroll-step": 0.1
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% "
+  },
+
+  "river/tags": {
+    "num-tags": 5
+  },
+  "river/window": {
+    "format": "{}"
+  },
+
+  "temperature": {
+    "critical-threshold": 70,
+    "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureC}°C "
+  }
+}

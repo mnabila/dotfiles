@@ -1,0 +1,18 @@
+#!/bin/sh
+
+function run() {
+	if [[ -z "$(pidof $1)" ]]; then
+		$@ &
+	fi
+}
+
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=GNOME
+
+run /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+run batsignal -b -c 20 -w 25 -d 10 -f 99 -D "systemctl suspend"
+run dunst
+run wl-paste --watch cliphist store
+run waybar
+run nm-applet
+run swaybg -m fill -i /home/saya/Pictures/wallpaper/minimalism-think-lightbulb-simple-background-wallpaper-b8668de820c07c5870dc213e2852947a.jpg

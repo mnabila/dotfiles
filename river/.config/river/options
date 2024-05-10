@@ -1,0 +1,18 @@
+#!/bin/sh
+
+touchpad=pointer-1267-12632-ELAN050A:01_04F3:3158_Touchpad
+
+# Enable or disable the tap functionality of the input device.
+riverctl input $touchpad tap enabled
+
+# Enable tap-and-drag functionality of the input device.
+riverctl input $touchpad drag enabled
+
+# Set keyboard repeat rate
+riverctl set-repeat 50 300
+
+# Set background color
+riverctl background-color 0x282828
+
+# Enabled server side decorations
+riverctl rule-add ssd

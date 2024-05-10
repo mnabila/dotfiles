@@ -1,5 +1,4 @@
 #!/bin/bash
-# rclonebrowser
 # Copyright (c) 2022 M. Nabil Adani <nblid48[at]gmail[dot]com>
 #
 # This Source Code Form is subject to the terms of the Mozilla Public
@@ -13,8 +12,8 @@ if [ ! -d $MOUNTPOINT ]; then
 	mkdir $MOUNTPOINT
 fi
 
-rclone mount --daemon "$REMOTE:/" $MOUNTPOINT
+rclone mount --daemon "$REMOTE" $MOUNTPOINT
 lf $MOUNTPOINT
 fusermount -u $MOUNTPOINT
-rclone cleanup "$REMOTE:/" >/dev/null
-rclone about "$REMOTE:/"
+rclone cleanup "$REMOTE" >/dev/null
+rclone about "$REMOTE"

@@ -21,7 +21,7 @@
 # SOFTWARE.
 
 REMOTE="$1"
-FILENAME=$(rclone lsjson $REMOTE | jq -r '.[].Path' | fzf)
+FILENAME=$(rclone lsjson --recursive $REMOTE | jq -r '.[].Path' | fzf)
 if [ -n "$FILENAME" ]; then
-	rclone copy --max-age 24h -P "$REMOTE$FILENAME" .
+	rclone copy --max-age 24h -P "$REMOTE/$FILENAME" .
 fi

@@ -20,12 +20,25 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# Resource:
-# mpvc: https://github.com/lwilletts/mpvc
+# Required
+# 1. mpv
+# 2. rofi
+# 3. openbsd-netcat
+# 4. jq
 
 DMENU="rofi -dmenu -i"
-track=$(mpvc -i | sed -r 's/\x1B\[(;?[0-9]{1,3})+[mGK]//g' | tr -d "\t" | $DMENU -p "奈 MPV" | cut -d " " -f 1)
-# track=$(mpvc -i | sed 's/\t\[\[7m/|/g' | $dmenu | cut -d "|" -f 1)
-if [[ ! -z $track ]]; then
-    mpvc -J $track
-fi
+SOCKET=${MPVC_SOCKET:-/tmp/mpvsocket}
+SOCKETCOMMAND="nc -U -N $SOCKET"
+
+getPlaylist() {
+	echo '{ "command": ["get_property_string", "playlist"] }' | $SOCKETCOMMAND | jq ".data | fromjson"
+}
+
+play() {
+	query=$(jq --null-input --arg id $1 '{ "command": ["set_property_string", "playlist-pos-1", $id] }')
+	echo $query | $SOCKETCOMMAND
+}
+
+playlist=$(getPlaylist)
+filename=$(echo $playlist | jq -r '.[].filename' | $DMENU -p "奈 MPV")
+play $(echo $playlist | jq ".[] | select(.filename==\"$filename\") | .id")

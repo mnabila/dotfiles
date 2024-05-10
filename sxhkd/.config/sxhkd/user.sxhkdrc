@@ -3,11 +3,12 @@
 #
 
 # dmenu collections
-super + {KP_End,space,Delete,Print}
-    dmenu_{power,mager,kill,ffmpeg}
+super + {space,Delete,Print}
+    dmenu_{mager,kill,ffmpeg}
 super + KP_Home
     rofi -show window
-
+super + {KP_End,End}
+    dmenu_power
 
 # mpris control
 super + Pause

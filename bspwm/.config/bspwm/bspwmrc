@@ -8,8 +8,7 @@ $HOME/.config/bspwm/autostart
 # define colorscheme
 #
 focus="#ebdbb2"
-normal="#282828"
-
+normal="#504945"
 
 #
 # Workspace
@@ -19,48 +18,31 @@ bspc monitor eDP-1 -d 1 2 3 4 5
 #
 # Window Configurations
 #
-bspc config border_width   2
-bspc config border_radius  5
-bspc config window_gap     5
-bspc config top_padding    28
+bspc config border_width 2
+bspc config window_gap 5
+bspc config top_padding 28
 bspc config bottom_padding 0
-bspc config right_padding  0
-bspc config left_padding   0
+bspc config right_padding 0
+bspc config left_padding 0
 
 #
 # User Interface
 #
-bspc config split_ratio               0.50
-bspc config borderless_monocle        false
-bspc config gapless_monocle           false
-bspc config focus_follows_pointer     false
-bspc config pointer_follows_focus     false
-bspc config pointer_follows_monitor   true
-bspc config ignore_ewmh_fullscreen    none
-bspc config ignore_ewmh_focus         false
+bspc config split_ratio 0.50
+bspc config borderless_monocle false
+bspc config gapless_monocle false
+bspc config focus_follows_pointer false
+bspc config pointer_follows_focus false
+bspc config pointer_follows_monitor true
+bspc config ignore_ewmh_fullscreen none
+bspc config ignore_ewmh_focus false
 bspc config remove_unplugged_monitors true
-bspc config normal_border_color       $normal
-bspc config active_border_color       $focus
-bspc config focused_border_color      $focus
+bspc config normal_border_color $normal
+bspc config active_border_color $focus
+bspc config focused_border_color $focus
 
 #
 # Window Rules
 #
 bspc rule -a Screenkey manage=off
-bspc rule -a Zathura   state=tiled
-
-# floating
-# bspc rule -a Key-mon:"Keyboard    Status         Monitor" state=tiled sticky=on focus=off border=off
-# bspc rule -a Arandr               state=floating center=on
-# bspc rule -a Connman-gtk          state=floating center=on
-# bspc rule -a GParted              state=floating center=on
-# bspc rule -a Gcolor3              state=floating center=on
-# bspc rule -a KBBI-Qt              state=floating center=on
-# bspc rule -a Nm-connection-editor state=floating center=on
-# bspc rule -a SimpleScreenRecorder state=floating center=on
-# bspc rule -a MEGASync             state=floating sticky=on
-# bspc rule -a scrcpy               state=floating center=on
-
-# workspace
-# bspc rule -a qutebrowser desktop='^2'
-# bspc rule -a TelegramDesktop desktop='^2'
+bspc rule -a Zathura state=tiled

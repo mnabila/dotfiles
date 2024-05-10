@@ -31,11 +31,6 @@ alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
 #
 # function
 #
-nvimrc() {
-	cd ~/dotfiles
-	git subtree push --prefix=neovim/.config/nvim subtree-nvimrc master:master
-	cd ~/.config/nvim
-}
 
 pmu() {
 	sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist $@

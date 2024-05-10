@@ -1,22 +1,21 @@
 #!/bin/bash
 
 function bsprun() {
-    if [[ -z "$(pidof $1)" ]]; then
-        $@ &
-    fi
+	if [[ -z "$(pidof $1)" ]]; then
+		$@ &
+	fi
 }
 
 bsprun /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
-bsprun mate-power-manager
-# bsprun picom
+bsprun picom
 bsprun dunst
 bsprun nm-applet
 bsprun greenclip daemon
 bsprun eww open topbar
-bsprun batsignal -b -c 20 -w 25 -d 10 -f 99
+bsprun batsignal -b -p -e -n BAT1 -c 20 -w 25 -d 10 -f 99
 
 # systray
-bsprun stalonetray --background "#282828" --window-type dock --icon-size 22 --geometry 1x1+1285+2 --grow-gravity SE --icon-gravity SE
+bsprun stalonetray --background "#282828" --window-type dock --icon-size 22 --geometry 1x1+1590+2 --grow-gravity SE --icon-gravity SE
 
 sxhkdrcgen &
-feh --bg-scale /home/saya/Pictures/wallpaper/wallhaven-1k19g3.png
+feh --bg-scale /home/saya/Pictures/wallpaper/minimalism-think-lightbulb-simple-background-wallpaper-b8668de820c07c5870dc213e2852947a.jpg

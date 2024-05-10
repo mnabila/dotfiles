@@ -17,8 +17,9 @@ map <f-11>u &dmenu_iso
 map <f-11>c !dir2iso "$f"
 
 # Directory
-map gi cd /run/media/
+map gM cd /run/media/
 map gm cd /mnt/
+map gt cd /tmp/
 
 # yank file name
 map Yn &echo -n $(basename "$f") | xclip -selection clipboard

@@ -1,5 +1,5 @@
 (defwidget battery [?charging ?full ?half ?empty]
-  (box :class "widget memory" :orientation "horizontal" :halign "center" :space-evenly true
+  (box :class "widget memory" :orientation "horizontal" :halign "center" :space-evenly false
     (label :class "icon" :text {EWW_BATTERY.BAT1.capacity <= 25 ? empty : EWW_BATTERY.BAT1.capacity <= 50 ? half: full})
     (label :class "value" :text "${EWW_BATTERY.BAT1.capacity}")
     (label :class "state" :text charging :visible {EWW_BATTERY.BAT1.status == "Charging"})))

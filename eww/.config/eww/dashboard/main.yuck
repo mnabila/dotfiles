@@ -5,12 +5,12 @@
 
 (defwidget dashboard []
 (eventbox :onhoverlost "eww close dashboard"
-    (box :orientation "horizontal" :halign "fill" :space-evenly true :class "dashboard" 
-        (box :orientation "vertical" :valign "fill" :space-evenly true
-            (notification))
-        (box :orientation "vertical" :valign "fill" :space-evenly false :spacing 20
-            (box :orientation "vertical" :valign "start" :space-evenly false :spacing 10
-                (date)
-                (cal))
-            (box :orientation "vertical" :valign "end" :space-evenly false 
-                (session))))))
+	(box :orientation "horizontal" :halign "fill" :space-evenly true :class "dashboard" 
+		(box :orientation "vertical" :valign "fill" :space-evenly true
+			(notification))
+		(box :orientation "vertical" :valign "fill" :space-evenly false :spacing 20
+			(box :orientation "vertical" :valign "start" :space-evenly false :spacing 10
+				(date)
+				(cal))
+			(box :orientation "vertical" :valign "end" :space-evenly false 
+				(session))))))

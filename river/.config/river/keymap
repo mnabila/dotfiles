@@ -99,3 +99,9 @@ riverctl map normal Super+Shift C spawn 'cliphist clear'
 
 # Print to take screenshot
 riverctl map normal None Print spawn 'grim - | satty --filename -'
+
+# Super+P to open dmenu_power
+riverctl map normal Super P spawn dmenu_power
+
+# Super+S to open dmenu_mager
+riverctl map normal Super S spawn dmenu_mager

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source $HOME/.config/river/options
-source $HOME/.config/river/keymap
-source $HOME/.config/river/autostart
-source $HOME/.config/river/wideriver
+$HOME/.config/river/autostart
+$HOME/.config/river/options
+$HOME/.config/river/keymap
+$HOME/.config/river/wideriver

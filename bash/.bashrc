@@ -35,3 +35,7 @@ alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
 pmu() {
 	sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist $@
 }
+
+rmorphans() {
+	pacman -Qdtq | sudo pacman -Rns -
+}

@@ -62,8 +62,10 @@
   "river/tags": {
     "num-tags": 5
   },
+
   "river/window": {
-    "format": "{}"
+    "format": "{}",
+    "max-length": 100
   },
 
   "temperature": {

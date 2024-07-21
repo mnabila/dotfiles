@@ -22,9 +22,9 @@ map gm cd /mnt/
 map gt cd /tmp/
 
 # yank file name
-map Yn &echo -n $(basename "$f") | xclip -selection clipboard
-map Yp &echo -n "$f" | xclip -selection clipboard
-map Yd &echo -n $(dirname "$f") | xclip -selection clipboard
+map Yn &echo -n $(basename "$f") | wl-copy
+map Yp &echo -n "$f" | wl-copy
+map Yd &echo -n $(dirname "$f") | wl-copy
 
 # ratios
 map <a-0> set ratios 1:3:2

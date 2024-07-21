@@ -1,26 +1,26 @@
+[colors.normal]
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
+
 [colors.bright]
-black = "#5C6773"
-blue = "#8ca9bf"
-cyan = "#73c5e2"
-green = "#add488"
-magenta = "#e2afec"
-red = "#e16f7e"
-white = "#fcfcfc"
-yellow = "#E6B673"
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'
 
 [colors.cursor]
 cursor = "#ebdbb2"
 text = "#282828"
-
-[colors.normal]
-black = "#0F1419"
-blue = "#4877b1"
-cyan = "#00bcd4"
-green = "#5ca75b"
-magenta = "#a660c3"
-red = "#e14245"
-white = "#a9a9aa"
-yellow = "#FFB454"
 
 [colors.primary]
 background = "#282828"
@@ -33,7 +33,7 @@ shape = "Block"
 TERM = "xterm-256color"
 
 [font]
-size = 10.0
+size = 15.0
 
 [font.bold]
 family = "Iosevka Nerd Font"

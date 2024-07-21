@@ -39,3 +39,7 @@ pmu() {
 rmorphans() {
 	pacman -Qdtq | sudo pacman -Rns -
 }
+
+gpuinfo() {
+	glxinfo | grep "OpenGL renderer"
+}

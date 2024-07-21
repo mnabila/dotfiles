@@ -14,4 +14,4 @@ run mako
 run wl-paste --watch cliphist store
 run waybar
 run nm-applet
-run swaybg -m fill -i /home/saya/Pictures/wallpaper/minimalism-think-lightbulb-simple-background-wallpaper-b8668de820c07c5870dc213e2852947a.jpg
+run swaybg -m fill -i /home/saya/Pictures/wallpaper/1002535.png

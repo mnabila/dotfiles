@@ -35,8 +35,8 @@ for i in $(seq 1 5); do
 	riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
 done
 
-# Super+Return to start an instance of foot
-riverctl map normal Super Return spawn foot
+# Super+Return to start an instance of alacritty
+riverctl map normal Super Return spawn alacritty
 
 # Super+W to close the focused view
 riverctl map normal Super W close
@@ -92,10 +92,10 @@ riverctl map normal Super BackSpace spawn 'notify-send "Pass Man" "Clear Cache T
 riverctl map normal Super+Shift BackSpace spawn tessen
 
 # Super+X to open clipboard
-riverctl map normal Super X spawn 'cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy'
+riverctl map normal Super C spawn 'cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy'
 
 # Super+Shift+C to clear clipboard
-riverctl map normal Super+Shift C spawn 'cliphist clear'
+riverctl map normal Super+Shift C spawn 'cliphist wipe'
 
 # Print to take screenshot
 riverctl map normal None Print spawn 'grim - | satty --filename -'
@@ -105,3 +105,6 @@ riverctl map normal Super P spawn dmenu_power
 
 # Super+S to open dmenu_mager
 riverctl map normal Super S spawn dmenu_mager
+
+# Super+Tab to open list window
+riverctl map normal Super Tab spawn 'rofi -show window'

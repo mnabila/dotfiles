@@ -8,6 +8,12 @@ riverctl input $touchpad tap enabled
 # Enable tap-and-drag functionality of the input device.
 riverctl input $touchpad drag enabled
 
+# Set the pointer acceleration profile of the input device.
+riverctl input $touchpad accel-profile none
+
+# Set the pointer acceleration factor of the input device. Needs a float between -1.0 and 1.0.
+riverctl input $touchpad pointer-accel 0.3
+
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
 

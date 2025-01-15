@@ -3,7 +3,7 @@
   font-size: 14px;
   padding: 0;
   margin: 0;
-  border-radius: 2;
+  border-radius: 4;
 }
 
 window#waybar {
@@ -12,9 +12,13 @@ window#waybar {
 }
 
 #tags button {
-  background-color: #504945;
+  background-color: #3c3836;
   font-weight: bold;
-  margin-right: 2;
+  margin-right: 3;
+}
+
+#tags button:last-child {
+  margin-right: 0;
 }
 
 #tags button.occupied {
@@ -35,8 +39,7 @@ window#waybar {
 #wireplumber,
 #tray {
   padding: 0 15px;
-  color: #ebdbb2;
-  background-color: #504945;
+  background-color: #3c3836;
 }
 
 #tray>.passive {
@@ -54,6 +57,7 @@ window#waybar {
 #temperature.critical {
   background-color: #eb4d4b;
   color: #282828;
+  font-weight: bold;
 }
 
 #window {

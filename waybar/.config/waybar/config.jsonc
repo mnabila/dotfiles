@@ -17,64 +17,66 @@
     "battery",
     "memory",
     "cpu",
-    "tray"
+    "tray",
   ],
 
   "tray": {
     "icon-size": 16,
-    "spacing": 5
+    "spacing": 5,
   },
 
   "clock": {
-    "format": "{:%A, %d %B %Y  %H:%M %Z}"
+    "format": "{:%A, %d %B %Y  %H:%M %Z}",
   },
 
   "cpu": {
-    "format": "{usage}% 󰍛"
+    "format": "{usage}% 󰍛",
   },
 
   "memory": {
-    "format": "{}% 󰔚"
+    "format": "{}% 󰔚",
   },
 
   "battery": {
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 20
+      "critical": 20,
     },
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format-icons": ["", "", "", "", ""],
   },
 
   "wireplumber": {
     "format": "{volume}% {icon}",
     "format-icons": ["奔", "墳"],
-    "format-muted": "婢",
+    "format-muted": "Muted 婢",
     "max-volume": 100,
-    "scroll-step": 0.1
+    "scroll-step": 0.1,
+    "on-click": "pamixer --toggle-mute",
   },
 
   "backlight": {
     "device": "intel_backlight",
-    "format": "{percent}% "
+    "format": "{percent}% ",
   },
 
   "river/tags": {
-    "num-tags": 5
+    "num-tags": 5,
+    "disable-click": true,
   },
 
   "river/window": {
     "format": "{}",
-    "max-length": 100
+    "max-length": 75,
   },
 
   "temperature": {
-    "critical-threshold": 70,
+    "critical-threshold": 65,
     "format-critical": "{temperatureC}°C ",
-    "format": "{temperatureC}°C "
-  }
+    "format": "{temperatureC}°C ",
+  },
 }

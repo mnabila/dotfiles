@@ -22,3 +22,13 @@ riverctl background-color 0x282828
 
 # Enabled server side decorations
 riverctl rule-add ssd
+
+# Autofocus to spesific output by cursor
+riverctl focus-follows-cursor disabled
+
+# RULES
+riverctl rule-add -app-id Pinentry-gtk float
+riverctl rule-add -app-id xdg-desktop-portal-gtk float
+riverctl rule-add -app-id nm-connection-editor float
+riverctl rule-add -app-id com.usebottles.bottles csd
+riverctl rule-add -app-id wpsoffice csd

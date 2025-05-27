@@ -1,0 +1,4 @@
+#!/bin/sh
+DMENU="rofi -dmenu -i -P Virt-Viewer"
+
+virt-viewer -a --domain-name $(virsh list --name | $DMENU)

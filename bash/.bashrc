@@ -33,13 +33,25 @@ alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
 #
 
 pmu() {
-	sudo reflector --verbose --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist $@
+  sudo reflector --verbose --latest 3 --protocol https --sort rate --save /etc/pacman.d/mirrorlist $@
 }
 
 rmorphans() {
-	pacman -Qdtq | sudo pacman -Rns -
+  pacman -Qdtq | sudo pacman -Rns -
 }
 
 gpuinfo() {
-	glxinfo | grep "OpenGL renderer"
+  glxinfo | grep "OpenGL renderer"
+}
+
+http() {
+  caddy file-server --listen :8000 --browse
+}
+
+ipinfo() {
+  curl ipinfo.io
+}
+
+sshfm() {
+  sshfs -o cache_timeout=600 -o attr_timeout=600 -o entry_timeout=600 -o direct_io -o cache=yes -o kernel_cache $@
 }

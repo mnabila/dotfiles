@@ -1,24 +1,25 @@
 * {
-  font-family: "Iosevka Nerd Font Regular";
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  border-radius: 4;
+  padding: 0px;
+  margin: 0px;
 }
 
 window#waybar {
   background-color: transparent;
-  color: #ebdbb2;
+}
+
+button,
+label {
+  font-family: "Iosevka Nerd Font";
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 0px 15px;
 }
 
 #tags button {
   background-color: #3c3836;
   font-weight: bold;
-  margin-right: 3;
-}
-
-#tags button:last-child {
-  margin-right: 0;
+  padding: 0px;
+  margin-right: 3px;
 }
 
 #tags button.occupied {
@@ -30,36 +31,22 @@ window#waybar {
   color: #282828;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#backlight,
-#wireplumber,
-#tray {
-  padding: 0 15px;
-  background-color: #3c3836;
-}
-
-#tray>.passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray>.needs-attention {
-  -gtk-icon-effect: highlight;
-}
-
-#tray menu {
-  padding: 5px;
-}
-
-#temperature.critical {
-  background-color: #eb4d4b;
-  color: #282828;
-  font-weight: bold;
-}
-
 #window {
   font-weight: bold;
+}
+
+#tray.horizontal {
+  background-color: #3c3836;
+  padding: 0px 10px;
+  border-radius: 4px;
+}
+
+.module:not(#tags):not(#window) {
+  background-color: #3c3836;
+  color: #ebdbb2;
+}
+
+#battery.critical {
+  background-color: #fb4934;
+  color: #3c3836;
 }

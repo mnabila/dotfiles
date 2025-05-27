@@ -36,23 +36,23 @@ TERM = "xterm-256color"
 size = 15.0
 
 [font.bold]
-family = "Iosevka Nerd Font"
+family = "monospace"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka Nerd Font"
+family = "monospace"
 style = "Bold Italic"
 
 [font.italic]
-family = "Iosevka Nerd Font"
+family = "monospace"
 style = "Italic"
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "monospace"
 style = "Regular"
 
 [window]
-dynamic_padding = false
+dynamic_padding = true
 dynamic_title = true
 
 [window.padding]

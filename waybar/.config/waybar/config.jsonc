@@ -52,8 +52,8 @@
 
   "wireplumber": {
     "format": "{volume}% {icon}",
-    "format-icons": ["奔", "墳"],
-    "format-muted": "Muted 婢",
+    "format-icons": ["", ""],
+    "format-muted": "Muted 󰖁",
     "max-volume": 100,
     "scroll-step": 0.1,
     "on-click": "pamixer --toggle-mute",

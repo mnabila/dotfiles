@@ -3,36 +3,37 @@
 # Various media key mapping examples for both normal and locked mode which do
 # not have a modifier
 for mode in normal locked; do
-  # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
-  riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 2'
-  riverctl map $mode None XF86AudioLowerVolume spawn 'pamixer -d 2'
-  riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
+	# Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
+	riverctl map $mode None XF86AudioRaiseVolume spawn 'pamixer -i 2'
+	riverctl map $mode None XF86AudioLowerVolume spawn 'pamixer -d 2'
+	riverctl map $mode None XF86AudioMute spawn 'pamixer --toggle-mute'
 
-  # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
-  riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
-  riverctl map $mode None XF86AudioPlay spawn 'playerctl play-pause'
-  riverctl map $mode None XF86AudioPrev spawn 'playerctl previous'
-  riverctl map $mode None XF86AudioNext spawn 'playerctl next'
+	# Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
+	riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
+	riverctl map $mode None XF86AudioPlay spawn 'playerctl play-pause'
+	riverctl map $mode None XF86AudioPrev spawn 'playerctl previous'
+	riverctl map $mode None XF86AudioNext spawn 'playerctl next'
 
-  # Control screen backlight brightness with light (https://gitlab.com/dpeukert/light)
-  riverctl map $mode None XF86MonBrightnessUp spawn 'light -A 2'
-  riverctl map $mode None XF86MonBrightnessDown spawn 'light -U 2'
+	# Control screen backlight brightness with light (https://gitlab.com/dpeukert/light)
+	riverctl map $mode None XF86MonBrightnessUp spawn 'light -A 5'
+	riverctl map $mode None XF86MonBrightnessDown spawn 'light -U 5'
+
 done
 
 for i in $(seq 1 5); do
-  tags=$((1 << ($i - 1)))
+	tags=$((1 << ($i - 1)))
 
-  # Super+[1-5] to focus tag [0-4]
-  riverctl map normal Super $i set-focused-tags $tags
+	# Super+[1-5] to focus tag [0-4]
+	riverctl map normal Super $i set-focused-tags $tags
 
-  # Super+Shift+[1-5] to tag focused view with tag [0-4]
-  riverctl map normal Super+Shift $i set-view-tags $tags
+	# Super+Shift+[1-5] to tag focused view with tag [0-4]
+	riverctl map normal Super+Shift $i set-view-tags $tags
 
-  # Super+Control+[1-5] to toggle focus of tag [0-4]
-  riverctl map normal Super+Control $i toggle-focused-tags $tags
+	# Super+Control+[1-5] to toggle focus of tag [0-4]
+	riverctl map normal Super+Control $i toggle-focused-tags $tags
 
-  # Super+Shift+Control+[1-5] to toggle tag [0-4] of focused view
-  riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
+	# Super+Shift+Control+[1-5] to toggle tag [0-4] of focused view
+	riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
 done
 
 # Super+Return to start an instance of alacritty
@@ -97,7 +98,7 @@ riverctl map normal Super+Shift D spawn 'rofi -show run'
 riverctl map normal Super BackSpace spawn 'notify-send "Pass Man" "Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)"'
 
 # Super+Shift+BackSpace to open password manager session
-riverctl map normal Super+Shift BackSpace spawn tessen
+riverctl map normal Super+Shift BackSpace spawn 'tessen -d rofi'
 
 # Super+X to open clipboard
 riverctl map normal Super C spawn 'cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy'
@@ -107,6 +108,8 @@ riverctl map normal Super+Shift C spawn 'cliphist wipe'
 
 # Print to take screenshot
 riverctl map normal None Print spawn 'XDG_CURRENT_DESKTOP=sway flameshot gui --raw | wl-copy'
+riverctl map normal Super+Shift Print spawn 'XDG_CURRENT_DESKTOP=sway flameshot full --raw | wl-copy'
+riverctl map normal Super Print spawn 'XDG_CURRENT_DESKTOP=sway flameshot gui'
 
 # Super+P to open dmenu_power
 riverctl map normal Super P spawn dmenu_power
@@ -116,3 +119,6 @@ riverctl map normal Super S spawn dmenu_mager
 
 # Super+Tab to open list window
 riverctl map normal Super Tab spawn 'rofi -show window'
+
+# Super+Shift+Return to lock the screen
+riverctl map normal Super+Shift Return spawn 'swaylock'

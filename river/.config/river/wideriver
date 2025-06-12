@@ -15,4 +15,4 @@ riverctl map normal Super equal send-layout-cmd wideriver "--ratio 0.5"
 riverctl map normal Super minus send-layout-cmd wideriver "--ratio -0.01"
 
 # start layout manager
-riverctl spawn 'wideriver --layout left --ratio-master 0.5 --stack even --outer-gaps 5 --inner-gaps 5 --border-color-focused "0xebdbb2" --border-color-unfocused "0x665c54" --layout-alt monocle --border-width 3 --border-width-monocle 3 --no-smart-gaps --border-color-focused-monocle "0xebdbb2"'
+riverctl spawn 'wideriver --layout left --ratio-master 0.5 --stack even --outer-gaps 5 --inner-gaps 5 --border-color-focused "0xebdbb2" --border-color-unfocused "0x665c54" --layout-alt monocle --border-width 2 --border-width-monocle 2  --border-color-focused-monocle "0xebdbb2"'

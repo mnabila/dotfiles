@@ -8,11 +8,6 @@ function run() {
 
 run systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 run dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-run /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
-run batsignal -b -c 20 -w 25 -d 10 -f 99 -D "systemctl suspend"
 run wl-paste --watch cliphist store
-run waybar
 run nm-applet
-run swaybg -m fill -i /home/saya/Pictures/wallpaper/1379031.png
-run kanshi
-
+run swaybg -m fill -i /home/saya/Pictures/wallpaper/1361761.jpeg

@@ -1,8 +1,8 @@
-#
+# ============================
 # Colorscheme
-#
+# ============================
 
-# completion
+# # Completion
 set completion-bg "#282828"
 set completion-fg "#ebdbb2"
 set completion-group-bg "#282828"
@@ -10,69 +10,69 @@ set completion-group-fg "#ebdbb2"
 set completion-highlight-bg "#ebdbb2"
 set completion-highlight-fg "#282828"
 
-# default
+# Default
 set default-bg "#282828"
 set default-fg "#ebdbb2"
 
-# inputbar
+# Inputbar
 set inputbar-bg "#282828"
 set inputbar-fg "#ebdbb2"
 
-# notification
-set notification-bg "#ebdbb2"
-set notification-fg "#282828"
-set notification-error-bg "#cc241d"
-set notification-error-fg "#ebdbb2"
-set notification-warning-bg "#ebdbb2"
-set notification-warning-fg "#282828"
-
-
-# statusbar
+# Statusbar
 set statusbar-bg "#282828"
 set statusbar-fg "#ebdbb2"
 
-# highlight
-set highlight-color "#ebdbb2"
-set highlight-active-color "#282828"
 
-# recolor
+# Notification (commented out)
+set notification-bg "#282828"
+set notification-fg "#ebdbb2"
+set notification-error-bg "#cc241d"
+set notification-error-fg "#ebdbb2"
+set notification-warning-bg "#d79921"
+set notification-warning-fg "#282828"
+
+# Highlight
+set highlight-color "rgba(215, 153, 33, 0.5)"
+set highlight-active-color "rgba(215, 153, 33, 0.5)"
+
+# Recolor
 set recolor-darkcolor "#ebdbb2"
 set recolor-lightcolor "#282828"
 
-# loading
+# Loading
 set render-loading-bg "#282828"
 set render-loading-fg "#ebdbb2"
 
-#
+# ============================
 # Configurations
-#
+# ============================
 
-# font
-set font "Iosevka Nerd Font 12"
+# Font
+set font "Iosevka Nerd Font 13"
 
-# scrollbar
+# Scrollbar
 set show-scrollbars true
 set show-v-scrollbar true
 set show-h-scrollbar false
 
-# highlight
-set highlight-transparency "0.8"
+# Highlight
+set highlight-transparency "0.1"
 
-# recoloring
+# Recoloring
 set recolor false
 set recolor-keephue false
 
-# window title
+# Window
 set window-title-basename true
 set window-title-home-tilde true
 set window-title-page true
 
-# statusbar
+# Statusbar
 set statusbar-basename true
-set statusbar-home-tilde true
+set statusbar-home-tilde false
 
-# clipboard
+# Clipboard
 set selection-clipboard "clipboard"
 
-# sandbox
+# Sandbox
 set sandbox none

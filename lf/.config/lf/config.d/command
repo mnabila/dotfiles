@@ -8,7 +8,6 @@ cmd open ${{
         application/x-iso9660-image) udisksctl loop-setup --file "$f";;
         application/x-executable) lf -remote "send $id echo 'not allowed'";;
         video/*) lf -remote "send $id multifile mpv";;
-        application/epub+zip) zathura "$f" &>/dev/null &;;
         *) xdg-open "$f" &>/dev/null & ;;
     esac
 }}
@@ -71,66 +70,4 @@ cmd extract ${{
         *.rar) unrar x "$f";;
         *.7z) 7z x "$f";;
     esac
-}}
-
-# compress current file or selected files with tar and gunzip
-cmd tar ${{
-    set -f
-    mkdir "$1"
-    cp -r $fx "$1"
-    tar czf "$1.tar.gz" "$1"
-    rm -rf "$1"
-}}
-
-# compress current file or selected files with zip
-cmd zip ${{
-    set -f
-    mkdir "$1"
-    cp -r $fx "$1"
-    zip -r "$1.zip" "$1"
-    rm -rf "$1"
-}}
-
-# compress current file or selected files with 7z
-cmd 7z ${{
-    set -f
-    mkdir "$1"
-    cp -r $fx "$1"
-    7z a "$1.7z" "$1"
-    rm -rf "$1"
-}}
-
-
-cmd rclone ${{
-    function rmount () {
-        if [ ! -d "/tmp/rclone" ]; then
-            mkdir /tmp/lfrclone
-        fi
-        rclone mount "$1" /tmp/lfrclone --daemon && notify-send "LF - Rclone" "Success Mount $1"
-    }
-
-    case $1 in
-        m|mount) rmount "$2";;
-        u|umount) fusermount -u /tmp/lfrclone && rmdir /tmp/lfrclone && notify-send "LF - Rclone" "Success Umount" ;;
-        *) lf -remote "send $id echo example: rclone m remote:/path and rclone u"
-    esac
-}}
-
-cmd du ${{
-    size=$(du -sh "$f" | cut -d " " -f 1)
-    lf -remote "send $id echo Size : $size"
-}}
-
-cmd dir2iso ${{
-    FILEPATH="$f"
-    if [ -f "$f" ]; then
-        FILEPATH=$(dirname "$f")
-    fi
-    LABEL=$(basename "$FILEPATH")
-
-    if ((${#LABEL} > 32)); then
-        LABEL=$(echo $LABEL | cut -c 1-32)
-    fi
-
-    genisoimage -f -J -joliet-long -r -allow-lowercase -allow-multidot -iso-level 3 -volid "$LABEL" -sysid LINUX -volset-size 1 -volset-seqno 1 -no-cache-inodes -full-iso9660-filenames -o "$FILEPATH.iso" "$FILEPATH"
 }}

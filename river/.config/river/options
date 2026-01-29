@@ -20,6 +20,10 @@ riverctl set-repeat 50 300
 # Set background color
 riverctl background-color 0x282828
 
+# Set border color
+riverctl border-color-focused 0xebdbb2
+riverctl border-color-unfocused 0x504945
+
 # Enabled server side decorations
 riverctl rule-add ssd
 
@@ -32,3 +36,4 @@ riverctl rule-add -app-id xdg-desktop-portal-gtk float
 riverctl rule-add -app-id nm-connection-editor float
 riverctl rule-add -app-id com.usebottles.bottles csd
 riverctl rule-add -app-id wpsoffice csd
+riverctl rule-add -app-id Emulator float

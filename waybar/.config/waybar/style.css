@@ -1,52 +1,79 @@
+@define-color black           #282828;
+@define-color red             #cc241d;
+@define-color green           #98971a;
+@define-color yellow          #d79921;
+@define-color blue            #458588;
+@define-color magenta         #b16286;
+@define-color cyan            #689d6a;
+@define-color white           #a89984;
+@define-color bright_black    #3c3836;
+@define-color bright_red      #fb4934;
+@define-color bright_green    #b8bb26;
+@define-color bright_yellow   #fabd2f;
+@define-color bright_blue     #83a598;
+@define-color bright_magenta  #d3869b;
+@define-color bright_cyan     #8ec07c;
+@define-color bright_white    #ebdbb2;
+
 * {
   padding: 0px;
   margin: 0px;
 }
 
-window#waybar {
+window {
   background-color: transparent;
 }
 
-button,
-label {
+widget label {
   font-family: "Iosevka Nerd Font";
   font-size: 14px;
   border-radius: 4px;
   padding: 0px 15px;
 }
 
+widget label:not(#window){
+  background-color: @bright_black;
+  color: @bright_white;
+}
+
 #tags button {
-  background-color: #3c3836;
+  background-color: @bright_black;
   font-weight: bold;
-  padding: 0px;
   margin-right: 3px;
 }
 
-#tags button.occupied {
-  background-color: #7c6f64;
+#tags button.occupied label {
+  background-color: @white;
+  color: @black;
 }
 
-#tags button.focused {
-  background-color: #ebdbb2;
-  color: #282828;
+#tags button.focused label {
+  background-color: @bright_white;
+  color: @black;
 }
 
 #window {
   font-weight: bold;
 }
 
-#tray.horizontal {
-  background-color: #3c3836;
-  padding: 0px 10px;
+#battery.critical,
+#temperature.critical {
+  font-weight: bold;
+  background-color: @bright_red;
+  color: @bright_black;
+}
+
+#tray {
+  background-color: @bright_black;
+  padding: 10px 10px;
   border-radius: 4px;
 }
 
-.module:not(#tags):not(#window) {
-  background-color: #3c3836;
-  color: #ebdbb2;
+#tray menu{
+  padding: 10px;
+  border-radius: 2px;
 }
 
-#battery.critical {
-  background-color: #fb4934;
-  color: #3c3836;
+#tray menu label{
+  background-color: transparent;
 }

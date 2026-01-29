@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Set the default layout generator to be filtile and start it.
+# River will send the process group of the init executable SIGTERM on exit.
+riverctl default-layout filtile
+
+# Super+Space to toggle layout
+riverctl map normal Super Space send-layout-cmd filtile 'monocle'
+
+# Super+Z to flip main area to the other side of the layout.
+riverctl map normal Super Z send-layout-cmd filtile "flip"
+
+# Super+Left and Super+Right to decrease/increase the main ratio of filtile(1)
+riverctl map normal Super+Shift H send-layout-cmd filtile "move-split-left 5"
+riverctl map normal Super+Shift L send-layout-cmd filtile "move-split-right 5"
+
+# start layout manager
+riverctl spawn 'filtile view-padding 2, outer-padding 2'

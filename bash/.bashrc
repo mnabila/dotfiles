@@ -12,46 +12,61 @@
 [ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 
 #
+# ENV
+#
+[ -f ~/.profile ] && source ~/.profile
+
+#
 # Prompt
 #
 eval "$(starship init bash)"
-
-#
-# ENV
-#
-export HISTSIZE=5000
 
 #
 # Alias
 #
 alias ls="ls --color=auto"
 alias aria2d="aria2c --enable-rpc --auto-file-renaming=false"
-alias sysinfo="neofetch --ascii ~/.config/neofetch/chess.txt"
+alias vi="nvim"
 
 #
-# function
+# Function
 #
-
 pmu() {
-  sudo reflector --verbose --latest 3 --protocol https --sort rate --save /etc/pacman.d/mirrorlist $@
+	sudo reflector --verbose --latest 3 --protocol https --sort rate --save /etc/pacman.d/mirrorlist $@
 }
 
 rmorphans() {
-  pacman -Qdtq | sudo pacman -Rns -
+	pacman -Qdtq | sudo pacman -Rns -
 }
 
 gpuinfo() {
-  glxinfo | grep "OpenGL renderer"
+	glxinfo | grep "OpenGL renderer"
 }
 
 http() {
-  caddy file-server --listen :8000 --browse
+	caddy file-server --listen :8000 --browse
 }
 
 ipinfo() {
-  curl ipinfo.io
+	curl ipinfo.io
 }
 
 sshfm() {
-  sshfs -o cache_timeout=600 -o attr_timeout=600 -o entry_timeout=600 -o direct_io -o cache=yes -o kernel_cache $@
+	sshfs -o cache_timeout=600 -o attr_timeout=600 -o entry_timeout=600 -o direct_io -o cache=yes -o kernel_cache $@
+}
+
+scrcpy-preview() {
+	scrcpy --no-audio --video-codec=h264 --video-encoder=OMX.google.h264.encoder --max-fps=23 --video-bit-rate=1M --video-buffer=50 --max-size=360 --no-control $@
+}
+
+scrcpy-lite() {
+	scrcpy --no-audio --video-codec=h264 --video-encoder=OMX.google.h264.encoder --max-fps=23 --video-bit-rate=1M --video-buffer=50 --max-size=720 $@
+}
+
+ytv() {
+	mpv --ytdl-format="bestvideo[height<=?1080]+bestaudio/best" ytdl://ytsearch:"$*"
+}
+
+yta() {
+	mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
 }

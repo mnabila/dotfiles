@@ -4,10 +4,6 @@
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 
-# Set border color
-riverctl border-color-focused 0xebdbb2
-riverctl border-color-unfocused 0x504945
-
 # Super+H and Super+L to decrease/increase the main ratio of rivertile(1)
 riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
 riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"

@@ -62,8 +62,8 @@ riverctl map normal Super+Shift J swap next
 riverctl map normal Super+Shift K swap previous
 
 # Super+H and Super+L to swap the focused view with the left/right
-riverctl map normal Super+Shift H swap left
-riverctl map normal Super+Shift L swap right
+# riverctl map normal Super+Shift H swap left
+# riverctl map normal Super+Shift L swap right
 
 # Super+Period and Super+Comma to focus the next/previous output
 riverctl map normal Super Period focus-output next
@@ -122,3 +122,6 @@ riverctl map normal Super Tab spawn 'rofi -show window'
 
 # Super+Shift+Return to lock the screen
 riverctl map normal Super+Shift Return spawn 'swaylock'
+
+# Super+B to toggle waybar
+riverctl map normal Super B spawn 'pkill waybar || waybar'

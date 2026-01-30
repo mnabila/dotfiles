@@ -2,7 +2,6 @@
 
 [mgr]
 border_symbol = " "
-border_style = { fg = "gray" }
 
 
 [indicator]
@@ -10,6 +9,13 @@ parent = { fg = "black", bg = "white" }
 current = { fg = "black", bg = "white" }
 preview = { hidden = true }
 padding = { open = "█", close = "█" }
+
+
+[tabs]
+active = { bg = "gray", fg = "black", bold = true }
+inactive = { fg = "reset", bg = "reset" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
 
 
 [status]
@@ -22,10 +28,8 @@ sep_right = { open = "", close = "" }
 normal_main = { bg = "reset", bold = true }
 normal_alt = { fg = "reset", bg = "reset" }
 
-# Select mode
 select_main = { bg = "red", bold = true }
 select_alt = { fg = "red", bg = "gray" }
 
-# Unset mode
 unset_main = { bg = "red", bold = true }
 unset_alt = { fg = "red", bg = "gray" }

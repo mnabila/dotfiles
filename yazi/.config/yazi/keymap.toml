@@ -3,6 +3,15 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 [mgr]
+prepend_keymap = [
+  { on = "M", run = "plugin mount", desc = "A mount manager for Yazi" },
+  { on = [ "c", "m" ], run = "plugin chmod", desc = "Chmod on selected files" },
+]
+
 append_keymap = [
   { on = "<C-o>", run = "shell -- dragon-drop -x -i -T %s1", desc = "Drag & drop file (dragon)" },
 ]
+
+
+[input]
+prepend_keymap = [{ on = "<Esc>", run = "close", desc = "Cancel input" }]

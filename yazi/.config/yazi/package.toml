@@ -1,0 +1,12 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "6f50636"
+hash = "563e4068979d1466d3dfc2e70a296947"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "6f50636"
+hash = "8da0b15a97b5dfd13941d1ecc617ac7c"
+
+[flavor]
+deps = []

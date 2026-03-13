@@ -17,6 +17,9 @@ mouse_events = ["click", "scroll"]
 title_format = "Yazi: {cwd}"
 
 [opener]
+play = [
+	{ run = "mpv %s", orphan = true, for = "unix" },
+]
 set-wallpaper = [
   { run = "swww img '%s1'", for = "linux", desc = "Set as wallpaper", orphan = true },
 ]
@@ -25,4 +28,9 @@ set-wallpaper = [
 prepend_rules = [{ mime = "image/*", use = ["open", "set-wallpaper"] }]
 
 [plugin]
-prepend_previewers = [{ mime = "image/*", run = "noop" }]
+prepend_fetchers = [
+  { id = "mime", url = "local:///tmp/sshfs/*", run = "mime-ext.remote", prio = "high" },
+  { id = "mime", url = "local://*", run = "mime-ext.local", prio = "high" },
+  { id = "mime", url = "remote://*", run = "mime-ext.remote", prio = "high" }
+]
+

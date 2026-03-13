@@ -20,24 +20,19 @@ for mode in normal locked; do
 
 done
 
+echo 1 > /tmp/river-tag
+
 for i in $(seq 1 5); do
 	tags=$((1 << ($i - 1)))
 
-	# Super+[1-5] to focus tag [0-4]
-	riverctl map normal Super $i set-focused-tags $tags
-
-	# Super+Shift+[1-5] to tag focused view with tag [0-4]
+	riverctl map normal Super $i spawn set-focused-tags $tags
 	riverctl map normal Super+Shift $i set-view-tags $tags
-
-	# Super+Control+[1-5] to toggle focus of tag [0-4]
 	riverctl map normal Super+Control $i toggle-focused-tags $tags
-
-	# Super+Shift+Control+[1-5] to toggle tag [0-4] of focused view
 	riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
 done
 
-# Super+Return to start an instance of alacritty
-riverctl map normal Super Return spawn alacritty
+# Super+Return to start an instance of foot
+riverctl map normal Super Return spawn foot
 
 # Super+W to close the focused view
 riverctl map normal Super W close
@@ -125,3 +120,4 @@ riverctl map normal Super+Shift Return spawn 'swaylock'
 
 # Super+B to toggle waybar
 riverctl map normal Super B spawn 'pkill waybar || waybar'
+

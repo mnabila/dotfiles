@@ -4,8 +4,15 @@
 
 [mgr]
 prepend_keymap = [
-  { on = "M", run = "plugin mount", desc = "A mount manager for Yazi" },
-  { on = [ "c", "m" ], run = "plugin chmod", desc = "Chmod on selected files" },
+  { on = ["M", "d"], run = "plugin mount", desc = "A mount manager for Yazi" },
+  { on = [
+    "M",
+    "s",
+  ], run = "plugin sshfs -- menu", desc = "Open SSHFS options" },
+  { on = [
+    "c",
+    "m",
+  ], run = "plugin chmod", desc = "Chmod on selected files" },
 ]
 
 append_keymap = [

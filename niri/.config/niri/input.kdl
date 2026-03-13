@@ -1,0 +1,12 @@
+input {
+    keyboard {
+        repeat-delay 250
+        repeat-rate 30
+    }
+    touchpad {
+        tap
+        scroll-method "two-finger"
+        disabled-on-external-mouse
+    }
+    focus-follows-mouse max-scroll-amount="0%"
+}

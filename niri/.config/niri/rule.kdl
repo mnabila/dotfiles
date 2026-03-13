@@ -1,0 +1,14 @@
+layer-rule {
+    match namespace="^notifications$"
+    block-out-from "screencast"
+}
+window-rule {
+    open-maximized true
+    clip-to-geometry true
+}
+window-rule {
+    match app-id="Pinentry-gtk"
+    match app-id="nm-connection-editor"
+    open-maximized false
+    open-floating true
+}

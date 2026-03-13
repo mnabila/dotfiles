@@ -1,0 +1,56 @@
+binds {
+    Mod+Shift+Slash {
+        show-hotkey-overlay
+    }
+    Mod+T {
+        spawn "foot"
+    }
+    Mod+D {
+        spawn-sh "rofi -show drun"
+    }
+    Mod+Shift+D {
+        spawn-sh "rofi -show run"
+    }
+    Super+Alt+L {
+        spawn "swaylock"
+    }
+    Mod+Shift+E {
+        quit
+    }
+    Ctrl+Alt+Delete {
+        quit
+    }
+    Mod+Alt+P {
+        power-off-monitors
+    }
+    Print {
+        spawn-sh "flameshot gui"
+    }
+    Mod+Print {
+        spawn-sh "flameshot screen"
+    }
+    Mod+C {
+        spawn-sh "cliphist list | rofi -dmenu -p Clipboard | cliphist decode | wl-copy"
+    }
+    Mod+Shift+C {
+        spawn-sh "cliphist wipe"
+    }
+    Mod+BackSpace {
+        spawn-sh "notify-send 'Pass Man' \"Clear Cache Time Out : $(gpg-connect-agent reloadagent /bye)\""
+    }
+    Mod+Shift+BackSpace {
+        spawn-sh "tessen -d rofi"
+    }
+    Mod+O repeat=false {
+        toggle-overview
+    }
+    Mod+Q repeat=false {
+        close-window
+    }
+    Mod+P {
+        spawn-sh "dmenu_power"
+    }
+    Mod+B {
+        spawn-sh "pkill waybar || waybar"
+    }
+}

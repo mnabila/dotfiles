@@ -71,10 +71,15 @@ yta() {
 	mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
 }
 
-function yz() {
+yz() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd <"$tmp"
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
+}
+
+fix-podman-disk-quota() {
+	sudo sysctl -w kernel.keys.maxkeys=10000
+	sysctl kernel.keys.maxkeys
 }

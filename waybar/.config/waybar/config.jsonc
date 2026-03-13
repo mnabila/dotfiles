@@ -8,7 +8,7 @@
   "margin-right": 5,
   "height": 32,
   "spacing": 10,
-  "modules-left": ["river/tags", "clock", "river/window"],
+  "modules-left": ["clock", "niri/window"],
   "modules-right": [
     "network",
     "temperature",
@@ -21,7 +21,7 @@
   ],
   "tray": {
     "icon-size": 12,
-    "spacing": 5
+    "spacing": 5,
   },
   "clock": {
     "format": "{:%A, %d %B %Y  %H:%M %Z}",
@@ -80,5 +80,8 @@
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected ",
     "max-length": 30,
+  },
+  "niri/window": {
+    "format": "{}",
   },
 }

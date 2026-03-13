@@ -1,0 +1,32 @@
+binds {
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn-sh "pamixer -i 2"
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn-sh "pamixer -d 2"
+    }
+    XF86AudioMute allow-when-locked=true {
+        spawn-sh "pamixer --toggle-mute"
+    }
+    XF86AudioMicMute allow-when-locked=true {
+        spawn-sh "pamixer --toggle-mute"
+    }
+    XF86AudioPlay allow-when-locked=true {
+        spawn-sh "playerctl play-pause"
+    }
+    XF86AudioStop allow-when-locked=true {
+        spawn-sh "playerctl stop"
+    }
+    XF86AudioPrev allow-when-locked=true {
+        spawn-sh "playerctl previous"
+    }
+    XF86AudioNext allow-when-locked=true {
+        spawn-sh "playerctl next"
+    }
+    XF86MonBrightnessUp allow-when-locked=true {
+        spawn "brightnessctl" "--class=backlight" "set" "+5%"
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+        spawn "brightnessctl" "--class=backlight" "set" "5%-"
+    }
+}

@@ -1,0 +1,18 @@
+include "autostart.kdl"
+include "input.kdl"
+include "layout.kdl"
+include "rule.kdl"
+include "binds/essentials.kdl"
+include "binds/navigation.kdl"
+include "binds/workspaces.kdl"
+include "binds/windows.kdl"
+include "binds/media.kdl"
+
+hotkey-overlay {
+    skip-at-startup
+}
+prefer-no-csd
+screenshot-path null
+animations {
+    slowdown 1.0
+}

@@ -5,16 +5,16 @@ binds {
     Mod+Up {
         focus-workspace-up
     }
-    Mod+Ctrl+U {
+    Mod+Shift+Down {
         move-column-to-workspace-down
     }
-    Mod+Ctrl+Up {
+    Mod+Shift+Up {
         move-column-to-workspace-up
     }
-    Mod+Shift+Down {
+    Mod+Ctrl+Down {
         move-workspace-down
     }
-    Mod+Shift+Up {
+    Mod+Ctrl+Up {
         move-workspace-up
     }
     Mod+WheelScrollDown cooldown-ms=150 {

@@ -50,7 +50,4 @@ binds {
     Mod+P {
         spawn-sh "dmenu_power"
     }
-    Mod+B {
-        spawn-sh "pkill waybar || waybar"
-    }
 }

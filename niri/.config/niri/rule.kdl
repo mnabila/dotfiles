@@ -5,10 +5,12 @@ layer-rule {
 window-rule {
     open-maximized true
     clip-to-geometry true
+    geometry-corner-radius 4
 }
 window-rule {
     match app-id="Pinentry-gtk"
     match app-id="nm-connection-editor"
-    open-maximized false
+    match app-id="org.gnome.NetworkDisplays"
     open-floating true
+    open-maximized false
 }

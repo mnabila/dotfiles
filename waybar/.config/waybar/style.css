@@ -31,7 +31,7 @@ widget label {
   padding: 0px 15px;
 }
 
-widget label:not(#window){
+widget label:not(#window) {
   background-color: @bright_black;
   color: @bright_white;
 }
@@ -69,12 +69,11 @@ widget label:not(#window){
   border-radius: 4px;
 }
 
-#tray menu{
+#tray menu {
   padding: 10px;
   border-radius: 2px;
 }
 
-#tray menu label{
+#tray menu label {
   background-color: transparent;
 }
-

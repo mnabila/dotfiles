@@ -18,12 +18,14 @@ ignore-timeout=0
 
 # Font
 font=Iosevka NerdFont 10
+format=<b>%s</b>\n%b
 
 # Gruvbox Dark Colors
 background-color=#282828
 text-color=#ebdbb2
 border-color=#ebdbb2
-border-size=1
+border-size=2
+border-radius=3
 icons=1
 icon-path=/usr/share/icons/Papirus-Dark
 max-icon-size=48

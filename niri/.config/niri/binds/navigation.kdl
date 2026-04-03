@@ -23,18 +23,6 @@ binds {
     Mod+Shift+L {
         move-column-right
     }
-    Mod+Home {
-        focus-column-first
-    }
-    Mod+End {
-        focus-column-last
-    }
-    Mod+Ctrl+Home {
-        move-column-to-first
-    }
-    Mod+Ctrl+End {
-        move-column-to-last
-    }
     Mod+Ctrl+H {
         focus-monitor-left
     }
@@ -57,18 +45,6 @@ binds {
         move-column-to-monitor-up
     }
     Mod+Shift+Ctrl+Right {
-        move-column-to-monitor-right
-    }
-    Mod+Shift+Ctrl+H {
-        move-column-to-monitor-left
-    }
-    Mod+Shift+Ctrl+J {
-        move-column-to-monitor-down
-    }
-    Mod+Shift+Ctrl+K {
-        move-column-to-monitor-up
-    }
-    Mod+Shift+Ctrl+L {
         move-column-to-monitor-right
     }
     Mod+WheelScrollRight {

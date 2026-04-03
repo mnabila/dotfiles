@@ -21,7 +21,7 @@ play = [
 	{ run = "mpv %s", orphan = true, for = "unix" },
 ]
 set-wallpaper = [
-  { run = "swww img '%s1'", for = "linux", desc = "Set as wallpaper", orphan = true },
+  { run = "awww img '%s1'", for = "linux", desc = "Set as wallpaper", orphan = true },
 ]
 
 [open]

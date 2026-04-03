@@ -1,4 +1,3 @@
-include "autostart.kdl"
 include "input.kdl"
 include "layout.kdl"
 include "rule.kdl"
@@ -7,12 +6,28 @@ include "binds/navigation.kdl"
 include "binds/workspaces.kdl"
 include "binds/windows.kdl"
 include "binds/media.kdl"
-
+prefer-no-csd
+screenshot-path null
 hotkey-overlay {
     skip-at-startup
 }
-prefer-no-csd
-screenshot-path null
 animations {
     slowdown 1.0
+}
+cursor {
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 24
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+gestures {
+    hot-corners {
+        top-left
+    }
+}
+debug {
+    honor-xdg-activation-with-invalid-serial
 }

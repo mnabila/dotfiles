@@ -1,4 +1,0 @@
-spawn-at-startup "swww-daemon"
-spawn-at-startup "mako"
-spawn-sh-at-startup "wl-paste --watch cliphist store"
-spawn-sh-at-startup "batsignal -b -c 20 -w 25 -d 15 -D 'systemctl suspend'"

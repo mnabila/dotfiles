@@ -24,6 +24,5 @@ layout {
         width 1
         active-color "#ebdbb2"
         inactive-color "#282828"
-        urgent-color "#9b0000"
     }
 }

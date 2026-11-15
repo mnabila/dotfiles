@@ -1,3 +1,4 @@
+include "output.kdl"
 include "input.kdl"
 include "layout.kdl"
 include "rule.kdl"
@@ -22,11 +23,6 @@ cursor {
 }
 xwayland-satellite {
     path "xwayland-satellite"
-}
-gestures {
-    hot-corners {
-        top-left
-    }
 }
 debug {
     honor-xdg-activation-with-invalid-serial

@@ -14,3 +14,12 @@ window-rule {
     open-floating true
     open-maximized false
 }
+
+//
+// window-rule {
+//     match is-active=false
+//     opacity 0.85
+//     background-effect {
+//         blur true
+//     }
+// }

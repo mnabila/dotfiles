@@ -35,16 +35,16 @@ binds {
     Mod+Ctrl+L {
         focus-monitor-right
     }
-    Mod+Shift+Ctrl+Left {
+    Mod+Shift+Ctrl+H {
         move-column-to-monitor-left
     }
-    Mod+Shift+Ctrl+Down {
+    Mod+Shift+Ctrl+J {
         move-column-to-monitor-down
     }
-    Mod+Shift+Ctrl+Up {
+    Mod+Shift+Ctrl+K {
         move-column-to-monitor-up
     }
-    Mod+Shift+Ctrl+Right {
+    Mod+Shift+Ctrl+L {
         move-column-to-monitor-right
     }
     Mod+WheelScrollRight {
@@ -70,5 +70,23 @@ binds {
     }
     Mod+Ctrl+Shift+WheelScrollUp {
         move-column-left
+    }
+    Mod+U {
+        focus-workspace-down
+    }
+    Mod+I {
+        focus-workspace-up
+    }
+    Mod+Shift+U {
+        move-workspace-down
+    }
+    Mod+Shift+I {
+        move-workspace-up
+    }
+    Mod+Ctrl+U {
+        move-column-to-workspace-down
+    }
+    Mod+Ctrl+I {
+        move-column-to-workspace-up
     }
 }

@@ -1,6 +1,6 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+#:schema https://yazi-rs.github.io/schemas/yazi.json
 
 [mgr]
 ratio = [1, 4, 3]
@@ -21,16 +21,23 @@ play = [
 	{ run = "mpv %s", orphan = true, for = "unix" },
 ]
 set-wallpaper = [
-  { run = "awww img '%s1'", for = "linux", desc = "Set as wallpaper", orphan = true },
+  { run = "awww img '%s1' --transition-type none", for = "linux", desc = "Set as wallpaper", orphan = true },
 ]
 
 [open]
 prepend_rules = [{ mime = "image/*", use = ["open", "set-wallpaper"] }]
 
 [plugin]
+prepend_previewers = [
+  # No preview under /tmp/sshfs at any depth (files and folders)
+  { url = "local:///tmp/sshfs/**", run = "noop" },
+  { url = "local:///tmp/sshfs/**/", run = "noop" },
+]
+
 prepend_fetchers = [
-  { id = "mime", url = "local:///tmp/sshfs/*", run = "mime-ext.remote", prio = "high" },
-  { id = "mime", url = "local://*", run = "mime-ext.local", prio = "high" },
-  { id = "mime", url = "remote://*", run = "mime-ext.remote", prio = "high" }
+  # Skip MIME detection under /tmp/sshfs at any depth (files only)
+  { group = "mime", url = "local:///tmp/sshfs/**", run = "mime-skip", prio = "high" },
+  { group = "mime", url = "local://*", run = "mime-ext.local", prio = "high" },
+  { group = "mime", url = "remote://*", run = "mime-skip", prio = "high" }
 ]
 

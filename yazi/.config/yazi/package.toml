@@ -1,22 +1,22 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "1962818"
-hash = "91937a4a9b779eabc6983e258befdfe9"
+rev = "598cdb6"
+hash = "e3260d0b1feded8c8e3ae3afa1169e30"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "1962818"
+rev = "598cdb6"
 hash = "f0c8c378184d5f8abd1b095a443d336d"
 
 [[plugin.deps]]
 use = "uhs-robert/sshfs"
-rev = "4070c8e"
-hash = "a4cd81fe60c350c3f0fde9957f4a4bb9"
+rev = "a8b8903"
+hash = "8c1b36103121a66b37308afaf7124575"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mime-ext"
-rev = "1962818"
-hash = "8b177921e50732b2c8e9d71aa5956270"
+rev = "598cdb6"
+hash = "2678c84a0b3a0b22504e918ccaf99011"
 
 [flavor]
 deps = []
